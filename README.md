@@ -59,7 +59,7 @@ Este são os dados que propomos:
   Kanto, com suas respectivas estatísticas utilizadas no jogo [Pokémon GO](http://pokemongolive.com).
   - [Pesquisa com jogadores de Pokémon Go](src/data/pokemon/README.pt-BR.md)
 * [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este conjunto mostra a lista de jogadores de uma liga do jogo League of
+  Este conjunto mostra a lista de campeões do jogo League of
   Legends (LoL).
   - [Pesquisa com jogadores de LoL](src/data/lol/README.md)
 * [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
