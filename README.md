@@ -110,7 +110,7 @@ possa resolver o problema (ou problemas) de seu usuário.
 
 ### Histórias de usuário
 
-Uma vez que entenda a necessidade dos usuários, escreva as [Historias de
+Uma vez que entenda a necessidade dos usuários, escreva as [Histórias de
 Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representem
 tudo que o usuário precisa fazer/ver. As **histórias de usuário** devem ser o
 resultado de seu processo de investigação/pesquisa de seus usuários.
@@ -146,10 +146,9 @@ priorizar as tarefas.
 No mínimo, sua implementação deverá:
 
 1. Mostrar os dados em uma interface: pode ser em cards, tabelas, listas, etc.
-2. Permitir ao usuário interagit com a interface para obter as informações que necessita;
+2. Permitir ao usuário interagir com a interface para obter as informações que necessita;
 3. Ser _responsivo_, ou seja, deve ser visualizada sem problemas a partir de
    diversos tamanhos de tela: celulares, tablets, notebooks, etc.
-4. Que a interface siga os fundamentos de _visual design_.
 
 ### Testes unitários
 
@@ -237,8 +236,8 @@ eventos (_event listeners_ ou _event handlers_) e etc.
 Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e
 pastas, sempre e quando a estrutura estiver clara para suas colegas.
 
-Neste arquivo você encontrará uma séris de _imports comentados_. Para carregar
-diferentes fontes de dados, você deverá "descomentar" estos _imports_. Cada um
+Neste arquivo você encontrará uma série de _imports comentados_. Para carregar
+diferentes fontes de dados, você deverá "descomentar" estes _imports_. Cada um
 destes _imports_ criará uma variável `data` com os dados correspondentes à fonte
 escolhida.
 
@@ -340,54 +339,6 @@ Quando estiver pronta para codar, sugerimos começar desta forma:
 
 6. Comece a codar! :rocket:
 
-<!--
-En este proyecto deberás trabajar colaborativamente. Para ello, una de las
-integrantes del equipo deberá forkear el repositorio del cohort y la otra
-integrante **deberá hacer un fork del repositorio de su compañera**. Luego de
-esto, deberás
-[configurar](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
-un `remote` hacia el repositorio del cual hiciste el fork.
-
-Para mandar cambios desde un repositorio forkeado al original debes crear un
-[pull request](https://goo.gl/4bYnuh)
-y el propietario del repositorio original recibirá una notificación para
-[revisar el pull request](https://goo.gl/XSFcT5)
-y [aceptar los cambios](https://goo.gl/HLJtqN).
-
-Aquí algunas recomendaciones para que organices mejor el trabajo con tu
-compañera:
-
-* En lugar de trabajar en una sola rama o _branch_, puedes organizar el flujo de
-  trabajo con dos ramas principales:
-  - `master`: rama que contiene las funcionalidades terminadas y sin errores.
-  - `develop`: rama dónde integrarás las funcionalidades conforme las vayas
-    desarrollando.
-
-* Además de tener las dos ramas anteriores, puedes trabajar cada nueva
-  funcionalidad en una rama individual (_feature branches_), estas ramas en
-  lugar de crearse a partir de `master`, tienen a `develop` como su rama de
-  origen. Cuando una funcionalidad es terminada se integra de nuevo a `develop`.
-  Las _feature branches_ no se deben integrar directamente a `master`.
-
-* Por último, te sugerimos codear usando la técnica de
-  [pair programming](https://goo.gl/uAMBX2).
-
-¿Quieres saber más forks y pull requests?
-
-* Un [fork](https://help.github.com/articles/fork-a-repo/) es una copia de un
-  repositorio en el que puedes experimentar sin afectar al repositorio original.
-  Generalmente se usa para proponer cambios al proyecto de alguien más o para
-  usar el proyecto de otra persona como punto de partida para una idea que
-  quieras realizar.
-
-* Un [pull request](https://help.github.com/articles/about-pull-requests/) (PR)
-  te permite solicitar la inclusión de cambios al repositorio original (tu punto
-  de partida) en GitHub. Cuando un PR es abierto, este permite solicitar,
-  discutir y revisar los cambios realizados con todos los colaboradores y
-  agregar otros commits antes de que los cambios sean incluidos al repositorio
-  original.
--->
-
 ***
 
 ### Conteúdo de referência
@@ -414,9 +365,6 @@ compañera:
 * [Object.entries no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
 * [Fetch API no MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [json.org](https://json.org/json-pt.html)
-<!-- * [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [datos atómicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/) -->
 * [Modulos: Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
 * [Modulos: Import](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
 
