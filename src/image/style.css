@@ -2,8 +2,8 @@ body{
     background-image: url("ceu.jpg");
     text-align: center;
     background-attachment: fixed;
-    background-color:black
     background-repeat: no-repeat; /* faz com a imagem não repita, apareça uma única vez. */
+    background-color:black;
     background-size:cover;  /* pra imagem ficar na tela toda. */
     display:block;
 }

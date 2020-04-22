@@ -12,14 +12,22 @@
 <div id="root"></div>
         <header>
 
+            <article
+  id="poke"
+  data-columns="3"
+  data-index-number="12314"
+  data-parent="cars">
+...
+</article>
+
         <form action="" id="search-form" class="search-form">
         <section">
             
             <ul>
-                <a><label for="name-search" class="name-search">Faça sua busca aqui:</label>
-                    <input type="text" id="name-search" placeholder="Nome do Pokémon"></a>
+                <label for="name-search" class="name-search">Faça sua busca aqui:</label>
+                    <input type="text" id="name-search" placeholder="Nome do Pokémon">
 
-                <a> <label for="filter-type" class="filter-type"> Filtrar por:</label>
+                 <label for="filter-type" class="filter-type"> Filtrar por:</label>
                     <select id="filter-type" class="filter-type">
                     <option id="type" value="type">Tipo</option>
                     <option id="type-water" value="type">Água</option>
@@ -38,9 +46,9 @@
                     <option id="type-ground" value="type">Terra</option>
                     <option id="type-poison" value="type">Venenoso</option>
                     <option id="type-flying" value="type">Voador</option>
-                    </select></a>
+                    </select>
 
-                <a> <label for="filter-weakness" class="filter-weakness">Filtrar por:</label>
+                <label for="filter-weakness" class="filter-weakness">Filtrar por:</label>
                     <select id="filter-weakness" class="filter-weakness">
                     <option id="type" value="type">Fraquesas</option>
                     <option id="type-water" value="type">Água</option>
@@ -59,24 +67,25 @@
                     <option id="type-ground" value="type">Terra</option>
                     <option id="type-poison" value="type">Venenoso</option>
                     <option id="type-flying" value="type">Voador</option>
-                </select></a>
-                <a> <label for="order-search" class="order-search">Ordenar por:</label>
+                </select>
+                <label for="order-search" class="order-search">Ordenar por:</label>
                     <select id="order-search" class="order-search">
                     <option value=""></option>
                     <option id="order-az" value="order-az"> Nomes A - Z</option>
                     <option id="order-za" value="order-az"> Nomes Z - A</option>
                     <option id="most-popular" value="most-popular">Mais Populares</option>
                     <option id="size" value="size"> Tamanho</option>
-                    </select></a>
+                    </select>
             </ul>
             </section>
         </form>
     </header>
 
-<main>
+<main id="pokes">
+    
 </main>
 
 <script src="main.js" type="module"></script>
 </body>
 
-</html>
+</html
