@@ -61,7 +61,7 @@ Este são os dados que propomos:
 * [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
   Este conjunto mostra a lista de campeões do jogo League of
   Legends (LoL).
-  - [Pesquisa com jogadores de LoL](src/data/lol/README.md)
+  - [Pesquisa com jogadores de LoL](src/data/lol/README.pt-BR.md)
 * [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
   Lista de personagens da série Rick & Morty. Você pode revisar a documentação
   da API neste [link](https://rickandmortyapi.com).
