@@ -1,0 +1,50 @@
+body{
+    background-image: url("ceu.jpg");
+    text-align: center;
+    background-attachment: fixed;
+    background-color:black
+    background-repeat: no-repeat; /* faz com a imagem não repita, apareça uma única vez. */
+    background-size:cover;  /* pra imagem ficar na tela toda. */
+    display:block;
+}
+
+main {
+    background-color: tomato;
+    width: 750px;
+    max-width: 85%;
+    height: 550px;
+    border-radius: 20px;
+    border-color: silver;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    align-content: center;
+    position: center;
+}
+/*header {
+    color: white;
+    font-size: 20px;
+    line-height: 25px;
+    width: 150px;
+    height: 200px;
+    padding: 10px;
+    display: table;
+    margin: 100px 20px;
+    background-color: blue;
+    border-radius: 5px;
+    position: absolute;
+}*/
+
+.search-form{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    align-content: center;
+    
+}
+© 2020 GitHub, Inc.
