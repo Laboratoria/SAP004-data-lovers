@@ -65,7 +65,7 @@ Este são os dados que propomos:
 * [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
   Lista de personagens da série Rick & Morty. Você pode revisar a documentação
   da API neste [link](https://rickandmortyapi.com).
-  - [Pesquisa com seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+  - [Pesquisa com seguidores de Rick and Morty](src/data/rickandmorty/README.pt-BR.md)
 
 ## 3. Objetivos de aprendizagem
 
