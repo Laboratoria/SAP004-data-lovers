@@ -34,7 +34,7 @@ na parte direita.
 
 ## 2. Resumo do projeto
 
-Neste projeto você **construirá uma _página web_ para visualizar um conjunto
+Neste projeto você **construirá uma _página web_ para visualizar um _conjunto
 (set) de dados_** que se adeque às necessidades de seu usuário.
 
 Como entregável final terá uma página web que permita **visualizar dados,
@@ -111,7 +111,7 @@ possa resolver o problema (ou problemas) de seu usuário.
 ### Histórias de usuário
 
 Uma vez que entenda a necessidade dos usuários, escreva as [Histórias de
-Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representem
+Usuario](https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_usu%C3%A1rio) que representem
 tudo que o usuário precisa fazer/ver. As **histórias de usuário** devem ser o
 resultado de seu processo de investigação/pesquisa de seus usuários.
 
