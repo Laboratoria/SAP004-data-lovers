@@ -1,0 +1,30 @@
+body {
+  background-image: url(img/RM_page-header_background1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  color: white;
+}
+
+#logoRM {
+  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+#rr {
+  display: block;
+  margin-top: 45px;
+  width: 300px;
+}
+
+.navbar {
+  background-image: url(img/botao.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  height: 90px;
+   
+}
