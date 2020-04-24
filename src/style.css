@@ -4,6 +4,7 @@ margin: 0px;
 font-family: Arial, Helvetica, sans-serif;
 }
 .home{ /*class da div raiz */
+    margin: 10px;
     position: absolute;
     left: 7.5%;
     width: 85%;
@@ -15,15 +16,33 @@ font-family: Arial, Helvetica, sans-serif;
     height: auto;
 }
 .card{ /* classe das novas divs */
-    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(56, 55, 55, 0.055);
+    margin: 5px;
+    padding: 5px;
     width: 15%;
     height: auto;
+    border-radius: 5%;
+}
+.card:hover{
+    background-color: yellow;
+}
+.card-information{
+    padding: 2px;
+    border-radius: 5%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.082);
 }
 .picture{ /* imagem dos pokemons*/
     margin: 5%;
     width: 75%;
     height: auto;
 }
+.picture:hover {
+    transform: scaleX(-1);
+  }
 .menu{
     padding: 1%;
     max-width: 100%;
