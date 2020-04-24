@@ -1,0 +1,28 @@
+.header {
+    background-color: green;
+}
+.button{
+   display: inline-block;
+   left: 80px;
+   
+}
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+p{
+    font-family: fantasy;
+    color: rgb(48, 65, 15);
+}
+.button{
+    
+        position: absolute;
+        margin: 1em 70em;
+        border-radius: 2px;
+        border: 1px solid rgb(82, 245, 7);
+        padding: 3px 3px;
+        font-weight: bold;
+        font-family: Arial;
+        
+}
