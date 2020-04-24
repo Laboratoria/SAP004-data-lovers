@@ -10,20 +10,19 @@
 
 <body>
 <div id="root"></div>
-        <header>
+    <header>
 
-            <article
-  id="poke"
-  data-columns="3"
-  data-index-number="12314"
-  data-parent="cars">
+    <article
+        id="poke"
+        data-columns="3"
+        data-index-number="12314"
+        data-parent="cars">
 ...
-</article>
+    </article>
 
         <form action="" id="search-form" class="search-form">
-        <section">
-            
-            <ul></ul>
+            <section">
+             <ul>
                 <label for="name-search" class="name-search">Faça sua busca aqui:</label>
                     <input type="text" id="name-search" placeholder="Nome do Pokémon">
 
@@ -51,23 +50,23 @@
 
                 <label for="filter-weakness" class="filter-weakness">Filtrar por:</label>
                     <select id="filter-weakness" class="filter-weakness">
-                    <option id="type" value="type">Fraquesas</option>
-                    <option id="type-water" value="type">Água</option>
-                    <option id="type-dragon" value="type">Dragão</option>
-                    <option id="type-elétric" value="type">Elétrico</option>
-                    <option id="type-fairy" value="type">Fada</option>
-                    <option id="type-ghost" value="type">Fantasma</option>
-                    <option id="type-fire" value="type">Fogo</option>
-                    <option id="type-ice" value="type">Gelo</option>
-                    <option id="type-bug" value="type">Inseto</option>
-                    <option id="type-fighting" value="type">Lutador</option>
-                    <option id="type-normal" value="type">Normal</option>
-                    <option id="type-rock" value="type">Pedra</option>
-                    <option id="type-plant" value="type">Planta</option>
-                    <option id="type-psychic" value="type">Psíquico</option>
-                    <option id="type-ground" value="type">Terra</option>
-                    <option id="type-poison" value="type">Venenoso</option>
-                    <option id="type-flying" value="type">Voador</option>
+                    <option value="" disabled selected>Tipo</option>
+                    <option  value="Water">Água</option>
+                    <option  value="Dragon">Dragão</option>
+                    <option  value="Electric">Elétrico</option>
+                    <option  value="Fairy">Fada</option>
+                    <option  value="Grost">Fantasma</option>
+                    <option  value="Fire">Fogo</option>
+                    <option  value="Ice">Gelo</option>
+                    <option  value="Grass">Grama</option>
+                    <option  value="Bug">Inseto</option>
+                    <option  value="Fighting">Lutador</option>
+                    <option  value="Normal">Normal</option>
+                    <option  value="Rock">Pedra</option>
+                    <option  value="Psychic">Psíquico</option>
+                    <option  value="Ground">Terrestre</option>
+                    <option  value="Poison">Venenoso</option>
+                    <option  value="Flying">Voador</option>
                 </select>
                 <label for="order-search" class="order-search">Ordenar por:</label>
                     <select id="order-search" class="order-search">
@@ -77,6 +76,7 @@
                     <option id="most-popular" value="most-popular">Mais Populares</option>
                     <option id="size" value="size"> Tamanho</option>
                     </select>
+                    <button id="play">Ir para jogo.</button>
             </ul>
             </section>
         </form>
