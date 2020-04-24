@@ -15,25 +15,25 @@ const print = pokemons => { //função para imprimir os pokemons
     img.classList.add("picture") // coloca uma classe na imagem
     cardInformation.classList.add("card-information")  
     cardInformation.innerHTML += `<br><h5>${pokemons.num}</h5>` //coloca o numero
-    cardInformation.innerHTML += `<h4>${pokemons.name}</h4>` // coloca o nome
+    cardInformation.innerHTML += `<h4>${pokemons.name}</h4>` // coloca o nameInput
     cardInformation.innerHTML +=  `<h5>${pokemons.type}</h5>` // coloca o tipo
     card.appendChild(img) //coloca a imagem na nova div
     card.appendChild(cardInformation) // coloca informações no card
     root.appendChild(card) // coloca nova div dentro da div existente
 }
-//pokemons.map(print) // percorre o array e execulta a função print
+pokemons.map(print) // percorre o array e execulta a função print
 const clearDisplay = () => root.innerHTML = ""
 
-const filtro = p => {
+const searchFunc = p => {
     clearDisplay()
-    let nome = document.getElementById("search").value
-return nome == p.name.slice(0,-(p.name.length - nome.length))
+    let nameInput = document.getElementById("search").value
+return (nameInput == p.name.slice(0,-(p.name.length - nameInput.length))|| nameInput == p.name) 
 }
 
-const searchText = ()=>{
-const filtrar = pokemons.filter(filtro)
-console.log(filtrar)
-filtrar.map(print)
+const searchName = ()=>{
+const elementSearched = pokemons.filter(searchFunc)
+console.log(elementSearched)
+elementSearched.map(print)
 }
 
-document.getElementById("search").addEventListener('input',searchText)
+document.getElementById("search").addEventListener('input',searchName)
