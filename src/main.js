@@ -21,5 +21,19 @@ const print = pokemons => { //função para imprimir os pokemons
     card.appendChild(cardInformation) // coloca informações no card
     root.appendChild(card) // coloca nova div dentro da div existente
 }
-pokemons.map(print) // percorre o array e execulta a função print
+//pokemons.map(print) // percorre o array e execulta a função print
+const clearDisplay = () => root.innerHTML = ""
 
+const filtro = p => {
+    clearDisplay()
+    let nome = document.getElementById("search").value
+return nome == p.name.slice(0,-(p.name.length - nome.length))
+}
+
+const searchText = ()=>{
+const filtrar = pokemons.filter(filtro)
+console.log(filtrar)
+filtrar.map(print)
+}
+
+document.getElementById("search").addEventListener('input',searchText)
