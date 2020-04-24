@@ -1,0 +1,41 @@
+/* . = class # = id */
+body{
+margin: 0px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.home{ /*class da div raiz */
+    position: absolute;
+    left: 7.5%;
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+    line-height: 0.5px;
+    height: auto;
+}
+.card{ /* classe das novas divs */
+    margin: 3px;
+    width: 15%;
+    height: auto;
+}
+.picture{ /* imagem dos pokemons*/
+    margin: 5%;
+    width: 75%;
+    height: auto;
+}
+.menu{
+    padding: 1%;
+    max-width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: black;
+}
+.search{
+    width: 30%;
+    height: 37%;
+    border-radius: 2%;
+    font-size: 100%;
+}
