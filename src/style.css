@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(28, 28, 129);
+}
+.header-pokemon {
+    width: 100%;
+    height: 220px;
+    text-align: center;
+}
+
+.img1-pokemon {
+    width: 320px;
+    height: 205px;
+    margin-top: auto;
+}
+
+;
