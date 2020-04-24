@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Rick and Morty</title>
-    <link rel="shortcut icon" type="image/x-icon" href=" ">
+    <link rel="shortcut icon" type="image/x-icon" href="Imagens/rickandmortyportalpequeno.jpg ">
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
   </head>
@@ -13,11 +13,30 @@
     </header>
       <div class="actions">
       <button id="btn-order-az" class="btn">Ordenar A-Z</button>
-      <button id=" " class="btn">Ordenar Z-A</button>
-    
+      <button id="btn-order-za " class="btn">Ordenar Z-A</button>
+      <select id="select-gender" class="btn">
+        <option value="gender" selected disabled>Gênero</option>
+        <option value="undefined">Indefinido</option>
+        <option value="male">Macho</option>
+        <option value="female">Fêmea</option>
+     </select>
+     <select id="select-species" class="btn">
+       <option value="specie" select disabled>Espécie</option>
+       <option value="human">Humano</option>
+       <option value="humanoide">Humanoide</option>
+       <option value="alien">Alien</option>
+       <option value="animal">Animal</option>
+      </select>
+      <select id="select-status" class="btn">
+        <option value="status" selected disabled>Status</option>
+        <option value="undefined">Indefinido</option>
+        <option value="alive">Vivo</option>
+        <option value="dead">Morto</option>
+      </select>
+           
       
-  <body>
-    <div id="root"></div>
+  
+    <!-- <div id="root"></div> -->
     <script src="main.js" type="module"></script>
   </body>
 </html>
