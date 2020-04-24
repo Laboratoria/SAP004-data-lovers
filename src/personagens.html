@@ -23,30 +23,31 @@
         <form action="" id="search-form" class="search-form">
         <section">
             
-            <ul>
+            <ul></ul>
                 <label for="name-search" class="name-search">Faça sua busca aqui:</label>
                     <input type="text" id="name-search" placeholder="Nome do Pokémon">
 
                  <label for="filter-type" class="filter-type"> Filtrar por:</label>
                     <select id="filter-type" class="filter-type">
-                    <option id="type" value="type">Tipo</option>
-                    <option id="type-water" value="type">Água</option>
-                    <option id="type-dragon" value="type">Dragão</option>
-                    <option id="type-elétric" value="type">Elétrico</option>
-                    <option id="type-fairy" value="type">Fada</option>
-                    <option id="type-ghost" value="type">Fantasma</option>
-                    <option id="type-fire" value="type">Fogo</option>
-                    <option id="type-ice" value="type">Gelo</option>
-                    <option id="type-bug" value="type">Inseto</option>
-                    <option id="type-fighting" value="type">Lutador</option>
-                    <option id="type-normal" value="type">Normal</option>
-                    <option id="type-rock" value="type">Pedra</option>
-                    <option id="type-plant" value="type">Planta</option>
-                    <option id="type-psychic" value="type">Psíquico</option>
-                    <option id="type-ground" value="type">Terra</option>
-                    <option id="type-poison" value="type">Venenoso</option>
-                    <option id="type-flying" value="type">Voador</option>
+                    <option  value="" disabled selected>Tipo</option>
+                    <option  value="Water">Água</option>
+                    <option  value="Dragon">Dragão</option>
+                    <option  value="Electric">Elétrico</option>
+                    <option  value="Fairy">Fada</option>
+                    <option  value="Grost">Fantasma</option>
+                    <option  value="Fire">Fogo</option>
+                    <option  value="Ice">Gelo</option>
+                    <option  value="Grass">Grama</option>
+                    <option  value="Bug">Inseto</option>
+                    <option  value="Fighting">Lutador</option>
+                    <option  value="Normal">Normal</option>
+                    <option  value="Rock">Pedra</option>
+                    <option  value="Psychic">Psíquico</option>
+                    <option  value="Ground">Terrestre</option>
+                    <option  value="Poison">Venenoso</option>
+                    <option  value="Flying">Voador</option>
                     </select>
+                    <button id="test-pesq">pesquisar</button>
 
                 <label for="filter-weakness" class="filter-weakness">Filtrar por:</label>
                     <select id="filter-weakness" class="filter-weakness">
@@ -81,8 +82,8 @@
         </form>
     </header>
 
-<main id="pokes">
-    
+<main>
+<div id="pokes" class="row" ></div>
 </main>
 
 <script src="main.js" type="module"></script>

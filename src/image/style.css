@@ -6,10 +6,10 @@ body{
     background-color:black;
     background-size:cover;  /* pra imagem ficar na tela toda. */
     display:block;
+    
 }
-
 main {
-    background-color: tomato;
+    background-color:rgba(71, 99, 255, 0.459);
     width: 750px;
     max-width: 85%;
     height: 550px;
@@ -21,6 +21,21 @@ main {
     padding: 5px;
     align-content: center;
     position: center;
+}
+.img{
+    display:block;
+    text-align: center;
+    width: 100%;
+    height:100%;
+   
+}
+.coluna{
+    float: left;
+    width: 20%;
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 /*header {
     color: white;
