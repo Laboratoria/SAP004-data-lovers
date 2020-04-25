@@ -18,6 +18,13 @@ function aboutTheGame() {
 aboutTheGameButton.addEvendListener('click', aboutTheGame);
 closePopupButton.addEvendListener('click', aboutTheGame);
 
+function openPopup(){
+    //FUNÇÃO DE ABRIR POPUP
+}
+function closePopup(){
+    //FUNÇÃO DE FECHAR POPUP
+}
+//------------------------------------------------------------------------
 function showCharacters() {
     /*MOSTRAR INFORMAÇÕES SOBRE OS PERSONAGENS*/
 }
@@ -33,10 +40,3 @@ function compareCharacters() {
 }
 compareButton.addEvendListener('click', compareCharacters);
 
-//-----------------------------------------------------------------------
-function openPopup(){
-    //FUNÇÃO DE ABRIR POPUP
-}
-function closePopup(){
-    //FUNÇÃO DE FECHAR POPUP
-}

@@ -25,9 +25,8 @@ header{
     font-size: 30px;
 }
 .menu li {
-    display: inline;
-    margin-right: 20px;
-    margin-left: 20px;
+    display: inline-block;
+    width: 150px;
 }
 .about-the-game-button, .characters-button, .youtube-button, .compare-button{
     border-radius: 3px;
@@ -105,17 +104,8 @@ header{
         font-size: 30px;
     }
     .menu li {
-        display: inline;
-        margin-right: 2px;
-        margin-left: 2px;
-    }
-    #compare-button li{
-        margin-right: 25px;
-        margin-left: 25px;
-    }
-    #youtube-button li{
-        margin-right: 30px;
-        margin-left: 30px;
+        display: inline-block;
+        width: 150px;
     }
     .about-the-game-button, .characters-button, .youtube-button, .compare-button{
         border-radius: 3px;
