@@ -2,29 +2,68 @@ body {
   background-image: url(img/RM_page-header_background1.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: local;
   background-clip: border-box;
   color: white;
+  margin: 0px;
+}
+
+#menu ul {
+  padding:0px;
+  margin:0px;
+  background-color:#EDEDED;
+  list-style:none;
+  text-align: center;
+  font-size: large;
+}
+
+#menu ul li { display: inline; }
+#menu ul li a {
+  padding: 6px 10px;
+  display: inline-block;
+
+  /* visual do link */
+  background-color:#EDEDED;
+  color: #333;
+  text-decoration: none;
+  border-bottom:3px solid #EDEDED;
+}
+
+#menu ul li a:hover {
+  background-color:#D6D6D6;
+  color: #6D6D6D;
+  border-bottom:3px solid #c3bd2e;
 }
 
 #logoRM {
   width: 600px;
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 #rr {
-  display: block;
-  margin-top: 45px;
+  float: left;
   width: 300px;
 }
 
-.navbar {
-  background-image: url(img/botao.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-clip: content-box;
-  height: 90px;
-   
+main {
+  margin-top: 130px;
+}
+
+.sinopse {
+  opacity: 0.7;
+  width: 400px;
+  box-sizing: content-box; 
+  display: inline-flex;
+  border-radius: 20px;
+  background-color: #146666;
+  padding: 10px;
+  text-align: justify;
+}
+
+#trailler {
+  float: right;
+  margin-right: 140px;
+  display: block;
 }

@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-         <img src="" class="d-inline-block align-top" alt="">
-          
-      </nav>
-      <img src="img/logo.png" id="logoRM" alt="logo">
-    </header>
-    <div id="rick-and-morty">
-      <img src="img/rr.png" id="rr" alt="rick-and-morty">
-    </div>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Rick and Morty</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Personagens</a></li>
+        <li><a href="#">Origem</a></li>
+      </ul>
+    </nav>
+  </header>
+  <img src="img/logo.png" id="logoRM" alt="logo">
+  <div id="rick-and-morty">
+    <img src="img/rr.png" id="rr" alt="rick-and-morty">
+  </div>
+  <main>
+    <section class="sinopse">
+  <article >Rick Sanchez é um cientista genial e alcoólatra que foi morar com a família de sua filha Beth, uma cirurgiã cardíaca 
+    de equinos. Ele divide seu tempo entre desenvolver projetos altamente tecnológicos em seu laboratório (garagem da casa de 
+    Beth) e levar seu neto de 14 anos Morty em aventuras perigosas e surreais pelo Multiverso. Combinados com tensões 
+    preexistentes dentro da família, esses eventos causam ao sensível Morty muito angústia em casa e na escola.
+  </article>
+  </section>
+  <div id="trailler">
+    <iframe width="360" height="315" src="https://www.youtube.com/embed/WNhH00OIPP0" frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+  </div>
+
+  <div id="root"></div>
+</main>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
