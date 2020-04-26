@@ -18,20 +18,24 @@ Engloba título, texto sobre a página, menu, quatro links para abrir as outras 
 Decidimos entregar na primeira sprint a página home, onde irá usar todas as funcionalidades HTML CSS e JavaScript.
 
 ![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho1.jpeg)
+HOME
+
+Em primeiro momento foi imaginado uma página limpa onde direcionasse aos outros links de busca.
 
 
 ![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho2.jpeg)
+EVENTOS
 
-
+Página onde é possível o usuário localizar novos eventos e batalhas.
 
 ![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho3.jpeg)
-
+COMUNIDADES
 
 
 ![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho4.jpeg)
 
 
 ![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho5.jpeg)
-
+POKEDÉX
 
 
