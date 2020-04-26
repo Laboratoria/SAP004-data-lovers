@@ -20,6 +20,7 @@ Decidimos entregar na primeira sprint a página home, onde irá usar todas as fu
 ![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho1.png)
 
 
+![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho2.jpeg)
 
 
 
