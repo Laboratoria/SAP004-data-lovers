@@ -18,3 +18,5 @@ Engloba título, texto sobre a página, menu, quatro links para abrir as outras 
 Decidimos entregar na primeira sprint a página home, onde irá usar todas as funcionalidades HTML CSS e JavaScript.
 
 segue abaixo rascunhos iniciais
+
+
