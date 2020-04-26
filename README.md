@@ -17,7 +17,7 @@ Engloba título, texto sobre a página, menu, quatro links para abrir as outras 
 
 Decidimos entregar na primeira sprint a página home, onde irá usar todas as funcionalidades HTML CSS e JavaScript.
 
-![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho1.png)
+![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho1.jpeg)
 
 
 ![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho2.jpeg)
@@ -31,10 +31,7 @@ Decidimos entregar na primeira sprint a página home, onde irá usar todas as fu
 ![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho4.jpeg)
 
 
-
-
 ![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho5.jpeg)
-![Image of page](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/rascunho4.jpeg)
 
 
 
