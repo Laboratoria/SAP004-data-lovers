@@ -16,3 +16,8 @@ Optamos inicialmente por cinco páginas: home, Pokedéx, Eventos, Comunidade, On
 Engloba título, texto sobre a página, menu, quatro links para abrir as outras telas, para melhor vizualização do usuário, podendo ser acessada sempre que quiser saber dados acima.
 
 Decidimos entregar na primeira sprint a página home, onde irá usar todas as funcionalidades HTML CSS e JavaScript.
+
+![Imagem](https://github.com/karina1981/SAP004-data-lovers/blob/master/img_readme/racunho1.jpeg "Rascunho Home")
+
+
+
