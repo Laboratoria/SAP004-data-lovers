@@ -3,6 +3,7 @@ html{
     background-size: 100%;
     background-repeat: inherit;
     font-family: 'Girassol';
+    cursor: url('cursor-lol.cur'), default;
 }
 header{
     background: #ffffff3d;
@@ -34,6 +35,7 @@ header{
     font-size: 25px;
     font-family: 'Girassol';
     border: solid 1px black;
+    cursor: url('cursor-lol.cur'), default;
 }
 .introduction-site{
     text-align: center;
