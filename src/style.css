@@ -15,6 +15,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: rgb(0, 119, 255);
 }
 
 .lista-pokedex {

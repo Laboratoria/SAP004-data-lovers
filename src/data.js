@@ -8,6 +8,7 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
-function filtro(){
-  
+function filtrar() {
+ const filtro = document.querySelector("#filtrar-pokemon")
 }
+  
