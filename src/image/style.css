@@ -3,34 +3,64 @@ body{
     text-align: center;
     background-attachment: fixed;
     background-repeat: no-repeat; /* faz com a imagem não repita, apareça uma única vez. */
-    background-color:rgba(104, 190, 230, 0.692);
-    background-size:cover;  /* pra imagem ficar na tela toda. */
-    display:block;
-    
+    background-size:cover;  /* pra imagem ficar na tela toda. */  
 }
-.search-form{
+.search-form {
     display: flex;
-    align-items:center ;
+    align-items: center;
     justify-content: space-between;
-    background-color: rgba(71, 99, 255, 0.616);
+    background-color: rgba(245, 245, 245, 0.5);
     color: white;
     font-size: 20px;
     border-radius: 5px;
     align-content: center;
 }
 main {
-    background-color:rgba(71, 99, 255, 0.459);
+    background-color: rgba(245, 245, 245, 0.5);
     width: 750px;
-    8max-width: 85%;
-    height: 550px;
-    border-radius: 20px;*/
+    max-width: 85%;
+    height: 5400px;
+    border-radius: 20px;
     border-color: silver;
-    margin: auto;
+    margin: 20px auto;
     position: relative;
     text-align: center;
-    padding: 5px;*/
+    padding: 5px;
     align-content: center;
-    position: center;
+}
+
+.presentation{
+    background-color: rgba(245, 245, 245, 0.5);
+    width: 200px;
+    height: 4000px;
+    border-radius: 20px;
+    border-color: silver;
+    margin: 20px auto;
+    position: relative;
+    text-align: right;
+    padding: 5px;
+    align-content: center;
+    
+}
+h1{
+    font-family: 'Bangers', cursive;
+    font-size: 50px;
+    color: rgb(231, 203, 45);
+    
+}
+button{
+    color: rgb(66, 66, 231) ;
+    font-family: 'Bangers', cursive;
+    background-color:rgb(231, 203, 45);
+}
+.btn-go{
+    width: 80px;
+    height: auto;
+    border-radius: 100%;
+    font-size: 30px;
+}
+#pokes{
+    display: block;
 }
 .img{
     display:block;
@@ -60,17 +90,7 @@ main {
     background-color: blue;
     border-radius: 5px;
     position: absolute;
-}
-
-.search-form{
-    display: flex;
-    align-items:center ;
-    justify-content: space-between;
-    background-color: blue;
-    color: white;
-    font-size: 20px;
-    border-radius: 5px;
-    align-content: center;
     
 }*/
+
 © 2020 GitHub, Inc.

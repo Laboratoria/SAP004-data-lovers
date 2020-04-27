@@ -23,8 +23,18 @@
         <form action="" id="search-form" class="search-form">
             <section">
              <ul>
-                <label for="name-search" class="name-search">Faça sua busca aqui:</label>
-                    <input type="text" id="name-search" placeholder="Nome do Pokémon">
+                <label for="name-pokemon" class="name-search">Faça sua busca aqui:</label>
+                   <!-- <input type="text" id="name-pokemon" placeholder="Nome do Pokémon">
+                    <button id="test-pesq">pesquisar</button>-->
+                   
+                    <select id="name-pokemon" class="name-pokemon">
+                    <option  value="" disabled selected>Nome</option>
+                    <option  value="0">Bulbasaur</option>
+                    <option  value="1">Ivysau</option>
+                    <option  value="2">Venusaur</option>
+                    <option  value="3">Charmander</option>
+                    </select>
+                    
 
                  <label for="filter-type" class="filter-type"> Filtrar por:</label>
                     <select id="filter-type" class="filter-type">
@@ -46,11 +56,11 @@
                     <option  value="Poison">Venenoso</option>
                     <option  value="Flying">Voador</option>
                     </select>
-                    <button id="test-pesq">pesquisar</button>
+                    
 
                 <label for="filter-weakness" class="filter-weakness">Filtrar por:</label>
                     <select id="filter-weakness" class="filter-weakness">
-                    <option value="" disabled selected>Tipo</option>
+                    <option value="" disabled selected>Fraquesa</option>
                     <option  value="Water">Água</option>
                     <option  value="Dragon">Dragão</option>
                     <option  value="Electric">Elétrico</option>
@@ -83,7 +93,11 @@
     </header>
 
 <main>
+    <p id="filtrado"></p>
 <div id="pokes" class="row" ></div>
+<button id="btn-top" class="btn-top"> Voltar ao topo</a> </button>
+<button id="btn-top-all" class="btn-top"> Ver Todos</a> </button>
+
 </main>
 
 <script src="main.js" type="module"></script>
