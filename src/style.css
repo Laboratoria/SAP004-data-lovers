@@ -6,4 +6,5 @@ body{
 }
 .footer-main{
     background-color: #2D9245;
+    display: block;
 }
