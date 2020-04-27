@@ -4,11 +4,22 @@
     left: 70%;
 }
 .image-principal {
-    display: block;
-    margin-left: auto;
-    margin-right: auto 
+    position: absolute;
+    left: 377px;
+    top: 35px;
 }
-p{
-    font-family: fantasy;
-    color: rgb(48, 65, 15);
+.text-principal{
+    position: absolute;
+    width: 1004px;
+    height: 201px;
+    left: 260px;
+    top: 684px;
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #205B2F;
 }
