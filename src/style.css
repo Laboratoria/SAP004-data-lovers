@@ -15,6 +15,10 @@ header{
     color: #97723d;
     text-shadow: 2px 3px 2px black;
 }
+a{
+    color: black;
+    text-decoration: none;
+}
 .menu ul {
     padding:0px;
     padding-bottom: 10px;
@@ -29,6 +33,9 @@ header{
     display: inline-block;
     width: 150px;
 }
+h1{
+    text-shadow: 2px 3px 2px #97723d;
+}
 .about-the-game-button, .characters-button, .youtube-button, .compare-button{
     border-radius: 3px;
     background-color: #bda275;
@@ -37,14 +44,31 @@ header{
     border: solid 1px black;
     cursor: url('cursor-lol.cur'), default;
 }
-.introduction-site{
+.introduction-site, .introduction-game, .youtubers-list, .characters-list{
     text-align: center;
-    font-size: 30px;
-    background: #ffffff3d;
+    font-size: 40px;
+    color: bold;
+    background: #ffffff;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-style: ridge;
+    border-width: 5px;
+    border-radius: 35px;
+    border-color: #97723d;
+    background: #bda275c7;
 }
-.introduction-game{
+/*.introduction-game{
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
+    color: bold;
+    background: #ffffff;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-style: ridge;
+    border-width: 5px;
+    border-radius: 35px;
+    border-color: #97723d;
+    background: #bda275c7; */
 }
 .introduction-game-popup{
     position: fixed;
