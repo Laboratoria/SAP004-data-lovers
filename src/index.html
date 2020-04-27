@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Gotta Catcha!</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <section>
+      <div class="logotipo">
+        <img class="logo" src="./pokemon.png" alt="Logo do Pokemon" />
+      </div>
+      <nav class="navBar">
+        <button>
+          <a href="http://">Pagina inicial</a>
+        </button>
+        <button>
+          <a href="http://">Pokedex</a>
+        </button>
+      </nav>
+    </section>
+  </header>
+  <main id="pokemons" class="pokedex">
+    <ul id="lista-pokemon" class="lista-pokedex"></ul>
+  </main>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
