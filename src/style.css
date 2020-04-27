@@ -1,0 +1,48 @@
+.logotipo {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(189, 9, 9);
+}
+
+.logo {
+  width: 70%;
+  height: 370px;
+}
+
+.pokedex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lista-pokedex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.lista-pokedex-link {
+  width: 30%;
+  height: 180px;
+  margin: 3px;
+  background-color: lightgray;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column-reverse;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.lista-img {
+  display: flex;
+  height: 120px;
+}

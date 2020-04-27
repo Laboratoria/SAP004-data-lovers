@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta charset="utf-8" />
+    <title>Gotta Catcha!</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="root"></div>
+    <header>
+      <div class="logotipo">
+        <img class="logo" src="./pokemon.png" alt="Logo do Pokemon" class="logo"/>
+      </div>
+      <nav>
+        <button>
+          <a href="http://">Home</a>
+        </button>
+        <button>
+          <a href="http://">Pokedex</a>
+        </button>
+        <label for="filtrar-pokemon"></label>
+        <input type="text" name="filtro" id="filtrar-pokemon">        
+      </nav>
+    </header>
+    <main id="pokemons" class="pokedex">
+      <ul id="lista-pokemon" class="lista-pokedex"></ul>
+    </main>
+    <footer class="rodape">
+      By Carolina Moscheta e Nathalia Bitener
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
