@@ -1,0 +1,186 @@
+/*Classes das cores por tipo do pokemon*/
+
+.color-aco {
+    background-color: #DAA520;
+}
+
+.color-agua {
+    background-color: #2DD0DB;
+}
+
+.color-dragao {
+    background-color: #DB3E1B;
+}
+
+.color-eletrico {
+    background-color: #D7DB1E;
+}
+
+.color-fada {
+    background-color: #D91CD1;
+}
+
+.color-fantasma {
+    background-color: #F6D7F6;
+}
+
+.color-fogo {
+    background-color: #FF8C00;
+}
+
+.color-gelo {
+    background-color: #DBDDDD;
+}
+
+.color-inseto {
+    background-color: #B1D596;
+}
+
+.color-lutador {
+    background-color: #01D4AE;
+}
+
+.color-normal {
+    background-color: #DE2626;
+}
+
+.color-noturno {
+    background-color: #000000;
+}
+
+.color-planta {
+    background-color: #59B539;
+}
+
+.color-pedra {
+    background-color: #000000;
+}
+
+.color-psiquico {
+    background-color: #1E6DE3;
+}
+
+.color-venenoso {
+    background-color: #A6A925;
+}
+
+.color-voador {
+    background-color: #0E8AA5;
+}
+
+.color-terra {
+    background-color: #976B36;
+}
+
+
+/*Demais estilizações*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.font-22 {
+    font-size: 22px;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.body-config {
+    max-width: 1024px;
+    margin: 0px auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.btn {
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0px 20px;
+    background: #FFFFFF;
+    opacity: 0.35;
+    border-radius: 25px;
+    margin-left: 7px;
+    color: black;
+}
+
+.btn-card {
+    width: 85px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+    text-align: center;
+    margin: 0px 3px 5px 0px;
+    padding: 0px;
+}
+
+.container {
+    background-color: #E5E5E5;
+    width: 1024px;
+    font-family: sans-serif;
+}
+
+.container-card {
+    width: 200px;
+    height: 200px;
+    margin: 15px 15px 15px 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    color: white;
+    border: 1px solid gray
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.flex-pok-type {
+    justify-content: flex-start;
+}
+
+.header {
+    padding: 0px 30px;
+    height: 65px;
+    background: rgba(40, 169, 146, 0.94);
+}
+
+.header-logo {
+    width: 80px;
+    height: 60px;
+}
+
+.in-block {
+    display: inline-block;
+}
+
+.logo-align {
+    margin-right: 400px;
+}
+
+.number-pok {
+    font-size: 14px;
+    float: right;
+    padding-top: 6px;
+    margin-right: 5px;
+}
+
+.pok-img {
+    width: 130px;
+    height: 110px;
+    margin: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 5px 15px;
+}
+
+.footer-page {
+    color: white;
+}
