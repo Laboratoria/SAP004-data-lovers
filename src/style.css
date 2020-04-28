@@ -86,15 +86,11 @@ h1{
     border: solid 1px black;
     border-radius: 25px;
     background: #09404ff2;
-    color: black;*/
-}
-.back-button{
-    margin-left: 98%;
-    margin-top: 2%;;
-}
+    color: black;
+}*/
 .back-to-main-page-button{
-    margin-left: 90%;
-    margin-top: 2%;
+    margin-left: 97%;
+    margin-top: 0%;
     width: 10%;
     border-radius: 20px;
 }
@@ -140,6 +136,12 @@ h1{
         display: inline-block;
         width: 150px;
     }
+    h1{
+        text-shadow: 2px 3px 2px #97723d;
+        display: inline-flexbox;
+        margin-top: 0px;
+        font-size: 30px;
+    }
     .about-the-game-button, .characters-button, .youtube-button, .compare-button{
         border-radius: 3px;
         background-color: #bda275;
@@ -177,7 +179,18 @@ h1{
         background: #ffffff3d;
         margin-top: 0%;
         font-family: 'Girassol';
-        border-radius: 10px;*/
+        border-radius: 10px;
+    }*/
+    .back-button{
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .back-to-main-page-button{
+        margin-left: 270px;
+        margin-top: 10px;
+        width: 30px;
+        height: 10%;
+        border-radius: 20px;
     }
     .made-by{
         bottom: 0;
@@ -185,4 +198,5 @@ h1{
         width: 100%;
         background: #ffffff3d;
     }
+
 }
