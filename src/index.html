@@ -7,8 +7,22 @@
   </head>
   <body>
     <header class="menu">
-      <input id ="search" type="text" class="search" placeholder="Nome do Pokémon">
-      <img src="img/icons8-search-50.png" alt="search">
+
+      <div class="menu-search">
+        <h1>Pokémon</h1>
+        <input id ="search" type="text" class="search" placeholder="Nome do Pokémon">
+        <img src="img/icons8-search-50.png" alt="search"></div>
+      <ul class="buttons">
+        <li class="menu-buttons" id="home">Pokémons</li>
+        <li class="menu-buttons" id="comparation">Comparação</li>
+        <li class="menu-buttons" id="ranking">Ranking</li>
+        <li class="menu-buttons" id="menu-filter">Filtro</li>
+      </ul>
+      <div id="filters">
+        <ul>
+          <li class="Flying power">Flying</li>
+        </ul>
+      </div>
     </header>
     <div id="root" class="home"></div> <!--class home-->
     <script src="main.js" type="module"></script>
