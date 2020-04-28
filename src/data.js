@@ -8,3 +8,4 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
+// FAZER OS FILTROS, ORDENAGENS E COMPUTESTATS AQUI. 
