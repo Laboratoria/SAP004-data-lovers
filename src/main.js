@@ -1,9 +1,12 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
+
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+const pokemonGo = data.pokemon[0];
+let box = `<img src=${pokemonGo.img}>`;
+document.getElementById("cards").innerHTML = box;
 
 
 
+console.log(box);
+  
