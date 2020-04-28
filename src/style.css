@@ -1,30 +1,158 @@
+@font-face {
+  font-family: roboto;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
 body {
-  background-image: url(img/RM_page-header_background1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-clip: border-box;
+  background-color: #081014;
   color: white;
+  margin: 0px;
+}
+
+.botao {
+  border: none;
+  background-color: #c3bd2e;
+  color: #081014;
+  padding: 25px;
+  margin-left: 25px;
+  font-size: 20px;
+  font-family: roboto;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: black;
+  font-weight: bold;
+  line-height: 10px;
+  border-radius: 10px;
+  position: relative;
+  top: 30px;
+  left: 345px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform-style: preserve-3d;
+}
+
+.botao:after {
+  top:-100% ;
+  left: 0px;
+  width: 100%;
+  padding: 25px;
+  position: absolute;
+  background: #081014;
+  color: #c2be49;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transform-origin: left bottom;
+  transform: rotateX(90deg);
+  outline: none;
+}
+.botao:hover{
+  transform-origin: center;
+  transform:rotateX(-90deg) translateY(100%);
+}
+
+.botao a:link,
+a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #081014;
+}
+
+#btn-home:after {
+  content: "Home";
+}
+
+#btn-personagens:after {
+  content: "Personagens";
+}
+
+#btn-mundos:after {
+  content: "Mundos";
 }
 
 #logoRM {
-  width: 600px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto
+  width: 415px;
+  position: absolute;
+  left: 400px;
+  top: 60px;
 }
 
-#rr {
-  display: block;
-  margin-top: 45px;
+#nave {
+  position: absolute;
+  width: 400px;
+  margin-top: 150px;
+  left: 35px;
+  transform: rotate(-25deg);
+}
+
+#portal2 {
+  position: absolute;
+  width: 350px;
+  margin-top: -50px;
+  left: 900px;
+}
+
+#title {
+  position: relative;
+  left: 356px;
   width: 300px;
+  top: 250px;
+  font-size: xx-large;
 }
 
-.navbar {
-  background-image: url(img/botao.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-clip: content-box;
-  height: 90px;
-   
+.sinopse {
+  opacity: 0.9;
+  width: 400px;
+  box-sizing: content-box; 
+  position: absolute;
+  left: 340px;
+  top: 390px;
+  border-radius: 20px;
+  background-color: #146666;
+  padding: 10px;
+  text-align: justify;
+  font-family: roboto;
 }
+
+iframe {
+  display: inline-block;
+  margin-left: 790px;
+  margin-top: 180px;
+  border-radius: 15px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 200px;
+}
+
+.made {
+  display: flex;
+  height: 20px;
+  min-height: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: #081014;
+  background-color: #c3bd2e;
+}
+
+.made a {
+  color: #081014;
+}
+
+.made a:link,
+a:visited {
+  text-decoration: none
+}
+
+.made a:hover {
+  text-decoration: underline;
+  color: #081014;
+}
+
+.made a:active {
+  text-decoration: none
+}
+
