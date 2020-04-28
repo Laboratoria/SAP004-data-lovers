@@ -14,23 +14,28 @@ font-family: sans-serif;
     line-height: 0.5px;
     height: auto;
 }
-.card{ /* classe das novas divs */
-    color:  white;
+.view-all-class{
+    font-size: large;
+    padding: 10px;
+    border-radius: 5%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    /* align-items: center; */
-    align-content: space-between;
-    /* background-color: rgba(56, 55, 55, 0.055); */
+    align-items: center;
+    justify-content: center;
+}
+.card{ /* classe das novas divs */
+    color:  rgb(83, 80, 80);
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: rgb(224, 221, 221); 
     margin: 5px;
-    padding: 5px;
-    width: 220px;
+    padding: 3px;
+    width: 235px;
     height: 130px;
     border-radius: 8%;
 }
 .card:hover{
-    background-color: rgba(10, 10, 0, 0.205); 
+    background-color: rgb(252, 228, 11);
+    color: black;
     cursor: pointer;
 }
 .card-information{
@@ -38,13 +43,13 @@ font-family: sans-serif;
     flex-direction: column;
     padding: 2px;
     /* border-radius: 5%; */
-    width: 100%;
+    width: 55%;
     /* background-color: rgba(0, 0, 0, 0.082);  */
     height: 130px;
 }
 .picture{ /* imagem dos pokemons*/
     margin: 5%;
-    width: 55%;
+    width: 45%;
     height: auto;
 }
 .picture:hover {
@@ -68,22 +73,25 @@ font-family: sans-serif;
 .filter{
     color: white;
 }
-.view-all-class{
-    background-color: rgb(58, 57, 57);
-    font-size: large;
-    padding: 10px;
-    border-style:  2px solid black;
-    border-radius: 5%;
-    display: flex;
+.power{
+    color: white;
+    width: auto;
+    height: 25px;
+    border-radius: 5px;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}.power :first-child{
+    padding: 1px;
+    margin: 1px;
+    border-radius: 5px;
 }
-.pokeball{
-    position: relative;
-    right: 5px;
+
+.Flying{
+    background-color: teal;
 }
 .Ice{
-    background-color: rgb(142, 197, 233);
+background-color: rgb(142, 197, 233);
 }
 .Grass{
 background-color: rgb(106, 230, 172);
