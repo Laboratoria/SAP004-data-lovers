@@ -34,7 +34,7 @@ na parte direita.
 
 ## 2. Resumo do projeto
 
-Neste projeto você **construirá uma _página web_ para visualizar um conjunto
+Neste projeto você **construirá uma _página web_ para visualizar um _conjunto
 (set) de dados_** que se adeque às necessidades de seu usuário.
 
 Como entregável final terá uma página web que permita **visualizar dados,
@@ -61,11 +61,11 @@ Este são os dados que propomos:
 * [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
   Este conjunto mostra a lista de campeões do jogo League of
   Legends (LoL).
-  - [Pesquisa com jogadores de LoL](src/data/lol/README.md)
+  - [Pesquisa com jogadores de LoL](src/data/lol/README.pt-BR.md)
 * [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
   Lista de personagens da série Rick & Morty. Você pode revisar a documentação
   da API neste [link](https://rickandmortyapi.com).
-  - [Pesquisa com seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+  - [Pesquisa com seguidores de Rick and Morty](src/data/rickandmorty/README.pt-BR.md)
 
 ## 3. Objetivos de aprendizagem
 
@@ -111,7 +111,7 @@ possa resolver o problema (ou problemas) de seu usuário.
 ### Histórias de usuário
 
 Uma vez que entenda a necessidade dos usuários, escreva as [Histórias de
-Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representem
+Usuario](https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_usu%C3%A1rio) que representem
 tudo que o usuário precisa fazer/ver. As **histórias de usuário** devem ser o
 resultado de seu processo de investigação/pesquisa de seus usuários.
 
