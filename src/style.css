@@ -119,6 +119,13 @@ iframe {
   border-radius: 15px;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 200px;
+}
+
 .made {
   display: flex;
   height: 20px;
