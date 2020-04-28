@@ -5,9 +5,6 @@
 
 body {
   background-color: #081014;
-  background-attachment: fixed;
-  background-size: cover;
-  background-clip: border-box;
   color: white;
   margin: 0px;
 }
@@ -26,7 +23,7 @@ body {
   line-height: 10px;
   border-radius: 10px;
   position: relative;
-  top: 35px;
+  top: 30px;
   left: 345px;
   box-sizing: border-box;
   cursor: pointer;
@@ -46,21 +43,28 @@ body {
   box-sizing: border-box;
   transform-origin: left bottom;
   transform: rotateX(90deg);
+  outline: none;
 }
 .botao:hover{
   transform-origin: center;
   transform:rotateX(-90deg) translateY(100%);
 }
 
-#btn-home:after{
+.botao a:link,
+a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #081014;
+}
+
+#btn-home:after {
   content: "Home";
 }
 
-#btn-personagens:after{
+#btn-personagens:after {
   content: "Personagens";
 }
 
-#btn-mundos:after{
+#btn-mundos:after {
   content: "Mundos";
 }
 
@@ -86,21 +90,62 @@ body {
   left: 900px;
 }
 
+#title {
+  position: relative;
+  left: 356px;
+  width: 300px;
+  top: 250px;
+  font-size: xx-large;
+}
+
 .sinopse {
   opacity: 0.9;
   width: 400px;
   box-sizing: content-box; 
   position: absolute;
   left: 340px;
-  top: 380px;
+  top: 390px;
   border-radius: 20px;
   background-color: #146666;
   padding: 10px;
   text-align: justify;
+  font-family: roboto;
 }
 
-#trailler {
- display: inline-block;
- margin-left: 790px;
- margin-top: 250px;
+iframe {
+  display: inline-block;
+  margin-left: 790px;
+  margin-top: 180px;
+  border-radius: 15px;
 }
+
+.made {
+  display: flex;
+  height: 20px;
+  min-height: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: #081014;
+  background-color: #c3bd2e;
+}
+
+.made a {
+  color: #081014;
+}
+
+.made a:link,
+a:visited {
+  text-decoration: none
+}
+
+.made a:hover {
+  text-decoration: underline;
+  color: #081014;
+}
+
+.made a:active {
+  text-decoration: none
+}
+
