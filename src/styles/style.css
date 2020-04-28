@@ -1,4 +1,25 @@
-.cards-list {
+.cards-box {
   display: flex;
   flex-wrap: wrap;
 }
+
+.cards-list {
+  background: green;
+    height: 500px;
+    color: #fff;
+    width: 315px;
+    margin: 20px;
+}
+
+.front-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 400px;
+}
+
+.back-card {
+  display: none;
+}
+
