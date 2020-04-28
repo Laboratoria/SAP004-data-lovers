@@ -15,21 +15,22 @@ font-family: sans-serif;
     height: auto;
 }
 .card{ /* classe das novas divs */
+    color:  white;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     flex-wrap: nowrap;
     /* align-items: center; */
     align-content: space-between;
-    background-color: rgba(56, 55, 55, 0.055);
+    /* background-color: rgba(56, 55, 55, 0.055); */
     margin: 5px;
     padding: 5px;
-    width: 240px;
+    width: 220px;
     height: 130px;
     border-radius: 8%;
 }
 .card:hover{
-    background-color: yellow; 
+    background-color: rgba(10, 10, 0, 0.205); 
     cursor: pointer;
 }
 .card-information{
@@ -43,7 +44,7 @@ font-family: sans-serif;
 }
 .picture{ /* imagem dos pokemons*/
     margin: 5%;
-    width: 65%;
+    width: 55%;
     height: auto;
 }
 .picture:hover {
@@ -68,7 +69,8 @@ font-family: sans-serif;
     color: white;
 }
 .view-all-class{
-    font-size: larger;
+    background-color: rgb(58, 57, 57);
+    font-size: large;
     padding: 10px;
     border-style:  2px solid black;
     border-radius: 5%;
@@ -76,6 +78,49 @@ font-family: sans-serif;
     align-items: center;
     justify-content: center;
 }
-.view-all{
-    color: black;
+.pokeball{
+    position: relative;
+    right: 5px;
+}
+.Ice{
+    background-color: rgb(142, 197, 233);
+}
+.Grass{
+background-color: rgb(106, 230, 172);
+}
+.Fire{
+background-color: orange;
+}
+.Water{
+background-color: rgb(29, 230, 209);
+}
+.Bug{
+background-color: rgb(139, 238, 119);
+}
+.Normal{
+background-color: rgb(250, 110, 100);
+}
+.Poison{
+background-color: rgb(210, 163, 214);
+}
+.Electric{
+background-color: rgb(241, 241, 98);
+}
+.Ground{
+background-color: rgb(219, 122, 58);
+}
+.Rock{
+background-color: rgb(56, 56, 56);
+}
+.Fighting{
+    background-color: coral;
+}
+.Psychic{
+    background-color: crimson;
+}
+.Ghost{
+    background-color: darkmagenta;
+}
+.Dragon{
+    background-color: rgb(226, 68, 160);
 }
