@@ -1,13 +1,13 @@
 /* . = class # = id */
 body{
 margin: 0px;
-font-family: Arial, Helvetica, sans-serif;
+font-family: sans-serif;
 }
 .home{ /*class da div raiz */
     margin: 10px;
     position: absolute;
-    left: 12.5%;
-    width: 75%;
+    left: 10%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -17,27 +17,33 @@ font-family: Arial, Helvetica, sans-serif;
 .card{ /* classe das novas divs */
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    /* align-items: center; */
     align-content: space-between;
     background-color: rgba(56, 55, 55, 0.055);
     margin: 5px;
     padding: 5px;
-    width: 180px;
-    height: 260px;
-    border-radius: 5%;
+    width: 240px;
+    height: 130px;
+    border-radius: 8%;
 }
 .card:hover{
-    background-color: yellow;
+    background-color: yellow; 
+    cursor: pointer;
 }
 .card-information{
+    display: flex;
+    flex-direction: column;
     padding: 2px;
-    border-radius: 5%;
+    /* border-radius: 5%; */
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.082);
+    /* background-color: rgba(0, 0, 0, 0.082);  */
+    height: 130px;
 }
 .picture{ /* imagem dos pokemons*/
     margin: 5%;
-    width: 75%;
+    width: 65%;
     height: auto;
 }
 .picture:hover {
@@ -60,4 +66,16 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .filter{
     color: white;
+}
+.view-all-class{
+    font-size: larger;
+    padding: 10px;
+    border-style:  2px solid black;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.view-all{
+    color: black;
 }
