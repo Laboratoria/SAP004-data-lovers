@@ -6,6 +6,131 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav class="menu-container">
+      <ul class="menu">
+        <li><a id="allCharacters">All</a></li>
+        <li>
+          <label for="drop-1" class="toggle">Status +</label>
+          <a>Status</a>
+          <input type="checkbox" id="drop-1"/>
+          <ul>
+            <li>
+              <input type="radio" name="status" id="status-alive" value="Alive" class="status"/>
+              <label for="status-alive" class="menu-item">Alive</label>
+            </li>
+            <li>
+              <input type="radio" name="status" id="status-dead" value="Dead" class="status"/>
+              <label for="status-dead" class="menu-item">Dead</label>
+            </li>
+            <li>
+              <input type="radio" name="status" id="status-unknown" value="unknown" class="status"/>
+              <label for="status-unknown" class="menu-item">Unknown</label>
+            </li>
+            </li>
+          </ul> 
+            <li>
+          <label for="drop-2" class="toggle">Species +</label>
+          <a>Species</a>
+          <input type="checkbox" id="drop-2"/>
+          <ul>
+            <li>
+              <input type="radio" name="species" id="species-alien" value="Alien" class="species">
+              <label for="species-alien" class="menu-item">Alien</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-animal" value="Animal" class="species">
+              <label for="species-animal" class="menu-item">Animal</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-cronenberg" value="Cronenberg" class="species">
+              <label for="species-cronenberg" class="menu-item">Cronenberg</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-disease" value="Disease" class="species">
+              <label for="species-disease" class="menu-item">Disease</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-human" value="Human" class="species">
+              <label for="species-human" class="menu-item">Human</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-humanoid" value="Humanoid" class="species">
+              <label for="species-humanoid" class="menu-item">Humanoid</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-mytholog" value="Mytholog" class="species">
+              <label for="species-mytholog" class="menu-item">Mytholog</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-parasite" value="Parasite" class="species">
+              <label for="species-parasite" class="menu-item">Parasite</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-poopybutthole" value="Poopybutthole" class="species">
+              <label for="species-poopybutthole" class="menu-item">Poopybutthole</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-robot" value="Robot" class="species">
+              <label for="species-robot" class="menu-item">Robot</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-unknown" value="unknown" class="species">
+              <label for="species-unknown" class="menu-item">Unknown</label>
+            </li>
+            <li>
+              <input type="radio" name="species" id="species-vampire" value="Vampire" class="species">
+              <label for="species-vampire" class="menu-item">Vampire</label>
+            </li>
+            </li>
+          </ul>
+            <li>
+          <label for="drop-3" class="toggle">Alphabetical order +</label>
+          <a>Sort</a>
+          <input type="checkbox" id="drop-3"/>
+          <ul>
+            <li>
+              <input type="radio" name="sort" id="sort-asc" value="asc" class="sort">
+              <label for="sort-asc" class="menu-item">A - Z</label>
+            </li>
+            <li>
+              <input type="radio" name="sort" id="sort-desc" value="desc" class="sort">
+              <label for="sort-desc" class="menu-item">Z - A</label>
+            </li>
+            </li>
+          </ul>
+          <li>
+          <label for="drop-4" class="toggle">Gender +</label>
+          <a>Gender</a>
+          <input type="checkbox" id="drop-4"/>
+          <ul>
+            <li>
+              <input type="radio" name="gender" id="gender-male" value="Male" class="gender">
+              <label for="gender-male" class="menu-item">Male</label>
+            </li>
+            <li>
+              <input type="radio" name="gender" id="gender-female" value="Female" class="gender">
+              <label for="gender-female" class="menu-item">Female</label>
+            </li>
+            <li>
+              <input type="radio" name="gender" id="gender-unknown" value="unknown" class="gender">
+              <label for="gender-unknown" class="menu-item">Unknown</label>
+            </li>
+            <li>
+              <input type="radio" name="gender" id="gender-genderless" value="Genderless" class="gender">
+              <label for="gender-genderless" class="menu-item">Genderless</label>
+            </li>
+            </li>
+          </ul>
+    </nav>
+    <main>
+    <section>
+      <div id="root">
+        <div id="characters" class="characters">  
+        </div>
+      </div>
+    </section>
+  </main>
+    <script src="main.js" type="module"></script>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
