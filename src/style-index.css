@@ -1,19 +1,26 @@
+.logo {
+    padding: 10px;
+}
 .button-characters{
+    color:white;
     position: relative;
-    top: 50%;
+    top: 40%;
     left: 70%;
+    font-family: questrial;
+    font-size: 20px;
+    text-decoration: none;
 }
 .image-principal {
     position: absolute;
-    left: 377px;
-    top: 35px;
+    left: 290px;
+    top: 17px;
 }
 .text-principal{
     position: absolute;
-    width: 1004px;
+    width: 1000px;
     height: 201px;
-    left: 260px;
-    top: 684px;
+    left: 180px;
+    top: 500px;
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
@@ -22,4 +29,7 @@
     text-align: center;
     letter-spacing: 0.1em;
     color: #205B2F;
+}
+.footer-main{
+    margin-top: 600px;
 }
