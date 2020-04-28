@@ -77,14 +77,13 @@ font-family: sans-serif;
     color: white;
     width: auto;
     height: 25px;
-    border-radius: 5px;
+    border-radius: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
 }.power :first-child{
     padding: 1px;
     margin: 1px;
-    border-radius: 5px;
 }
 
 .Flying{
