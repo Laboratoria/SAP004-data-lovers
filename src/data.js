@@ -14,3 +14,4 @@ export const anotherExample = () => {
 
 
 
+// FAZER OS FILTROS, ORDENAGENS E COMPUTESTATS AQUI. 
