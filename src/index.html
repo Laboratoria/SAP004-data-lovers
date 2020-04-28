@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>League of Legends Tool</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="favicon2.ico" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" href="favicon2.ico"/>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    <div class="header-link"><a href="index.html">
-    <header title="League of Legends Tool - Main Page">League of Legends Tool</header>
-  </a>
-  </div>
+      rel="stylesheet"/>
+    <div class="header-link">
+      <a href="index.html">
+        <header title="League of Legends Tool - Main Page">League of Legends Tool</header>
+      </a>
+   </div>
   </head>
 
   <body>
@@ -21,16 +21,16 @@
       <ul>
         <form method="post" id="buttons-form">
           <button class="about-the-game-button">
-            <li><a href="about-the-game.html">Sobre o Jogo</a></li>
+            <li><a href="#about-the-game-div">Sobre o Jogo</a></li> <!--FAZER UM TESTE TIRANDO AS LI-->
           </button>
           <button class="characters-button">
-            <li><a href="characters.html">Personagens</a></li>
+            <li><a href="#characters-div">Campeões</a></li> <!--FAZER UM TESTE TIRANDO AS LI-->
           </button>
           <button class="youtube-button">
-            <li><a href="youtube.html">Youtube</a></li>
+            <li><a href="#youtube-div">Youtube</a></li> <!--FAZER UM TESTE TIRANDO AS LI-->
           </button>
           <button class="compare-button">
-            <li><a href="compare.html">Compare</a></li>
+            <li><a href="#compare-div">Compare</a></li> <!--FAZER UM TESTE TIRANDO AS LI-->
           </button>
         </form>
       </ul>
@@ -43,6 +43,39 @@
         encontrar desde informações mais básicas sobre cada um dos Campeões, até 
         informações sobre youtubers mulheres que também são jogadoras de League of Legends.</p>
     </div>
+    <br />
+    <div class="introduction-game" id="about-the-game-div">
+      <div class="back-button"><a href="#"><button class="back-to-main-page-button">Voltar ao topo ⇞</button></a></div>
+      <h1>Sobre o Jogo</h1>
+    <p>League of Legends é um jogo de estratégia em que duas equipes de cinco
+      poderosos Campeões se enfrentam para destruir a base uma da outra. Escolha
+      entre mais de 140 Campeões para realizar jogadas épicas, assegurar abates
+      e destruir torres conforme você luta até a vitória.</p>
+  </div>
+  <br />
+    <div class="characters-list" id="characters-div">
+      <div class="back-button"><a href="#"><button class="back-to-main-page-button">Voltar ao topo ⇞</button></a></div>
+      <h1>Campeões</h1>
+      <p>PERSONAGENS DO JOGO</p>
+    </div>
+    <br />
+    <div class="youtubers-list" id="youtube-div">
+      <div class="back-button"><a href="#"><button class="back-to-main-page-button">Voltar ao topo ⇞</button></a></div>
+      <h1>Youtubers Mulheres</h1>
+    <p>
+        <ul>
+            <li>Thaiga</li> <!--COLOCAR OS LINKS E INFORMAÇÕES-->
+            <li>Queen</li> <!--COLOCAR OS LINKS E INFORMAÇÕES-->
+            <li>Riyuuka</li> <!--COLOCAR OS LINKS E INFORMAÇÕES-->
+        </ul>
+    </p>
+  </div>
+  <br />
+  <div class="compare-characters" id="compare-div">
+    <div class="back-button"><a href="#"><button class="back-to-main-page-button">Voltar ao topo ⇞</button></a></div>
+    <h1>Compare Campeões</h1>
+  <p>COMPARE CAMPEÕES</p>
+</div>
     <footer class="made-by">Copyright (c) 2020 by Amanda e Larissa</footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
