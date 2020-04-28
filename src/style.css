@@ -1,0 +1,117 @@
+.characters {
+    text-align: center;
+    padding: 10px 0 0 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.character {
+    background-color: rgb(154, 155, 154);
+    text-transform: uppercase;
+    font-size:12px;
+    line-height: 1.5;
+    margin:10px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    width: 120px;
+    height: 150px;
+}
+
+.character-image {
+    width:100px;
+    height: 100px;
+}
+
+.status, .species, .sort, .gender {
+    display: none;
+}
+
+body {
+	background-image:  url("imagens/tela-01.png");
+	line-height: 32px;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*menu*/
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+.menu-item {
+	width: 100%;
+	display: inline-block;
+}
+
+.menu-container { 
+	margin:0;
+	padding: 0;
+    background-color: #dfe0e086;
+    display:flex;
+    justify-content: center;
+}
+
+.menu-container:after {
+	content:"";
+	display:table;
+	clear:both;
+	
+}
+
+.menu-container ul {
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+}
+
+.menu-container ul li {
+	margin: 0px;
+	display:inline-block;
+}
+
+.menu-container a {
+	display:block;
+	padding:14px 20px;
+	color:rgb(85, 84, 84);
+	font-size:17px;
+	text-decoration:none;
+}
+
+.menu-container ul li ul li:hover { background: #7ee0c3; }
+
+.menu-container a:hover { 
+	background-color: #41aa8b; 
+}
+
+.menu-container ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; 
+	background-color: #4cc4a0;
+}
+.menu-container ul li:hover > ul {
+	display:inherit;
+}
+	
+.menu-container ul ul li {
+	width:170px;
+	display:list-item;
+	position: relative;
+}
+
+.menu-container ul ul ul li {
+	position: relative;
+	top:-60px;
+	left:170px; 
+}
+
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+/*fim do menu*/
