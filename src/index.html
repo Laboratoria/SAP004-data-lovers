@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
+    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+</head>
+
+<body class="body-config">
+    <div id="root">
+
+        <!-- Container principal-->
+        <div class="container font-22">
+
+            <!--cabeçalho da pagina-->
+            <header class="header flex">
+                <div class="logo-align">
+                    <img src="../assets/logo.png">
+                </div>
+
+                <div class="btn">
+                    Filtrar
+                </div>
+                <div class="btn">
+                    Ordenar
+                </div>
+                <input class="btn font-22" placeholder="Buscar">
+            </header>
+            <!--//fim cabeçalho-->
+
+            <!-- tela de cards-->
+            <main>
+                <!--template do card-->
+                <section id="card001" class="container-card">
+                    <header>
+                        <h4 class="in-block name-pok-spacing ">Name</h4>
+                        <div class="number-pok bold ">#000</div>
+                    </header>
+                    <aside class="flex-pok-type flex ">
+                        <div class="btn btn-card bold ">Tipo
+                        </div>
+                        <div class="btn btn-card bold ">Tipo
+                        </div>
+                    </aside>
+                    <figure>
+                        <img class="pok-img " src=" ../assets/ ">
+                    </figure>
+                </section>
+            </main>
+            <!--//fim tela de cards-->
+            <footer class="color-noturno footer-page">
+                Rodapé
+            </footer>
+        </div>
+        <!-- //fim container-->
+
+
+    </div>
+    <script src="main.js " type="module "></script>
+</body>
+
 </html>
