@@ -6,6 +6,10 @@ body{
     background-blend-mode: soft-light;
 }
 
+p{
+    font-family: 'Friz Quadrata Std',sans-serif;
+}
+
 /****** Menus*********************************************************/
 .nav{
     position: relative;
@@ -23,12 +27,11 @@ body{
     left: 35%;   
     z-index: -1;       
 }
-p{
-    font-family: 'Friz Quadrata Std',sans-serif;
-}
+
 a:hover, a{
     color: white;
-    text-decoration: none;   
+    text-decoration: none; 
+    outline: none;   
 }
 
 .link {
@@ -41,7 +44,7 @@ a:hover, a{
 	cursor:pointer;
 	color:#ffffff;
 	font-family:'Friz Quadrata Std',sans-serif;
-     font-size:14px;
+    font-size:14px;
 	padding:15px 23px;
 	text-decoration:none;
 	text-shadow:-2px 2px 3px #ce6d39;
@@ -60,6 +63,7 @@ a:hover, a{
     border-radius:18px;
     color:#ffffff;
     border:2px solid #0b0e07;
+    outline: none;
 }
 /*****************************Texto Sobre********************************/
 
@@ -91,14 +95,13 @@ a:hover, a{
     line-height: 1.5;
     color: white;
     margin:5px ;
+    outline: none;
 }
 
 #lol-list{
     position: absolute;
     top:30%;
 }
-  
-
 .card{
     display: inline-block;
     clear: both;
