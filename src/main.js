@@ -1,11 +1,23 @@
-import { example } from './data.js';
-<<<<<<< HEAD
+//import { example } from './data.js';
 import data from './data/lol/lol.js';
 
-=======
-// import data from './data/lol/lol.js';
-import data from './data/lol/lol.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+document.getElementById("show-champions").addEventListener("click", showChampions);
 
-console.log(example, data);
->>>>>>> refs/remotes/origin/master
+function showChampions() {  
+    for (let persona in data.data){ 
+    document.getElementById("see-characters-here").innerHTML += `
+    <hr>
+    <img src="${data.data[persona].img}"> <br>
+    ${persona} <br>    
+    ${data.data[persona].title} <br>
+    ${data.data[persona].tags} <br>
+    <hr>
+    `;
+    };
+};
+
+
+
+
+     
+    
