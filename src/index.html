@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Gotta Catcha!</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header>
+<head>
+  <meta charset="utf-8" />
+  <title>Gotta Catcha!</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <section>
       <div class="logotipo">
-        <img class="logo" src="./pokemon.png" alt="Logo do Pokemon" class="logo"/>
+        <img class="logo" src="./pokemon.png" alt="Logo do Pokemon" />
       </div>
-      <nav>
+      <nav class="navBar">
         <button>
-          <a href="http://">Home</a>
+          <a href="http://">Pagina inicial</a>
         </button>
         <button>
           <a href="http://">Pokedex</a>
         </button>
-        <label for="filtrar-pokemon"></label>
-        <input type="text" name="filtro" id="filtrar-pokemon">        
       </nav>
-    </header>
-    <main id="pokemons" class="pokedex">
-      <ul id="lista-pokemon" class="lista-pokedex"></ul>
-    </main>
-    <footer class="rodape">
-      By Carolina Moscheta e Nathalia Bitener
-    </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+    </section>
+    <section> Filtrar
+      <label for="filtro">Tipo</label>
+      <input list="tipos" name="filtrar" id="filtro" class="filtrar-pokemon" />
+      <datalist id="tipos">
+        <option value="Grass">
+        <option value="Poison">
+        <option value="Fire">
+        <option value="Flying">
+        <option value="Water">
+        <option value="Bug">
+        <option value="Electric">
+        <option value="Ground">
+        <option value="Fighting">
+        <option value="Psychic">
+        <option value="Rock">
+        <option value="Ice">
+        <option value="Ghost">
+        <option value="Dragon">
+        <option value="Normal">
+      </datalist>
+      <input type="button" value="ok" id="botao-ok" class="ok">
+      <input type="button" value="Limpar filtro" id="botao-limpar" class="botao-limpar-filro">
+    </section>
+  </header>
+  <main id="pokemons" class="pokedex">
+    <ul id="lista-pokemon" class="lista-pokedex"></ul>
+  </main>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
