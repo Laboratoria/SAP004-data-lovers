@@ -1,0 +1,126 @@
+body{
+    background-image: url("image/lol-background3.jpg");
+    opacity: 90%;  
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    background-blend-mode: soft-light;
+}
+
+/****** Menus*********************************************************/
+.nav{
+    position: relative;
+    bottom:40%;
+    padding: 19px;
+    height: 300px;
+    line-height: 1.5;
+    color: white;
+    margin:5px ;
+}
+
+.logo{
+    position: absolute;
+    bottom: 60%;
+    left: 35%;   
+    z-index: -1;       
+}
+p{
+    font-family: 'Friz Quadrata Std',sans-serif;
+}
+a:hover, a{
+    color: white;
+    text-decoration: none;   
+}
+
+.link {
+	box-shadow:inset 0px -3px 7px 0px #f17f42;
+	background:linear-gradient(to bottom, #ce6d39 5%, #f17f42 100%);
+	background-color:#ce6d39;
+	border-radius:41px;
+	border:2px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Friz Quadrata Std',sans-serif;
+     font-size:14px;
+	padding:15px 23px;
+	text-decoration:none;
+	text-shadow:-2px 2px 3px #ce6d39;
+}
+.link:hover {
+	background:linear-gradient(to bottom, #f17f42 5%, #ce6d39 100%);
+	background-color:#f17f42;
+}
+
+
+.order{
+    box-shadow:inset 0px -3px 7px 0px #f17f42;
+	background:linear-gradient(to bottom, #ce6d39 5%, #f17f42 100%);
+    background-color:#ce6d39;
+    font-family: 'Friz Quadrata Std',sans-serif;
+    border-radius:18px;
+    color:#ffffff;
+    border:2px solid #0b0e07;
+}
+/*****************************Texto Sobre********************************/
+
+.about-text{
+    font-family: 'Friz Quadrata Std',sans-serif;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align:center;
+    position: absolute;
+    top:30%;
+    margin: 5px;
+}
+
+.nav-sobre{
+    position: absolute;
+    bottom:40%;
+    padding: 19px;
+    height: 300px;
+    line-height: 1.5;
+    color: white;
+    margin:5px ;
+}
+.nav-form{
+    position: relative;
+    float: right;
+    bottom:40%;
+    padding: 19px;
+    height: 300px;
+    line-height: 1.5;
+    color: white;
+    margin:5px ;
+}
+
+#lol-list{
+    position: absolute;
+    top:30%;
+}
+  
+
+.card{
+    display: inline-block;
+    clear: both;
+    font-family: 'Friz Quadrata Std',sans-serif;
+    color: white;
+    width: 170px;
+    min-width: 100px;
+    height: 250px;
+    margin: 10px;
+    padding: 2px;
+    border-radius: 10%;
+    text-align: center;
+    position: relative;
+    left: 5%;   
+    bottom: 50%;
+    background-image: radial-gradient(circle, #9055a2, #7b4d93, #674684, #543d74, #433564, #382f5b, #2e2a52, #242449, #1c2045, #141d41, #0b193c, #011638);
+    border: 2px solid black;
+}
+    
+
+
+
+   
+
+
