@@ -32,6 +32,8 @@ function showChampions() {
     <hr>
     `;
     };
+
+    
 };
 
 function showAboutGame(){

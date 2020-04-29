@@ -1,5 +1,6 @@
 *{
     cursor: url('cursor-lol.cur'), default;
+    font-family: 'Cinzel', serif;
 }
 
 html{
@@ -8,18 +9,18 @@ html{
     background-position: right top;
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Girassol';
 }
 
 header{
     background: #ffffff3d;
-    font-size: 100px;
+    font-size: 90px;
     text-align: center;
-    border-style: double;
-    border-color: black;
-    border-width: 15px;
     color: #97723d;
     text-shadow: 2px 3px 2px black;
+    border-style: ridge;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #97723d;
 }
 
 
@@ -28,10 +29,10 @@ header{
     padding-bottom: 10px;
     padding-top: 10px;
     margin:0px;
-    background-color: #ffffff3d;
+    border-radius: 20px;
     list-style: none;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .menu li {
@@ -45,46 +46,43 @@ h1{
     margin-top: 0%;
 }
 
-.about-the-game-button, .characters-button, .youtube-button, .compare-button{
+.style-buttons{
     border-radius: 3px;
     background-color: #bda275;
-    font-size: 25px;
-    font-family: 'Girassol';
+    font-size: 18px;
     border: solid 1px black;
 }
 
-.introduction-site, .introduction-game, .youtubers-list, .characters-list, .compare-characters{
+.style-view{
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     color: bold;
-    background: #ffffff;
     padding-left: 25px;
     padding-right: 25px;
     border-style: ridge;
     border-width: 5px;
-    border-radius: 35px;
+    border-radius: 20px;
     border-color: #97723d;
     background: #bda275c7;
 }
 
-.back-button{
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: 730px;
-}
-
-}
 .made-by{
     text-align: center;
     bottom: 0;
     position: end;
     width: 100%;
+    border-radius: 10px;
     background: #ffffff3d;
 }
 
 .insivible-class{
     visibility: hidden;
     display: none;
+}
+
+
+#see-characters-here{
+    
 }
 
 
@@ -140,18 +138,14 @@ h1{
         background: #ffffff3d;
         background: #bda275c7;
     }
-    .back-button{
-        margin-bottom: 0px;
-        margin-top: 0px;
-        margin-left: 2px;
-    }
+    
   
     }
     .made-by{
+        text-align: center;
         bottom: 0;
         position: end;
         width: 100%;
         background: #ffffff3d;
     }
 
-}
