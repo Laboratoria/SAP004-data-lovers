@@ -10,14 +10,12 @@
   <body>
 
     <div class="header-link">
-      <a href="index.html">
         <header title="League of Legends Tool - Main Page">League of Legends Tool</header>
-      </a>
    </div>
 
     <nav class="menu">
       <ul>
-        <button class="about-the-game-button">
+        <button id="about-game" class="about-the-game-button">
           <li>Sobre o Jogo</li>
         </button> 
 
@@ -25,13 +23,13 @@
         <li>Campeões</li>
         </button>
 
-        <button class="youtube-button">
-        <li>Youtube</li>
-        </button>
-
-        <button class="compare-button">
+        <button id="compare-champ-but" class="compare-button">
         <li>Compare</li>
         </button>
+
+        <button id="but-youtube" class="youtube-button">
+          <li>Youtube</li>
+          </button>
       </ul>        
       
     </nav>
@@ -40,7 +38,7 @@
 
     <section>
       <main>
-        <div class="introduction-site">
+        <div id="lol-too-intro" class="introduction-site">
           <h1>League of Legends Tool</h1>
           <p>O League of Legends Tool é um site que reúne as informações mais importantes
           e mais requisitadas pelas jogadoras do, tão famoso, League of Legends. Aqui é possível 
@@ -50,8 +48,7 @@
       </main>
     
 
-      <div class="introduction-game" id="about-the-game-div">
-      <div class="back-button"><a href="#"><button class="back-to-main-page-button">⇞</button></a></div>
+      <div id="about-the-game-div" class="introduction-game insivible-class">
       <h1>Sobre o Jogo</h1>
       <p>League of Legends é um jogo de estratégia em que duas equipes de cinco
       poderosos Campeões se enfrentam para destruir a base uma da outra. Escolha
@@ -60,10 +57,24 @@
       </div>
     
 
-      <div class="characters-list" id="characters-div">
-      <div class="back-button"><a href="#"><button class="back-to-main-page-button">⇞</button></a></div>
+      <div id="characters-div" class="characters-list insivible-class">
       <h1>Campeões</h1>
       <div id="see-characters-here"></div>
+      </div>
+
+      <div id="compare-champions" class="characters-list insivible-class">
+        <p>Compare Campeões</p>
+      </div>
+
+      <div id="youtube-media" class="characters-list insivible-class">
+        <h1>Youtubers Mulheres</h1>
+      <p>
+          <ul>
+              <li>Thaiga</li> 
+              <li>Queen</li> 
+              <li>Riyuuka</li>
+          </ul>
+      </p>
       </div>
     </section>
 

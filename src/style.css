@@ -1,3 +1,7 @@
+*{
+    cursor: url('cursor-lol.cur'), default;
+}
+
 html{
     background-image: url("wallpaper.jpg");
     background-repeat: no-repeat;
@@ -5,8 +9,8 @@ html{
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Girassol';
-    cursor: url('cursor-lol.cur'), default;
 }
+
 header{
     background: #ffffff3d;
     font-size: 100px;
@@ -17,11 +21,8 @@ header{
     color: #97723d;
     text-shadow: 2px 3px 2px black;
 }
-a{
-    color: black;
-    text-decoration: none;
-    cursor: url('cursor-lol.cur'), default;
-}
+
+
 .menu ul {
     padding:0px;
     padding-bottom: 10px;
@@ -32,23 +33,26 @@ a{
     text-align: center;
     font-size: 30px;
 }
+
 .menu li {
     display: inline-block;
     width: 150px;
 }
+
 h1{
     text-shadow: 2px 3px 2px #97723d;
     display: inline-flexbox;
     margin-top: 0%;
 }
+
 .about-the-game-button, .characters-button, .youtube-button, .compare-button{
     border-radius: 3px;
     background-color: #bda275;
     font-size: 25px;
     font-family: 'Girassol';
     border: solid 1px black;
-    cursor: url('cursor-lol.cur'), default;
 }
+
 .introduction-site, .introduction-game, .youtubers-list, .characters-list, .compare-characters{
     text-align: center;
     font-size: 40px;
@@ -62,21 +66,13 @@ h1{
     border-color: #97723d;
     background: #bda275c7;
 }
+
 .back-button{
     margin-bottom: 0px;
     margin-top: 0px;
     margin-left: 730px;
 }
-.back-to-main-page-button{
-    margin-left: 500px;
-    margin-top: 0px;
-    width: 7%;
-    border-radius: 20px;
-    background-color: #bda275;
-    font-size: 25px;
-    font-family: 'Girassol';
-    border: solid 1px black;
-    cursor: url('cursor-lol.cur'), default;
+
 }
 .made-by{
     text-align: center;
@@ -84,6 +80,11 @@ h1{
     position: end;
     width: 100%;
     background: #ffffff3d;
+}
+
+.insivible-class{
+    visibility: hidden;
+    display: none;
 }
 
 
@@ -144,12 +145,7 @@ h1{
         margin-top: 0px;
         margin-left: 2px;
     }
-    .back-to-main-page-button{
-        margin-left: 270px;
-        margin-top: 10px;
-        width: 30px;
-        height: 10%;
-        border-radius: 20px;
+  
     }
     .made-by{
         bottom: 0;
