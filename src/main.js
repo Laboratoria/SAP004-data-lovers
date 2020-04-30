@@ -1,92 +1,105 @@
 //import { example } from './data.js';
-import data from './data/lol/lol.js';
 
-document.getElementById("show-champions").addEventListener("click", showChampions);
-document.getElementById("about-game").addEventListener("click", showAboutGame);
-document.getElementById("compare-champ-but").addEventListener("click", showCompChan);
-document.getElementById("but-youtube").addEventListener("click", showYoutubers);
+import data from "./data/lol/lol.js";
+import lol from "./data/lol/lol.js";
 
-function showChampions() {  
-    document.getElementById("characters-div").style.visibility = "visible"; 
-    document.getElementById("characters-div").style.display = "block";
+const aboutGameButton = document.getElementById("about-game");
+aboutGameButton.addEventListener("click", showAboutGame);
 
-    document.getElementById("lol-too-intro").style.visibility = "hidden"; 
-    document.getElementById("lol-too-intro").style.display = "none"; 
+const showChampionsButton = document.getElementById("show-champions");
+showChampionsButton.addEventListener("click", showChampions);
 
-    document.getElementById("about-the-game-div").style.visibility = "hidden"; 
-    document.getElementById("about-the-game-div").style.display = "none"; 
+const compareChampionButton = document.getElementById("compare-champ-but");
+compareChampionButton.addEventListener("click", showCompChan);
 
-    document.getElementById("compare-champions").style.visibility = "hidden"; 
-    document.getElementById("compare-champions").style.display = "none"; 
+const youtubeButton = document.getElementById("but-youtube");
+youtubeButton.addEventListener("click", showYoutubers);
 
-    document.getElementById("youtube-media").style.visibility = "hidden"; 
-    document.getElementById("youtube-media").style.display = "none"; 
+const charactersDiv = document.getElementById("characters-div");
+const lolToolIntro = document.getElementById("lol-too-intro");
+const aboutTheGameDiv = document.getElementById("about-the-game-div");
+const compareChampion = document.getElementById("compare-champions");
+const youtubeMedia = document.getElementById("youtube-media");
+// DECLAREI VARIÁVEIS PARA OS BOTÕES PARA FICAR MAIS FÁCIL DE TRABALHAR, AO INVÉS DE SEMPRE CHAMAR COM getElementeById
+function showChampions() {
+  charactersDiv.style.visibility = "visible";
+  charactersDiv.style.display = "block";
 
-    for (let persona in data.data){ 
+  lolToolIntro.style.visibility = "hidden";
+  lolToolIntro.style.display = "none";
+
+  aboutTheGameDiv.style.visibility = "hidden";
+  aboutTheGameDiv.style.display = "none";
+
+  compareChampion.style.visibility = "hidden";
+  compareChampion.style.display = "none";
+
+  youtubeMedia.style.visibility = "hidden";
+  youtubeMedia.style.display = "none";
+
+  for (let persona in data.data) {
     document.getElementById("see-characters-here").innerHTML += `
     <hr>
+    <div>
     <img src="${data.data[persona].img}"> <br>
-    ${persona} <br>    
+    Name: ${persona} <br>    
     ${data.data[persona].title} <br>
-    ${data.data[persona].tags} <br>
+    Role: ${data.data[persona].tags} <br>
+    </div>
     <hr>
     `;
-    };
+  }
+} 
+var texto = document.getElementById("aba-per").innerHTML;
+texto = texto.replace("→", "<br/>");
 
-    
-};
+function showAboutGame() {
+  charactersDiv.style.visibility = "hidden";
+  charactersDiv.style.display = "none";
 
-function showAboutGame(){
-    document.getElementById("characters-div").style.visibility = "hidden"; 
-    document.getElementById("characters-div").style.display = "none";
+  lolToolIntro.style.visibility = "hidden";
+  lolToolIntro.style.display = "none";
 
-    document.getElementById("lol-too-intro").style.visibility = "hidden"; 
-    document.getElementById("lol-too-intro").style.display = "none"; 
+  aboutTheGameDiv.style.visibility = "visible";
+  aboutTheGameDiv.style.display = "block";
 
-    document.getElementById("about-the-game-div").style.visibility = "visible"; 
-    document.getElementById("about-the-game-div").style.display = "block"; 
+  compareChampion.style.visibility = "hidden";
+  compareChampion.style.display = "none";
 
-    document.getElementById("compare-champions").style.visibility = "hidden"; 
-    document.getElementById("compare-champions").style.display = "none"; 
+  youtubeMedia.style.visibility = "hidden";
+  youtubeMedia.style.display = "none";
+}
 
-    document.getElementById("youtube-media").style.visibility = "hidden"; 
-    document.getElementById("youtube-media").style.display = "none";
-};
+function showCompChan() {
+  charactersDiv.style.visibility = "hidden";
+  charactersDiv.style.display = "none";
 
-function showCompChan(){
-    document.getElementById("characters-div").style.visibility = "hidden"; 
-    document.getElementById("characters-div").style.display = "none";
+  lolToolIntro.style.visibility = "hidden";
+  lolToolIntro.style.display = "none";
 
-    document.getElementById("lol-too-intro").style.visibility = "hidden"; 
-    document.getElementById("lol-too-intro").style.display = "none"; 
+  aboutTheGameDiv.style.visibility = "hidden";
+  aboutTheGameDiv.style.display = "none";
 
-    document.getElementById("about-the-game-div").style.visibility = "hidden"; 
-    document.getElementById("about-the-game-div").style.display = "none"; 
+  compareChampion.style.visibility = "visible";
+  compareChampion.style.display = "block";
 
-    document.getElementById("compare-champions").style.visibility = "visible"; 
-    document.getElementById("compare-champions").style.display = "block"; 
+  youtubeMedia.style.visibility = "hidden";
+  youtubeMedia.style.display = "none";
+}
 
-    document.getElementById("youtube-media").style.visibility = "hidden"; 
-    document.getElementById("youtube-media").style.display = "none";
-};
+function showYoutubers() {
+  charactersDiv.style.visibility = "hidden";
+  charactersDiv.style.display = "none";
 
-function showYoutubers(){
-    document.getElementById("characters-div").style.visibility = "hidden"; 
-    document.getElementById("characters-div").style.display = "none";
+  lolToolIntro.style.visibility = "hidden";
+  lolToolIntro.style.display = "none";
 
-    document.getElementById("lol-too-intro").style.visibility = "hidden"; 
-    document.getElementById("lol-too-intro").style.display = "none"; 
+  aboutTheGameDiv.style.visibility = "hidden";
+  aboutTheGameDiv.style.display = "none";
 
-    document.getElementById("about-the-game-div").style.visibility = "hidden"; 
-    document.getElementById("about-the-game-div").style.display = "none"; 
+  compareChampion.style.visibility = "hidden";
+  compareChampion.style.display = "none";
 
-    document.getElementById("compare-champions").style.visibility = "hidden"; 
-    document.getElementById("compare-champions").style.display = "none"; 
-
-    document.getElementById("youtube-media").style.visibility = "visible"; 
-    document.getElementById("youtube-media").style.display = "block";
-};
-
-
-     
-    
+  youtubeMedia.style.visibility = "visible";
+  youtubeMedia.style.display = "block";
+}
