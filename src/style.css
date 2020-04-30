@@ -1,0 +1,141 @@
+*{
+    cursor: url('cursor-lol.cur'), default;
+    font-family: 'Cinzel', serif;
+}
+
+html{
+    background-image: url("wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header{
+    background: #ffffff3d;
+    font-size: 90px;
+    text-align: center;
+    color: #97723d;
+    text-shadow: 2px 3px 2px black;
+    border-style: ridge;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #97723d;
+}
+
+
+.menu ul {
+    padding:0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin:0px;
+    border-radius: 20px;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    width: 150px;
+}
+
+h1{
+    text-shadow: 2px 3px 2px #97723d;
+    display: inline-flexbox;
+    margin-top: 0%;
+}
+
+.style-buttons{
+    border-radius: 3px;
+    background-color: #bda275;
+    font-size: 18px;
+    border: solid 1px black;
+}
+
+.style-view{
+    text-align: center;
+    font-size: 30px;
+    color: bold;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-style: ridge;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #97723d;
+    background: #bda275c7;
+}
+
+.made-by{
+    text-align: center;
+    bottom: 0;
+    position: end;
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff3d;
+}
+
+.insivible-class{
+    visibility: hidden;
+    display: none;
+}
+
+/*VERSÃO MOBILE*/
+@media only screen and (max-width: 800px){
+    html{
+        background-image: url("seamless-wallpaper-mobile.jpg");
+        background-size: 100%;
+        background-repeat: inherit;
+        font-family: 'Girassol';
+    }
+    header{
+        background: #ffffff3d;;
+        font-size: 50px;
+        text-align: center;
+        border-style: double;
+        border-color: black;
+        border-width: 15px;
+        color: #97723d;
+        text-shadow: 2px 3px 2px black;
+    }
+    .menu ul {
+        padding:0px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin:0px;
+        background-color: #ffffff3d;;
+        list-style: none;
+        text-align: center;
+        font-size: 30px;
+    }
+    .menu li {
+        display: inline-block;
+        width: 150px;
+    }
+    h1{
+        text-shadow: 2px 3px 2px #97723d;
+        display: inline-flexbox;
+        margin-top: 0px;
+        font-size: 30px;
+    }
+    .about-the-game-button, .characters-button, .youtube-button, .compare-button{
+        border-radius: 3px;
+        background-color: #bda275;
+        font-size: 20px;
+        font-family: 'Girassol';
+        border: solid 1px black;
+    }
+    .introduction-site, .introduction-game, .youtubers-list, .characters-list, .compare-characters{
+        text-align: center;
+        font-size: 20px;
+        background: #ffffff3d;
+        background: #bda275c7;
+    }
+    .made-by{
+        text-align: center;
+        bottom: 0;
+        position: end;
+        width: 100%;
+        background: #ffffff3d;
+    }
+}
