@@ -28,7 +28,7 @@ import data from './data/pokemon/pokemon.js';
 function loadCards() {
     for (let i = 0; i < data["pokemon"].length; i++) {
         //Clonar estrutura dos cards
-        let cloneCard = document.querySelector().cloneNode(true)
+        let cloneCard = document.querySelector('.container-card').cloneNode(true)
         '.container-card';
         document.querySelector('.container-deck').appendChild(cloneCard);
         //Modificar nome
