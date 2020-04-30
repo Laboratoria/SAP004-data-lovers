@@ -1,9 +1,9 @@
-import datum from '../data/rickandmorty/rickandmorty.js';
+import { cardsBox } from './selectors.js';
 
 const createCharacter = (character) => `
-<li class="cards-list">
+<li class="cards__list__character">
   <figure class="front-card">
-    <img src="${character.image}"/>
+    <img src="${character.image}" class="cards__list__image"/>
     <figcaption>${character.name}</figcaption>
   </figure>
   <section class="back-card">
@@ -18,10 +18,9 @@ const createCharacter = (character) => `
 </li>
 `;
 
-function buildHTML() {
-  let cardsBox = document.querySelector('#cards-box');
+function buildHTML(dataCharacter) {
   let html = '';
-  for (let i of datum.results) {
+  for (let i of dataCharacter) {
     html += createCharacter(i);
   }
   cardsBox.innerHTML = html;
