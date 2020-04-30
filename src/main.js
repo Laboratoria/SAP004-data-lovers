@@ -20,6 +20,8 @@ const aboutTheGameDiv = document.getElementById("about-the-game-div");
 const compareChampion = document.getElementById("compare-champions");
 const youtubeMedia = document.getElementById("youtube-media");
 
+var champion = data.data;
+
 
 function showChampions() {
   charactersDiv.style.visibility = "visible";
@@ -40,11 +42,15 @@ function showChampions() {
   for (let persona in data.data) {
     document.getElementById("see-characters-here").innerHTML += `
     <hr>
-    <div>
-    <img src="${data.data[persona].img}"> <br>
-    Name: ${persona} <br>
-    ${data.data[persona].title} <br>
-    Role: ${data.data[persona].tags} <br>
+    <div class="champions-card">
+    <img class="image common" src="${champion[persona].img}">
+    <p class="name common">Name: ${persona}</p>
+    <p class="title common">${champion[persona].title}</p>
+    <p class="role common">Role: ${champion[persona].tags}</p>
+    <p class="info-champ common">Attack: ${champion[persona].info.attack}</p>
+    <p class="info-champ common">Defense: ${champion[persona].info.defense}</p>
+    <p class="info-champ common">Magic: ${champion[persona].info.magic}</p>
+    <p class="info-champ common">Difficulty: ${champion[persona].info.difficulty}</p>
     </div>
     <hr>
     `;

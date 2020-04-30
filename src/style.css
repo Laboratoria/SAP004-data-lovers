@@ -65,10 +65,6 @@ h1{
     background: #bda275c7;
 }
 
-.characters-list{
-    text-align: left;
-    font-size: ;
-}
 img:hover{
     transform: scale(1.5);
     cursor: pointer;
@@ -89,6 +85,17 @@ img:hover{
     visibility: hidden;
     display: none;
 }
+
+.image{}
+.name{} 
+.tittle{}
+.role{}
+
+.common{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+    
 
 
 /*VERSÃO MOBILE*/
@@ -136,19 +143,11 @@ img:hover{
         font-family: 'Girassol';
         border: solid 1px black;
     }
-    .introduction-site, .introduction-game, .youtubers-list, .characters-list, .compare-characters{
+    .introduction-site, .introduction-game, .youtubers-list, .compare-characters{
         text-align: center;
         font-size: 20px;
 
-    }
-    .characters-list{
-        text-align: left;
-        font-size: 20px;
-
-        background: #ffffff3d;
-        background: #bda275c7;
-    }
-    
+    }    
   
     }
     .made-by{
