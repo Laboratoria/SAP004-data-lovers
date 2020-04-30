@@ -52,6 +52,10 @@ body {
   visibility: hidden;
 }
 
+.search__character {
+  text-transform: capitalize;
+}
+
 .cards__box {
   display: flex;
   flex-wrap: wrap;
