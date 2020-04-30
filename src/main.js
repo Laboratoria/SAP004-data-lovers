@@ -12,7 +12,5 @@ const card = (num, name, img) => {
     </figure>`
 }
 
-//pokemons.map(pokemon => document.getElementById("root").innerHTML += card(pokemons.num, pokemons.name, pokemons.img);
+pokemons.map(pokemon => document.getElementById("root").innerHTML += card (pokemon.num, pokemon.name, pokemon.img));
 
-
-pokemons.map(pokemon => document.getElementById("root").innerHTML += card (pokemons.num, pokemons.name, pokemons.img));
