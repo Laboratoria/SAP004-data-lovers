@@ -28,9 +28,7 @@ body{
         position: line;
         border: solid 1px rgb(218, 211, 211);
         text-align: center;
-        margin: auto
-    }
-    .imagePok{
+        margin: auto;
         background-color: rgb(227, 255, 227);
         text-align: center;
     }
