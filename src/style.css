@@ -22,8 +22,9 @@ header{
     border-radius: 20px;
     border-color: #97723d;
 }
-
-
+a{
+    text-decoration: none;
+}
 .menu ul {
     padding:0px;
     padding-bottom: 10px;
