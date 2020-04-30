@@ -1,13 +1,54 @@
 /* . = class # = id */
+
+/* Header */
 body{
 margin: 0px;
 font-family: sans-serif;
 }
-/* .filters{
-    display: none;
-} */
+.menu-search{ /*Menu superior*/
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.search{        /*Barra de pesquisa*/
+    margin-left: 20px;
+    width: 400px;
+    height: 50px;
+    border-radius: 2%;
+    font-size: 100%;
+}
+
+/*Main*/
+.filters-class{ /* Menu de filtro avançado*/
+    color: white;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 3px;
+    background-color: rgb(36, 34, 34);
+    height: 400px;
+    width: 100%;
+    font-weight: bold;
+}
+.checkbox-type:first-child{ /*Primeira filha da caixa de checkbox*/
+    display: flex;
+    flex-direction: column;
+}
+.line{
+    display: inline-flex;
+}
+.checkbox-form{ /*Config do form checkbox*/
+    display: inline-flex;
+    font-size: 14px;
+}
+.advanced-search{ /*Botao de pesquisa avançada*/
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 300px;
+}
+/*Div Raiz*/
 .home{ /*class da div raiz */
-    margin: 10px;
+    margin: 10px ;
     position: absolute;
     left: 10%;
     width: 80%;
@@ -17,7 +58,7 @@ font-family: sans-serif;
     line-height: 0.5px;
     height: auto;
 }
-.view-all-class{
+.view-all-class{ /*Botão ver mais/ ver menos*/
     font-size: large;
     padding: 10px;
     border-radius: 5%;
@@ -45,9 +86,7 @@ font-family: sans-serif;
     display: flex;
     flex-direction: column;
     padding: 2px;
-    /* border-radius: 5%; */
     width: 55%;
-    /* background-color: rgba(0, 0, 0, 0.082);  */
     height: 130px;
 }
 .picture{ /* imagem dos pokemons*/
@@ -59,6 +98,8 @@ font-family: sans-serif;
     transform: scaleX(-1);
   }
   .buttons{
+    padding-inline-start: 0px;
+    margin: 0px;
       display: flex;
       justify-content: space-around;
       width: 100%;
@@ -69,7 +110,7 @@ font-family: sans-serif;
       cursor: pointer;
   }
   .menu-buttons{
-    width: 25%;
+    width: 23%;
     margin: 3px;
     padding: 3px;
     display: flex;
@@ -84,23 +125,10 @@ font-family: sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
-.menu-search{
-    width: 40%;
-    display: flex;
-    align-items: center;
-}
-.search{
-    margin-left: 20px;
-    width: 400px;
-    height: 50px;
-    border-radius: 2%;
-    font-size: 100%;
-}
-.filter{
-    color: white;
-}
+
+
+
 .power{
     color: white;
     width: auto;
@@ -113,7 +141,7 @@ font-family: sans-serif;
     padding: 2px;
     margin: 1px;
 }
-
+/*Tipos de Pokemons*/
 .Flying{
     background-color: teal;
 }
@@ -159,3 +187,20 @@ background-color: rgb(56, 56, 56);
 .Dragon{
     background-color: rgb(226, 68, 160);
 }
+.Fairy{
+    background-color: rgb(199, 126, 218);
+}
+.filter-config{  
+    margin: 5px;  
+    width: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+

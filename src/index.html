@@ -1,30 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="menu">
 
-      <div class="menu-search">
-        <h1>Pokémon</h1>
-        <input id ="search" type="text" class="search" placeholder="Nome do Pokémon">
-        <img src="img/icons8-search-50.png" alt="search"></div>
-      <ul class="buttons">
-        <li class="menu-buttons" id="home">Pokémons</li>
-        <li class="menu-buttons" id="comparation">Comparação</li>
-        <li class="menu-buttons" id="ranking">Ranking</li>
-        <li class="menu-buttons" id="menu-filter">Filtro</li>
-      </ul>
-      <div id="filters">
-        <ul>
-          <li class="Flying power">Flying</li>
-        </ul>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="menu">
+
+    <div class="menu-search">
+      <h1>Pokémon</h1>
+      <input id="search" type="text" class="search" placeholder="Nome do Pokémon">
+      <img src="img/icons8-search-50.png" alt="search">
+    </div>
+    <ul class="buttons">
+      <li class="menu-buttons" id="home">Pokémons</li>
+      <li class="menu-buttons" id="comparation">Comparação</li>
+      <li class="menu-buttons" id="ranking">Ranking</li>
+      <li class="menu-buttons" id="menu-filter">Filtro</li>
+    </ul>
+
+  </header>
+  <main>
+
+    <div id="filters"> <!--Caixa de filtros-->
+      <div class="filters-class"> 
+        <div class="checkbox-type"> <!--Tipos e Fraquezaa-->
+          <div class="line"> <!--Caixa de descrição-->
+            <h3>Tipo e Fraqueza</h3>
+            <h6>Tipo = T Fraqueza = F</h6>
+          </div>
+          <form class="checkbox-form" id="checkbox-types">
+            <div>
+              <input type="checkbox" name="option" value="Flying"><label>T</label>
+              <input type="checkbox" name="weakness" value="Flying"><label>F<span
+                  class="Flying power filter-config">Flying</span></label><br>
+
+              <input type="checkbox" name="option" value="Ice"><label>T</label>
+              <input type="checkbox" name="weakness" value="Ice"><label>F<span
+                  class="Ice power filter-config">Ice</span></label><br>
+
+              <input type="checkbox" name="option" value="Grass"><label>T</label>
+              <input type="checkbox" name="weakness" value="Grass"><label>F<span
+                  class="Grass power filter-config">Grass</span></label><br>
+
+              <input type="checkbox" name="option" value="Fire"><label>T</label>
+              <input type="checkbox" name="weakness" value="Fire"><label>F<span
+                  class="Fire power filter-config">Fire</span></label><br>
+
+              <input type="checkbox" name="option" value="Water"><label>T</label>
+              <input type="checkbox" name="weakness" value="Water"><label>F<span
+                  class="Water power filter-config">Water</label><br>
+
+              <input type="checkbox" name="option" value="Bug"><label>T</label>
+              <input type="checkbox" name="weakness" value="Bug"><label>F<span
+                  class="Bug power filter-config">Bug</label><br>
+
+              <input type="checkbox" name="option" value="Normal"><label>T</label>
+              <input type="checkbox" name="weakness" value="Normal"><label>F<span
+                  class="Normal power filter-config">Normal</label><br>
+
+              <input type="checkbox" name="option" value="Poison"><label>T</label>
+              <input type="checkbox" name="weakness" value="Poison"><label>F<span
+                  class="Poison power filter-config">Poison</label><br>
+
+            </div>
+            <div>
+              <input type="checkbox" name="option" value="Electric"><label>T</label>
+              <input type="checkbox" name="weakness" value="Electric"><label>F<span
+                  class="Electric power filter-config">Electric</span></label><br>
+
+              <input type="checkbox" name="option" value="Ground"><label>T</label>
+              <input type="checkbox" name="weakness" value="Ground"><label>F<span
+                  class="Ground power filter-config">Ground</label><br>
+
+              <input type="checkbox" name="option" value="Rock"><label>T</label>
+              <input type="checkbox" name="weakness" value="Rock"><label>F<span
+                  class="Rock power filter-config">Rock</label><br>
+
+              <input type="checkbox" name="option" value="Fighting"><label>T</label>
+              <input type="checkbox" name="weakness" value="Fighting"><label>F<span
+                  class="Fighting power filter-config">Fighting</label><br>
+
+              <input type="checkbox" name="option" value="Psychic"><label>T</label>
+              <input type="checkbox" name="weakness" value="Psychic"><label>F<span
+                  class="Psychic power filter-config">Psychic</label><br>
+
+              <input type="checkbox" name="option" value="Ghost"><label>T</label>
+              <input type="checkbox" name="weakness" value="Ghost"><label>F<span
+                  class="Ghost power filter-config">Ghost</label><br>
+
+              <input type="checkbox" name="option" value="Dragon"><label>T</label>
+              <input type="checkbox" name="weakness" value="Dragon"><label>F<span
+                  class="Dragon power filter-config">Dragon</label><br>
+
+              <input type="checkbox" name="option" value="Fairy"><label>T</label>
+              <input type="checkbox" name="weakness" value="Fairy"><label>F<span
+                  class="Fairy power filter-config">Fairy</label><br>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <ul class="filter advanced-search">
+            <li>Redefinir</li>
+            <li id="advanced-search">Pesquisar</li>
+          </ul>
+        </div>
       </div>
-    </header>
-    <div id="root" class="home"></div> <!--class home-->
-    <script src="main.js" type="module"></script>
-  </body>
+    </div>
+    <div id="root" class="home">
+    </div>
+    <!--class home-->
+  </main>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
