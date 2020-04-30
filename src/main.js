@@ -4,12 +4,16 @@ import lol from "./data/lol/lol.js";
 
 const aboutGameButton = document.getElementById("about-game");
 aboutGameButton.addEventListener("click", showAboutGame);
+
 const showChampionsButton = document.getElementById("show-champions");
 showChampionsButton.addEventListener("click", showChampions);
+
 const compareChampionButton = document.getElementById("compare-champ-but");
 compareChampionButton.addEventListener("click", showCompChan);
+
 const youtubeButton = document.getElementById("but-youtube");
 youtubeButton.addEventListener("click", showYoutubers);
+
 const charactersDiv = document.getElementById("characters-div");
 const lolToolIntro = document.getElementById("lol-too-intro");
 const aboutTheGameDiv = document.getElementById("about-the-game-div");
@@ -42,7 +46,9 @@ function showChampions() {
     <hr>
     `;
   }
-}
+} 
+var texto = document.getElementById("aba-per").innerHTML;
+texto = texto.replace("→", "<br/>");
 
 function showAboutGame() {
   charactersDiv.style.visibility = "hidden";
