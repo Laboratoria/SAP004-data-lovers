@@ -1,64 +1,63 @@
 import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
+//Código Mona
+//Criar estrutura dos 151 cards
 
-//Criar estrutura dos 150 cards (+1 template = 151cards)
-function loadCards() {
-    for (let i = 0; i < data["pokemon"].length - 1; i++) {
-        document.querySelector('.container-deck').appendChild(document.querySelector('.container-card').cloneNode(true));
-    }
-    //Carregar informações dos cards
-    setDataOnCards();
-}
-loadCards()
+//Variáveis globais: configuração
+//Tipos de pokemon
+// const originalTypeList = [
+//     { type: "Fire", color: "#FF8C00" },
+//     { type: "Ice", color: "#DBDDDD" },
+//     { type: "Flying", color: "#0E8AA5" },
+//     { type: "Psychic", color: "#1E6DE3" },
+//     { type: "Grass", color: "#59B539" },
+//     { type: "Fighting", color: "#01D4AE" },
+//     { type: "Ground", color: "#976B36" },
+//     { type: "Steel", color: "#DAA520" },
+//     { type: "Bug", color: "#B1D596" },
+//     { type: "Ghost", color: "#F6D7F6" },
+//     { type: "Dark", color: "#000000" },
+//     { type: "Electric", color: "#D7DB1E" },
+//     { type: "Rock", color: "#484848" },
+//     { type: "Poison", color: "#A6A925" },
+//     { type: "Normal", color: "#DE2626" },
+// ]
 
 //Carregar informaçoes dentro de cada card
-function setDataOnCards() {
-    //Nome:
-    function setNamePokemon() {
-        document.querySelectorAll('.name-pok')[0].textContent = data["pokemon"][0]["name"]
-            // let element_list = document.querySelectorAll('.name-pok');
-            // for (let i = 0; i < data["pokemon"].length - 1; i++) {
-            //     element_list[i].textContent = data["pokemon"][i]["name"];
-            // }
+function loadCards() {
+    for (let i = 0; i < data["pokemon"].length; i++) {
+        //Clonar estrutura dos cards
+        let cloneCard = document.querySelector().cloneNode(true)
+        '.container-card';
+        document.querySelector('.container-deck').appendChild(cloneCard);
+        //Modificar nome
+        document.querySelectorAll('.name-pok')[i].textContent = data["pokemon"][i]["name"];
+        //Encurtando nomes muito extensos
+        if (data["pokemon"][i]["name"] == "Nidoran ♀ (Female)") {
+            document.querySelectorAll('.name-pok')[i].textContent = "Nidoran ♀"
+        };
+        if (data["pokemon"][i]["name"] === "Nidoran ♂ (Male)") {
+            document.querySelectorAll('.name-pok')[i].textContent = "Nidoran ♂"
+        };
+        //Modificar número
+        document.querySelectorAll('.number-pok')[i].textContent = `#${data["pokemon"][i]["num"]}`;
+        //Modificar tipo
+        //....
+
+        //Modificar imagem
+        document.querySelectorAll('.img-pok')[i].src = data["pokemon"][i]["img"];
     }
-    setNamePokemon();
-
-    //Número:
-    function setNumberPokemon() {
-        document.querySelectorAll('.number-pok')[0].textContent = `#${data["pokemon"][0]["num"]}`;
-    }
-    setNumberPokemon();
-
-    //Tipo:
-    function setTypePokemon() {
-        //fazer depois	
-    };
-    setTypePokemon();
-
-    //Imagem:
-    function setImgPokemon() {
-        document.querySelectorAll('.img-pok')[0].src = data["pokemon"][0]["img"]
-    }
-    setImgPokemon();
-
-    //Cor do cartão de acordo com o tipo:
-    function setColorCard() {
-        let originalTypeList = [
-            "Fire", "Ice", "Flying", "Psychic", "Water",
-            "Grass", "Fighting", "Ground", "Steel", "Bug", "Ghost", "Dark", "Electric", "Rock", "Poison", "Normal"
-        ];
-
-        let colorList = [
-            "FF8C00", "DBDDDD", "0E8AA5", "1E6DE3", "2DD0DB", "59B539", "01D4AE", "976B36", "DAA520", "B1D596", "F6D7F6", "000000", "484848", "A6A925", "DE2626"
-        ];
-        //Atribuir cor do primeiro tipo
-        //Extrair primeiro tipo do banco de dados
-        let mainType = data["pokemon"][0]["type"][0];
-        //Extrair posição na lista de tipos
-        let index = originalTypeList.indexOf(mainType);
-        //
-        document.querySelectorAll('.container-card')[0].style.backgroundColor = `#${colorList[index]}`
-    }
-    setColorCard();
 }
+
+//Modificar cor do cartão de acordo com o tipo
+//Atribuir cor do primeiro tipo
+//Extrair primeiro tipo do banco de dados
+//         let mainType = data["pokemon"][i]["type"][0];
+//         //Extrair posição na lista de tipos
+//         let index = originalTypeList.indexOf(mainType);
+//         //
+//         document.querySelectorAll('.container-card')[i].style.backgroundColor = `#${colorList[index]}`
+//     }
+// };
+loadCards();
