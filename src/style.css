@@ -5,7 +5,7 @@
 }
 
 .color-agua {
-    background-color: #2DD0DB;
+    background-color: #87CEEB;
 }
 
 .color-dragao {
@@ -33,11 +33,11 @@
 }
 
 .color-inseto {
-    background-color: #B1D596;
+    background-color: #1E6DE3;
 }
 
 .color-lutador {
-    background-color: #01D4AE;
+    background-color: #FEC807;
 }
 
 .color-normal {
@@ -57,11 +57,11 @@
 }
 
 .color-psiquico {
-    background-color: #1E6DE3;
+    background-color: #D91CD1;
 }
 
 .color-venenoso {
-    background-color: #A6A925;
+    background-color: #9D9F25;
 }
 
 .color-voador {
@@ -93,6 +93,7 @@ input {
 .body-config {
     margin: 0px auto;
     background-color: #E5E5E5;
+    font-size: 22px;
 }
 
 .bold {
@@ -129,8 +130,8 @@ input {
 }
 
 .container-card {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     margin: 15px 15px 15px 0px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
     padding: 15px;
@@ -182,12 +183,15 @@ input {
 }
 
 .img-pok {
-    width: 150px;
-    height: 145px;
+    width: 170px;
+    height: 170px;
     margin-left: 7px;
-    padding-bottom: 20px;
+    padding: 20px auto;
 }
 
 .footer-page {
     color: white;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
 }
