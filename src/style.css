@@ -184,3 +184,188 @@ input {
 .footer-page {
     color: white;
 }
+
+/* tela secundária/características */
+.modal-characters{
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+ul li a{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-decoration:none;
+    
+}
+
+.char-card-container{
+    position: absolute;
+    width: 210px;
+    height: 330px;
+    left: 0px;
+    top: 0px;
+
+    background: #FF8C00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menu-characters-item{
+    position: absolute;
+    width: 210px;
+    height: 330px;
+    left: 0px;
+    top: 0px;
+}
+
+.menu-characters-item{
+}
+
+#char-name{
+    position: absolute;
+    width: 174px;
+    height: 30.21px;
+    left: 15px;
+    top: 19px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+#char-num{
+    position: absolute;
+    width: 41.68px;
+    height: 15.59px;
+    left: 163px;
+    top: 26px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 15px;/* identical to box height */
+    text-align: right;
+    color: #FFFFFF;
+}
+
+#char-type{
+    position: absolute;
+    width: 43.76px;
+    height: 15.59px;
+    left: 40.01px;
+    top: 50.18px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.62);
+}
+
+.close{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 180px;
+    top: 5px;
+/* background: url(icon.png); verificar com a mona como vamos fazer*/
+}
+
+.item-menu-char{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.item-menu-char.data{
+    position: absolute;
+    left: 7%;
+    right: 52.32%;
+    top: 15%;
+    bottom: 74.39%;
+}
+
+.menu-nav.menu-char-item{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.57);
+}
+
+.char-height-item{
+    position: absolute;
+    left: 6.5%;
+    right: 64.44%;
+    top: 30.16%;
+    bottom: 59.23%;
+}
+
+.char-weight-item{
+    position: absolute;
+    left: 6.5%;
+    right: 64.44%;
+    top: 38.11%;
+    bottom: 51.28%;
+}
+
+.char-cand-item{
+    position: absolute;
+    left: 6.5%;
+    right: 64.44%;
+    top: 45.54%;
+    bottom: 43.85%;
+}
+
+.char-cand-count-item{
+    position: absolute;
+    left: 6.5%;
+    right: 59%;
+    top: 63%;
+    bottom: 29%;
+}
+
+.Char-egg-item{
+    position: absolute;
+    left: 6.5%;
+    right: 64.44%;
+    top: 54.39%;
+    bottom: 35%;
+}
+
+.char-spawn-chance-item{
+    position: absolute;
+    left: 16%;
+    right: 14.22%;  
+    top: 78%;
+    bottom: 10.89%;
+    font-weight: bold;
+}
+.item-menu-char.weaknesses{
+    position: absolute;
+    left: 30.72%;
+    right: 28.59%;
+    top: 15%;
+    bottom: 74.39%;
+}
+
+.item-menu-char.evolution{
+    position: absolute;
+    left: 65.5%;
+    right: 6%;
+    top: 15%;
+    bottom: 77%;
+    /*color: rgba(0, 0, 0, 0.57); Verificar com a mona se a cor ficará diferente*/    
+}
