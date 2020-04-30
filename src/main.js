@@ -39,10 +39,12 @@ function showChampions() {
   for (let persona in data.data) {
     document.getElementById("see-characters-here").innerHTML += `
     <hr>
+    <div>
     <img src="${data.data[persona].img}"> <br>
     Name: ${persona} <br>    
     ${data.data[persona].title} <br>
     Role: ${data.data[persona].tags} <br>
+    </div>
     <hr>
     `;
   }
