@@ -33,7 +33,22 @@ function showChampions() {
     `;
     };
 
-    
+    // Escrevendo Ordenação do Personagens
+    const selectElement = document.getElementById("sort-characters");
+
+    selectElement.addEventListener('change', (event) => {
+
+    document.getElementById("see-characters-here").style.visibility = "hidden"; 
+    document.getElementById("see-characters-here").style.display = "none";
+
+    const result = document.getElementById("see-characters-sort-here");
+    if (event.target.value = "AZ"){
+
+    }else{
+
+    }   
+
+    });    
 };
 
 function showAboutGame(){
@@ -86,7 +101,3 @@ function showYoutubers(){
     document.getElementById("youtube-media").style.visibility = "visible"; 
     document.getElementById("youtube-media").style.display = "block";
 };
-
-
-     
-    
