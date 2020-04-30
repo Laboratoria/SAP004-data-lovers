@@ -1,0 +1,43 @@
+body{
+    background: rgb(141, 206, 243);
+    font: normal 15pt arial;
+    
+    }
+    header{
+    color: white;
+    text-align: center;
+    margin: auto;
+    }
+    section{
+       
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 410px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.329);
+    }
+    footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    }
+    .imagePok{ 
+        display: inline-table;
+        width: 200px;
+        position: line;
+        border: solid 1px rgb(218, 211, 211);
+        text-align: center;
+        margin: auto
+    }
+    .imagePok{
+        background-color: rgb(227, 255, 227);
+        text-align: center;
+    }
+    #numPok {
+        margin-top: 0px;
+        font-size: 13pt;
+        text-align: end;
+        top: 0;
+        right: 0;
+    }
