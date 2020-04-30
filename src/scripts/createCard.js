@@ -1,19 +1,19 @@
 import { cardsBox } from './selectors.js';
 
 const createCharacter = (character) => `
-<li class="cards__list__character">
-  <figure class="front-card">
-    <img src="${character.image}" class="cards__list__image"/>
-    <figcaption>${character.name}</figcaption>
+<li class="card__character">
+  <figure>
+    <img src="${character.image}" class="card__image"/>
+    <figcaption class="card__name">${character.name}</figcaption>
   </figure>
-  <section class="back-card">
-    <p>${character.species}</p>
-    <p>${character.status}</p>
-    <p>${character.gender}</p>
-    <p>${character.type}</p>
-    <p>${character.origin.name}</p>
-    <p>${character.location.name}</p>
-    <p>${character.episode.length}</p>
+  <section class="card__description">
+    <p><span>Species:</span> ${character.species}</p>
+    <p><span>Status:</span> ${character.status}</p>
+    <p><span>Gender:</span> ${character.gender}</p>
+    <p><span>Type:</span> ${character.type}</p>
+    <p><span>Origin:</span> ${character.origin.name}</p>
+    <p><span>Location:</span> ${character.location.name}</p>
+    <p><span>Episodes:</span> ${character.episode.length}</p>
   <section>
 </li>
 `;
