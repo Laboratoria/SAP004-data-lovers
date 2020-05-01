@@ -88,6 +88,7 @@
 input {
     border: none;
     outline: none;
+    background-color: transparent;
 }
 
 .body-config {
@@ -101,15 +102,11 @@ input {
 }
 
 .btn {
-    width: 180px;
-    height: 45px;
-    line-height: 45px;
-    padding: 0px 20px;
     background: #FFFFFF;
-    opacity: 0.35;
+    opacity: 0.5;
     border-radius: 25px;
-    margin-left: 7px;
     color: black;
+    margin-left: 5px;
 }
 
 .btn-card {
@@ -119,7 +116,36 @@ input {
     font-size: 13px;
     text-align: center;
     margin: 3px 3px 3px 0px;
-    padding: 0px;
+}
+
+.btn-menu {
+    padding: 10px;
+    width: 200px;
+}
+
+.btn-filter {
+    padding: 0px 10px 0px 0px;
+}
+
+.btn-search {
+    padding: 5px;
+}
+
+.btn-search input {
+    width: 200px;
+    margin-left: 5px;
+}
+
+.select {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 170px;
+}
+
+.btn-search:hover,
+.select:hover {
+    cursor: pointer;
 }
 
 .container {
@@ -137,6 +163,7 @@ input {
     padding: 15px;
     color: white;
     border: 1px solid gray;
+    background: url("/assets/pokeball_half.png") no-repeat right bottom;
 }
 
 .container-card:hover {
@@ -160,16 +187,16 @@ input {
     justify-content: flex-start;
 }
 
-.header {
-    padding: 10px 50px;
-    height: 65px;
-    margin-bottom: 30px;
-    background: rgba(40, 169, 146, 0.94);
+.inner-header {
+    margin: auto;
+    max-width: 1200px;
 }
 
-.header-logo {
-    width: 80px;
-    height: 60px;
+.header {
+    padding: 10px 50px;
+    height: 70px;
+    margin-bottom: 30px;
+    background: rgba(40, 169, 146, 0.94);
 }
 
 .in-block {
@@ -189,8 +216,8 @@ input {
 }
 
 .logo-item2 {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin-left: 45px;
 }
 
@@ -207,6 +234,30 @@ input {
     height: 150px;
     margin-left: 15px;
     padding-bottom: 10px;
+}
+
+.img-btn-filter {
+    width: 45px;
+    height: 45px;
+    margin-left: 5px;
+}
+
+.img-btn-order {
+    width: 25px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.img-btn-search {
+    width: 30px;
+    height: 30px;
+}
+
+.bg-img-pok {
+    float: right;
+    opacity: 0.3;
+    width: 50px;
+    height: 100px;
 }
 
 .footer-page {
