@@ -1,19 +1,51 @@
-import { example } from "./data.js";
-//import {filtrar} from './data.js';
+import {filtrar, ordemNomes} from './data.js';
 import data from "./data/pokemon/pokemon.js";
 
 let arrayPokemon = data["pokemon"];
 let ul = document.querySelector("#lista-pokemon");
 
+
 card(arrayPokemon);
 
-function card(arrayPokemon) {
+let campoFiltro = document.querySelector(".filtrar-pokemon")
+campoFiltro.addEventListener("input", function filtrados(){
+ card(filtrar(campoFiltro.value, arrayPokemon));
+});
+  
+let botaoLimpar = document.querySelector("#botao-limpar");
+botaoLimpar.addEventListener("click", function limparFiltro(){
+  let campoFiltro = document.querySelector(".filtrar-pokemon");
+  campoFiltro.value="";
+  card(arrayPokemon);
+});
+
+let campoOrdem = document.querySelector("#campo-ordenacao-pokemon");
+campoOrdem.addEventListener("input", function(){
+  card(ordemNomes(campoOrdem.value, arrayPokemon));
+})
+
+let botaoLimparOrdem = document.querySelector("#limpar-ordem-pokemon");
+botaoLimparOrdem.addEventListener("click", function limparOrdem(){
+  let campoOrdem = document.querySelector("#campo-ordenacao-pokemon");
+  campoOrdem.value="";
+  card(arrayPokemon);
+})
+
+
+/*let campoBusca = document.querySelector("#campo-busca");
+campoBusca.addEventListener("input", function Buscado(){
+  let campoBuscado = document.querySelector("#campo-busca");
+  card(buscarNome(campoBuscado, arrayPokemon.name));
+});*/
+
+
+
+function card(array) {
   ul.innerHTML = "";
-  for (let i = 0; i < arrayPokemon.length; i++) {
-    let dadoImagem = arrayPokemon[i].img;
-    let dadoNome = arrayPokemon[i].name;
-    let dadoTipo = arrayPokemon[i].type;
-    let dadoFraqueza = arrayPokemon[i].weaknesses;
+  for (let i = 0; i < array.length; i++) {
+    let dadoImagem = array[i].img;
+    let dadoNome = array[i].name;
+    let dadoTipo = array[i].type;
 
     let li = document.createElement("li");
     li.classList.add("lista-pokedex-link");
@@ -27,24 +59,8 @@ function card(arrayPokemon) {
 
     let tipo = document.createElement("tipo");
     tipo.classList.add("lista-tipo");
-    tipo.textContent += dadoTipo;
+    tipo.textContent += dadoTipo.join(" e ");
     li.appendChild(tipo);
 
-    let fraqueza = document.createElement("p");
-    fraqueza.classList.add("lista-fraqueza");
-    fraqueza.textContent += dadoFraqueza;
-    li.appendChild(fraqueza);
   }
 }
-
-let botaoOk = document.querySelector("#botao-ok");
-botaoOk.addEventListener("click", function filtrar() {
-  let campoFiltro = document.querySelector(".filtrar-pokemon").value;
-  const filtrado = arrayPokemon.filter((item) =>
-    item.type.includes(campoFiltro)
-  );
-  card(filtrado);
-});
-
-let botaoLimpar = document.querySelector("#botao-limpar");
-botaoLimpar.addEventListener("click", card(arrayPokemon));

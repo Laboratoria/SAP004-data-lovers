@@ -77,6 +77,14 @@ main {
   padding: 0.5em;
 }
 
-.invisivel{
-	display: none;
+.rodape{
+  background-color: rgb(5, 137, 170);
+  color: white;
+  font-weight: bolder;
+  padding: 10px;
+  text-align: center;
+}
+
+.invisivel {
+  display: none;
 }

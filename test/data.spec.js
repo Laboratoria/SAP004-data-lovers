@@ -1,23 +1,29 @@
-import { example, anotherExample } from '../src/data.js';
+import {filtrar, ordemNomes} from '../src/data.js';
 
+const ordemPokemon = [
+  { "name": "Ivysaur" },
+  { "name": "Bulbasaur" },
+  { "name": "Venusaur" }
+];
 
-describe('example', () => {
+describe('filtrar', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filtrar).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns "Fire" for "Fire" with campo Fire', () => {
+    expect(filtrar('Fire', 'data.pokemon')).toBe('Fire');
   });
 });
 
 
-describe('anotherExample', () => {
+
+describe('ordemNomes', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof ordemNomes).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('ordemNomes', () => {
+    expect(ordemNomes(ordemPokemon, "name")).toBe([{"name": "Bulbasaur"}, {"name": "Ivysaur"}, {"name": "Venusaur"}]);
   });
 });
