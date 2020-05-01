@@ -65,13 +65,44 @@ h1{
     background: #bda275c7;
 }
 
+.characters-list{
+    text-align: left;
+    font-size: ;
+    display: flex;
+    flex-wrap: wrap;
+}
+.characters-list > div{
+    margin: 10px;
+    align-items: center;
+}
+.champions-list{
+    display: inline;
+    margin-right: 10px;
+}
+.champions-card{
+    display: inline-block;
+    border-style: groove;
+    border-width: 4px;
+    border-color: #34dce8;
+    background: #fbd27361;
+    width: 395px;
+}
 img:hover{
     transform: scale(1.5);
     cursor: pointer;
     cursor: url('cursor-lol.cur'), default;
 }
-
-
+.image, .name, .title, .role{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.image, .name, .title{
+    text-align: center;
+}
+.image{
+    align-items: center;
+    padding-top: 10px;
+}
 .made-by{
     text-align: center;
     bottom: 0;
@@ -80,25 +111,14 @@ img:hover{
     border-radius: 10px;
     background: #ffffff3d;
 }
-
 .insivible-class{
     visibility: hidden;
     display: none;
 }
 
-.image{}
-.name{} 
-.tittle{}
-.role{}
-
-.common{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-    
 
 
-/*VERSÃO MOBILE*/
+/VERSÃO MOBILE/
 @media only screen and (max-width: 800px){
     html{
         background-image: url("seamless-wallpaper-mobile.jpg");
@@ -136,6 +156,29 @@ img:hover{
         margin-top: 0px;
         font-size: 30px;
     }
+    .characters-list{
+        text-align: left;
+        font-size: ;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .characters-list > div{
+        margin: 10px;
+        align-items: center;
+    }
+    .champions-list{
+        display: inline;
+        margin-right: 10px;
+    }
+    .champions-card{
+        display: inline-block;
+        margin-bottom: 10px;
+        border-style: groove;
+        border-width: 4px;
+        border-color: #34dce8;
+        background: #fbd27361;
+        width: 60%;
+    }
     .about-the-game-button, .characters-button, .youtube-button, .compare-button{
         border-radius: 3px;
         background-color: #bda275;
@@ -143,12 +186,17 @@ img:hover{
         font-family: 'Girassol';
         border: solid 1px black;
     }
-    .introduction-site, .introduction-game, .youtubers-list, .compare-characters{
+    .introduction-site, .introduction-game, .youtubers-list, .characters-list, .compare-characters{
         text-align: center;
         font-size: 20px;
 
-    }    
-  
+    }
+    .characters-list{
+        text-align: left;
+        font-size: 20px;
+
+        background: #ffffff3d;
+        background: #bda275c7;
     }
     .made-by{
         text-align: center;
@@ -157,4 +205,3 @@ img:hover{
         width: 100%;
         background: #ffffff3d;
     }
-
