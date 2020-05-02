@@ -172,7 +172,7 @@ function myFunctionClear(a) {
         }
     }
 }
-//Função que reseta o menu avançado
+/*Função que reseta o menu avançado*/
 const resetSearch = () => {
     const checkbox = document.getElementById("checkbox-types")
     myFunctionClear(checkbox.weakness)
