@@ -82,47 +82,107 @@ const searchName = () => {
     elementSearched.map(print)
 }
 /*Função de abrir e fechar menu avançado*/
-const filters = () => {
-    if (filtersMenu.style.display == "none")
-        filtersMenu.style.display = "block"
-    else
-        filtersMenu.style.display = "none"
-}
+const filters = () =>
+    filtersMenu.style.display == "none" ? filtersMenu.style.display = "block" : filtersMenu.style.display = "none"
+
+
 
 /*Função que verifica quais checkboxs estão selecionados*/
- const checkType = (a) => {
-     const newArray = []
-     for( let i in a){
-         if(a[i].checked==true)
-         newArray.push(a[i].value)
-     }
-     console.log(newArray)
-     return newArray
- }
-
- /*Função que compara os pokemons com os checkboxs*/
-const typeFunction = (p) =>{
-    const checkbox = document.getElementById("checkbox-types")
-     const checkboxType = checkType(checkbox.option)
-    const checkboxWeakness = checkType(checkbox.weakness)
-   console.log(checkboxType)
-   for(let i in checkboxType){
-       if(p.type[0] == checkboxType[i] || p.type[1] == checkboxType[i])
-        return true
-   }
-   for(let j in checkboxWeakness){
-       for(let k in p.type){
-           if(p.weaknesses[k] == checkboxWeakness[j])
-           return true
-       }
-   }
+const checkType = (a) => {
+    const newArray = []
+    for (let i in a) {
+        if (a[i].checked )
+            newArray.push(a[i].value)
+    }
+    return newArray
 }
 
-/*Função que chama a comparação do menu avançado*/
+/*Função de verificar checkbox repetidos*/
+const concat = (checkboxType, checkboxWeakness) => {
+    const newArray = []
+    for (let i in checkboxType) {
+        for (let j in checkboxWeakness) {
+            if (checkboxWeakness[j] == checkboxType[i])
+                newArray.push(checkboxWeakness[j])
+        }
+    } return newArray
+
+}
+/*Função que subtrai os os checkboxs marcados duas vezes */
+const subtraction = (checkboxType, checkboxWeakness, parameter) => {
+
+    console.log("checkboxType in subtration" + checkboxType)
+    console.log("checkboxType" + checkboxWeakness)
+    console.log("checkboxType" + parameter)
+
+
+        const newArray = concat(checkboxType, checkboxWeakness)
+        if (newArray.length != 0) {
+        const result = []
+        for (let i in parameter) {
+            for (let j in newArray) {
+                if (parameter[i] != newArray[j])
+                    result.push(parameter[i])
+            }
+        }
+        console.log("re" + result)
+        return result
+    }
+    else
+        return parameter
+}
+/*Funcao que verifica os tipos e fraquezas*/
+const typeFunction = (p) => {
+    /*Puxa os checkboxs */
+    const checkbox = document.getElementById("checkbox-types")
+    const checkboxWeakness = checkType(checkbox.weakness)
+    const checkboxType = checkType(checkbox.option)
+    let result = []
+    let resultWeakness = []
+    /*subtrai os checkboxs repetidos*/
+      if (checkboxWeakness.length != 0 && checkboxType.length != 0) {
+           result = subtraction(checkboxType, checkboxWeakness, checkboxType)
+           resultWeakness = subtraction(checkboxType, checkboxWeakness, checkboxWeakness)
+      }
+      else {
+        result = checkboxType
+        resultWeakness = checkboxWeakness
+     }
+    // /*Verifica os tipos*/
+     for (let i in result) {
+         if( p.type[0] == result[i] || p.type[1] == result[i])
+         return true
+     }
+    /*Verifica as fraquezas */
+
+    for (let i in resultWeakness) {
+        for (let j in p.weaknesses) {
+            if( p.weaknesses[j] == resultWeakness[i])
+            return true
+        }
+    }
+}
+
+/*Função que filtra os checkboxs*/
 const advancedSearch = () => {
-        const pokemonsFiltred = pokemons.filter(typeFunction)
-        clearDisplay()
-        pokemonsFiltred.map(print)
+    clearDisplay()
+    const pokemonsFiltred = pokemons.filter(typeFunction).map(print)
+    resetSearch()
+    filters()
+}
+function myFunctionClear(a) {
+    if(a.length !=0){
+    for (let i in a){
+      if (a[i].checked)
+        a[i].checked = false;
+    }
+}
+}
+//Função que reseta o menu avançado
+const resetSearch = () =>{
+    const checkbox = document.getElementById("checkbox-types")
+myFunctionClear(checkbox.weakness)
+myFunctionClear(checkbox.option)
 }
 
 /*Verifica eventos*/
@@ -130,4 +190,5 @@ document.getElementById("search").addEventListener('input', searchName)
 document.getElementById("menu-filter").addEventListener('click', filters)
 document.getElementById("home").addEventListener('click', main)
 document.getElementById("advanced-search").addEventListener('click', advancedSearch)
+document.getElementById("reset-search").addEventListener('click', resetSearch)
 main()
