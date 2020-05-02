@@ -47,60 +47,74 @@
                     <figure>
                         <img class="pok-img " src=" ../assets/ ">
                     </figure>
-
-                    <!--tela secundaria-->
                 </section>
-                <section id= "modal-characters" class= "modal-char">
-                    <nav class= "menu-nav char-card-container">
-                        <ul Class= "menu-characters-item">
-                            <li><div id="char-name" ></div></li>
-                            <li><div id= "char-num"></div></li>
-                            <li><div id= "char-type"></div></li>
-                            <li><button class= "close">X</button></li>
-                            <li><a href= "#" class= "item-menu-char data">Dados</a></li>
-                                <ul class= "menu-nav menu-char-item">
-                                    <li><div id= "char-height" class="char-height-item">Altura</div></li>
-                                    <li><div id= "char-height-value" class= "char-height-value-item"></div></li>
-                                    <li><div id= "char-weight"class= "char-weight-item">Peso</div></li>
-                                    <li><div id= "char-weight-value" class= "char-weight-value"></div></li>
-                                    <li><div id= "char-cand" class= "char-cand-item">Doce</div></li>
-                                    <li><div id= "char-cand-value" class= "char-cand-value-item"></div></li>
-                                    <li><div id= "char-cand-count" class= "char-cand-count-item">Nº Doces</div></li>
-                                    <li><div id= "char-cand-count-value" class= "char-cand-count-value-item"></div></li>
-                                    <li><div id= "Char-egg" class= "Char-egg-item" >Ovo</div></li>
-                                    <li><div id= "Char-egg-value" class= "Char-egg-value-item"></div></li>
-                                    <li><div id= "char-spawn-chance" class= "char-spawn-chance-item">Chance de Captura(%)</div></li>
-                                    <li><div id= "char-spawn-chance-value" class= "char-spawn-chance-value-item"></div></li>
-                                </ul>
-                            <li><a href= "#" class= "item-menu-char weaknesses">Fraqueza</a></li>
-                                <ul class="menu-nav menu-char-weaknesses">
-                                    <li><div id= "char-weaknesses-1"></div></li>
-                                    <li><div id=></div></li>
-                                    <li><div id= "char-weaknesses-2"></div></li>
-                                    <li><div id= "char-weaknesses-3"></div></li>
-                                    <li><div id= "char-weaknesses-4"></div></li>
-                                    <li><div id= "char-weaknesses-5"></div></li>
-                                    <li><div id= "char-weaknesses-6"></div></li>
-                                </ul>
-                            <li><a href= "#" class= "item-menu-char evolution">Evolução</a></li>
-                                <ul class= "menu-nav char-evolution-1">
-                                    <li><figure>
-                                        <imag class= "evo-1-img" src=" "></imag>
-                                    </figure></li>
-                                    <li><div id= "evo-1-name"></div></li>
-                                    <li><div id= "evo-1-num"></div></li>
-                                </ul>
-                                <ul class= "menu-nav char-evolution-2">
-                                    <li><figure>
-                                        <!--SETINHA-->
-                                        <imag class= "evo-2-img" src=" "></imag>
-                                    </figure></li>
-                                    <li><div id= "evo-2-name"></div></li>
-                                    <li><div id= "evo-2-num"></div></li>
-                                </ul>
+                
+                  <!--tela secundaria-->
+                <section id= "modal-characters" > <!--class= "  modal-char"-->
+
+                    <section id= "modal-char-trans" class= "char-card-container "> 
+                        <!--menu-characters-item-->
+                        <div id="char-name" class= "char-name-style">VulpixVulpixvu</div>
+                        <div id= "char-num"class= "char-num-style">037</div>
+                        <div id= "char-type" class= "char-type-style">Fogo</div>
+                        <div id= "char-img" class= "char-img-style"></div>
+                        <figure><img class="close" src="../assets/icon.png "/></figure> 
+                        <section class= "sections"> 
+                            <section id= "data-container" class= "modal-char-trans modal-data">
+                                <nav class= "menu-nav"> 
+                                                  
+                                    <label for="rd-data" class= "item-menu-char data">Dados</label>
+                                    <label for="rd-weak" class= "item-menu-char weaknesses">Fraqueza</label>
+                                    <label for="rd-evo" class= "item-menu-char evolution">Evolução</label>
+                                </nav>
+                                <div classs= "scroll "> 
+                                    <input type= "radio" name= "group" id= "rd-data" Checked= "true">
+                                    <input type= "radio" name= "group" id= "rd-weak">
+                                    <input type= "radio" name= "group" id= "rd-evo">
+                                </div>
                                 
-                        </ul>
-                    </nav>
+                                <div id= "char-height" class= "char-item char-height">Altura</div>
+                                <div id= "char-height-value" class= " char-item-value char-height">61 cm</div>
+                                <div id= "char-weight"class= "char-item char-weight">Peso</div>
+                                <div id= "char-weight-value" class= "char-item-value char-weight">9,9kg</div>
+                                <div id= "char-cand" class= "char-cand-item">Doce</div>
+                                <div id= "char-cand-value" class= "char-cand-item cand-value">vulpixVulpix-cand</div>
+                                <div id= "char-cand-count" class= "char-item char-cand-count">Nº Doces</div>
+                                <div id= "char-cand-count-value" class= "char-item-value char-cand-count">2</div>
+                                <div id= "Char-egg" class= " char-item Char-egg" >Ovo</div>
+                                <div id= "Char-egg-value" class= "char-item-value Char-egg">2</div>
+                                <div id= "char-spawn-chance" class= "char-spawn-chance-item">Chance de Captura(%)</div>
+                                <div id= "char-spawn-chance-value" class= "char-spawn-chance-value-item">10</div>
+                            </section>
+                        </section>  
+                        
+                        <section id= "weak-container" class= "menu-char-weaknesses modal-char-trans modal-weak">
+                            <div id= "char-weak-1"></div>
+                            <div id= "char-weak-icon-1"></div>
+                            <div id= "char-weak-2"></div>
+                            <div id= "char-weak-icon-2"></div>
+                            <div id= "char-weak-3"></div>
+                            <div id= "char-weak-icon-3"></div>
+                            <div id= "char-weak-4"></div>
+                            <div id= "char-weak-icon-4"></div>
+                            <div id= "char-weak-5"></div>
+                            <div id= "char-weak-icon-5"></div>
+                            <div id= "char-weak-6"></div>
+                            <div id= "char-weak-icon-6"></div>
+                        </section>
+                        <section id= "evo-container" class= "char-evolution-1 modal-char-trans modal-evo"> 
+                            <figure><imag class= "img-evo evo-1-img" src=" "></imag></figure>
+                            <div id= "evo-1-name evo-position-name evo-name-num-box1"></div>
+                            <div id= "evo-1-num evo-position-num evo-name-num-box1"></div>
+                            <!--SETINHA-->
+                            <figure><img class= "arrow"src="../assets/up-chevron.png"></figure>
+                                
+                            <div class= "char-evolution-2">
+                            <figure><imag class= "img-evo evo-2-img" src=" "></imag></figure>
+                            <div id= "evo-2-name evo-position-name evo-name-num-box2"></div>
+                            <div id= "evo-2-num evo-position-num evo-name-num-box2"></div>
+                        </section>
+                    </sections>  
                 </section>
             </main>
             <!--//fim tela de cards-->

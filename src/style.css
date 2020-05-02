@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 /*Classes das cores por tipo do pokemon*/
 
 .color-aco {
@@ -186,7 +188,17 @@ input {
 }
 
 /* tela secundária/características */
-.modal-characters{
+
+body {
+    font-family:"roboto", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.modal-char {
     display: none; 
     position: fixed; 
     z-index: 2000; 
@@ -195,177 +207,322 @@ input {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center; 
 }
 
-ul li a{
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
-    text-decoration:none;
-    
-}
-
-.char-card-container{
-    position: absolute;
+.char-card-container {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
     width: 210px;
     height: 330px;
     left: 0px;
     top: 0px;
-
-    background: #FF8C00;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.menu-characters-item{
-    position: absolute;
-    width: 210px;
-    height: 330px;
-    left: 0px;
-    top: 0px;
-}
-
-.menu-characters-item{
-}
-
-#char-name{
-    position: absolute;
-    width: 174px;
-    height: 30.21px;
-    left: 15px;
-    top: 19px;
-    font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    background: #FF8C00;/*tirar depois, apenas para visualizar*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /*justify-content: center;
+    align-items: center;*/
+}
+
+.char-name-style {
+    position: relative;
+    width: 68px;
+    height: 28px;
+    left: 5px;
+    top: -117px;
+    font-size: 22px;
     line-height: 28px;
     color: #FFFFFF;
 }
 
-#char-num{
-    position: absolute;
-    width: 41.68px;
-    height: 15.59px;
-    left: 163px;
-    top: 26px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
+.char-num-style {
+    position: relative;
+    width: 42.4px;
+    height: 17.28px;
+    left: 150.6px;
+    top: -152px;
     font-size: 13px;
-    line-height: 15px;/* identical to box height */
+    line-height: 15px;
     text-align: right;
     color: #FFFFFF;
 }
 
-#char-type{
+.char-img-style {
+    max-width: 100%;
+    display: block;
+    width:100px;
     position: absolute;
-    width: 43.76px;
-    height: 15.59px;
-    left: 40.01px;
-    top: 50.18px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
+    left: 26%;
+    right: 22.86%;
+    top: -30%;
+    bottom: 90%;
+    background: url(037.png);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.char-type-style {
+    position: relative;
+    width: 90.09px;
+    height: 20.52px;
+    left: 4px;
+    top: -135px;
     font-size: 14px;
     line-height: 16px;
+    text-align: center;
     color: rgba(0, 0, 0, 0.62);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: #FFFFFF;
+    opacity: 0.3;
 }
 
-.close{
+.modal-char-trans{
+    display: flex;
+    /*flex-grow: 1;*/
     position: absolute;
-    width: 15px;
-    height: 15px;
-    left: 180px;
-    top: 5px;
-/* background: url(icon.png); verificar com a mona como vamos fazer*/
-}
-
-.item-menu-char{
-    font-family: Roboto;
+    width: 200px;
+    height: 200px;
+    left: 5px;
+    right:5px;
+    top: 130px;
+    bottom: 0px;
     font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
+    background: #FFFFFF;
+    border-radius: 20px 20px 0px 0px;
+    /*justify-content: center;
+    align-items: center; */
 }
 
-.item-menu-char.data{
-    position: absolute;
-    left: 7%;
-    right: 52.32%;
-    top: 15%;
-    bottom: 74.39%;
-}
-
-.menu-nav.menu-char-item{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+.modal-data{
     font-size: 14px;
     line-height: 16px;
     color: rgba(0, 0, 0, 0.57);
 }
 
-.char-height-item{
-    position: absolute;
-    left: 6.5%;
-    right: 64.44%;
-    top: 30.16%;
-    bottom: 59.23%;
+.scroll imput{
+    display: none;
+    list-style-type: none;
+   
 }
 
-.char-weight-item{
+.scroll{
+    display: flex;
+    width: 2000px;
+    height: 30px;
+    overflow: hidden ;
+}
+
+.menu-nav{
+    /*position: relative;*/
+    width: 200px;
+    height: 21px;
+    
+    top: 200px;
+    position: fixed;
+    display:flex;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*text-align: center;
+    margin: 0px;
+    padding: 0px;*/
+}
+
+.menu-nav label{
+    position: absolute;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.menu-nav label:hover {
+    
+}
+
+#rd-weak:cheked ~ .sections{
+    margin-top: -200px; 
+}
+
+#rd-evo:checked ~.sections{
+    margin-top: -400px;
+}*/
+
+.close {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 180px;
+    top: 5px;
+    cursor: pointer;
+    /*background: url(icon.png) no-repeat;*/
+}
+.close:hover {
+    background: #FFFFFF;
+    opacity: 0.3;
+}
+
+.item-menu-char {
+    position: absolute;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.57);
+}
+
+.item-menu-char.data {
+    left: 6.5%;
+    right: 52.32%;
+    top: 15%;
+    bottom: 74.39%;
+}
+
+.char-item {
     position: absolute;
     left: 6.5%;
-    right: 64.44%;
+    right: 59%;
+    font-weight: normal;
+}
+
+.char-item-value{
+    position: absolute;
+    left: 44%;
+    right: 6.5%;
+    font-weight: normal;
+    text-align: right;
+}
+
+.char-height{
+    top: 30.16%;
+    bottom: 59.23%
+}
+
+.char-weight{
     top: 38.11%;
     bottom: 51.28%;
 }
 
 .char-cand-item{
     position: absolute;
+    font-weight: normal;
     left: 6.5%;
-    right: 64.44%;
+    right: 74%;
     top: 45.54%;
     bottom: 43.85%;
 }
 
-.char-cand-count-item{
-    position: absolute;
-    left: 6.5%;
-    right: 59%;
-    top: 63%;
-    bottom: 29%;
+.cand-value{
+    left: 30.5%;
+    right: 6.5%;
+    text-align: right;
 }
 
-.Char-egg-item{
-    position: absolute;
-    left: 6.5%;
-    right: 64.44%;
+.char-cand-count {
     top: 54.39%;
     bottom: 35%;
 }
 
+.Char-egg {
+    top: 63%;
+    bottom: 29%;
+}
+
 .char-spawn-chance-item{
     position: absolute;
-    left: 16%;
-    right: 14.22%;  
-    top: 78%;
+    left: 11%;
+    right: 11%;  
+    top: 75%;
     bottom: 10.89%;
     font-weight: bold;
+    text-align: center;
 }
-.item-menu-char.weaknesses{
+
+.char-spawn-chance-value-item {
     position: absolute;
+    left: 11%;
+    right: 11%;  
+    top: 85%;
+    bottom:9%;
+    font-weight: normal;
+    text-align: center;
+}
+
+.item-menu-char.weaknesses{
     left: 30.72%;
     right: 28.59%;
     top: 15%;
     bottom: 74.39%;
 }
 
+.modal-weak{
+
+}
+
+.modal-evo{
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.78);
+}
+
 .item-menu-char.evolution{
-    position: absolute;
-    left: 65.5%;
-    right: 6%;
+    left: 64.0%;
+    right: 6.5%;
     top: 15%;
     bottom: 77%;
-    /*color: rgba(0, 0, 0, 0.57); Verificar com a mona se a cor ficará diferente*/    
+}
+
+.arrow{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 94px;
+    top: 115px;
+    /*background: url(up-chevron.png);*/
+}
+
+.img-evo {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top: 88px;
+}
+
+.evo-1-img{
+    left: 31px;
+    /*background: url(037.png)*/
+}
+
+.evo-item{
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+}
+
+.evo-position-name{
+    position: absolute;
+    top: 79%;
+    bottom: 12.5%;
+    text-align: center;
+}
+
+.evo-position-num{
+    position: absolute;
+    top: 87.5%;
+    bottom: 4.5%;
+    text-align: center;
+}
+
+.evo-name-num-box1{
+    left: 4%;
+    right: 55%;
+}
+
+.evo-2-img{
+    left: 120px;
+    /*background: url(038.png);*/
+}
+
+.evo-name-num-box2{
+    left: 52.5%;
+    right: 5%;
 }
