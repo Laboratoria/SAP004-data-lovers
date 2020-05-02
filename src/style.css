@@ -5,7 +5,7 @@
 }
 
 .color-agua {
-    background-color: #2DD0DB;
+    background-color: #87CEEB;
 }
 
 .color-dragao {
@@ -33,11 +33,11 @@
 }
 
 .color-inseto {
-    background-color: #B1D596;
+    background-color: #1E6DE3;
 }
 
 .color-lutador {
-    background-color: #01D4AE;
+    background-color: #FEC807;
 }
 
 .color-normal {
@@ -53,15 +53,15 @@
 }
 
 .color-pedra {
-    background-color: #000000;
+    background-color: #484848;
 }
 
 .color-psiquico {
-    background-color: #1E6DE3;
+    background-color: #D91CD1;
 }
 
 .color-venenoso {
-    background-color: #A6A925;
+    background-color: #9D9F25;
 }
 
 .color-voador {
@@ -88,11 +88,13 @@
 input {
     border: none;
     outline: none;
+    background-color: transparent;
 }
 
 .body-config {
-    max-width: 1024px;
     margin: 0px auto;
+    background-color: #E5E5E5;
+    font-size: 22px;
 }
 
 .bold {
@@ -100,15 +102,11 @@ input {
 }
 
 .btn {
-    width: 180px;
-    height: 45px;
-    line-height: 45px;
-    padding: 0px 20px;
     background: #FFFFFF;
-    opacity: 0.35;
+    opacity: 0.5;
     border-radius: 25px;
-    margin-left: 7px;
     color: black;
+    margin-left: 5px;
 }
 
 .btn-card {
@@ -117,24 +115,66 @@ input {
     line-height: 25px;
     font-size: 13px;
     text-align: center;
-    margin: 0px 3px 5px 0px;
-    padding: 0px;
+    margin: 3px 3px 3px 0px;
+}
+
+.btn-menu {
+    padding: 10px;
+    width: 200px;
+}
+
+.btn-filter {
+    padding: 0px 10px 0px 0px;
+}
+
+.btn-search {
+    padding: 5px;
+}
+
+.btn-search input {
+    width: 200px;
+    margin-left: 5px;
+}
+
+.select {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 170px;
+}
+
+.btn-search:hover,
+.select:hover {
+    cursor: pointer;
 }
 
 .container {
     background-color: #E5E5E5;
-    width: 1024px;
+    margin: 0px auto;
+    width: 1200px;
     font-family: sans-serif;
 }
 
 .container-card {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     margin: 15px 15px 15px 0px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
     padding: 15px;
     color: white;
-    border: 1px solid gray
+    border: 1px solid gray;
+    background: url("/assets/pokeball_half.png") no-repeat right bottom;
+}
+
+.container-card:hover {
+    opacity: 0.70;
+}
+
+.container-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .flex {
@@ -147,15 +187,16 @@ input {
     justify-content: flex-start;
 }
 
-.header {
-    padding: 0px 30px;
-    height: 65px;
-    background: rgba(40, 169, 146, 0.94);
+.inner-header {
+    margin: auto;
+    max-width: 1200px;
 }
 
-.header-logo {
-    width: 80px;
-    height: 60px;
+.header {
+    padding: 10px 50px;
+    height: 70px;
+    margin-bottom: 30px;
+    background: rgba(40, 169, 146, 0.94);
 }
 
 .in-block {
@@ -163,24 +204,65 @@ input {
 }
 
 .logo-align {
-    margin-right: 400px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+}
+
+.logo-item1 {
+    width: 110px;
+    height: 30px;
+}
+
+.logo-item2 {
+    width: 30px;
+    height: 30px;
+    margin-left: 45px;
 }
 
 .number-pok {
+    margin-top: 5px 0px;
     font-size: 14px;
     float: right;
     padding-top: 6px;
     margin-right: 5px;
 }
 
-.pok-img {
-    width: 130px;
-    height: 110px;
-    margin: 0px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 5px 15px;
+.img-pok {
+    width: 150px;
+    height: 150px;
+    margin-left: 15px;
+    padding-bottom: 10px;
+}
+
+.img-btn-filter {
+    width: 45px;
+    height: 45px;
+    margin-left: 5px;
+}
+
+.img-btn-order {
+    width: 25px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.img-btn-search {
+    width: 30px;
+    height: 30px;
+}
+
+.bg-img-pok {
+    float: right;
+    opacity: 0.3;
+    width: 50px;
+    height: 100px;
 }
 
 .footer-page {
     color: white;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
 }
