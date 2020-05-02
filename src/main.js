@@ -90,9 +90,9 @@ const filters = () =>
 /*Função que verifica quais checkboxs estão selecionados*/
 const checkType = (a) => {
     const newArray = []
-    for (let i in a) {
-        if (a[i].checked )
-            newArray.push(a[i].value)
+    for (let i of a) {
+        if (i.checked)
+            newArray.push(i.value)
     }
     return newArray
 }
@@ -100,10 +100,10 @@ const checkType = (a) => {
 /*Função de verificar checkbox repetidos*/
 const concat = (checkboxType, checkboxWeakness) => {
     const newArray = []
-    for (let i in checkboxType) {
-        for (let j in checkboxWeakness) {
-            if (checkboxWeakness[j] == checkboxType[i])
-                newArray.push(checkboxWeakness[j])
+    for (let i of checkboxType) {
+        for (let j of checkboxWeakness) {
+            if (j == i)
+                newArray.push(j)
         }
     } return newArray
 
@@ -111,21 +111,15 @@ const concat = (checkboxType, checkboxWeakness) => {
 /*Função que subtrai os os checkboxs marcados duas vezes */
 const subtraction = (checkboxType, checkboxWeakness, parameter) => {
 
-    console.log("checkboxType in subtration" + checkboxType)
-    console.log("checkboxType" + checkboxWeakness)
-    console.log("checkboxType" + parameter)
-
-
-        const newArray = concat(checkboxType, checkboxWeakness)
-        if (newArray.length != 0) {
+    const newArray = concat(checkboxType, checkboxWeakness)
+    if (newArray.length != 0) {
         const result = []
-        for (let i in parameter) {
-            for (let j in newArray) {
-                if (parameter[i] != newArray[j])
-                    result.push(parameter[i])
+        for (let i of parameter) {
+            for (let j of newArray) {
+                if (i != j)
+                    result.push(i)
             }
         }
-        console.log("re" + result)
         return result
     }
     else
@@ -140,25 +134,25 @@ const typeFunction = (p) => {
     let result = []
     let resultWeakness = []
     /*subtrai os checkboxs repetidos*/
-      if (checkboxWeakness.length != 0 && checkboxType.length != 0) {
-           result = subtraction(checkboxType, checkboxWeakness, checkboxType)
-           resultWeakness = subtraction(checkboxType, checkboxWeakness, checkboxWeakness)
-      }
-      else {
+    if (checkboxWeakness.length != 0 && checkboxType.length != 0) {
+        result = subtraction(checkboxType, checkboxWeakness, checkboxType)
+        resultWeakness = subtraction(checkboxType, checkboxWeakness, checkboxWeakness)
+    }
+    else {
         result = checkboxType
         resultWeakness = checkboxWeakness
-     }
+    }
     // /*Verifica os tipos*/
-     for (let i in result) {
-         if( p.type[0] == result[i] || p.type[1] == result[i])
-         return true
-     }
+    for (let i of result) {
+        if (p.type[0] == i || p.type[1] == i)
+            return true
+    }
     /*Verifica as fraquezas */
 
-    for (let i in resultWeakness) {
-        for (let j in p.weaknesses) {
-            if( p.weaknesses[j] == resultWeakness[i])
-            return true
+    for (let i of resultWeakness) {
+        for (let j of p.weaknesses) {
+            if (j == i)
+                return true
         }
     }
 }
@@ -171,18 +165,18 @@ const advancedSearch = () => {
     filters()
 }
 function myFunctionClear(a) {
-    if(a.length !=0){
-    for (let i in a){
-      if (a[i].checked)
-        a[i].checked = false;
+    if (a.length != 0) {
+        for (let i of a) {
+            if (i.checked)
+                i.checked = false;
+        }
     }
 }
-}
 //Função que reseta o menu avançado
-const resetSearch = () =>{
+const resetSearch = () => {
     const checkbox = document.getElementById("checkbox-types")
-myFunctionClear(checkbox.weakness)
-myFunctionClear(checkbox.option)
+    myFunctionClear(checkbox.weakness)
+    myFunctionClear(checkbox.option)
 }
 
 /*Verifica eventos*/
