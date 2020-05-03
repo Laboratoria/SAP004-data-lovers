@@ -118,6 +118,10 @@ input {
     margin: 3px 3px 3px 0px;
 }
 
+.btn-card-double {
+    width: 150px;
+}
+
 .btn-menu {
     padding: 10px;
     width: 200px;
