@@ -31,39 +31,29 @@ p{
 a:hover, a{
     color: white;
     text-decoration: none; 
-    outline: none;   
+    outline: none;  
 }
 
 .link {
-	box-shadow:inset 0px -3px 7px 0px #f17f42;
-	background:linear-gradient(to bottom, #ce6d39 5%, #f17f42 100%);
 	background-color:#ce6d39;
 	border-radius:41px;
-	border:2px solid #0b0e07;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
-	font-family:'Friz Quadrata Std',sans-serif;
-    font-size:14px;
+	font-size:14px;
 	padding:15px 23px;
-	text-decoration:none;
 	text-shadow:-2px 2px 3px #ce6d39;
 }
 .link:hover {
-	background:linear-gradient(to bottom, #f17f42 5%, #ce6d39 100%);
-	background-color:#f17f42;
+    background:linear-gradient(to bottom, #000000 5%, #C65146 100%);	  
 }
-
 
 .order{
     box-shadow:inset 0px -3px 7px 0px #f17f42;
-	background:linear-gradient(to bottom, #ce6d39 5%, #f17f42 100%);
     background-color:#ce6d39;
-    font-family: 'Friz Quadrata Std',sans-serif;
     border-radius:18px;
-    color:#ffffff;
-    border:2px solid #0b0e07;
+    color: #ffffff;
     outline: none;
+    border:2px solid #0b0e07; 
 }
 /*****************************Texto Sobre********************************/
 
@@ -119,6 +109,7 @@ a:hover, a{
     bottom: 50%;
     background-image: radial-gradient(circle, #9055a2, #7b4d93, #674684, #543d74, #433564, #382f5b, #2e2a52, #242449, #1c2045, #141d41, #0b193c, #011638);
     border: 2px solid black;
+    z-index: -1;
 }
     
 
