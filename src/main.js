@@ -11,31 +11,22 @@ const print = pokemons => { //função para imprimir os pokemons
     const card = document.createElement("div") // cria uma nova div
     const img = document.createElement("img") //criar elemento img
     const cardInformation = document.createElement("div") //cria div das informações
-    const powerTypeZero = document.createElement("div")
     const power = document.createElement("div")
     img.src = pokemons.img // coloca o endereço da imagem
 
-
-    powerTypeZero.classList = (pokemons.type[0])
     card.classList.add("card")
-    powerTypeZero.classList.add("power")
     img.classList.add("picture") // coloca uma classe na imagem
-    cardInformation.classList.add("card-information")
-    cardInformation.innerHTML += `<br><h5>${pokemons.num}</h5>` //coloca o numero
-    cardInformation.innerHTML += `<h3>${pokemons.name}</h4>` // coloca o nameInput
-    powerTypeZero.innerHTML += `<h5>${pokemons.type[0]}</h5>` //${pokemons.type[1] = pokemons.type[1] || ""}</h5>` // coloca o tipo
-
-    power.appendChild(powerTypeZero)
-    if (pokemons.type[1] != undefined) {
-        const powerTypeOne = document.createElement("div")
-        powerTypeOne.classList = (pokemons.type[1])
-        powerTypeOne.classList.add("power")
-        powerTypeOne.innerHTML += `<h5>${pokemons.type[1]}</h5>`
-        power.appendChild(powerTypeOne)
-    }
-
+    cardInformation.innerHTML += `<br><h5>${pokemons.num}</h5><br><h3>${pokemons.name}</h4>` // coloca o nameInput
+    pokemons.type.forEach(a => { 
+        const powerType = document.createElement("div")
+        powerType.classList = (a)
+        powerType.classList.add("power")
+        powerType.innerHTML += `<h5>${a}</h5>` //${pokemons.type[1] = pokemons.type[1] || ""}</h5>` // coloca o tipo
+        power.appendChild(powerType)
+    });
+    
     cardInformation.appendChild(power)
-    card.appendChild(cardInformation) // coloca informações no card
+    card.appendChild(cardInformation, img) // coloca informações no card
     card.appendChild(img) //coloca a imagem na nova div
     root.appendChild(card) // coloca nova div dentro da div existente
 }
@@ -60,8 +51,7 @@ const creatButtonView = () => {
 /*Tela inicial*/
 const main = () => {
     clearDisplay()
-    const funcMain = (pokemons) => Number(pokemons.num) < 8
-    const elementMain = pokemons.filter(funcMain)
+    const elementMain = pokemons.filter((pokemons) => Number(pokemons.num) < 8)
     elementMain.map(print)
     const viewAll = creatButtonView()
     viewAll.innerHTML = "<h3>Ver Tudo</h3>"
@@ -75,6 +65,7 @@ const viewAllElement = () => {
     viewAll.innerHTML = "<h3>Ver Menos</h3>"
     viewAll.addEventListener('click', main)
 }
+
 /*Função que pesquisa os nomes*/
 const searchName = () => {
     clearDisplay()
@@ -82,9 +73,10 @@ const searchName = () => {
     elementSearched.map(print)
 }
 /*Função de abrir e fechar menu avançado*/
-const filters = () =>
-    filtersMenu.style.display == "none" ? filtersMenu.style.display = "block" : filtersMenu.style.display = "none"
-
+const filters = () =>{
+    const filterMenuDysplay = filtersMenu.style.display
+    filtersMenu.style.display = filterMenuDysplay == "block" ?  "none" : "block"
+}
 
 
 /*Função que verifica quais checkboxs estão selecionados*/

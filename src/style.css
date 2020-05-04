@@ -82,7 +82,7 @@ font-family: sans-serif;
     color: black;
     cursor: pointer;
 }
-.card-information{
+.card:only-child{
     display: flex;
     flex-direction: column;
     padding: 2px;
@@ -127,7 +127,11 @@ font-family: sans-serif;
     flex-direction: column;
 }
 
-
+.button-search:hover{
+    background-color: rgb(252, 228, 11);
+    color: black;
+    cursor: pointer;  
+}
 
 .power{
     color: white;
