@@ -8,3 +8,8 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
+export const searchFunc = p => {
+  let nameInput = document.getElementById("searchtxt").value
+  nameInput = nameInput.toUpperCase() 
+return (nameInput == p.name.slice(0,-(p.name.length - nameInput.length)).toUpperCase()|| nameInput == p.name.toUpperCase()) 
+};
