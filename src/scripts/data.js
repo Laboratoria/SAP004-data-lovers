@@ -1,27 +1,17 @@
-export function sortData (data, by, order) {
-  function sortAsc(a, b) {
-    if (a[by] > b[by]){
-      return 1;
-    }
-    if (a[by] < b[by]){
-      return -1;
-    }
-    return 0;
-  }
+export function filterExact(characters, prop, value) {
+  return characters.filter((character) => character[prop] === value);
+}
 
-  function sortDesc(a, b) {
-    if(a[by] > b[by]){
-      return -1;
-    }
-    if(a[by] < b[by]){
-      return 1;
-    }
-    return 0;
-  }
+export function filterLike(characters, prop, value) {
+  return characters.filter((character) => character[prop].toLowerCase().includes(value.toLowerCase()));
+}
 
 
-  if(order === 'desc') {
-    return data.sort(sortDesc)
-  }
-  return data.sort(sortAsc)
+export function sortByProp(characters, prop, upOrDown) {
+  return characters.sort((previos, next) => {
+    const az = previos[prop] > next[prop];
+    const za = previos[prop] < next[prop];
+    const compare = upOrDown ? az : za;
+    return compare ? 1 : -1;
+  })
 }
