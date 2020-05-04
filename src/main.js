@@ -156,14 +156,15 @@ const advancedSearch = () => {
     resetSearch()
     filters()
 }
-function myFunctionClear(a) {
+//Limpar filtro
+const myFunctionClear = (a) =>{
     if (a.length != 0) {
         for (let i of a) {
             if (i.checked)
                 i.checked = false;
         }
     }
-}
+  }
 /*Função que reseta o menu avançado*/
 const resetSearch = () => {
     const checkbox = document.getElementById("checkbox-types")
@@ -177,4 +178,5 @@ document.getElementById("menu-filter").addEventListener('click', filters)
 document.getElementById("home").addEventListener('click', main)
 document.getElementById("advanced-search").addEventListener('click', advancedSearch)
 document.getElementById("reset-search").addEventListener('click', resetSearch)
-main()
+ main()
+
