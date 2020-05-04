@@ -1,13 +1,17 @@
 import buildHTML from './createCard.js'
 import data from '../data/rickandmorty/rickandmorty.js';
-import { allCharacters, gendersFilter, search, speciesFilter, sortFilter, statusFilter } from './selectors.js'
+import { allCharacters, gendersFilter, search, speciesFilter, sortByNameUp, sortByNameDown, statusFilter } from './selectors.js'
 import { createFilter, getOptions } from './createFilters.js';
+import { filterExact, filterLike, sortByProp } from './data.js';
 
-allCharacters.addEventListener('click', () => buildHTML(data.results))
+buildHTML(data.results);
 
-search.addEventListener('input', () => {
-  let name = search.value;
-  let listCharacters = data.results.filter((character) => character.name.toLowerCase().includes(name.toLowerCase()));
+allCharacters.addEventListener('click', buildSort.bind(null, 'id', true));
+sortByNameUp.addEventListener('click', buildSort.bind(null, 'name', true));
+sortByNameDown.addEventListener('click', buildSort.bind(null, 'name', false));
+
+search.addEventListener('input', (event) => {
+  let listCharacters = filterLike(data.results, 'name', event.target.value);
   buildHTML(listCharacters);
 })
 
@@ -15,14 +19,18 @@ function buildFilter(parentElement, type) {
   const options = getOptions(data.results, type);
 
   createFilter(parentElement, options, (option) => {
-    let characterFiltered = data.results.filter((character) => character[type] === option);
+    let characterFiltered = filterExact(data.results, type, option);
     buildHTML(characterFiltered);
   })
+}
 
+function buildSort(prop, upOrDown) {
+  let sorted = sortByProp(data.results, prop, upOrDown);
+  buildHTML(sorted);
 }
 
 buildFilter(speciesFilter, 'species');
 buildFilter(gendersFilter, 'gender');
 buildFilter(statusFilter, 'status');
 
-buildHTML(data.results);
+
