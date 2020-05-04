@@ -5,16 +5,18 @@ import data from './data/pokemon/pokemon.js';
 
 //import { searchFunc } from './data.js';
 const pokemons = data.pokemon;
-const search = document.querySelector('#searchBar');
+const searchBar = document.querySelector('#searchBar');
 const btnSrc = document.querySelector("#btn-src")
-const card = (num, name, img,type) => {
+
+//apenas mostra personagens na tela
+/*const card = (num, name, img,type) => {
     return `<figure class="card-pokemon"><p>${num}</p>
     <img src="${img}" alt="Miniatura do pokémon ${name}">
     <figcaption class="pokemon-name">${name}</figcaption>
     </figure>`
 }
 
-pokemons.map(pokemon => document.getElementById("root").innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));
+pokemons.map(pokemon => document.getElementById("root").innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));*/
 
 let showBtn = document.querySelector('#btn-src');
 // função mostrar barra de pesquisa
@@ -38,14 +40,11 @@ let showBtn = document.querySelector('#btn-src');
 
 //função pesquisar
 const charactersList = document.getElementById('root');
-let pCharacters = [];
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
-
-    const filteredCharacters = pCharacters.filter((character) => {
+    const filteredCharacters = pokemons.filter((character) => {
         return (
-            character.name.toLowerCase().includes(searchString) //|| character.type.toLowerCase().includes(searchStringS)
-           
+            character.name.toLowerCase().includes(searchString) //|| character.type.toLowerCase().includes(searchStringS)           
         );
     });
     displayCharacters(filteredCharacters);
@@ -54,8 +53,8 @@ searchBar.addEventListener('keyup', (e) => {
 const loadCharacters = async () => {
     try {
        
-        pCharacters = pokemons
-        displayCharacters(pCharacters);
+      
+        displayCharacters(pokemons);
     } catch (err) {
         console.error(err);
     }
