@@ -1,11 +1,12 @@
-body {
-  background-color: rgb(30, 163, 240);
+header {
+  background-color: yellow;
 }
 
 .logotipo {
-  margin: 1em;
   display: flex;
   justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .logo {
@@ -17,7 +18,14 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
-  margin: 2em;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+main {
+  background-color: rgb(30, 163, 240);
+  padding-top: 30px;
+
 }
 
 .pokedex {
@@ -37,13 +45,14 @@ body {
 
 .lista-img {
   display: flex;
-  height: 120px;
+  height: 150px;
 }
 
 .lista-pokedex-link {
-  width: 30%;
-  height: 180px;
-  margin: 3px;
+  width: 25%;
+  height: 250px;
+  padding: 0.5em;
+  margin: 0.5em;
   background-color: lightgray;
   list-style-type: none;
   display: flex;
@@ -52,4 +61,26 @@ body {
   flex-direction: column;
   border: 1px solid gray;
   border-radius: 10px;
+}
+
+.lista-tipo{
+  border: 1px solid green;
+  background-color: lightgreen;
+  border-radius: 10px;
+  padding: 0.5em;
+}
+
+.lista-fraqueza{
+  border: 1px solid red;
+  background-color: lightcoral;
+  border-radius: 10px;
+  padding: 0.5em;
+}
+
+.rodape{
+  background-color: rgb(5, 137, 170);
+  color: white;
+  font-weight: bolder;
+  padding: 10px;
+  text-align: center;
 }
