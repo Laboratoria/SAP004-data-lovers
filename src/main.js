@@ -1,4 +1,4 @@
-import {filtrar, ordemNomes} from './data.js';
+import {filtrar, ordemNomes, buscarNome} from './data.js';
 import data from "./data/pokemon/pokemon.js";
 
 let arrayPokemon = data["pokemon"];
@@ -32,11 +32,12 @@ botaoLimparOrdem.addEventListener("click", function limparOrdem(){
 })
 
 
-/*let campoBusca = document.querySelector("#campo-busca");
+let campoBusca = document.querySelector("#campo-busca");
 campoBusca.addEventListener("input", function Buscado(){
-  let campoBuscado = document.querySelector("#campo-busca");
-  card(buscarNome(campoBuscado, arrayPokemon.name));
-});*/
+  let campoBuscado = document.querySelector("#campo-busca").value;
+  campoBuscado = campoBuscado.substring(0,1).toUpperCase().concat(campoBuscado.substring(1));
+  card(buscarNome(campoBuscado, arrayPokemon));
+});
 
 
 

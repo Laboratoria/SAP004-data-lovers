@@ -4,10 +4,10 @@ export function filtrar(campo, array) {
 return filtrado;
 }
  
-/*export  function buscarNome(campo, array){
-  const buscado = array.name.map((item) => item(campo))
-return console.log(buscado);
-}*/
+export  function buscarNome(campo, array){
+  const buscado = array.filter((item) => item.name.includes(campo))
+return buscado;
+}
 
 export function ordemNomes(campo, array){
   const opcao = array.sort(function (a, b) {
