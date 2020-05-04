@@ -2,7 +2,7 @@
 
 /*Classes das cores por tipo do pokemon*/
 
-.color-aco {
+/*.color-aco {
     background-color: #DAA520;
 }
 
@@ -76,7 +76,7 @@
 
 
 /*Demais estilizações*/
-
+/*
 * {
     margin: 0px;
     padding: 0px;
@@ -271,11 +271,21 @@ input {
 
 /* tela secundária/características */
 
-*{
+body{
+    display:flex;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
     font-family:"roboto", sans-serif
 }
 
 .modal-char {
+    display:flex;
     display: none;
     position: fixed; 
     z-index: 2000; 
@@ -291,65 +301,71 @@ input {
 
 .char-card-container {
     display: flex;
-    position: relative;
     flex-grow: 1;
     width: 210px;
     height: 330px;
-    left: 0px;
-    top: 0px;
+    margin: 50% auto;
+    
     font-style: normal;
-    font-weight: bold;
     background: #FF8C00;/*tirar depois, apenas para visualizar*/
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    /*justify-content: center;
-    align-items: center;*/
+    align-items: flex-start;
+    align-self: center;
+    justify-content: center;
 }
+
 
 .char-name-style {
     position: relative;
-    width: 68px;
-    height: 28px;
-    left: 5px;
-    top: -117px;
+    left: 305px;
+    top: 19px;
+    /*bottom: 280.79px;*/
     font-size: 22px;
     line-height: 28px;
+    font-weight: bold;
     color: #FFFFFF;
 }
 
 .char-num-style {
     position: relative;
-    width: 42.4px;
-    height: 17.28px;
-    left: 150.6px;
-    top: -152px;
-    font-size: 13px;
+    /*width: 42.4px;
+    height: 17.28px;*/
+    left: 330px;
+    /*right: 2.5px;*/
+    top: 26px;
+    font-size: 12px;
     line-height: 15px;
     text-align: right;
+    font-weight: bold;
     color: #FFFFFF;
 }
 
 .char-img-style {
-    max-width: 100%;
-    display: block;
-    width:100px;
-    position: absolute;
-    left: 26%;
-    right: 22.86%;
-    top: -30%;
-    bottom: 90%;
+    position: relative;
+    width: 80px;
+    height:80px;
+    left: 35px;
+    /*right: 22.86%;*/
+    top: 40px;
+    bottom: 0px;
+    /*max-width: 100%;
+    /*display: block;
+    left: 10px;
+    right: 10px;
+    top: 20.3%;*/
+    z-index: 2;
     background: url(037.png);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+    /*align-self: center;*/
+    
 }
 
 .char-type-style {
-    position: relative;
-    width: 90.09px;
-    height: 20.52px;
-    left: 4px;
-    top: -135px;
+    position:relative;
+    padding:2.5px 8px;
     font-size: 14px;
     line-height: 16px;
-    text-align: center;
+    font-weight: bold;
     color: rgba(0, 0, 0, 0.62);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -357,42 +373,62 @@ input {
     opacity: 0.3;
 }
 
+.char-type-style.st {
+    left: 138px;
+    top: 50px;
+}
+
+.char-type-style.nd {
+    left: 91px;
+    top: 72.5px;
+}
+
+.char-type-style.rd {
+    left: 21px;
+    top: 95px;
+}
+
+
 .modal-char-trans{
     display: flex;
+    position: relative;
     /*flex-grow: 1;*/
-    position: absolute;
     width: 200px;
     height: 200px;
-    left: 5px;
-    right:5px;
+    /*left: -181px;*/
+    right: 221.5px;
     top: 130px;
     bottom: 0px;
     font-style: normal;
-    background: #FFFFFF;
-    border-radius: 20px 20px 0px 0px;
-        
-    /*justify-content: center;
-    align-items: center; */
-}
-
-.modal-data{
     font-size: 14px;
     line-height: 16px;
     color: rgba(0, 0, 0, 0.57);
+    background: #FFFFFF;
+    border-radius: 20px 20px 0px 0px;
+    justify-content: center;
+    align-items: center;
 }
+
+/*.modal-data{???????????????????   verificar para excluir depois
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    color: rgba(0, 0, 0, 0.57);
+}*/
 
 /*.scroll imput{
-    display: none;
+    
+    list-style-image:
     list-style-type: none;
-}
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    z-index:-2;
+}*/
 
-/*.scroll{
-    display: flex;
-    width: 2000px;
-    height: 30px;
+.scroll{
     overflow: hidden ;
 }
-
 /*.menu-nav{
     /*position: relative;
     width: 200px;
@@ -404,8 +440,8 @@ input {
     /*align-items: center;*/
     /*text-align: center;
     margin: 0px;
-    padding: 0px;*/
-}
+    padding: 0px;
+}*/
 
 /*.menu-nav label{
     position: absolute;
@@ -427,13 +463,14 @@ input {
 }*/
 
 .close {
-    position: absolute;
+    position: relative;
     width: 15px;
     height: 15px;
-    left: 180px;
-    top: 5px;
+    left: 12px;
+    top: 120px;
     cursor: pointer;
-    /*background: url(icon.png) no-repeat;*/
+    background: url(icon.png) no-repeat;
+    z-index: 3;
 }
 .close:hover {
     background: #FFFFFF;
@@ -441,93 +478,117 @@ input {
 }
 
 .item-menu-char {
-    position: absolute;
+    position: relative;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.57);
+    padding: 3px;
+    background-color:grey;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25) ;
+    border: 1.5px solid (0, 0, 0, 0.57);
+    border-radius: 5px;
+    cursor:pointer
+}
+
+.item-menu-char:hover{
+    opacity: 0.8;
+}
+
+.item-menu-char:active {
+    color: #FFFFFF;
+    background:  rgba(0, 0, 0, 0.57);
+    box-shadow: none;
 }
 
 .item-menu-char.data {
-    left: 6.5%;
-    right: 52.32%;
-    top: 15%;
-    bottom: 74.39%;
+    position: relative;
+    left: 212px;
+    top: -40px; 
+}
+
+#rd-data {
+    position: fixed;
+    left: 78px;
+    top: -36.5px;
 }
 
 .char-item {
-    position: absolute;
-    left: 6.5%;
-    right: 59%;
-    font-weight: normal;
-}
-
-.char-item-value{
-    position: absolute;
-    left: 44%;
-    right: 6.5%;
-    font-weight: normal;
-    text-align: right;
+    position: relative;
+    /*font-weight: normal;*/
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .char-height{
-    top: 30.16%;
-    bottom: 59.23%
+    left: 153px;
+    bottom:25px;
 }
 
-.char-weight{
-    top: 38.11%;
-    bottom: 51.28%;
+.char-height-value {
+    left: 252px;
+    bottom:25px;
+}
+.char-weight {
+    left: 71px;
+    bottom:10px;
 }
 
-.char-cand-item{
-    position: absolute;
-    font-weight: normal;
-    left: 6.5%;
-    right: 74%;
-    top: 45.54%;
-    bottom: 43.85%;
+.char-weight-value {
+    left: 183px;
+    bottom:10px;
+    width: 100px;
 }
 
-.cand-value{
-    left: 30.5%;
-    right: 6.5%;
-    text-align: right;
+.char-cand {
+    right: -2px;
+    top: 6px;
+}
+
+.char-cand-value {
+    left: 41px;
+    top: 6px;
+
 }
 
 .char-cand-count {
-    top: 54.39%;
-    bottom: 35%;
+    right: 140.5px;
+    top: 22px;
+    width: 100px;
 }
 
+.char-cand-count-value {
+    right: 26px;
+    top: 22px;
+    width: 100px;
+}
 .Char-egg {
-    top: 63%;
-    bottom: 29%;
+    right: 208px;
+    top: 38px;
+}   
+
+.Char-egg-value{
+    right: 58px;
+    top: 38px;
+    width: 100px;
+}
+.char-spawn-chance {
+    right: 215px;
+    top: 59px;
 }
 
-.char-spawn-chance-item{
-    position: absolute;
-    left: 11%;
-    right: 11%;  
-    top: 75%;
-    bottom: 10.89%;
-    font-weight: bold;
-    text-align: center;
+.char-spawn-chance-value{
+    right: 293px;
+    top: 84px;
+    width: 100px;
 }
-
-.char-spawn-chance-value-item {
-    position: absolute;
-    left: 11%;
-    right: 11%;  
-    top: 85%;
-    bottom:9%;
-    font-weight: normal;
-    text-align: center;
-}
-
 .item-menu-char.weaknesses{
-    left: 30.72%;
-    right: 28.59%;
-    top: 15%;
-    bottom: 74.39%;
+    left: 263.5px;
+    top: -55.5px;
+}
+
+#rd-weak {
+    position: fixed;
+    left: 132px;
+    top: -55px
 }
 
 .modal-weak{
@@ -537,14 +598,19 @@ input {
 /*.modal-evo{
     font-size: 14px;
     line-height: 16px;
-    color: rgba(0, 0, 0, 0.78);*/
-}
+    color: rgba(0, 0, 0, 0.78);
+}*/
 
 .item-menu-char.evolution{
-    left: 64.0%;
-    right: 6.5%;
-    top: 15%;
-    bottom: 77%;
+    left: 333px;
+    top: -71px;
+}
+
+#rd-evo {
+    position:fixed;
+    /*position: fixed;*/
+    left: 206px;
+    top: -72.5px;
 }
 
 /*.arrow{

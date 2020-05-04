@@ -69,18 +69,18 @@ removeTemplateCard();
 //modal
 const modal= document.querySelector(".modal-char")
 document.querySelector("container-card").addEventListener("click", openModal)
-    function(openModal) {
+    function openModal() {
         modal.style.display= "block"
 };
 
 const closeModal= document.querySelector(".close")[0].addEventListener("click", function(){
-    openModal.style.display= "none"
+    modal.style.display= "none"
 });
 
 window.addEventListener("click", event)
-function(event){
+function event(){
     if (event.target== openModal) {
-        openModal.style.display= "none"
+        modal.style.display= "none"
         }
 };
 
