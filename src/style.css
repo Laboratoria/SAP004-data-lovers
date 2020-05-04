@@ -278,7 +278,8 @@ body{
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.4);
+    background-color:black ;
+    /*background-color: rgba(0,0,0,0.4);*/
     justify-content: center;
     align-items: center;
     font-family:"roboto", sans-serif
@@ -305,7 +306,6 @@ body{
     width: 210px;
     height: 330px;
     margin: 50% auto;
-    
     font-style: normal;
     background: #FF8C00;/*tirar depois, apenas para visualizar*/
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -426,9 +426,9 @@ body{
     z-index:-2;
 }*/
 
-.scroll{
+/*.scroll{
     overflow: hidden ;
-}
+}*/
 /*.menu-nav{
     /*position: relative;
     width: 200px;
@@ -459,7 +459,7 @@ body{
 }*/
 
 /*#rd-evo:checked ~.sections{
-    margin-top: -340px;
+    z-index: 5
 }*/
 
 .close {
@@ -470,7 +470,7 @@ body{
     top: 120px;
     cursor: pointer;
     background: url(icon.png) no-repeat;
-    z-index: 3;
+    z-index: 2;
 }
 .close:hover {
     background: #FFFFFF;
@@ -513,7 +513,7 @@ body{
 
 .char-item {
     position: relative;
-    /*font-weight: normal;*/
+
     font-weight: bold;
     white-space: nowrap;
 }
@@ -536,6 +536,7 @@ body{
     left: 183px;
     bottom:10px;
     width: 100px;
+    text-align: end;
 }
 
 .char-cand {
@@ -580,6 +581,49 @@ body{
     top: 84px;
     width: 100px;
 }
+
+.modal-char-trans-1{
+    display: flex;
+    position: relative;
+    /*flex-grow: 1;*/
+    width: 200px;
+    height: 170px;
+    /*left: -181px;*/
+    /*right: 221.5px;*/
+    top: 130px;
+    bottom: 0px;
+    font-style: bold;
+    font-size: 14px;
+    line-height: 16px;
+    /*color: #FFFFFF;*/
+    background: white;
+    /*background: #FFFFFF;*/
+    /*border-radius: 20px 20px 0px 0px;*/
+    justify-content: center;
+    align-items: center;
+}
+
+/*.modal-char-trans-2{
+    display: flex;
+    position: relative;
+    /*flex-grow: 1;
+    width:200px;
+    height: 200px;
+    /*left: -181px;
+    right: 395px;
+    top: 170px;
+    bottom: 0px;
+    font-style: bold;
+    font-size: 14px;
+    line-height: 16px;
+    /*color: #FFFFFF;
+    background: lightsteelblue;
+    /*background: #FFFFFF;*/
+    /*border-radius: 20px 20px 0px 0px;
+    justify-content: center;
+    align-items: center;
+}*/
+    
 .item-menu-char.weaknesses{
     left: 263.5px;
     top: -55.5px;
@@ -613,13 +657,14 @@ body{
     top: -72.5px;
 }
 
-/*.arrow{
-    position: absolute;
+.arrow{
+    /*position: absolute;*/
+    z-index: 4;
     width: 10px;
     height: 10px;
-    left: 94px;
+    /*left: 94px;
     top: 115px;
-    /*background: url(up-chevron.png);*/
+    background: url(up-chevron.png);
 }
 
 /*.img-evo {
@@ -631,8 +676,8 @@ body{
 
 .evo-1-img{
     left: 31px;
-    /*background: url(037.png)*/
-}
+    /*background: url(037.png)
+}*/
 
 /*.evo-item{
     position: absolute;
@@ -661,8 +706,8 @@ body{
 
 .evo-2-img{
     left: 120px;
-    /*background: url(038.png);*/
-}
+    /*background: url(038.png);
+}*/
 
 /*.evo-name-num-box2{
     left: 52.5%;

@@ -79,7 +79,7 @@ const closeModal= document.querySelector(".close")[0].addEventListener("click", 
 
 window.addEventListener("click", event)
 function event(){
-    if (event.target== openModal) {
+    if (event.target==openModal) {
         modal.style.display= "none"
         }
 };
