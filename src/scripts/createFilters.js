@@ -1,6 +1,7 @@
 export function getOptions(characters, prop) {
   return characters.reduce(
     (acc, character) => acc.add(character[prop]),
+    // eslint-disable-next-line no-undef
     new Set(),
   );
 }
