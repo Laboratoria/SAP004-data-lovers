@@ -1,32 +1,54 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
+import { searchPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-//import { searchFunc } from './data.js';
+// banco de dados
 const pokemons = data.pokemon;
-const searchBar = document.querySelector('#searchBar');
-const btnSrc = document.querySelector("#btn-src")
 
-//apenas mostra personagens na tela
-/*const card = (num, name, img,type) => {
-    return `<figure class="card-pokemon"><p>${num}</p>
-    <img src="${img}" alt="Miniatura do pokémon ${name}">
+// variáveis do HTML
+const searchBar = document.querySelector("#searchBar");
+const buttonOrder = document.querySelector("#buttonOrder");
+const buttonFilter = document.querySelector("#buttonFilter");
+const buttonSearch = document.querySelector("#buttonSearch");
+const pokemonsList = document.querySelector("#root");
+
+/* 
+// função para mostrar barra de pesquisa
+buttonSearch.addEventListener("click", function () {
+    searchBar.style.visibility = "visible"; 
+    buttonOrder.style.visibility = "hidden";
+    buttonFilter.style.visibility = "hidden";
+    buttonSearch.style.visibility = "hidden";
+});
+*/
+
+
+// card do pokémon
+const card = (num, name, img, type) => {
+    return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
+    <img src="${img}" alt="Miniatura do pokémon ${name} do tipo ${type}">
     <figcaption class="pokemon-name">${name}</figcaption>
     </figure>`
-}
+};
 
-pokemons.map(pokemon => document.getElementById("root").innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));*/
+// mapping para gerar o card
+pokemons.map(pkm => pokemonsList.innerHTML += card (pkm.num, pkm.name, pkm.img, pkm.type));
 
-let showBtn = document.querySelector('#btn-src');
-// função mostrar barra de pesquisa
- showBtn.addEventListener("click", function () {
-        document.querySelector("#searchBar").style.visibility = "visible"; 
-        document.querySelector("#btn-od").style.visibility = "hidden";
-        document.querySelector("#btn-fl").style.visibility = "hidden";
-        document.querySelector('#btn-src').style.visibility = "hidden";
 
-    });
+// cards filtrados
+const search = searchPokemon; ()=> {
+    return card;
+}; console.log(search)
+
+
+
+
+
+
+
+
+
+
+
 
     //função tela inicial 
 //let botaor = document.querySelector("#reset")
@@ -36,45 +58,3 @@ let showBtn = document.querySelector('#btn-src');
   //      }
  //    );
     
-
-
-//função pesquisar
-const charactersList = document.getElementById('root');
-searchBar.addEventListener('keyup', (e) => {
-    const searchString = e.target.value.toLowerCase();
-    const filteredCharacters = pokemons.filter((character) => {
-        return (
-            character.name.toLowerCase().includes(searchString) //|| character.type.toLowerCase().includes(searchStringS)           
-        );
-    });
-    displayCharacters(filteredCharacters);
-});
-
-const loadCharacters = async () => {
-    try {
-       
-      
-        displayCharacters(pokemons);
-    } catch (err) {
-        console.error(err);
-    }
-};
-
-const displayCharacters = (characters) => {
-    const htmlString = characters
-        .map((character) => {
-            return `<figure class="character"><p class="poke-num">${character.num}</p>
-            <img src="${character.img}" alt="Miniatura do pokémon ${character.name}">
-            <figcaption class="pokemon-name">${character.name}</figcaption>
-            </figure>`;    
-            
-
-
-
-
-        })
-        .join('');
-    charactersList.innerHTML = htmlString;
-};
-
-loadCharacters();

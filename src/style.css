@@ -36,7 +36,7 @@ character {
     text-align: auto; 
     
 }
-.character{
+.card-pokemon{
     margin:auto;
     border-radius: 3px;
     background-color: #eaeaea;
@@ -47,15 +47,10 @@ character {
 .pokemon-name{
     text-align: center;
 }
-.poke-num{
+.pokemon-num{
     text-align: end;
 }
-#searchWrapper::after {
-    content: '🔍';
-    position: absolute;
-    top: 7px;
-    right: 15px;
-}
+
 #searchBar{
     margin-left: 35%;
     margin-bottom: 20px;
@@ -63,3 +58,4 @@ character {
     height: 30px;
     border-radius: 20px;
 }
+
