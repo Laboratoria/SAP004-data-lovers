@@ -8,18 +8,37 @@
   </head>
   <body>
 
-    <header>
-        <img src="img/pokemon.png">
+    <header id="home"> 
+        <img src="img/pokemon.png" >  
     </header>
 
+    <nav>
+      <ul>
+        <li>
+          <button id="buttonOrder">ORDEM</button>
+        </li>
+        <li>
+          <button id="buttonFilter">TIPO</button>
+        </li>
+        <li id="searchWrapper">
+          <button id="buttonSearch">BUSCA</button>
+          <ul>
+            <li>
+              <input type="text" name="busca" id="searchBar" placeholder="NOME DO POKÉMON"/>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
     <main id="root">
-      <!-- cards vindos do banco de dados-->
+        <!--cards vindos do banco de dados-->
     </main>
-    
+
     <footer>
       <p>&copy; Adriana & Tamires</p>
     </footer>
-
     <script src="main.js" type="module"></script>
   </body>
 </html>
+

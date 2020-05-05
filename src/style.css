@@ -1,50 +1,61 @@
 body{
     background: rgb(141, 206, 243);
-    font: normal 15pt arial;
+    font-family: sans-serif;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    margin: auto;
+    background: rgb(141, 206, 243);
     
     }
-    header{
-    color: white;
+    
+section{
+    margin: bottom 10px;
+}
+   #root {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+character {
+    list-style-type: none;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+        'num image'
+        'name image';
+    text-align: auto; 
+    
+}
+.card-pokemon{
+    margin:auto;
+    border-radius: 3px;
+    background-color: #eaeaea;
+    display: grid;
+    padding: 10px 30px;
+    
+}
+.pokemon-name{
     text-align: center;
-    margin: auto;
-    }
+}
+.pokemon-num{
+    text-align: end;
+}
 
-    section{
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 410px;
-    margin: auto;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.329);
-    }
+#searchBar{
+    margin-left: 35%;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 30px;
+    border-radius: 20px;
+}
 
-    footer{
-    color: white;
-    text-align: center;
-    font-style: italic;
-    }
-
-    .poke-image{ 
-        display: inline-table;
-        width: 200px;
-        position: line;
-        border: solid 1px rgb(218, 211, 211);
-        text-align: center;
-        margin: auto;
-        background-color: rgb(227, 255, 227);
-        text-align: center;
-    }
-
-    }
-    .poke-num {
-        margin-top: 0px;
-        font-size: 13pt;
-        text-align: end;
-        top: 0;
-        right: 0;
-    }
-
-
-    .card-pokemon {
-        
-    }
