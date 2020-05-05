@@ -1,18 +1,78 @@
-#fundoExterno {
-  margin-left: -0.5em;
-  margin-right: -1em;
-  overflow: hidden;
-  display: block;
-  position: relative;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
-#site {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  width: 560px;
-  padding: 20px;
-  margin-left: -300px;
-  background: #FFF;
-  background: rgba(255, 255, 255, 0.8);
+.wrapper {
+  height: 100vh;
+  perspective: 2px;
+  transform-style: preserve-3d;
+  overflow: hidden;
 }
+
+.section {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  transform-style: inherit;
+}
+
+.section::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: translateZ(-1px) scale(1.5);
+}
+
+.bg1::before {
+  background-image: url(./imagens/fundo1278.jpg);
+}
+
+.logotipo {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  width: 20%;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+@media screen and (min-width: 320px) {
+  .bg1::before {
+    background-image: url(./imagens/fundo320x600.png);
+  }
+
+  .logo {
+    width: 40%
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .bg1::before {
+    background-image: url(./imagens/fundo600x800.jpg);
+  }
+
+  .logo {
+    width: 40%
+  }
+}
+
+@media screen and (min-width: 100px) {
+  .bg1::before {
+    background-image: url(./imagens/fundo1000x750.png);
+  }
+
+  .logo {
+    width: 40%
+  }
