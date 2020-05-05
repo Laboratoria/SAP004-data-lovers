@@ -11,15 +11,28 @@
     <header id="home"> 
         <img src="img/pokemon.png" >  
     </header>
-    <section>
-      <div><button  id="reset"  type="reset">Pokédex</button></div>
-      <div id="searchWrapper">
-        
-        <button id="btn-src">pesquisar</button> <button id="btn-od">order</button> <button id="btn-fl">filter</button> <div><input type="text" name="nome" id="searchBar" placeholder="search for a character" style="visibility:hidden;" /></div>
-    </div>
-    </section>
-    <main id="root" >
-      <!-- cards vindos do banco de dados-->
+
+    <nav>
+      <ul>
+        <li>
+          <button id="buttonOrder">ORDEM</button>
+        </li>
+        <li>
+          <button id="buttonFilter">TIPO</button>
+        </li>
+        <li id="searchWrapper">
+          <button id="buttonSearch">BUSCA</button>
+          <ul>
+            <li>
+              <input type="text" name="busca" id="searchBar" placeholder="NOME DO POKÉMON"/>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="root">
+        <!--cards vindos do banco de dados-->
     </main>
 
     <footer>
