@@ -33,7 +33,6 @@ const card = (num, name, img, type) => {
 // mapping para gerar o card
 pokemons.map(pkm => pokemonsList.innerHTML += card (pkm.num, pkm.name, pkm.img, pkm.type));
 
-
 // cards filtrados
 searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar, pokemons)));
 
@@ -48,11 +47,30 @@ const displayPokemons = (characters) => {
         .join('');
     pokemonsList.innerHTML = cards;
   };
+  
+  //função a-z 
+/*btnorder.addEventListener("click", () => {
+    const sortedA = pokemons.sort( (a, b) => {
+    if( a.name > b.name) {return 1}
+    else if(b.name > a.name) { -1}
+    else { 0};})
+} );
+//console.log( sortedA );
 
+/*função z-a
+const sortedZ = pokemons.sort( (a, b) => {
+    if( b.name > a.name) return 1;
+    else if(a.name > b.name) return -1;
+    else return 0;
+} );
+//console.log( sortedZ );
 
-
-
-
+// função id
+const sortedId = pokemons.sort((a, b)=> {
+    if (b.id > a.id) return 1;
+    else if (a.id > b.id) return -1;
+    else return 0
+});console.log( sortedId);
 
 
 
