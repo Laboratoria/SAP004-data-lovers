@@ -1,6 +1,4 @@
-/*Classes das cores por tipo do pokemon*/
-
-.color-aco {
+Classes das cores por tipo do pokemon .color-aco {
     background-color: #DAA520;
 }
 
@@ -81,6 +79,11 @@
     box-sizing: border-box;
 }
 
+#home:hover,
+#logo-lab {
+    cursor: pointer;
+}
+
 .font-22 {
     font-size: 22px;
 }
@@ -110,12 +113,15 @@ input {
 }
 
 .btn-card {
-    width: 85px;
     height: 25px;
     line-height: 25px;
     font-size: 13px;
     text-align: center;
     margin: 3px 3px 3px 0px;
+}
+
+.btn-card-double {
+    width: 150px;
 }
 
 .btn-menu {
@@ -143,14 +149,18 @@ input {
     width: 170px;
 }
 
+.btn-menu:hover,
 .btn-search:hover,
 .select:hover {
     cursor: pointer;
+    background-color: #FFFFFF;
+    opacity: 1;
 }
 
 .container {
     background-color: #E5E5E5;
     margin: 0px auto;
+    padding-bottom: 30px;
     width: 1200px;
     font-family: sans-serif;
 }
@@ -167,7 +177,7 @@ input {
 }
 
 .container-card:hover {
-    opacity: 0.70;
+    opacity: 0.6;
 }
 
 .container-deck {
@@ -175,6 +185,7 @@ input {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
+    flex-shrink: 1;
 }
 
 .flex {
@@ -261,8 +272,17 @@ input {
 }
 
 .footer-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
     color: white;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
+    padding: 5px;
+}
+
+.footer-page img {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    margin-right: 8px;
 }

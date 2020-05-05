@@ -1,5 +1,6 @@
 import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
+import pokemon from './data/pokemon/pokemon.js';
 
 
 //Variáveis globais: configuração
@@ -22,46 +23,62 @@ const colorTypeList = {
     Water: "#87CEEB",
 };
 
-//Criar estrutura dos 151 cards
-let loadCards = () => {
-    for (let i = 0; i < data["pokemon"].length; i++) {
-        let cloneCard = document.querySelector('.container-card').cloneNode(true)
-        '.container-card';
-        document.querySelector('.container-deck').appendChild(cloneCard);
-    }
-    setInfosOnCard()
-}
+const cloneCards = () => document.querySelector('.container-deck').appendChild(document.querySelector('.container-card').cloneNode(true));
 
-//Carregar informações nos cards
-let setInfosOnCard = () => {
-        for (let i = 0; i < data["pokemon"].length; i++) {
-            //Modificar nome
-            document.querySelectorAll('.name-pok')[i].textContent = data["pokemon"][i]["name"];
-            //Encurtando nomes muito extensos
-            if (data["pokemon"][i]["name"] == "Nidoran ♀ (Female)") {
-                document.querySelectorAll('.name-pok')[i].textContent = "Nidoran ♀"
-            };
-            if (data["pokemon"][i]["name"] === "Nidoran ♂ (Male)") {
-                document.querySelectorAll('.name-pok')[i].textContent = "Nidoran ♂"
-            };
-            //Modificar número
-            document.querySelectorAll('.number-pok')[i].textContent = `#${data["pokemon"][i]["num"]}`;
-            //Modificar tipo
-            //....
+const setInfosOnCard = (node, index, data, attribute) => {
+    let parentNode = document.querySelectorAll(node)[index]
+    parentNode.textContent = data[index][attribute];
 
-            //Modificar imagem
-            document.querySelectorAll('.img-pok')[i].src = data["pokemon"][i]["img"];
-            //Modificar cor
-            let mainType = data["pokemon"][i]["type"][0];
-            document.querySelectorAll('.container-card')[i].style.backgroundColor = colorTypeList[mainType];
+    //Tratando as exceções nas informações
+    const fixInfosDetails = () => {
+        switch (attribute) {
+            case 'name':
+                if (data[index][attribute] === "Nidoran ♀ (Female)") {
+                    parentNode.textContent = 'Nidoran ♀';
+                }
+                if (data[index][attribute] === "Nidoran ♂ (Male)") {
+                    parentNode.textContent = 'Nidoran ♂';
+                }
+                break;
+            case 'img':
+                parentNode.src = data[index][attribute];
+                break;
+            case 'type':
+                parentNode.style.width = "150px";
+                if (data[index][attribute].length > 1) {
+                    parentNode.textContent = `${data[index][attribute][0]} - ${data[index][attribute][1]}`;
+                }
+                break;
         }
     }
-    //Remover card que serviu de modelo
-let removeTemplateCard = () => document.querySelector('.container-deck').removeChild(document.querySelectorAll('.container-card')[151]);
+    fixInfosDetails();
+
+}
+
+const setCardColor = (index) => document.querySelectorAll('.container-card')[index].style.backgroundColor = colorTypeList[data["pokemon"][index]["type"][0]];
+
+const loadCards = () => {
+    for (let i = 0; i < data["pokemon"].length; i++) {
+        cloneCards();
+        setInfosOnCard('.name-pok', i, data["pokemon"], 'name')
+        setInfosOnCard('.number-pok', i, data["pokemon"], 'num')
+        setInfosOnCard('.type-pok', i, data["pokemon"], 'type')
+        setInfosOnCard('.img-pok', i, data["pokemon"], 'img');
+        setCardColor(i);
+    }
+    removeTemplateCard();
+}
+
+const removeTemplateCard = () => document.querySelector('.container-deck').removeChild(document.querySelectorAll('.container-card')[data["pokemon"].length]);
 
 
-
-
-//Chamada das funções (manter essa ordem pror causa das regras de precedência)
+//Chamada das funções
 loadCards();
-removeTemplateCard();
+
+//Voltar para home page
+const goHomePage = () => window.location.reload()
+const goLaboratoriaPage = () => window.location.href = "https://www.laboratoria.la/"
+
+//Atribuição de eventos
+document.querySelector('#home').addEventListener('click', goHomePage);
+document.querySelector('#logo-lab').addEventListener('click', goLaboratoriaPage)
