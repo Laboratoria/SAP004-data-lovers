@@ -35,10 +35,19 @@ pokemons.map(pkm => pokemonsList.innerHTML += card (pkm.num, pkm.name, pkm.img, 
 
 
 // cards filtrados
-const search = searchPokemon; ()=> {
-    return card;
-}; console.log(search)
+searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar, pokemons)));
 
+const displayPokemons = (characters) => {
+    const cards = characters
+        .map((character) => {
+            return `<figure class="card-pokemon"><p class="pokemon-num">${character.num}</p>
+            <img src="${character.img}" alt="Miniatura do pokémon ${character.name} do tipo ${character.type}">
+            <figcaption class="pokemon-name">${character.name}</figcaption>
+            </figure>`;    
+        })
+        .join('');
+    pokemonsList.innerHTML = cards;
+  };
 
 
 

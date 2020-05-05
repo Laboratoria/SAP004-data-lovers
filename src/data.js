@@ -15,48 +15,27 @@ return (nameInput == p.name.slice(0,-(p.name.length - nameInput.length)).toUpper
 };
 
 const searchBar = document.querySelector("#searchBar");
-
-// versão LAB baseada na função acima
+/*
+// versão doida da Dri
 export const searchCards = string => {
   let searchString = searchBar.value;
   searchString = searchString.toLowerCase(); 
   return (searchString == string.name.slice(0,-(string.name.length - searchString.length)).toLowerCase()()|| searchString == string.name.toLowerCase()()) 
-};
+};*/
 
-// versão Mix
-export const searchPokemon = string => {
-  searchBar.addEventListener("keyup", letters => {
-    let searchString = letters.value.toLowerCase();
+// versão 4.0 da função de busca
+export const searchPokemon = (search, pokemon) => {
+    let searchString = search.value.toLowerCase();
     let filteredPokemons = pokemon.filter( pkm => {
-    return (pkm.name.toLowerCase().includes(searchString));
+      let pkmString = pkm.name.toLowerCase();
+      let beginOfString = pkmString.substr(0,searchString.length);
+    return (beginOfString.includes(searchString));
   });
   return filteredPokemons;
-  }
-});
-
-
-//função Dri&Mi
-export const searchPokemons = searchBar.addEventListener("keyup", (string) => {
-  const searchString = string.target.value.toLowerCase();
-  const filteredPokemons = pokemons.filter( pokemon => {
-    return (pokemon.name.toLowerCase().includes(searchString));
-  displayPokemons(filteredPokemons);
-});
-
-/*
-const displayPokemons = (characters) => {
-  const cards = characters
-      .map((character) => {
-          return `<figure class="character"><p class="poke-num">${character.num}</p>
-          <img src="${character.img}" alt="Miniatura do pokémon ${character.name}">
-          <figcaption class="pokemon-name">${character.name}</figcaption>
-          </figure>`;    
-          
-      })
-      .join('');
-  pokemonsList.innerHTML = cards;
 };
 
+
+/*
 loadCharacters();
 
 const loadCharacters = async () => {
@@ -68,4 +47,15 @@ const loadCharacters = async () => {
       console.error(err);
   }
 };
+*/
+
+/*
+//função Dri&Mi
+export const searchPokemons = searchBar.addEventListener("keyup", (string) => {
+  let searchString = string.target.value.toLowerCase();
+
+  const filteredPokemons = pokemons.filter( pokemon => {
+    return (pokemon.name.toLowerCase().includes(searchString));
+  displayPokemons(filteredPokemons);
+});
 */
