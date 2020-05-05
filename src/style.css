@@ -1,17 +1,23 @@
-header {
-  background-color: yellow;
+.plano-fundo {
+  margin: 0;
+  padding: 0;
+  background: url(./imagens/fundo1278.jpg) no-repeat;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .logotipo {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 1em;
 }
 
 .logo {
-  width: 30%;
-  height: 30%;
+  width: 20%;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
 
 .navBar {
@@ -19,12 +25,9 @@ header {
   justify-content: center;
   flex-wrap: nowrap;
   padding-top: 10px;
-  padding-bottom: 30px;
-}
-
-main {
-  background-color: rgb(30, 163, 240);
-  padding-top: 30px;
+  padding-bottom: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 1em;
 
 }
 
@@ -41,11 +44,14 @@ main {
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
 .lista-img {
   display: flex;
   height: 150px;
+  order: -1;
 }
 
 .lista-pokedex-link {
@@ -53,34 +59,57 @@ main {
   height: 250px;
   padding: 0.5em;
   margin: 0.5em;
-  background-color: lightgray;
+  background: rgba(255, 255, 255, 0.3);
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  border: 1px solid gray;
   border-radius: 10px;
 }
 
-.lista-tipo{
+.lista-tipo {
   border: 1px solid green;
   background-color: lightgreen;
   border-radius: 10px;
   padding: 0.5em;
 }
 
-.lista-fraqueza{
-  border: 1px solid red;
-  background-color: lightcoral;
-  border-radius: 10px;
-  padding: 0.5em;
-}
-
-.rodape{
-  background-color: rgb(5, 137, 170);
+.rodape {
+  background-color: rgba(255, 255, 255, 0.3);
   color: white;
   font-weight: bolder;
   padding: 10px;
   text-align: center;
+}
+
+
+@media screen and (max-width: 320px) {
+  .plano-fundo {
+    background-image: url(./imagens/fundo320x600.png);
+  }
+
+  .logo {
+    width: 40%
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .plano-fundo {
+    background-image: url(./imagens/fundo600x800.jpg);
+  }
+
+  .logo {
+    width: 40%
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .plano-fundo {
+    background-image: url(./imagens/fundo1278.jpg);
+  }
+
+  .logo {
+    width: 20%
+  }
 }
