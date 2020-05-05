@@ -17,14 +17,14 @@ const print = pokemons => { //função para imprimir os pokemons
     card.classList.add("card")
     img.classList.add("picture") // coloca uma classe na imagem
     cardInformation.innerHTML += `<br><h5>${pokemons.num}</h5><br><h3>${pokemons.name}</h4>` // coloca o nameInput
-    pokemons.type.forEach(a => { 
+    pokemons.type.forEach(a => {
         const powerType = document.createElement("div")
         powerType.classList = (a)
         powerType.classList.add("power")
         powerType.innerHTML += `<h5>${a}</h5>` //${pokemons.type[1] = pokemons.type[1] || ""}</h5>` // coloca o tipo
         power.appendChild(powerType)
     });
-    
+
     cardInformation.appendChild(power)
     card.appendChild(cardInformation, img) // coloca informações no card
     card.appendChild(img) //coloca a imagem na nova div
@@ -73,9 +73,9 @@ const searchName = () => {
     elementSearched.map(print)
 }
 /*Função de abrir e fechar menu avançado*/
-const filters = () =>{
+const filters = () => {
     const filterMenuDysplay = filtersMenu.style.display
-    filtersMenu.style.display = filterMenuDysplay == "block" ?  "none" : "block"
+    filtersMenu.style.display = filterMenuDysplay == "block" ? "none" : "block"
 }
 
 
@@ -157,26 +157,41 @@ const advancedSearch = () => {
     filters()
 }
 //Limpar filtro
-const myFunctionClear = (a) =>{
+const myFunctionClear = (a) => {
     if (a.length != 0) {
         for (let i of a) {
             if (i.checked)
                 i.checked = false;
         }
     }
-  }
+}
 /*Função que reseta o menu avançado*/
 const resetSearch = () => {
     const checkbox = document.getElementById("checkbox-types")
     myFunctionClear(checkbox.weakness)
     myFunctionClear(checkbox.option)
 }
+const order = () => {
+    clearDisplay()
+    const orderBy = document.getElementById("browsers").value
+    if (orderBy == 0) {
+        let newArray = pokemons.sort(function(a, b){
+            return ((a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))
+        })
+        newArray.map(print)
+    
+    }
+}
+// const clearBody = () =>{
 
+// }
 /*Verifica eventos*/
 document.getElementById("search").addEventListener('input', searchName)
 document.getElementById("menu-filter").addEventListener('click', filters)
 document.getElementById("home").addEventListener('click', main)
 document.getElementById("advanced-search").addEventListener('click', advancedSearch)
 document.getElementById("reset-search").addEventListener('click', resetSearch)
+// document.getElementById("comparation").addEventListener('click', clearBody)
+document.getElementById("browsers").addEventListener('input', order)
 main()
 

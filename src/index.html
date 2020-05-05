@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 
@@ -12,16 +13,18 @@
   <header class="menu back-white">
 
 
-    <nav class="buttons">
-      <p> <img class="pokemon-img" src="img/poketype.png" alt="PokeType"></p>
-      <p class="menu-buttons back-white" id="home">Home</p>
-      <p class="menu-buttons back-white" id="comparation">Comparação</p>
-      <p class="menu-buttons back-white" id="ranking">Ranking</p>
+    <nav>
+      <ul class="buttons">
+      <li> <img class="pokemon-img" src="img/poketype.png" alt="PokeType"></li>
+      <li class="menu-buttons back-white" id="home">Home</li>
+      <li class="menu-buttons back-white" id="comparation">Comparação</li>
+      <li class="menu-buttons back-white" id="ranking">Ranking</li>
+    </ul>
     </nav>
   </header>
   <hr>
   <main>
-
+   
     <div id="filters">
       <!--Caixa de filtros-->
       <div class="filters-class back-white">
@@ -120,12 +123,21 @@
       </div>
 
     </div>
-    <button id="menu-filter" class="button-filter">Filtro</button>
+    <img id="menu-filter" src="img/icons8-filtro-25.png" class="button-filter">
 
 
-    <div id="root" class="home">
+    <div id="root" class="home"></div>
     </div>
-    </div>
+    <div>
+
+      <select id="browsers" class="selector">
+        <option value="">Ordenar por</option>
+        <option value="0">De A a Z</option>
+        <option value="1">De Z a A</option>
+        <option value="2">Do menor para o mair</option>
+        <option value="3">Do maior para o menor</option>
+        </select>
+          </div>
     <!--class home-->
   </main>
   <script src="main.js" type="module"></script>

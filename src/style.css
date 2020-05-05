@@ -15,6 +15,9 @@ font-family: sans-serif;
     margin-right: 20px;
     padding: 10px;
 }
+nav{
+    width: 100%;
+}
 .menu-search{ /*Menu superior*/
     padding-top: 20px;
     width: 100%;
@@ -76,16 +79,19 @@ main{
 /*Botão de filtro*/
 .button-filter{
     align-self: flex-start;
+    border: 0.7px solid rgb(173, 170, 170);
+    border-radius: 5px;
 }
 /*Div Raiz*/
 .home{ /*class da div raiz */
 
     flex-grow: 1;
-    margin: 20px 30px ;
-    padding: 10px 5%;
+    /* margin: 20px 5px ;
+    padding: 10px; */
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: center;
     line-height: 0.5px;
     height: auto;
 }
@@ -104,8 +110,8 @@ main{
     background-color: rgb(241, 237, 237); 
     margin: 5px;
     padding: 3px;
-    min-width: 235px;
-    max-width: 235px;
+    min-width: 220px;
+    max-width: 220px;
     height: 130px;
     border-radius: 8%;
 }
@@ -130,13 +136,15 @@ main{
     transform: scaleX(-1);
   }
   .buttons{
+    list-style-type: none;
       font-weight: bold;
     padding-inline-start: 0px;
     margin: 0px;
       display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
+
+      /* justify-content: space-around; */
+      /* align-items: center;
+      width: 100%; */
   }
   .menu-buttons:hover{
       background-color: rgba(241, 239, 239, 0.829);
@@ -144,10 +152,11 @@ main{
   }
   .menu-buttons{
     display: flex;
-    justify-content: space-around;
+
+    flex: 1;
     align-items: center;
-    height: 100%;
-    width: 100%;
+
+    justify-content: center;
     margin: 0px;
     padding: 3px;
     border-left: 0.7px solid rgb(173, 170, 170);
@@ -181,6 +190,9 @@ main{
 }.power :first-child{
     padding: 2px;
     margin: 1px;
+}
+.selector{
+    width: 100px;
 }
 /*Tipos de Pokemons*/
 .Flying{
@@ -239,7 +251,7 @@ background-color: rgb(56, 56, 56);
     justify-content: center;
 }
 
-@media screen and (max-width:600px){
+@media (max-width:600px){
     .home{
         background-color: darkorange;
         flex-shrink: 1;
@@ -247,8 +259,8 @@ background-color: rgb(56, 56, 56);
  main{
      background-color: darkorchid;
      display: block;
-     flex-wrap: wrap;
-     flex-direction: column;
+     -webkit-flex-wrap: wrap;
+     -webkit-flex-direction: column;
  }
 
 }
