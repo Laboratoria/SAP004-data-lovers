@@ -2,32 +2,59 @@
 
 /* Header */
 body{
-margin: 0px;
+margin:0px;
 font-family: sans-serif;
 }
+
+.back-white{
+    color: rgb(53, 52, 52);
+    background-color: white;
+}
+.pokemon-img{
+    width:150px;
+    margin-right: 20px;
+    padding: 10px;
+}
 .menu-search{ /*Menu superior*/
-    width: 40%;
+    padding-top: 20px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
 .search{        /*Barra de pesquisa*/
-    margin-left: 20px;
-    width: 400px;
-    height: 50px;
-    border-radius: 2%;
+    padding-left: 5px;
+    margin-left: 50px;
+    width: 200px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 30px;
     font-size: 100%;
 }
-
+.icon-search{
+    z-index: 1;
+    height: 18px;
+    position: relative;
+    left: -30px;
+}
+hr{
+    width: 80%;
+    border: 0;
+    border-top: 1px solid rgb(245, 242, 242);
+}
 /*Main*/
+main{ 
+    margin-right: 30px;
+    margin-top: 30px;
+    display: flex;
+}
 .filters-class{ /* Menu de filtro avançado*/
-    color: white;
-    display: inline-flex;
     justify-content: space-between;
+    flex-direction: column;
     padding: 3px;
-    background-color: rgb(36, 34, 34);
-    height: 400px;
-    width: 100%;
+    height: 600px;
+    width: 300px;
     font-weight: bold;
+    border-right: 0.7px solid rgb(173, 170, 170);
 }
 .checkbox-type:first-child{ /*Primeira filha da caixa de checkbox*/
     display: flex;
@@ -46,12 +73,16 @@ font-family: sans-serif;
     justify-content: space-around;
     width: 300px;
 }
+/*Botão de filtro*/
+.button-filter{
+    align-self: flex-start;
+}
 /*Div Raiz*/
 .home{ /*class da div raiz */
-    margin: 10px ;
-    position: absolute;
-    left: 10%;
-    width: 80%;
+
+    flex-grow: 1;
+    margin: 20px 30px ;
+    padding: 10px 5%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -70,7 +101,7 @@ font-family: sans-serif;
     color:  rgb(83, 80, 80);
     display: flex;
     flex-flow: row nowrap;
-    background-color: rgb(224, 221, 221); 
+    background-color: rgb(241, 237, 237); 
     margin: 5px;
     padding: 3px;
     min-width: 235px;
@@ -99,33 +130,38 @@ font-family: sans-serif;
     transform: scaleX(-1);
   }
   .buttons{
+      font-weight: bold;
     padding-inline-start: 0px;
     margin: 0px;
       display: flex;
       justify-content: space-around;
+      align-items: center;
       width: 100%;
   }
   .menu-buttons:hover{
-      background-color: rgb(15, 15, 15);
-      font-weight: bold;
+      background-color: rgba(241, 239, 239, 0.829);
       cursor: pointer;
   }
   .menu-buttons{
-    width: 23%;
-    margin: 3px;
-    padding: 3px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 3px;
+    border-left: 0.7px solid rgb(173, 170, 170);
+
 }
 .menu{
-    color: white;
     padding: 1%;
     max-width: 100%;
-    height: 120px;
-    background-color: black;
+    height: 70px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .button-search:hover{
@@ -203,11 +239,18 @@ background-color: rgb(56, 56, 56);
     justify-content: center;
 }
 
-@media (max-width:400){
- .home{
-     display: flex;
+@media screen and (max-width:600px){
+    .home{
+        background-color: darkorange;
+        flex-shrink: 1;
+     }
+ main{
+     background-color: darkorchid;
+     display: block;
+     flex-wrap: wrap;
      flex-direction: column;
  }
+
 }
 
 

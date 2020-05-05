@@ -5,33 +5,38 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
-  <header class="menu">
+  <header class="menu back-white">
 
-    <div class="menu-search">
-      <h1>Pokémon</h1>
-      <input id="search" type="text" class="search" placeholder="Nome do Pokémon">
-      <img src="img/icons8-search-50.png" alt="search">
-    </div>
-    <ul class="buttons">
-      <li class="menu-buttons" id="home">Pokémons</li>
-      <li class="menu-buttons" id="comparation">Comparação</li>
-      <li class="menu-buttons" id="ranking">Ranking</li>
-      <li class="menu-buttons" id="menu-filter">Filtro</li>
-    </ul>
 
+    <nav class="buttons">
+      <p> <img class="pokemon-img" src="img/poketype.png" alt="PokeType"></p>
+      <p class="menu-buttons back-white" id="home">Home</p>
+      <p class="menu-buttons back-white" id="comparation">Comparação</p>
+      <p class="menu-buttons back-white" id="ranking">Ranking</p>
+    </nav>
   </header>
+  <hr>
   <main>
 
-    <div id="filters"> <!--Caixa de filtros-->
-      <div class="filters-class"> 
-        <div class="checkbox-type"> <!--Tipos e Fraquezaa-->
-          <div class="line"> <!--Caixa de descrição-->
-            <h3>Tipo e Fraqueza</h3>
-            <h6>Tipo = T Fraqueza = F</h6>
-          </div>
+    <div id="filters">
+      <!--Caixa de filtros-->
+      <div class="filters-class back-white">
+        <div class="menu-search">
+          <input id="search" type="text" class="search" placeholder="Nome do Pokémon">
+          <img class="icon-search" src="img/icon-search-40.png" alt="search">
+        </div>
+        <!--Caixa de descrição-->
+        <div class="line">
+          <h3>Tipo e Fraqueza </h3>
+          <h6>Tipo = T Fraqueza = F</h6>
+        </div>
+        <div class="checkbox-type">
+
+
           <form class="checkbox-form" id="checkbox-types">
             <div>
               <input type="checkbox" name="option" value="Flying"><label>T</label>
@@ -101,18 +106,25 @@
                   class="Fairy power filter-config">Fairy</label><br>
             </div>
           </form>
-        </div>
+          <!--Tipos e Fraquezaa-->
 
-        <div>
-          <ul class="filter advanced-search">
-            <li id="reset-search" class="button-search">Redefinir</li>
-            <li id="advanced-search" class="button-search">Pesquisar</li>
-          </ul>
+          <div>
+            <ul class="filter advanced-search">
+              <li id="reset-search" class="button-search">Redefinir</li>
+              <li id="advanced-search" class="button-search">Pesquisar</li>
+            </ul>
+
+          </div>
+
         </div>
       </div>
+
     </div>
-    <div id ="card-information"></div>
+    <button id="menu-filter" class="button-filter">Filtro</button>
+
+
     <div id="root" class="home">
+    </div>
     </div>
     <!--class home-->
   </main>
