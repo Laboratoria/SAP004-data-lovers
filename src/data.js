@@ -1,10 +1,13 @@
-// funções de exemplo
+import {pegaNameImage} from './functionsdata.js'
 
-export const example = () => {
-  return 'example';
+export const ordenarAZ = () =>{
+return pegaNameImage().sort()
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const ordemQveio = () => {
+return pegaNameImage();
 };
 
+export const ordenarZA = () => {
+return ordenarAZ().reverse();
+};

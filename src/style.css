@@ -8,6 +8,12 @@ body {
   color: white;
   margin: 0px;
 }
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
 
 .botao {
   border: none;
@@ -21,10 +27,7 @@ body {
   -webkit-text-stroke-color: black;
   font-weight: bold;
   line-height: 10px;
-  border-radius: 10px;
-  position: relative;
-  top: 30px;
-  left: 345px;
+  border-radius: 40px;
   box-sizing: border-box;
   cursor: pointer;
   transition: all 500ms ease;
@@ -39,7 +42,7 @@ body {
   position: absolute;
   background: #081014;
   color: #c2be49;
-  border-radius: 10px;
+  border-radius: 40px;
   box-sizing: border-box;
   transform-origin: left bottom;
   transform: rotateX(90deg);
@@ -71,8 +74,13 @@ a:visited, a:hover, a:active {
 #logoRM {
   width: 415px;
   position: absolute;
-  left: 400px;
-  top: 60px;
+  margin-left: calc(100%/2.8);
+  margin-top: 20px;
+}
+.itens-center{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: calc(100%/3);
 }
 
 #nave {
@@ -86,25 +94,23 @@ a:visited, a:hover, a:active {
 #portal2 {
   position: absolute;
   width: 350px;
-  margin-top: -50px;
+  margin-top: -89px;
   left: 900px;
 }
 
 #title {
-  position: relative;
-  left: 356px;
   width: 300px;
-  top: 250px;
+  margin-top: 220px;
+  margin-left: 380px;
   font-size: xx-large;
 }
 
-.sinopse {
+#sinopse {
   opacity: 0.9;
   width: 400px;
+  margin-left: -330px;
+  margin-top: 280px;
   box-sizing: content-box; 
-  position: absolute;
-  left: 340px;
-  top: 390px;
   border-radius: 20px;
   background-color: #146666;
   padding: 10px;
@@ -113,9 +119,8 @@ a:visited, a:hover, a:active {
 }
 
 iframe {
-  display: inline-block;
   margin-left: 790px;
-  margin-top: 180px;
+  margin-top: -250px;
   border-radius: 15px;
 }
 
@@ -123,7 +128,7 @@ iframe {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .made {
@@ -141,18 +146,71 @@ iframe {
 .made a {
   color: #081014;
 }
-
 .made a:link,
 a:visited {
   text-decoration: none
 }
-
 .made a:hover {
   text-decoration: underline;
   color: #081014;
 }
-
 .made a:active {
   text-decoration: none
 }
 
+.cards{
+  border-radius: 50px;
+  padding: 15px;
+  size: 40px;
+  background-color: #c3bd2e;
+  margin:auto;
+  margin-top: 12px;
+  opacity: 0.65;
+  color: #081014;
+  height: 300px;
+  width:200px;
+  text-align:center;
+  transition: all 0.4s;
+}
+.cards:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity:1;
+}
+
+.imagem {
+  border-radius: 590px;
+  width: 150px;
+  border:black solid;
+}
+.list{
+  text-align: center;
+  font-family:roboto;
+  font-size: 13px;
+  margin-top: 0.5px;
+}
+#name {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 0.5px;
+}
+.nav{
+  margin-top:200px;
+  font-family:roboto;
+  margin-left:130px;
+  }
+  .drop-menu{
+    border-radius:10px;
+    height: 30px;
+    width: 150px;
+    font-family:roboto;
+    font-weight:bold;
+    background-color:#c3bd2e;
+    transition: all 0.4s;
+    outline: none;
+    }
+    .drop-menu:hover{
+      -webkit-transform: scale(1);
+       transform: scale(1.1);
+       opacity:1;
+    }

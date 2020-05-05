@@ -11,11 +11,31 @@
   <main>
     <header>
       <img src="img/logo.png" id="logoRM" alt="logo">
-      <a href="index.html"><button class="botao" id="btn-home">Home</button></a>
-      <a href="personagens.html"><button class="botao" id="btn-personagens">Personagens</button></a>
-      <a href="mundos.html"><button class="botao" id="btn-mundos">Mundos</button></a>
+      <nav class="buttons">
+        <a href="index.html"><button class="botao" id="btn-home">Home</button></a>
+        <a href="personagens.html"><button class="botao" id="btn-personagens">Personagens</button></a>
+        <a href="mundos.html"><button class="botao" id="btn-mundos">Mundos</button></a>
+        </nav>
     </header>
+    <div>
+      <img src="img/portal2.png" id="portal2" alt="rrportal">
+    </div>
+    <div class="nav">
+      <select class="drop-menu">
+        <option>Filtrar Por</option>
+        <option class="drop-menu" value="A-Z">A-Z</option>
+        <option class="drop-menu" value="Z-A">Z-A</option>
+        <option class="drop-menu" value="alive">Vivos</option>
+        <option class="drop-menu" value="dead">Mortos</option>
+        <option class="drop-menu" value="male">Homens</option>
+        <option class="drop-menu" value="female">Mulheres</option>
+      </select>
+    </div>
     <div id="root"></div>
+    <footer class="made">
+      <p>made by <a href="https://github.com/sabia997">Sabrina</a> and <a href="https://github.com/milaroque">Camila</a>
+      </p>
+    </footer>
   </main>
   <script src="main.js" type="module"></script>
 </body>
