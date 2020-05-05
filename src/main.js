@@ -69,7 +69,7 @@ removeTemplateCard();
 //modal
 const modal= document.querySelector(".modal-char")
 document.querySelector("container-card").addEventListener("click", openModal)
-    function openModal() {
+function openModal() {
         modal.style.display= "block"
 };
 
@@ -78,10 +78,54 @@ const closeModal= document.querySelector(".close")[0].addEventListener("click", 
 });
 
 window.addEventListener("click", event)
-function event(){
+function closeModalWindow (event){
     if (event.target==openModal) {
         modal.style.display= "none"
         }
 };
+//Objetivo Postar o Nome no Card
+//identificar qual card foi clicado(ex: id=1)
+//pegar o nome do card que foi clicado no banco(banco)
+//guardar nome no container que vai printar na tela (html)
+//ir para a próxima caracteristica
+
+const cardClicadoId1= "0";
+const name= data.po
+const namePokChar= document.getElementById()
+
+for (i=0; i<151; i++)
+let nomePok= data.pokemon[i]["nome"]
+
+//document.querySelector(".container-card").addEventListener("click",buscardados )
+//function (){
+//  for ( let i=0; i<data["pokemon"].length;i++){
+//      let cardClicado = document.querySelector(".container-card").nodeName;
+//    }
+//}
+
+
+function cardClicado() {
+    //escrever codigo para recuperar valor do cardClicado
+    //nesse caso, estamos simulando que clique no card primeiro card
+    let cardClicado = "0";
+    //devolver valor clicado pra função que vai chamar
+    return cardClicado
+
+}
+
+function descobrirNome() {
+    //chamar função que retorna o valor do card clicado
+    cardClicado()
+        //guardar em uma variável
+    let nome = data.pokemon[cardClicado]["name"];
+    console.log("cardClicado")
+    //agora você pode usar essa variavel pra fazer o que quiser, inclusive colocar o nome dentro do elemento html
+    document.guetElementById(char-name).textContent= descobrirNome
+}
+descobrirNome()
+
+
+
+
 
 
