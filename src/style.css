@@ -78,9 +78,19 @@ main{
 }
 /*Botão de filtro*/
 .button-filter{
-    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    width: 200px;
     border: 0.7px solid rgb(173, 170, 170);
     border-radius: 5px;
+}
+.button-filter:first-child{
+    justify-content: center;
+}
+.containers{
+display: flex;
+    justify-content: center;
+    justify-content: space-around; 
 }
 /*Div Raiz*/
 .home{ /*class da div raiz */
