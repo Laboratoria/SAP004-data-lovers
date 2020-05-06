@@ -1,4 +1,5 @@
-import {ordenarAZ, ordemQveio, ordenarZA} from './data.js';
+import {ordenarAZ, ordemQveio, ordenarZA, ordenarAlive, ordenarDead, ordenarMale, ordenarFemale} from './data.js';
+
 const selectElement = document.querySelector('.drop-menu');
 selectElement.addEventListener('change', seletor)
 
@@ -7,6 +8,14 @@ function seletor(){
     return ordenarCardsAZ()
   }else if (selectElement.value === 'Z-A'){
     return ordenarCardsZA()
+  }else if (selectElement.value === 'alive'){
+    return ordenaVivo()
+  }else if (selectElement.value === 'dead'){
+    return ordenaMorto()
+  }else if (selectElement.value === 'male'){
+    return ordenaHomem()
+  }else if (selectElement.value === 'female'){
+    return ordenaMulher()
   }else {
     return mostrapersonagens()
   }
@@ -29,6 +38,22 @@ function ordenarCardsZA(){
   return inserirNoHtml(nomesPersonagensZA);
 }
 
+function ordenaVivo(){
+  let personagensVivo = ordenarAlive();
+  return inserirNoHtml(personagensVivo)
+}
+function ordenaMorto(){
+  let personagensMorto = ordenarDead();
+  return inserirNoHtml(personagensMorto)
+}
+function ordenaHomem(){
+  let personagensHomem = ordenarMale();
+  return inserirNoHtml(personagensHomem)
+}
+function ordenaMulher(){
+  let personagensMulher = ordenarFemale();
+  return inserirNoHtml(personagensMulher)
+}
 function inserirNoHtml(vetor){
   let novaIsercao = "";
   novaIsercao += vetor.map((item) => 
