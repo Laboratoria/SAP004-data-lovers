@@ -80,14 +80,14 @@ const filters = () => {
 
 
 /*Função que verifica quais checkboxs estão selecionados*/
-const checkType = (a) => {
-    const newArray = []
-    for (let i of a) {
-        if (i.checked)
-            newArray.push(i.value)
-    }
-    return newArray
-}
+ const checkType = (a) => {
+     const newArray = []
+     for (let i of a) {
+         if (i.checked)
+             newArray.push(i.value)
+     }
+     return newArray
+ }
 
 /*Função de verificar checkbox repetidos*/
 const concat = (checkboxType, checkboxWeakness) => {
@@ -121,6 +121,8 @@ const subtraction = (checkboxType, checkboxWeakness, parameter) => {
 const typeFunction = (p) => {
     /*Puxa os checkboxs */
     const checkbox = document.getElementById("checkbox-types")
+    console.log(checkbox.weakness[0].checked)
+
     const checkboxWeakness = checkType(checkbox.weakness)
     const checkboxType = checkType(checkbox.option)
     let result = []
