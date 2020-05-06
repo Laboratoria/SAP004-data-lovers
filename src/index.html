@@ -15,16 +15,16 @@
 
     <nav>
       <ul class="buttons">
-      <li> <img class="pokemon-img" src="img/poketype.png" alt="PokeType"></li>
-      <li class="menu-buttons back-white" id="home">Home</li>
-      <li class="menu-buttons back-white" id="comparation">Comparação</li>
-      <li class="menu-buttons back-white" id="ranking">Ranking</li>
-    </ul>
+        <li> <img class="pokemon-img" src="img/poketype.png" alt="PokeType"></li>
+        <li class="menu-buttons back-white" id="home">Home</li>
+        <li class="menu-buttons back-white" id="comparation">Comparação</li>
+        <li class="menu-buttons back-white" id="ranking">Ranking</li>
+      </ul>
     </nav>
   </header>
   <hr>
   <main>
-   
+
     <div id="filters">
       <!--Caixa de filtros-->
       <div class="filters-class back-white">
@@ -123,21 +123,20 @@
       </div>
 
     </div>
-    <img id="menu-filter" src="img/icons8-filtro-25.png" class="button-filter">
+    <div >
+      <div class="containers"><button class="button-filter" id="menu-filter">Filtros Avançados<img  src="img/icons8-filtro-25.png" ></button>
 
-
-    <div id="root" class="home"></div>
-    </div>
-    <div>
-
-      <select id="browsers" class="selector">
+      <select id="browsers" class="button-filter">
         <option value="">Ordenar por</option>
         <option value="0">De A a Z</option>
         <option value="1">De Z a A</option>
-        <option value="2">Do menor para o mair</option>
+        <option value="2">Do menor para o maior</option>
         <option value="3">Do maior para o menor</option>
-        </select>
-          </div>
+      </select></div>
+      <div id="root" class="home"></div>
+    </div>
+
+
     <!--class home-->
   </main>
   <script src="main.js" type="module"></script>
