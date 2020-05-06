@@ -35,6 +35,19 @@ export const searchPokemon = (search, pokemon) => {
 };
 
 
+
+
+export const sortA = ( pokemon, name, alfaOrder ) => { 
+   if ( alfaOrder == "az"){
+     return pokemon.sort( (a, b) => {
+      if( b[name] < a[name]) return 1;
+      else if(a[name] < b[name]) return -1;
+      else return 0;
+   });
+ };
+}
+
+
 /*
 loadCharacters();
 

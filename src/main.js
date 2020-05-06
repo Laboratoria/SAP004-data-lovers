@@ -1,4 +1,4 @@
-import { searchPokemon } from './data.js';
+import { searchPokemon, sortA } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 // banco de dados
@@ -10,6 +10,10 @@ const buttonOrder = document.querySelector("#buttonOrder");
 const buttonFilter = document.querySelector("#buttonFilter");
 const buttonSearch = document.querySelector("#buttonSearch");
 const pokemonsList = document.querySelector("#root");
+const buttonAZ = document.querySelector("#buttonAZ")
+const buttonZA = document.querySelector("#buttonZA")
+const buttonCRE = document.querySelector("#buttonCRE")
+const buttonDE = document.querySelector("#buttonDE")
 
 /* 
 // função para mostrar barra de pesquisa
@@ -49,22 +53,21 @@ const displayPokemons = (characters) => {
   };
   
   //função a-z 
-/*btnorder.addEventListener("click", () => {
-    const sortedA = pokemons.sort( (a, b) => {
-    if( a.name > b.name) {return 1}
-    else if(b.name > a.name) { -1}
-    else { 0};})
-} );
-//console.log( sortedA );
+buttonAZ.addEventListener("click", () => {
+    const AZ = sortA (pokemons, "name", "az");
+    displayPokemons (AZ);
+});
 
-/*função z-a
-const sortedZ = pokemons.sort( (a, b) => {
+  
+/*
+//função z-a
+ const sortedZ = pokemons.sort( (a, b) => {
     if( b.name > a.name) return 1;
     else if(a.name > b.name) return -1;
     else return 0;
 } );
-//console.log( sortedZ );
-
+console.log( sortedZ );
+/*
 // função id
 const sortedId = pokemons.sort((a, b)=> {
     if (b.id > a.id) return 1;
@@ -78,10 +81,9 @@ const sortedId = pokemons.sort((a, b)=> {
 
 
     //função tela inicial 
-//let botaor = document.querySelector("#reset")
-//botaor.addEventListener("click", function(event){ 
-    //    event.preventDefault()   ;
-    //    searchWrapper.reset(); 
-  //      }
- //    );
-    
+let botaor = document.querySelector("#reset")
+botaor.addEventListener("click", function(event){ 
+        event.preventDefault()   ;
+        searchWrapper.reset(); 
+        }
+    );*/
