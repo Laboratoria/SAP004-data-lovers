@@ -1,6 +1,7 @@
 import data from './data/lol/lol.js';
+import { orderByza } from './data.js';
+import { orderByaz } from './data.js';
 
-//import dataJs from 'data.js';
 const lol = data.data
 
 const lolList = document.getElementById("lol-list")
@@ -9,7 +10,6 @@ const searchButton = document.getElementById("search-bnt")
 const noResultFound = document.getElementById("no-results-found")
 
 const renderLol = (lol) => {
-    console.log(lol)
     const template = document.getElementById("lol-template") //pegando a referencia no DOM
     const card = template.content.querySelector(".card")
     const championsName = card.querySelector(".name")
@@ -28,8 +28,7 @@ const renderLol = (lol) => {
 
 }
 var resp = Object.keys(lol); //pegando as chaves do mapa para passar para a funcao
-console.log(lol);
-console.log(resp);
+
 resp.forEach(element => {
     renderLol(lol[element]);
 });
@@ -39,10 +38,23 @@ const clearChampionsList = () => {
 const getFilter = () => { // para filtrar/ordenar de a-z/z-a
     let option = document.getElementById("ordenar").value;
     console.log(option);
+    
     if(option == "z-a"){
+        console.log("|Entrou");
+        console.log(lolList.childNodes);
+        lolList.innerHTML = "";
+       let dados = orderByza();
+       dados.forEach(element =>{
+           renderLol(lol[element]);
+       });
 
-       let dados = dataJs.orderByza();
        console.log(dados);
+    } else{ 
+        lolList.innerHTML = "";
+        let dados = orderByaz ();
+        dados.forEach(element =>{
+            renderLol(lol[element]);
+        });
     }
 }
 document.getElementById("ordenar").addEventListener("change",getFilter);

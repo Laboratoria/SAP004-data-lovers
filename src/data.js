@@ -1,11 +1,13 @@
 import data from './data/lol/lol.js';
 const lol = data.data;
 export const orderByza = () => {
-  lol = lol.reverse();
-  return lol
+  let lolkeys = Object.keys(lol);
+  lolkeys = lolkeys.reverse();
+  return lolkeys;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const orderByaz = () => {
+  let lolkeys = Object.keys(lol);
+  return lolkeys;
 };
 
