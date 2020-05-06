@@ -1,5 +1,7 @@
 import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
+import pokemon from './data/pokemon/pokemon.js';
+
 
 
 //Variáveis globais: configuração
@@ -22,110 +24,108 @@ const colorTypeList = {
     Water: "#87CEEB",
 };
 
-//Criar estrutura dos 151 cards
-let loadCards = () => {
-    for (let i = 0; i < data["pokemon"].length; i++) {
-        let cloneCard = document.querySelector('.container-card').cloneNode(true)
-        '.container-card';
-        document.querySelector('.container-deck').appendChild(cloneCard);
-    }
-    setInfosOnCard()
-}
+const cloneCards = () => document.querySelector('.container-deck').appendChild(document.querySelector('.container-card').cloneNode(true));
 
-//Carregar informações nos cards
-let setInfosOnCard = () => {
-        for (let i = 0; i < data["pokemon"].length; i++) {
-            //Modificar nome
-            document.querySelectorAll('.name-pok')[i].textContent = data["pokemon"][i]["name"];
-            //Encurtando nomes muito extensos
-            if (data["pokemon"][i]["name"] == "Nidoran ♀ (Female)") {
-                document.querySelectorAll('.name-pok')[i].textContent = "Nidoran ♀"
-            };
-            if (data["pokemon"][i]["name"] === "Nidoran ♂ (Male)") {
-                document.querySelectorAll('.name-pok')[i].textContent = "Nidoran ♂"
-            };
-            //Modificar número
-            document.querySelectorAll('.number-pok')[i].textContent = `#${data["pokemon"][i]["num"]}`;
-            //Modificar tipo
-            //....
+const setInfosOnCard = (node, index, data, attribute) => {
+    let parentNode = document.querySelectorAll(node)[index]
+    parentNode.textContent = data[index][attribute];
 
-            //Modificar imagem
-            document.querySelectorAll('.img-pok')[i].src = data["pokemon"][i]["img"];
-            //Modificar cor
-            let mainType = data["pokemon"][i]["type"][0];
-            document.querySelectorAll('.container-card')[i].style.backgroundColor = colorTypeList[mainType];
+    //Tratando as exceções nas informações
+    const fixInfosDetails = () => {
+        switch (attribute) {
+            case 'name':
+                if (data[index][attribute] === "Nidoran ♀ (Female)") {
+                    parentNode.textContent = 'Nidoran ♀';
+                }
+                if (data[index][attribute] === "Nidoran ♂ (Male)") {
+                    parentNode.textContent = 'Nidoran ♂';
+                }
+                break;
+            case 'img':
+                parentNode.src = data[index][attribute];
+                break;
+            case 'type':
+                parentNode.style.width = "150px";
+                if (data[index][attribute].length > 1) {
+                    parentNode.textContent = `${data[index][attribute][0]} - ${data[index][attribute][1]}`;
+                }
+                break;
         }
     }
-    //Remover card que serviu de modelo
-let removeTemplateCard = () => document.querySelector('.container-deck').removeChild(document.querySelectorAll('.container-card')[151]);
+    fixInfosDetails();
+
+}
+
+const setCardColor = (index) => document.querySelectorAll('.container-card')[index].style.backgroundColor = colorTypeList[data["pokemon"][index]["type"][0]];
+
+const loadCards = () => {
+    for (let i = 0; i < data["pokemon"].length; i++) {
+        cloneCards();
+        setInfosOnCard('.name-pok', i, data["pokemon"], 'name')
+        setInfosOnCard('.number-pok', i, data["pokemon"], 'num')
+        setInfosOnCard('.type-pok', i, data["pokemon"], 'type')
+        setInfosOnCard('.img-pok', i, data["pokemon"], 'img');
+        setCardColor(i);
+        document.querySelectorAll('.container-card')[i].addEventListener("click", () => {
+        clickCard(data["pokemon"][i].name,data["pokemon"][i].num,data["pokemon"][i].type,
+        data["pokemon"][i].img,data["pokemon"][i].height,data["pokemon"][i].weight,data["pokemon"][i].candy,
+        data["pokemon"][i].candy_count,data["pokemon"][i].egg,data["pokemon"][i].spawn_chance)})
+        
+    }
+    removeTemplateCard();
+}
+
+const removeTemplateCard = () => document.querySelector('.container-deck').removeChild(document.querySelectorAll('.container-card')[data["pokemon"].length]);
 
 
-
-
-//Chamada das funções (manter essa ordem pror causa das regras de precedência)
+//Chamada das funções
 loadCards();
-removeTemplateCard();
 
-//modal
-const modal= document.querySelector(".modal-char")
-document.querySelector("container-card").addEventListener("click", openModal)
+//Voltar para home page
+const goHomePage = () => window.location.reload()
+const goLaboratoriaPage = () => window.location.href = "https://www.laboratoria.la/"
+
+//Atribuição de eventos
+document.querySelector('#home').addEventListener('click', goHomePage);
+document.querySelector('#logo-lab').addEventListener('click', goLaboratoriaPage)
+
+// //modal
+const modal = document.querySelector('.modal-char')
+
 function openModal() {
-        modal.style.display= "block"
-};
+    modal.style.display= "block"
+}
 
-const closeModal= document.querySelector(".close")[0].addEventListener("click", function(){
+// const modal = () => {
+//     document.querySelector('.modal-char')
+//     modal.style.display= "block"
+// }
+
+const closeModal = document.querySelector('.close').addEventListener("click", () => {
     modal.style.display= "none"
-});
+})
 
-window.addEventListener("click", event)
-function closeModalWindow (event){
-    if (event.target==openModal) {
+window.addEventListener("click", (event) => {
+    if (event.target == modal) {
         modal.style.display= "none"
         }
-};
-//Objetivo Postar o Nome no Card
-//identificar qual card foi clicado(ex: id=1)
-//pegar o nome do card que foi clicado no banco(banco)
-//guardar nome no container que vai printar na tela (html)
-//ir para a próxima caracteristica
-
-const cardClicadoId1= "0";
-const name= data.po
-const namePokChar= document.getElementById()
-
-for (i=0; i<151; i++)
-let nomePok= data.pokemon[i]["nome"]
-
-//document.querySelector(".container-card").addEventListener("click",buscardados )
-//function (){
-//  for ( let i=0; i<data["pokemon"].length;i++){
-//      let cardClicado = document.querySelector(".container-card").nodeName;
-//    }
-//}
+    })
 
 
-function cardClicado() {
-    //escrever codigo para recuperar valor do cardClicado
-    //nesse caso, estamos simulando que clique no card primeiro card
-    let cardClicado = "0";
-    //devolver valor clicado pra função que vai chamar
-    return cardClicado
 
+function clickCard (name,num,type,img,height,weight,candy,candy_count,egg,spawn_chance) {
+    console.log(name,num,type,img,height,weight,candy,candy_count,egg,spawn_chance)
+    document.getElementById("char-name").textContent = name
+    document.getElementById("char-num").textContent = num
+    document.getElementById("char-type1").textContent = type
+    document.getElementById("char-img").src = img
+    document.getElementById("char-height-value").textContent = height
+    document.getElementById("char-weight-value").textContent = weight
+    document.getElementById("char-cand-value").textContent = candy
+    document.getElementById("char-cand-count-value").textContent = candy_count
+    document.getElementById("Char-egg-value").textContent = egg
+    document.getElementById("char-spawn-chance-value").textContent = spawn_chance
+    openModal();
 }
-
-function descobrirNome() {
-    //chamar função que retorna o valor do card clicado
-    cardClicado()
-        //guardar em uma variável
-    let nome = data.pokemon[cardClicado]["name"];
-    console.log("cardClicado")
-    //agora você pode usar essa variavel pra fazer o que quiser, inclusive colocar o nome dentro do elemento html
-    document.guetElementById(char-name).textContent= descobrirNome
-}
-descobrirNome()
-
-
-
-
 
 

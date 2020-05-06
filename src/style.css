@@ -1,79 +1,5 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
-/*Classes das cores por tipo do pokemon*/
-
-.color-aco {
-    background-color: #DAA520;
-}
-
-.color-agua {
-    background-color: #87CEEB;
-}
-
-.color-dragao {
-    background-color: #DB3E1B;
-}
-
-.color-eletrico {
-    background-color: #D7DB1E;
-}
-
-.color-fada {
-    background-color: #D91CD1;
-}
-
-.color-fantasma {
-    background-color: #F6D7F6;
-}
-
-.color-fogo {
-    background-color: #FF8C00;
-}
-
-.color-gelo {
-    background-color: #DBDDDD;
-}
-
-.color-inseto {
-    background-color: #1E6DE3;
-}
-
-.color-lutador {
-    background-color: #FEC807;
-}
-
-.color-normal {
-    background-color: #DE2626;
-}
-
-.color-noturno {
-    background-color: #000000;
-}
-
-.color-planta {
-    background-color: #59B539;
-}
-
-.color-pedra {
-    background-color: #484848;
-}
-
-.color-psiquico {
-    background-color: #D91CD1;
-}
-
-.color-venenoso {
-    background-color: #9D9F25;
-}
-
-.color-voador {
-    background-color: #0E8AA5;
-}
-
-.color-terra {
-    background-color: #976B36;
-}
-
 
 /*Demais estilizações*/
 
@@ -81,6 +7,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+#home:hover,
+#logo-lab {
+    cursor: pointer;
 }
 
 .font-22 {
@@ -112,12 +43,15 @@ input {
 }
 
 .btn-card {
-    width: 85px;
     height: 25px;
     line-height: 25px;
     font-size: 13px;
     text-align: center;
     margin: 3px 3px 3px 0px;
+}
+
+.btn-card-double {
+    width: 150px;
 }
 
 .btn-menu {
@@ -145,14 +79,18 @@ input {
     width: 170px;
 }
 
+.btn-menu:hover,
 .btn-search:hover,
 .select:hover {
     cursor: pointer;
+    background-color: #FFFFFF;
+    opacity: 1;
 }
 
 .container {
     background-color: #E5E5E5;
     margin: 0px auto;
+    padding-bottom: 30px;
     width: 1200px;
     font-family: sans-serif;
 }
@@ -169,7 +107,7 @@ input {
 }
 
 .container-card:hover {
-    opacity: 0.70;
+    opacity: 0.6;
 }
 
 .container-deck {
@@ -177,6 +115,8 @@ input {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
+    flex-shrink: 1;
+
 }
 
 .flex {
@@ -263,39 +203,33 @@ input {
 }
 
 .footer-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
     color: white;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
+    padding: 5px;
+}
+
+.footer-page img {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    margin-right: 8px;
 }
 
 /* tela secundária/características */
-
-/*body{
-    display:flex;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color:black ;
-    /*background-color: rgba(0,0,0,0.4);
-    justify-content: center;
-    align-items: center;
-    font-family:"roboto", sans-serif
-}
-*/
 
 .modal-char {
     display:flex;
     display: none;
     position: fixed; 
-    z-index: 2000; 
+    z-index: 1; 
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
-    overflow: auto; 
+    overflow: visible; 
     background-color: rgba(0,0,0,0.4);
     justify-content: center;
     align-items: center; 
@@ -303,15 +237,15 @@ input {
 
 .char-card-container {
     display: flex;
-    flex-grow: 1;
+   
     width: 210px;
     height: 330px;
-    margin: 50% auto;
+    margin: 15% auto;
     font-style: normal;
     background: #FF8C00;/*tirar depois, apenas para visualizar*/
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     align-items: flex-start;
-    align-self: center;
+    /*align-self: center;*/
     justify-content: center;
 }
 
@@ -346,16 +280,16 @@ input {
     width: 80px;
     height:80px;
     left: 35px;
-    /*right: 22.86%;*/
+    
     top: 40px;
     bottom: 0px;
-    /*max-width: 100%;
+    
     /*display: block;
     left: 10px;
-    right: 10px;
-    top: 20.3%;*/
+    right: 10px;*/
+    
     z-index: 2;
-    background: url(037.png);
+    /*background: url(037.png);*/
     /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
     /*align-self: center;*/
     
@@ -393,14 +327,16 @@ input {
 .modal-char-trans{
     display: flex;
     position: relative;
+    
     /*flex-grow: 1;*/
     width: 200px;
     height: 200px;
-    /*left: -181px;*/
-    right: 221.5px;
+    left: -181px;
+    right: 275px;
     top: 130px;
     bottom: 0px;
     font-style: normal;
+    font-weight: bold;
     font-size: 14px;
     line-height: 16px;
     color: rgba(0, 0, 0, 0.57);
@@ -480,7 +416,7 @@ input {
 
 .item-menu-char {
     position: relative;
-    font-weight: bold;
+    
     color: rgba(0, 0, 0, 0.57);
     padding: 3px;
     background-color:grey;
@@ -514,8 +450,8 @@ input {
 
 .char-item {
     position: relative;
-
-    font-weight: bold;
+        display: flex;
+    
     white-space: nowrap;
 }
 
@@ -583,23 +519,23 @@ input {
     width: 100px;
 }
 
-.modal-char-trans-1{
+/* .modal-char-trans-1 { 
     display: flex;
     position: relative;
-    /*flex-grow: 1;*/
+    /*flex-grow: 1;
     width: 200px;
     height: 170px;
     /*left: -181px;*/
-    /*right: 221.5px;*/
+    /*right: 221.5px;
     top: 130px;
     bottom: 0px;
     font-style: bold;
     font-size: 14px;
     line-height: 16px;
-    /*color: #FFFFFF;*/
+    /*color: #FFFFFF;
     background: white;
     /*background: #FFFFFF;*/
-    /*border-radius: 20px 20px 0px 0px;*/
+    /*border-radius: 20px 20px 0px 0px;
     justify-content: center;
     align-items: center;
 }
@@ -658,8 +594,8 @@ input {
     top: -72.5px;
 }
 
-.arrow{
-    /*position: absolute;*/
+/* .arrow{ */
+    /*position: absolute;
     z-index: 4;
     width: 10px;
     height: 10px;
@@ -714,3 +650,4 @@ input {
     left: 52.5%;
     right: 5%;
 }*/
+

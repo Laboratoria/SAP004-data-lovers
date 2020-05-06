@@ -10,121 +10,156 @@
 
 <body class="body-config">
     <div id="root">
+        <!--cabeçalho da pagina-->
+        <header class="header">
+            <div class="inner-header">
 
-        <!-- Container principal-->
-        <div class="container font-22">
+                <!-- logotipo -->
+                <figure id="home" class="logo-align">
+                    <img class="logo-item2" src="/assets/pokeball2.png">
+                    <img class="logo-item1" src="/assets/pokemon-logo.png">
+                </figure>
 
-            <!--cabeçalho da pagina-->
-           <header class="header flex">
-                <div class="logo-align">
-                    <img src="../assets/logo.png">
+                <!-- botões -->
+                <div class="flex">
+                    <!-- Filter -->
+                    <form class="flex btn btn-menu btn-filter">
+                        <img class="img-btn-filter" src="/assets/filter.png">
+                        <select class="select font-22">
+                            <option value="filter">Filtrar</option>
+                            <option value="">Tipo</option>
+                            <option value="">Ovo</option>
+                            <option value="">Comuns</option>
+                            <option value="">Raros</option>
+                            <option value="">Fraqueza</option>
+                        </select>
+                    </form>
+
+                    <!-- order -->
+                    <form class="flex btn btn-menu">
+                        <img class="img-btn-order" src="/assets/order.png">
+                        <select place class="select font-22">
+                            <option value="filter">Ordenar</option>
+                            <option value="">Menor nº
+                            </option>
+                            <option value="">Maior nº</option>
+                            <option value="">A - Z</option>
+                            <option value="">Z - A</option>
+                        </select>
+                    </form>
+
+                    <!-- search -->
+
+                    <div class="flex btn btn-search">
+                        <img class="img-btn-search" src="/assets/search.png">
+                        <input class="font-22" type="text" placeholder="Pesquisar">
+                    </div>
+
+
+
                 </div>
-
-                <div class="btn">
-                    Filtrar
-                </div>
-                <div class="btn">
-                    Ordenar
-                </div>
-                <input class="btn font-22" placeholder="Buscar">
-            </header>
-            <!--//fim cabeçalho-->
-
-            <!-- tela de cards-->
-            <main>
-                <!--template do card-->
-                <section id= " " class="container-card">
-                    <header>
-                        <h4 class="in-block name-pok-spacing ">Name</h4>
-                        <div class="number-pok bold ">#000</div>
-                    </header>
-                    <aside class="flex-pok-type flex ">
-                        <div class="btn btn-card bold ">Tipo
-                        </div>
-                        <div class="btn btn-card bold ">Tipo
-                        </div>
-                    </aside>
-                    <figure>
-                        <img class="pok-img " src=" ../assets/ ">
-                    </figure>
-                </section>-->
-                
-                <!--tela secundaria-->
-                <section id= "modal-characters" > <!--class= " modal-char"-->
-
-                    <section id= "modal-char-trans" class= "char-card-container"> 
-                        <!--menu-characters-item-->
-                        <div id="char-name" class= "char-name-style"></div>
-                        <div id= "char-num"class= "char-num-style"></div>
-                        <div id= "char-type" class= "char-type-style st"></div>
-                        <div id= "char-type" class= "char-type-style nd"></div>
-                        <div id= "char-type" class= "char-type-style rd"></div>
-                        <div id= "char-img" class= "char-img-style"><img src= " "/></div><!-- depois retirar a imagem-->
-                        <figure><img class="close" src="../assets/icon.png "/></figure>
-                        <section class= "sections"> 
-                            <section id= "data-container" class= "modal-char-trans modal-data">
-                                <nav class= "menu-nav"> 
-                                    <label for="rd-data" class= "item-menu-char data">Dados</label>
-                                    <label for="rd-weak" class= "item-menu-char weaknesses">Fraqueza</label>
-                                    <label for="rd-evo" class= "item-menu-char evolution">Evolução</label>
-                                </nav>
-                                <div classs= "scroll "> 
-                                    <input type= "radio" name= "group" id= "rd-data" Checked= "true">
-                                    <input type= "radio" name= "group" id= "rd-weak">
-                                    <input type= "radio" name= "group" id= "rd-evo">
-                                </div>
-                                <div id= "char-height" class= "char-item char-height">Altura</div>
-                                <div id= "char-height-value" class= " char-item char-height-value"></div>
-                                <div id= "char-weight"class= "char-item char-weight">Peso</div>
-                                <div id= "char-weight-value" class= "char-item char-weight-value"></div>
-                                <div id= "char-cand" class= "char-item char-cand">Doce</div>
-                                <div id= "char-cand-value" class= "char-item char-cand-value "></div>
-                                <div id= "char-cand-count" class= "char-item char-cand-count">Nº Doces</div>
-                                <div id= "char-cand-count-value" class= "char-item char-cand-count-value"></div>
-                                <div id= "Char-egg" class= " char-item Char-egg" >Ovo</div>
-                                <div id= "Char-egg-value" class= "char-item Char-egg-value"></div>
-                                <div id= "char-spawn-chance" class= " char-item char-spawn-chance">Chance de Captura(%)</div>
-                                <div id= "char-spawn-chance-value" class= "char-item char-spawn-chance-value"></div>
-                            </section>
-                        </section>  
-                        <section id= "weak-container" class= "modal-char-trans-1 "> <!--menu-char-weaknesses modal-weak -->
-                            <div id= "char-weak-1"></div>
-                            <div id= "char-weak-icon-1"></div>
-                            <div id= "char-weak-2"></div>
-                            <div id= "char-weak-icon-2"></div>
-                            <div id= "char-weak-3"></div>
-                            <div id= "char-weak-icon-3"></div>
-                            <div id= "char-weak-4"></div>
-                            <div id= "char-weak-icon-4"></div>
-                            <div id= "char-weak-5"></div>
-                            <div id= "char-weak-icon-5"></div>
-                            <div id= "char-weak-6"></div>
-                            <div id= "char-weak-icon-6"></div>
-                        </section>
-                        <section id= "evo-container" class= "modal-char-trans-2"> <!--char-evolution-1 modal-evo -->
-                            <figure><img class= "img-evo evo-1-img" src=" "></img></figure>
-                            <div id= "evo-1-name evo-position-name evo-name-num-box1"></div>
-                            <div id= "evo-1-num evo-position-num evo-name-num-box1"></div>
-                            <!--SETINHA-->
-                            <!--<figure><img class= "arrow"src="../assets/up-chevron.png"></figure>-->
-                            <div class= "char-evolution-2">
-                            <figure><img class= "img-evo evo-2-img" src=" "></img></figure>
-                            <div id= "evo-2-name evo-position-name evo-name-num-box2"></div>
-                            <div id= "evo-2-num evo-position-num evo-name-num-box2"></div>
-                        </section>
-                    </sections>  
-                </section>
-            </main>
-            <!--//fim tela de cards-->
-            <footer class="color-noturno footer-page">
-                <!--Rodapé-->
-            </footer>
-        </div>
-        <!-- //fim container-->
-
-
+            </div>
     </div>
-    <script src="main.js " type="module "></script>
+    </header>
+    <!--//fim cabeçalho-->
+
+
+    <!-- Container principal-->
+    <div class="container">
+        <!-- tela de cards-->
+        <main class="container-deck">
+
+
+            <!--template do card-->
+            <section class="container-card">
+                <header>
+                    <h4 class="name-pok in-block name-pok-spacing">Nome</h4>
+                    <div class="number-pok bold">#000</div>
+                </header>
+                <aside class="flex-pok-type flex">
+                    <div class="type-pok btn btn-card bold">Tipo
+                    </div>
+                </aside>
+                <figure>
+                    <img class="img-pok">
+
+                </figure>
+            </section>
+            <!-- //fim template do card-->
+             <!--tela secundaria-->
+             <section id= "modal-characters" class=  "modal-char"> <!--class= " modal-char"-->
+
+                <section id= "modal-char-trans" class= "char-card-container"> 
+                    <!--menu-characters-item-->
+                    <div id="char-name" class= "char-name-style"></div>
+                    <div id= "char-num"class= "char-num-style"></div>
+                    <div id= "char-type" class= "char-type-style st"></div>
+                    <figure><img id= "char-img" class= "char-img-style" ></figure>
+                    <figure><img class="close" src="../assets/icon.png "/></figure>
+                    <section class= "sections"> 
+                        <section id= "data-container" class= "modal-char-trans modal-data">
+                            <nav class= "menu-nav"> 
+                                <label for="rd-data" class= "item-menu-char data">Dados</label>
+                                <label for="rd-weak" class= "item-menu-char weaknesses">Fraqueza</label>
+                                <label for="rd-evo" class= "item-menu-char evolution">Evolução</label>
+                            </nav>
+                            <div classs= "scroll "> 
+                                <input type= "radio" name= "group" id= "rd-data" Checked= "true">
+                                <input type= "radio" name= "group" id= "rd-weak">
+                                <input type= "radio" name= "group" id= "rd-evo">
+                            </div>
+                            <div id= "char-height" class= "char-item char-height">Altura</div>
+                            <div id= "char-height-value" class= " char-item char-height-value"></div>
+                            <div id= "char-weight"class= "char-item char-weight">Peso</div>
+                            <div id= "char-weight-value" class= "char-item char-weight-value"></div>
+                            <div id= "char-cand" class= "char-item char-cand">Doce</div>
+                            <div id= "char-cand-value" class= "char-item char-cand-value"></div>
+                            <div id= "char-cand-count" class= "char-item char-cand-count">Nº Doces</div>
+                            <div id= "char-cand-count-value" class= "char-item char-cand-count-value"></div>
+                            <div id= "Char-egg" class= " char-item Char-egg" >Ovo</div>
+                            <div id= "Char-egg-value" class= "char-item Char-egg-value"></div>
+                            <div id= "char-spawn-chance" class= " char-item char-spawn-chance">Chance de Captura(%)</div>
+                            <div id= "char-spawn-chance-value" class= "char-item char-spawn-chance-value"></div>
+                        </section>
+                    </section>  
+                    <section id= "weak-container" class= "modal-char-trans-1 "> <!--menu-char-weaknesses modal-weak -->
+                        <div id= "char-weak-1"></div>
+                        <div id= "char-weak-icon-1"></div>
+                        <div id= "char-weak-2"></div>
+                        <div id= "char-weak-icon-2"></div>
+                        <div id= "char-weak-3"></div>
+                        <div id= "char-weak-icon-3"></div>
+                        <div id= "char-weak-4"></div>
+                        <div id= "char-weak-icon-4"></div>
+                        <div id= "char-weak-5"></div>
+                        <div id= "char-weak-icon-5"></div>
+                        <div id= "char-weak-6"></div>
+                        <div id= "char-weak-icon-6"></div>
+                    </section>
+                    <section id= "evo-container" class= "modal-char-trans-2"> <!--char-evolution-1 modal-evo -->
+                        <figure><img class= "img-evo evo-1-img" src=" "></img></figure>
+                        <div id= "evo-1-name evo-position-name evo-name-num-box1"></div>
+                        <div id= "evo-1-num evo-position-num evo-name-num-box1"></div>
+                        <!--SETINHA-->
+                        <!--<figure><img class= "arrow"src="../assets/up-chevron.png"></figure>-->
+                        <div class= "char-evolution-2">
+                        <figure><img class= "img-evo evo-2-img" src=" "></img></figure>
+                        <div id= "evo-2-name evo-position-name evo-name-num-box2"></div>
+                        <div id= "evo-2-num evo-position-num evo-name-num-box2"></div>
+                    </section>
+                </sections>  
+            </section>
+        </main>
+        <!--//fim tela de cards-->
+    </div>
+    <!-- //fim container-->
+
+    <footer class="footer-page color-noturno">
+        <img id="logo-lab" src="/assets/laboratoria_logo.png">
+        <span> Laboratoria - SAP004 | São Paulo, 2020</span>
+    </footer>
+    </div>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>
