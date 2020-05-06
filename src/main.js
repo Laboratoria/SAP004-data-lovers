@@ -117,7 +117,7 @@ function clickCard (name,num,type,img,height,weight,candy,candy_count,egg,spawn_
     console.log(name,num,type,img,height,weight,candy,candy_count,egg,spawn_chance)
     document.getElementById("char-name").textContent = name
     document.getElementById("char-num").textContent = num
-    document.getElementById("char-type1").textContent = type
+    document.getElementById("char-type").textContent = type
     document.getElementById("char-img").src = img
     document.getElementById("char-height-value").textContent = height
     document.getElementById("char-weight-value").textContent = weight
