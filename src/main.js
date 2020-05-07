@@ -4,7 +4,7 @@ import data from './data/pokemon/pokemon.js';
 // banco de dados
 const pokemons = data.pokemon;
 
-// variáveis do HTML
+// botões do HTML
 const searchBar = document.querySelector("#searchBar");
 //const buttonOrder = document.querySelector("#buttonOrder");
 //const buttonFilter = document.querySelector("#buttonFilter");
@@ -14,7 +14,6 @@ const buttonAZ = document.querySelector("#buttonAZ")
 const buttonZA = document.querySelector("#buttonZA")
 const buttonCresc = document.querySelector("#buttonCresc")
 const buttonDecre = document.querySelector("#buttonDecre")
-
 
 // card do pokémon
 const card = (num, name, img, type) => {
@@ -30,13 +29,13 @@ pokemons.map(pkm => pokemonsList.innerHTML += card (pkm.num, pkm.name, pkm.img, 
 // cards filtrados
 searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar, pokemons)));
 
-const displayPokemons = (characters) => {
-  const cards = characters
-    .map((character) => {
-      return `<figure class="card-pokemon"><p class="pokemon-num">${character.num}</p>
-      <img src="${character.img}" alt="Miniatura do pokémon ${character.name} do tipo ${character.type}">
-      <figcaption class="pokemon-name">${character.name}</figcaption>
-      </figure>`;    
+const displayPokemons = (pkm) => {
+  const cards = pkm
+    .map((pkm) => {
+      return `<figure class="card-pokemon"><p class="pokemon-num">${pkm.num}</p>
+      <img src="${pkm.img}" alt="Miniatura do pokémon ${pkm.name} do tipo ${pkm.type}">
+      <figcaption class="pokemon-name">${pkm.name}</figcaption>
+      </figure>`;
     })
     .join('');
   pokemonsList.innerHTML = cards;
