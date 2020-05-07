@@ -1,21 +1,7 @@
-import { listIcon, listSearch, searchNave, search } from './selectors.js'
+import { searchIcon, searchFilter, search } from './selectors.js'
 
-listSearch.addEventListener('click', () => {
-  openSearch();
-});
+searchIcon.addEventListener('click', () => search.focus());
 
-function openSearch () {
-  listIcon.style.display = 'none';
-  listSearch.style.width = '100%';
-  search.style.display = 'block';
-  searchNave.style.display = 'block';
-  searchNave.classList.add('nave--fly');
-  search.focus();
-}
+search.addEventListener('focusin', () => searchFilter.classList.add('animate--show'));
 
-search.addEventListener('blur', () => {
-  listIcon.style.display = 'block';
-  search.style.display = 'none';
-  searchNave.style.display = 'none';
-  listSearch.style.width = '0%';
-});
+search.addEventListener('blur', () => searchFilter.classList.remove('animate--show'));
