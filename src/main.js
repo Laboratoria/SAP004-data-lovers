@@ -15,23 +15,13 @@ const buttonZA = document.querySelector("#buttonZA")
 const buttonCresc = document.querySelector("#buttonCresc")
 const buttonDecre = document.querySelector("#buttonDecre")
 
-/* 
-// função para mostrar barra de pesquisa
-buttonSearch.addEventListener("click", function () {
-    searchBar.style.visibility = "visible"; 
-    buttonOrder.style.visibility = "hidden";
-    buttonFilter.style.visibility = "hidden";
-    buttonSearch.style.visibility = "hidden";
-});
-*/
-
 
 // card do pokémon
 const card = (num, name, img, type) => {
-    return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
-    <img src="${img}" alt="Miniatura do pokémon ${name} do tipo ${type}">
-    <figcaption class="pokemon-name">${name}</figcaption>
-    </figure>`
+  return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
+  <img src="${img}" alt="Miniatura do pokémon ${name} do tipo ${type}">
+  <figcaption class="pokemon-name">${name}</figcaption>
+  </figure>`
 };
 
 // mapping para gerar o card
@@ -41,46 +31,52 @@ pokemons.map(pkm => pokemonsList.innerHTML += card (pkm.num, pkm.name, pkm.img, 
 searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar, pokemons)));
 
 const displayPokemons = (characters) => {
-    const cards = characters
-        .map((character) => {
-            return `<figure class="card-pokemon"><p class="pokemon-num">${character.num}</p>
-            <img src="${character.img}" alt="Miniatura do pokémon ${character.name} do tipo ${character.type}">
-            <figcaption class="pokemon-name">${character.name}</figcaption>
-            </figure>`;    
-        })
-        .join('');
-    pokemonsList.innerHTML = cards;
+  const cards = characters
+    .map((character) => {
+      return `<figure class="card-pokemon"><p class="pokemon-num">${character.num}</p>
+      <img src="${character.img}" alt="Miniatura do pokémon ${character.name} do tipo ${character.type}">
+      <figcaption class="pokemon-name">${character.name}</figcaption>
+      </figure>`;    
+      })
+      .join('');
+  pokemonsList.innerHTML = cards;
 };
 
 // botão a-z 
 buttonAZ.addEventListener("click", () => {
-    const az = sortAlphaOrder(pokemons, "name", "az");
-    displayPokemons (az);
+  const az = sortAlphaOrder(pokemons, "name", "az");
+  displayPokemons (az);
 });
 
 // botão z-a
 buttonZA.addEventListener("click", () => {
-    const za = sortAlphaOrder(pokemons, "name", "za");
-    displayPokemons(za);
+  const za = sortAlphaOrder(pokemons, "name", "za");
+  displayPokemons(za);
 })
 
 // botão 1-151
 buttonCresc.addEventListener("click", () => {
-    const cresc = sortNumOrder(pokemons, "id", "cresc");
-    displayPokemons(cresc);
+  const cresc = sortNumOrder(pokemons, "id", "cresc");
+  displayPokemons(cresc);
 })
 
 // botão 151-1
 buttonDecre.addEventListener("click", () => {
-    const decre = sortNumOrder(pokemons, "id", "decre");
-    displayPokemons(decre);
+  const decre = sortNumOrder(pokemons, "id", "decre");
+  displayPokemons(decre);
 })
 
 
 
-
-
-
+/* 
+// função para mostrar barra de pesquisa
+buttonSearch.addEventListener("click", function () {
+    searchBar.style.visibility = "visible"; 
+    buttonOrder.style.visibility = "hidden";
+    buttonFilter.style.visibility = "hidden";
+    buttonSearch.style.visibility = "hidden";
+});
+*/
 
 
 /*
