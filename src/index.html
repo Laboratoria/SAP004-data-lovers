@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
 
-    <title>Pokédex</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
 
-    <header id="home"> 
-        <img src="img/pokemon.png" >  
-    </header>
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <nav>
-      <ul>
-        <li>
-          <button id="buttonOrder">ORDEM</button>
-          <ul>
-            <li><button id="buttonCresc">1 > 151</button></li>
-            <li><button id="buttonDecre">151 > 1</button></li>
-            <li><button id="buttonAZ">A > Z</button></li>
-            <li><button id="buttonZA">Z > A</button></li>
-          </ul>
-        </li>
-        <li>
-          <button id="buttonFilter">TIPO</button>
-          <ul>
-            <li></li>
-          </ul>
+<body>
+
+  <header id="home">
+    <img src="img/pokemon.png">
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        <button id="buttonOrder">ORDEM</button>
+        <ul>
+          <li><button id="buttonCresc">1 > 151</button></li>
+          <li><button id="buttonDecre">151 > 1</button></li>
+          <li><button id="buttonAZ">A > Z</button></li>
+          <li><button id="buttonZA">Z > A</button></li>
+        </ul>
+      </li>
+      <li>
+        <button id="buttonFilter">TIPO</button>
+      </li>
+      <li id="searchWrapper">
+        <button id="buttonSearch">BUSCA</button>
+        <ul>
+          <li>
+            <input type="text" name="busca" id="searchBar" placeholder="NOME DO POKÉMON" />
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="root">
+    <!--cards vindos do banco de dados-->
+  </main>
+
+  <footer>
+    <p>&copy; Adriana & Tamires</p>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
+
 <!--Aço
 Água
 Dragão
@@ -46,26 +69,3 @@ Psíquico
 Terrestre
 Venenoso
 Voador!-->
-        </li>
-        <li id="searchWrapper">
-          <button id="buttonSearch">BUSCA</button>
-          <ul>
-            <li>
-              <input type="text" name="busca" id="searchBar" placeholder="NOME DO POKÉMON"/>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-
-    <main id="root">
-        <!--cards vindos do banco de dados-->
-    </main>
-
-    <footer>
-      <p>&copy; Adriana & Tamires</p>
-    </footer>
-    <script src="main.js" type="module"></script>
-  </body>
-</html>
-
