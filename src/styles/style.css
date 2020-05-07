@@ -2,6 +2,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+
 body {
   background-image: url("imagens/tela-01.png");
 }
@@ -19,7 +20,6 @@ body {
   display: flex;
   height: 70px;
   justify-content: center;
-  position: fixed;
   width: 100%;
   z-index: 9999;
 }
@@ -61,6 +61,10 @@ body {
   transform: translateX(-50%);
   transition: 0.4s max-height ease-in;
   visibility: hidden;
+}
+
+.sort {
+  width: 25px;
 }
 
 .icon-search {
@@ -140,9 +144,44 @@ body {
 }
 
 @media (max-width: 960px) {
+  .animate {
+    width: 0%;
+  }
+
+  .animate input {
+    background: none;
+    border: none;
+    color: #000;
+    font-weight: 900;
+    padding: 0px 10px;
+    width: 0;
+  }
+
+  .animate--show {
+    width: 100%;
+  }
+
+  .animate--show i {
+    display: none;
+  }
+
+  .animate--show img {
+    animation: flySlow 2s ease-in-out;
+    display: block;
+    position: absolute;
+    width: 75px;
+    left: 80%;
+    top: 0%;
+  }
+
+  .animate--show input {
+    width: 100%;
+  }
+
   .menu {
     bottom: 0;
     height: auto;
+    position: fixed;
   }
 
   .menu__items {
@@ -156,19 +195,14 @@ body {
     padding: 20px 10px;
   }
 
+  .menu__items ul {
+    top: auto;
+    bottom: 100%;
+  }
+
   .filter__search {
     display: flex;
     justify-content: center;
-  }
-
-  .filter__search input {
-    background: none;
-    border: none;
-    color: #000;
-    font-weight: 900;
-    display: none;
-    padding: 0px 10px;
-    width: 100%;
   }
 
   .filter__search input::placeholder {
@@ -184,23 +218,14 @@ body {
     background-color: transparent;
   }
 
-  .nave--fly {
-    animation: flySlow 2s ease-in-out;
-    display: block;
-    position: absolute;
-    width: 75px;
-    left: 80%;
-    top: 0%;
-  }
-
   @keyframes flySlow {
-   from {
-     top: 50%;
-     left: 0%;
-   }
-   to {
-     top: 0%;
-     left: 80%;
-   }
+    from {
+      top: 50%;
+      left: 0%;
+    }
+    to {
+      top: 0%;
+      left: 80%;
+    }
   }
 }
