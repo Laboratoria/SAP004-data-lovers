@@ -37,7 +37,7 @@ export const sortNumOrder = (pokemon, id, alfaOrder) => {
       else return 0;
     })
   }  
-  if ( alfaOrder == "drecre"); {
+  if ( alfaOrder == "decre"); {
     return pokemon.sort((start, end) =>{
       if (end[id] > start[id]) return 1;
       else if (start[id]> end[id]) return -1;
