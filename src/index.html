@@ -15,12 +15,12 @@
   <body>
     <header role="search" class="menu">
       <ul class="menu__items">
-        <li class="filter__search" id="filter-search">
-          <i class="icon-search" id="search-icon"></i>
-          <img src="img/portal-search.png" class="search__nave" id="search-nave">
-          <input type="text" class="search__character" id="search">
+        <li id="search-filter" class="filter__search animate">
+          <i id="search-icon" class="icon-search"></i>
+          <img id="search-nave" src="img/portal-search.png" class="search__nave">
+          <input id="search" type="text" class="search__character">
         </li>
-        <li class="filter" id="allCharacters">All</li>
+        <li id="allCharacters" class="filter">All</li>
         <li class="filter">
           Status +
           <ul id="statusFilter"></ul>
@@ -29,11 +29,11 @@
           Species +
           <ul id="speciesFilter"></ul>
         </li>
-        <li class="filter" id="sortFilter">
+        <li id="sortFilter" class="filter">
           Sort +
           <ul>
-            <li id="sortByNameUp">A-Z</li>
-            <li id="sortByNameDown">Z-A</li>
+            <li id="sortByNameUp" class="sort">A-Z</li>
+            <li id="sortByNameDown" class="sort">Z-A</li>
           </ul>
         </li>
         <li class="filter">
