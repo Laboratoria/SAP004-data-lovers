@@ -7,9 +7,9 @@ const speciesFilter = document.querySelector('#speciesFilter');
 const sortByNameUp = document.querySelector('#sortByNameUp');
 const sortByNameDown = document.querySelector('#sortByNameDown');
 
-const listSearch = document.querySelector('#filter-search');
-const listIcon = document.querySelector('#search-icon');
+const searchFilter = document.querySelector('#search-filter');
+const searchIcon = document.querySelector('#search-icon');
 const searchNave = document.querySelector('#search-nave');
 
 
-export { allCharacters, cardsBox, gendersFilter, listIcon, listSearch, searchNave, search, speciesFilter, sortByNameUp, sortByNameDown, statusFilter };
+export { allCharacters, cardsBox, gendersFilter, searchIcon, searchFilter, searchNave, search, speciesFilter, sortByNameUp, sortByNameDown, statusFilter };
