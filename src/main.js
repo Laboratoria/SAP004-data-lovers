@@ -6,9 +6,9 @@ const pokemons = data.pokemon;
 
 // variáveis do HTML
 const searchBar = document.querySelector("#searchBar");
-const buttonOrder = document.querySelector("#buttonOrder");
-const buttonFilter = document.querySelector("#buttonFilter");
-const buttonSearch = document.querySelector("#buttonSearch");
+//const buttonOrder = document.querySelector("#buttonOrder");
+//const buttonFilter = document.querySelector("#buttonFilter");
+//const buttonSearch = document.querySelector("#buttonSearch");
 const pokemonsList = document.querySelector("#root");
 const buttonAZ = document.querySelector("#buttonAZ")
 const buttonZA = document.querySelector("#buttonZA")
@@ -37,8 +37,8 @@ const displayPokemons = (characters) => {
       <img src="${character.img}" alt="Miniatura do pokémon ${character.name} do tipo ${character.type}">
       <figcaption class="pokemon-name">${character.name}</figcaption>
       </figure>`;    
-      })
-      .join('');
+    })
+    .join('');
   pokemonsList.innerHTML = cards;
 };
 
