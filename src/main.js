@@ -1,4 +1,4 @@
-import { searchPokemon, sortA } from './data.js';
+import { searchPokemon, sortAlphaOrder, sortNumOrder } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 // banco de dados
@@ -12,8 +12,8 @@ const buttonSearch = document.querySelector("#buttonSearch");
 const pokemonsList = document.querySelector("#root");
 const buttonAZ = document.querySelector("#buttonAZ")
 const buttonZA = document.querySelector("#buttonZA")
-const buttonCRE = document.querySelector("#buttonCRE")
-const buttonDE = document.querySelector("#buttonDE")
+const buttonCresc = document.querySelector("#buttonCresc")
+const buttonDecre = document.querySelector("#buttonDecre")
 
 /* 
 // função para mostrar barra de pesquisa
@@ -50,40 +50,45 @@ const displayPokemons = (characters) => {
         })
         .join('');
     pokemonsList.innerHTML = cards;
-  };
-  
-  //função a-z 
+};
+
+// botão a-z 
 buttonAZ.addEventListener("click", () => {
-    const AZ = sortA (pokemons, "name", "az");
-    displayPokemons (AZ);
+    const az = sortAlphaOrder(pokemons, "name", "az");
+    displayPokemons (az);
 });
 
-  
+// botão z-a
+buttonZA.addEventListener("click", () => {
+    const za = sortAlphaOrder(pokemons, "name", "za");
+    displayPokemons(za);
+})
+
+// botão 1-151
+buttonCresc.addEventListener("click", () => {
+    const cresc = sortNumOrder(pokemons, "id", "cresc");
+    displayPokemons(cresc);
+})
+
+// botão 151-1
+buttonDecre.addEventListener("click", () => {
+    const decre = sortNumOrder(pokemons, "id", "decre");
+    displayPokemons(decre);
+})
+
+
+
+
+
+
+
+
 /*
-//função z-a
- const sortedZ = pokemons.sort( (a, b) => {
-    if( b.name > a.name) return 1;
-    else if(a.name > b.name) return -1;
-    else return 0;
-} );
-console.log( sortedZ );
-/*
-// função id
-const sortedId = pokemons.sort((a, b)=> {
-    if (b.id > a.id) return 1;
-    else if (a.id > b.id) return -1;
-    else return 0
-});console.log( sortedId);
-
-
-
-
-
-
     //função tela inicial 
 let botaor = document.querySelector("#reset")
 botaor.addEventListener("click", function(event){ 
         event.preventDefault()   ;
         searchWrapper.reset(); 
         }
-    );*/
+    );
+    */
