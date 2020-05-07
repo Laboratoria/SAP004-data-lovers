@@ -269,8 +269,7 @@ background-color: rgb(56, 56, 56);
  main{
      background-color: darkorchid;
      display: block;
-     -webkit-flex-wrap: wrap;
-     -webkit-flex-direction: column;
+
  }
 
 }
