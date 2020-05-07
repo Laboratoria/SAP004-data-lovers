@@ -1,62 +1,8 @@
-import {ordenarAZ, ordemQveio, ordenarZA, ordenarAlive, ordenarDead, ordenarMale, ordenarFemale} from './data.js';
+import { ordenarAZ, ordemQveio, ordenarZA, filtraGender, filtraStatus, elements } from './data.js';
 
-const selectElement = document.querySelector('.drop-menu');
-selectElement.addEventListener('change', seletor)
-
-function seletor(){
-  if (selectElement.value === 'A-Z'){
-    return ordenarCardsAZ()
-  }else if (selectElement.value === 'Z-A'){
-    return ordenarCardsZA()
-  }else if (selectElement.value === 'alive'){
-    return ordenaVivo()
-  }else if (selectElement.value === 'dead'){
-    return ordenaMorto()
-  }else if (selectElement.value === 'male'){
-    return ordenaHomem()
-  }else if (selectElement.value === 'female'){
-    return ordenaMulher()
-  }else {
-    return mostrapersonagens()
-  }
-}
-
-seletor()
-
-function mostrapersonagens(){
-  let nomesPersonagens = ordemQveio();
-  return  inserirNoHtml(nomesPersonagens);
-}
-
- function ordenarCardsAZ(){
-  let nomesPersonagensAZ = ordenarAZ();
-  return inserirNoHtml(nomesPersonagensAZ);
-}
-
-function ordenarCardsZA(){
-  let nomesPersonagensZA = ordenarZA();
-  return inserirNoHtml(nomesPersonagensZA);
-}
-
-function ordenaVivo(){
-  let personagensVivo = ordenarAlive();
-  return inserirNoHtml(personagensVivo)
-}
-function ordenaMorto(){
-  let personagensMorto = ordenarDead();
-  return inserirNoHtml(personagensMorto)
-}
-function ordenaHomem(){
-  let personagensHomem = ordenarMale();
-  return inserirNoHtml(personagensHomem)
-}
-function ordenaMulher(){
-  let personagensMulher = ordenarFemale();
-  return inserirNoHtml(personagensMulher)
-}
-function inserirNoHtml(vetor){
+function inserirNoHtml(vetor) {
   let novaIsercao = "";
-  novaIsercao += vetor.map((item) => 
+  novaIsercao += vetor.map((item) =>
     `<div class="cards">
       <img class="imagem" src="${item[1]}">
       <div id="nome"> ${item[0]}</div>
@@ -64,6 +10,30 @@ function inserirNoHtml(vetor){
       <p> Status: ${item[3]}</p>
       <p> Species: ${item[4]}</p>
     </div>`
-    ).join("");
-    document.getElementById('root').innerHTML = novaIsercao;
-  };
+  ).join("");
+  document.getElementById('root').innerHTML = novaIsercao;
+};
+
+const selectElement = document.querySelector('.drop-menu');
+selectElement.addEventListener('change', seletor)
+
+function seletor() {
+  if (selectElement.value === 'A-Z') {
+    return inserirNoHtml(ordenarAZ())
+  } else if (selectElement.value === 'Z-A') {
+    return inserirNoHtml(ordenarZA())
+  } else if (selectElement.value === 'alive') {
+    return inserirNoHtml(filtraStatus(elements.characterOrder, elements.statusA))
+  } else if (selectElement.value === 'dead') {
+    return inserirNoHtml(filtraStatus(elements.characterOrder, elements.statusD))
+  } else if (selectElement.value === 'male') {
+    return inserirNoHtml(filtraGender(elements.characterOrder, elements.genderM))
+  } else if (selectElement.value === 'female') {
+    return inserirNoHtml(filtraGender(elements.characterOrder, elements.genderF))
+  } else {
+    return inserirNoHtml(ordemQveio())
+  }
+}
+seletor()
+
+
