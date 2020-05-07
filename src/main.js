@@ -1,5 +1,8 @@
 /*Bloco de configurações*/
 import { searchFunc } from './data.js';
+import { typeFunctionConcat } from './data.js';
+import { checkType } from './data.js';
+import { height } from './data.js';
 import data from './data/pokemon/pokemon.js';
 const root = document.getElementById("root") // import div
 const pokemons = data.pokemon // pokemons = array
@@ -69,7 +72,10 @@ const viewAllElement = () => {
 /*Função que pesquisa os nomes*/
 const searchName = () => {
     clearDisplay()
-    const elementSearched = pokemons.filter(searchFunc)
+    let nameInput = document.getElementById("search").value
+    nameInput = nameInput.toUpperCase() 
+    const elementSearched = searchFunc(pokemons, nameInput)
+     
     elementSearched.map(print)
 }
 /*Função de abrir e fechar menu avançado*/
@@ -79,15 +85,7 @@ const filters = () => {
 }
 
 
-/*Função que verifica quais checkboxs estão selecionados*/
-const checkType = (a) => {
-    const newArray = []
-    for (let i of a) {
-        if (i.checked)
-            newArray.push(i.value)
-    }
-    return newArray
-}
+
 
 /*Funcao que verifica os tipos e fraquezas*/
 const typeFunction = (p) => {
@@ -95,28 +93,16 @@ const typeFunction = (p) => {
     const checkbox = document.getElementById("checkbox-types")
     const checkboxWeakness = checkType(checkbox.weakness)
     const checkboxType = checkType(checkbox.option)
-    /*Verifica os tipos*/
-    for (let i of checkboxType) {
-        if (p.type[0] == i || p.type[1] == i)
-            return true
-    }
-    //pokemons.type == tipos checkados
-    /*Verifica as fraquezas */
-    for (let i of checkboxWeakness) {
-        for (let j of p.weaknesses) {
-            if (j == i)
-                return true
-        }
-    }
+    return typeFunctionConcat(checkboxWeakness,checkboxType,p)
 }
 
 /*Função que filtra os checkboxs*/
 const advancedSearch = () => {
     clearDisplay()
-    ////////////const typeArray = pokemons.filter(typeFunction)
-    //const pokemonsFiltred = pokemons.filter(typeFunction).map(print)
+    /////////////const typeArray = pokemons.filter(typeFunction)
+    const pokemonsFiltred = pokemons.filter(typeFunction).map(print)
     //resetSearch()
-    const heightArray = getHeight()
+    //const heightArray = getHeight()
     heightArray.map(print)
 
 
@@ -171,42 +157,12 @@ const getHeight = () => {
     let result = []
     let resultArrays = []
     for (let i of checkboxHeight) {
-        resultArrays  =  result.concat(height(i))
+        resultArrays  =  result.concat(height(i, pokemons))
     }
     console.log(resultArrays)
 
     //result.map(print)
     return resultArrays
-}
-//Filtra altura
-const height = (heightPokemon) => {
-    let newArray = pokemons.sort(function (a, b) {
-        return ((a.height < b.height) ? 1 : ((b.height < a.height) ? -1 : 0))
-    })
-    let average = (parseFloat(newArray[4].height) - parseFloat(newArray[newArray.length - 1].height)) / 3
-
-    let resultMin
-    let resultMax
-    if (heightPokemon == "l") {
-        resultMax = average
-        resultMin = 0
-    }
-    else if (heightPokemon == "m") {
-        resultMax = 2 * average
-        resultMin = average
-    }
-    else {
-        resultMax = Math.ceil(parseFloat(newArray[0].height))
-        resultMin = 2 * average
-    }
-
-    const resultPokemons = pokemons.filter((p) => {
-        if (resultMin < parseFloat(p.height) && parseFloat(p.height) < resultMax)// array 4 pois os 5 primeiros estão muito acima da média
-            return true
-    })
-    //resultPokemons.map(print)
-    return resultPokemons
-
 }
 
 
