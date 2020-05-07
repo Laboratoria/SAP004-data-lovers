@@ -8,32 +8,35 @@
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header role="search" class="menu">
       <ul class="menu__items">
-        <li>
-          <input type="text" placeholder="Procurar..." class="search__character" id="search">
+        <li class="filter__search" id="filter-search">
+          <i class="icon-search" id="search-icon"></i>
+          <img src="img/portal-search.png" class="search__nave" id="search-nave">
+          <input type="text" class="search__character" id="search">
         </li>
-        <li id="allCharacters">All</li>
-        <li>
+        <li class="filter" id="allCharacters">All</li>
+        <li class="filter">
           Status +
           <ul id="statusFilter"></ul>
         </li>
-        <li>
+        <li class="filter">
           Species +
           <ul id="speciesFilter"></ul>
         </li>
-        <li id="sortFilter">
+        <li class="filter" id="sortFilter">
           Sort +
           <ul>
             <li id="sortByNameUp">A-Z</li>
             <li id="sortByNameDown">Z-A</li>
           </ul>
         </li>
-        <li>
+        <li class="filter">
           Gender +
           <ul id="gendersFilter"></ul>
         </li>
@@ -45,6 +48,7 @@
     </main>
 
     <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/style-menu.js" type="module"></script>
   </body>
 
 </html>
