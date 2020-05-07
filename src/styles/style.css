@@ -1,3 +1,7 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   background-image: url("imagens/tela-01.png");
 }
@@ -11,10 +15,13 @@ body {
 
 .menu {
   align-items: center;
-  background-color: rgb(51, 51, 51);
+  background-color: #a0d03f;
   display: flex;
   height: 70px;
   justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 .menu__items {
@@ -24,7 +31,9 @@ body {
 }
 
 .menu__items li {
-  color: #fff;
+  align-items: center;
+  color: #000;
+  display: flex;
   font-family: "Baloo Tamma 2", cursive;
   font-weight: 900;
   position: relative;
@@ -54,8 +63,17 @@ body {
   visibility: hidden;
 }
 
+.icon-search {
+  display: none;
+}
+
 .search__character {
   text-transform: capitalize;
+}
+
+.search__nave {
+  display: none;
+  width: 50px;
 }
 
 .cards__box {
@@ -78,10 +96,6 @@ body {
   margin: 10px;
   text-align: center;
   overflow: hidden;
-}
-
-.card__character:hover {
-  opacity: 0.4;
 }
 
 .card__image {
@@ -125,3 +139,68 @@ body {
   font-weight: 100;
 }
 
+@media (max-width: 960px) {
+  .menu {
+    bottom: 0;
+    height: auto;
+  }
+
+  .menu__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .menu__items li {
+    font-size: 15px;
+    justify-content: space-around;
+    padding: 20px 10px;
+  }
+
+  .filter__search {
+    display: flex;
+    justify-content: center;
+  }
+
+  .filter__search input {
+    background: none;
+    border: none;
+    color: #000;
+    font-weight: 900;
+    display: none;
+    padding: 0px 10px;
+    width: 100%;
+  }
+
+  .filter__search input::placeholder {
+    color: #000;
+    font-weight: 900;
+  }
+
+  .icon-search {
+    display: block;
+  }
+
+  .menu__items .filter__search:hover {
+    background-color: transparent;
+  }
+
+  .nave--fly {
+    animation: flySlow 2s ease-in-out;
+    display: block;
+    position: absolute;
+    width: 75px;
+    left: 80%;
+    top: 0%;
+  }
+
+  @keyframes flySlow {
+   from {
+     top: 50%;
+     left: 0%;
+   }
+   to {
+     top: 0%;
+     left: 80%;
+   }
+  }
+}
