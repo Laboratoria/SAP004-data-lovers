@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
-</html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header-pokemon">
+    <img src="img pokemon.jpeg" alt="pokemon" class="img1-pokemon">
+  </header>
+  <!--  <div id="root"></div> -->
+  <main>
+    <section>
+      <label><input type="text" id="filter-name" placeholder="ex: Pikachu"></label>
+      <select name="select-type" id="select-type">
+        <option value="Grass">Grass</option>
+        <option value="Fire" selected>Fire</option>
+        <option value="Water">Water</option>
+      </select>
+      <button id="A-Z">A-Z</button>
+      <button id="Z-A">Z-A</button>
+
+      <!-- <label><input name="A-Z" id="A-Z" type="radio">A-Z</label>
+      <label><input name="A-Z" id="A-Z" type="radio">Z-A</label> -->
+
+    </section>
+  </main>
+
+  <div id="cards" class="pokemons"></div>
+
+  <footer>by &copyRenataAlmeida e &copyGiseleCesar</footer>
+
+  <script src="main.js" type="module"></script>
+
+</body>
+
