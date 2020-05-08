@@ -9,23 +9,20 @@ export const searchPokemon = (search, pokemon) => {
   return filteredPokemons;
 };
 
+// usar nomes genéricos para usar o sortOrder para ambos. ex: name ou id = order, "az" ou "za" = cres e desc
+// simplesmente ter um multiplicador, não precisa usar dois ifs, no return multiplicando a 
+// estudar ternários, SE for isso será isso SE for aquilo será aquilo
+// estudar reverse com a Ale e a Thali
+
 
 // função de Ordenar AZ e ZA
 export const sortAlphaOrder = (pokemon, name, alfaOrder) => {
-  if (alfaOrder == "az") {
-    return pokemon.sort( (start, end) => {
-    if( end[name] < start[name]) return 1;
-      else if(start[name] < end[name]) return -1;
-      else return 0;
+  const direction = (alfaOrder === "az")?1:-1;
+  return pokemon.sort( (start, end) => {
+  if( end[name] < start[name]) return direction;
+    else if(start[name] < end[name]) return -direction;
+    else return 0;
     })
-  }
-  if (alfaOrder == "za") {
-    return pokemon.sort((start, end) => {
-      if( end[name] > start[name]) return 1;
-      else if(start[name] > end[name]) return -1;
-      else return 0;
-    })
-  } 
 };
 
 // função de Ordenar 1-151 e 151-1
@@ -37,7 +34,7 @@ export const sortNumOrder = (pokemon, id, alfaOrder) => {
       else return 0;
     })
   }  
-  if ( alfaOrder == "drecre"); {
+  if ( alfaOrder == "decre"); {
     return pokemon.sort((start, end) =>{
       if (end[id] > start[id]) return 1;
       else if (start[id]> end[id]) return -1;
