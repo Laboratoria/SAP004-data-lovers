@@ -139,17 +139,19 @@ function clickCard (name,num,type,img,height,weight,candy,candy_count,egg,spawn_
 
 //Passos:
 //PASSO1.Criar uma função para reconhecer o grupo de pokemon escolhido 
-//Aqui estou simulando que o usuário escolheu ‘fogo’. Falta implementar a lógica dessa função. Ju ficou de ver com a Palomita depois!
-// const ElementosOption= [Filtar,Bug,Dark,Electric,Fighting,Fire,Flying,Ghost,Grass,Ground,Ice,Normal,Poison,Psychic,Rock,Steel,Water]
-// const selectMenu = document.querySelector('.select')    
-// selectMenu.addEventListener("click", () => {
+//Aqui estou simulando que o usuá"rio escolheu ‘fogo’. Falta implementar a lógica dessa função. Ju ficou de ver com a Palomita depois!
+const ElementosOption= ["Filtar","Bug","Dark","Electric","Fighting","Fire","Flying","Ghost","Grass","Ground","Ice","Normal","Poison","Psychic","Rock","Steel","Water"];
 
-//     const optionMenu = document.getElementsByTagName('option')
-//     for (let i=0; i < optionMenu.length; i++){
+const selectMenu = document.querySelector('.select')
+console.log(selectMenu) 
+selectMenu.addEventListener("click", () => {
 
-//     }
+    const optionMenu = document.getElementsByTagName('option')
+    for (let i=0; i < optionMenu.length; i++){
+        console.log(optionMenu)
+    }
 
-// } )
+} )
 
 
 ///tentando obter a função debuscar os valores dos elementos clicados

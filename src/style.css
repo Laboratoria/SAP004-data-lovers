@@ -243,9 +243,10 @@ input {
     height: 330px;
     margin: 15% auto;
     font-style: normal;
-    background: #FF8C00;
+    background: #FF8C00 url("./assets/pokeball_half2.png") no-repeat right top;
+
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .img-container{
@@ -255,6 +256,7 @@ input {
 .char-name-style {
     font-size: 22px;
     font-weight: bold;
+    margin-top:10px;
     color: #FFFFFF;
 }
 
@@ -262,24 +264,25 @@ input {
     font-size: 12px;
     line-height: 15px;
     font-weight: bold;
+    margin-top:16px;
     color: #FFFFFF;
 }
 
 .char-img-style {
     position: absolute;
-    width: 90px;
-    height:90px;
-    top: -20px;
+    width: 100px;
+    height: 100px;
+    top: -10px;
     right: -50px;
     z-index: 2;
 }
 
 .char-type-style {
-    padding:2.5px 3px;
+    padding:2.5px 20px;
     font-size: 14px;
     line-height: 16px;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.62);
+    color: rgba(0, 0, 0);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background: #FFFFFF;
@@ -291,11 +294,12 @@ input {
     display: flex;
     width: 200px;
     height: 200px;
+    padding-top: 15px;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
-    color: rgba(0, 0, 0, 0.57);
+    color:#505050;
     background: #FFFFFF;
     border-radius: 20px 20px 0px 0px;
     justify-content: center;
@@ -308,7 +312,7 @@ input {
     width: 15px;
     height: 15px;
     left: 86px;
-    top: 37px; 
+    top: 45px; 
     z-index: 1;    
     cursor: pointer; 
 }
@@ -318,9 +322,10 @@ input {
     opacity: 0.3;
 }
 
-.menu-char{
+/* .menu-char{
     margin-bottom: 5%;
-}
+    text-align: center;
+} */
 
 hr{
     border: 1.5px solid #E5E5E5;
@@ -334,11 +339,7 @@ hr{
 }
 
 .char-item {
-    display:  flex;
-    text-align: center;
-    justify-content: space-between;
-    padding:0 5%;
-    margin: 1% 0;
+    text-align: right;
 }
 
 .char-value {
