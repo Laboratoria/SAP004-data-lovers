@@ -15,7 +15,7 @@ export const searchPokemon = (search, pokemon) => {
 // estudar reverse com a Ale e a Thali
 
 
-// função de Ordenar AZ e ZA
+// função de Ordenar - Dani e Palomita
 export const sortAlphaOrder = (pokemon, name, alfaOrder) => {
   const direction = (alfaOrder === "az")?1:-1;
   return pokemon.sort( (start, end) => {
@@ -43,6 +43,8 @@ export const sortNumOrder = (pokemon, id, alfaOrder) => {
   }
 };
 
+// função de Tipo
+export const filterType = 
 
 
 
