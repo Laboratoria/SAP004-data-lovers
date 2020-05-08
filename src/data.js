@@ -15,12 +15,13 @@ export const searchPokemon = (search, pokemon) => {
 // estudar reverse com a Ale e a Thali
 
 
+// refatorar e pensar no reverse
 // função de Ordenar - Dani e Palomita
-export const sortAlphaOrder = (pokemon, name, alfaOrder) => {
-  const direction = (alfaOrder === "az")?1:-1;
+export const sortOrder = (pokemon, order, alfaNumOrder) => {
+  const direction = (alfaNumOrder === "orderdirection")?1:-1;
   return pokemon.sort( (start, end) => {
-  if( end[name] < start[name]) return direction;
-    else if(start[name] < end[name]) return -direction;
+  if( end[order] < start[order]) return direction;
+    else if(start[order] < end[order]) return -direction;
     else return 0;
     })
 };
@@ -43,54 +44,12 @@ export const sortNumOrder = (pokemon, id, alfaOrder) => {
   }
 };
 
+/*
+// fazer a função de Tipo
 // função de Tipo
-export const filterByType = pokemon.reduce(filteredTypes(displayByType, type){
+export const filterByType = pokemon.reduce(filteredTypes(displayByType, pokemonType){
+  const typeForButton = 
+  const allPokemons = pokemonType.type ===0 ; 
   
 })
-
-
-
-
-/*
-//função z-a
- const sortedZ = pokemons.sort( (a, b) => {
-    if( b.name > a.name) return 1;
-    else if(a.name > b.name) return -1;
-    else return 0;
-} );
-console.log( sortedZ );
-/*
-// função id
-const sortedId = pokemons.sort((a, b)=> {
-    if (b.id > a.id) return 1;
-    else if (a.id > b.id) return -1;
-    else return 0
-});console.log( sortedId);
-
-
-
-
-/*
-loadCharacters();
-
-const loadCharacters = async () => {
-  try {
-     
-    
-      displayCharacters(pokemons);
-  } catch (err) {
-      console.error(err);
-  }
-};
-*/
-
-/*
-//função Dri&Mi
-export const searchPokemons = searchBar.addEventListener("keyup", (string) => {
-  let searchString = string.target.value.toLowerCase();
-
-  const filteredPokemons = pokemons.filter( pokemon => {
-    return (pokemon.name.toLowerCase().includes(searchString));
-  displayPokemons(filteredPokemons);
-});
 */

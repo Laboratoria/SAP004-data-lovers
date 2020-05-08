@@ -1,4 +1,4 @@
-import { searchPokemon, sortAlphaOrder, sortNumOrder } from './data.js';
+import { searchPokemon, sortAlphaOrder, sortNumOrder, filterByType } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 // banco de dados
@@ -66,7 +66,22 @@ buttonDecre.addEventListener("click", () => {
   displayPokemons(decre);
 })
 
+// refatorar
+const eventAlphaOrder = buttonZA.addEventListener("click", () => {
+  const za = sortAlphaOrder(pokemons, "name", "za")?"az":"za";
+  displayPokemons(za);
+})
+
+const eventNumOrder = buttonCresc.addEventListener("click", () => {
+  const cresc = sortNumOrder(pokemons, "id", "cresc")?"cre":"decre";
+  displayPokemons(cresc);
+})
+
+
 // botão Água
 buttonWater.addEventListener("click", () => {
-  const water = ;
+  const water = filterByType()
 } )
+
+
+
