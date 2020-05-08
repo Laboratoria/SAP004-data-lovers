@@ -1,29 +1,4 @@
-// funções de exemplo
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
-export const searchFunc = p => {
-  let nameInput = document.getElementById("searchtxt").value
-  nameInput = nameInput.toUpperCase() 
-return (nameInput == p.name.slice(0,-(p.name.length - nameInput.length)).toUpperCase()|| nameInput == p.name.toUpperCase()) 
-};
-
-const searchBar = document.querySelector("#searchBar");
-/*
-// versão doida da Dri
-export const searchCards = string => {
-  let searchString = searchBar.value;
-  searchString = searchString.toLowerCase(); 
-  return (searchString == string.name.slice(0,-(string.name.length - searchString.length)).toLowerCase()()|| searchString == string.name.toLowerCase()()) 
-};*/
-
-// versão 4.0 da função de busca
+// função de Busca
 export const searchPokemon = (search, pokemon) => {
     let searchString = search.value.toLowerCase();
     let filteredPokemons = pokemon.filter( pkm => {
@@ -35,17 +10,63 @@ export const searchPokemon = (search, pokemon) => {
 };
 
 
-
-
-export const sortA = ( pokemons, name, alfaOrder ) => { 
-   if ( alfaOrder == "az"){
-     return pokemons.sort( (a, b) => {
-      if( b[name] < a[name]) return 1;
-      else if(a[name] < b[name]) return -1;
+// função de Ordenar AZ e ZA
+export const sortAlphaOrder = (pokemon, name, alfaOrder) => {
+  if (alfaOrder == "az") {
+    return pokemon.sort( (start, end) => {
+    if( end[name] < start[name]) return 1;
+      else if(start[name] < end[name]) return -1;
       else return 0;
-   });
- };
-}
+    })
+  }
+  if (alfaOrder == "za") {
+    return pokemon.sort((start, end) => {
+      if( end[name] > start[name]) return 1;
+      else if(start[name] > end[name]) return -1;
+      else return 0;
+    })
+  } 
+};
+
+// função de Ordenar 1-151 e 151-1
+export const sortNumOrder = (pokemon, id, alfaOrder) => {
+   if ( alfaOrder == "cresc") {
+    return pokemon.sort((start, end) => {
+      if (end[id] < start[id]) return 1;
+      else if (start[id]< end[id]) return -1;
+      else return 0;
+    })
+  }  
+  if ( alfaOrder == "drecre"); {
+    return pokemon.sort((start, end) =>{
+      if (end[id] > start[id]) return 1;
+      else if (start[id]> end[id]) return -1;
+      else return 0;
+    })
+  }
+};
+
+
+
+
+
+/*
+//função z-a
+ const sortedZ = pokemons.sort( (a, b) => {
+    if( b.name > a.name) return 1;
+    else if(a.name > b.name) return -1;
+    else return 0;
+} );
+console.log( sortedZ );
+/*
+// função id
+const sortedId = pokemons.sort((a, b)=> {
+    if (b.id > a.id) return 1;
+    else if (a.id > b.id) return -1;
+    else return 0
+});console.log( sortedId);
+
+
 
 
 /*
