@@ -93,7 +93,6 @@ const filters = () => {
 /*Funcao que verifica os tipos e fraquezas*/
 const typeFunction = (p) => {
     /*Puxa os checkboxs */
-    const checkbox = document.getElementById("checkbox-types")
     const checkboxWeakness = checkType(checkbox.weakness)
     const checkboxType = checkType(checkbox.option)
     return typeFunctionConcat(checkboxWeakness, checkboxType, p)
