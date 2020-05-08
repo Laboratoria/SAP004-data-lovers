@@ -4,7 +4,7 @@ import data from './data/pokemon/pokemon.js';
 // banco de dados
 const pokemons = data.pokemon;
 
-// botões do HTML
+// ids do HTML
 const searchBar = document.querySelector("#searchBar");
 //const buttonOrder = document.querySelector("#buttonOrder");
 //const buttonFilter = document.querySelector("#buttonFilter");
