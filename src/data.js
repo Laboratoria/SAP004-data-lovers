@@ -1,26 +1,43 @@
+//função que ordena em ordem alfabética e num
+export const order = (orderBy, nameArray) => {
+  let newArray = [];
+  let objectParemeter
+  if (orderBy<0)
+      return orderBy
+  else {
+      orderBy < 2 ? objectParemeter = "name" : objectParemeter = "id"
+      newArray = nameArray.sort(function (a, b) {
+          return ((a[objectParemeter] > b[objectParemeter]) ? 1 : ((b[objectParemeter] > a[objectParemeter]) ? -1 : 0))
+      })
+      if (orderBy % 2 != 0)
+          newArray.reverse()
+  }
+}
+
+//Concatena os filtros
 export const concatFilters = (pokemonsType, heightArray, pokemons) => {
   let resultFilters = []
   if (pokemonsType.length && heightArray.length) {
-      resultFilters = pokemonsType.filter((pokemonsType) => {
-          for (let i of heightArray) {
-              if (pokemonsType === i)
-                  return true
-          }
-      })
+    resultFilters = pokemonsType.filter((pokemonsType) => {
+      for (let i of heightArray) {
+        if (pokemonsType === i)
+          return true
+      }
+    })
   }
   else
-      resultFilters = pokemonsType.concat(heightArray)
+    resultFilters = pokemonsType.concat(heightArray)
   if (!resultFilters.length)
-      resultFilters = pokemons
+    resultFilters = pokemons
   return resultFilters
 }
-//Limpar filtro
+//Limpar filtros
 export const myFunctionClear = (a) => {
   if (a.length != 0) {
-      for (let i of a) {
-          if (i.checked)
-              i.checked = false;
-      }
+    for (let i of a) {
+      if (i.checked)
+        i.checked = false;
+    }
   }
 }
 
@@ -60,22 +77,18 @@ export const height = (heightPokemon, pokemons) => {
     if (resultMin < parseFloat(p.height) && parseFloat(p.height) < resultMax)// array 4 pois os 5 primeiros estão muito acima da média
       return true
   })
-  //resultPokemons.map(print)
   return resultPokemons
-
 }
 
 /*Compara tipos e fraquezas */
 export const typeFunctionConcat = (checkboxWeakness, checkboxType, p) => {   /*Verifica os tipos*/
   for (let i of checkboxType) {
-    if (p.type[0] == i || p.type[1] == i)
+    if (p.type[0] === i || p.type[1] === i)
       return true
   }
-
-  /*Verifica as fraquezas */
   for (let i of checkboxWeakness) {
     for (let j of p.weaknesses) {
-      if (j == i)
+      if (j === i)
         return true
     }
   }
@@ -83,9 +96,8 @@ export const typeFunctionConcat = (checkboxWeakness, checkboxType, p) => {   /*V
 
 //pesquisa função pelo nome
 export const searchFunc = (p, nameInput) => {
-
-  return  p.filter((p) => {
-   return nameInput == p.name.slice(0, -(p.name.length - nameInput.length)).toUpperCase() || nameInput == p.name.toUpperCase()
+  return p.filter((p) => {
+    return nameInput === p.name.slice(0, -(p.name.length - nameInput.length)).toUpperCase() || nameInput === p.name.toUpperCase()
   })
-  //console.log(a)
-  }
+
+}

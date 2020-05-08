@@ -1,5 +1,6 @@
 /*Bloco de configurações*/
 import { searchFunc } from './data.js';
+import { order } from './data.js';
 import { myFunctionClear } from './data.js';
 import { typeFunctionConcat } from './data.js';
 import { checkType } from './data.js';
@@ -64,6 +65,7 @@ const main = () => {
     viewAll.innerHTML = "<h3>Ver Tudo</h3>"
     viewAll.addEventListener('click', viewAllElement)
 }
+
 /*Função que mostra todos elementos */
 const viewAllElement = () => {
     clearDisplay()
@@ -80,8 +82,8 @@ const searchName = (p) => {
     nameInput = nameInput.toUpperCase()
     const elementSearched = searchFunc(p, nameInput)
     return elementSearched
-    //elementSearched.map(print)
 }
+
 /*Função de abrir e fechar menu avançado*/
 const filters = () => {
     const filterMenuDysplay = filtersMenu.style.display
@@ -98,31 +100,14 @@ const typeFunction = (p) => {
     return typeFunctionConcat(checkboxWeakness, checkboxType, p)
 }
 
-
-
 /*Função que reseta o menu avançado*/
 const resetSearch = () => {
     const checkbox = document.getElementById("checkbox-types")
     myFunctionClear(checkbox.weakness)
     myFunctionClear(checkbox.option)
 }
-//função que ordena em ordem alfabética e num
-const order = () => {
-    clearDisplay()
-    let newArray = [];
-    const orderBy = document.getElementById("browsers").value
-    let objectParemeter
-    orderBy < 2 ? objectParemeter = "name" : objectParemeter = "id"
-
-    newArray = pokemons.sort(function (a, b) {
-        return ((a[objectParemeter] > b[objectParemeter]) ? 1 : ((b[objectParemeter] > a[objectParemeter]) ? -1 : 0))
-    })
 
 
-    if (orderBy % 2 != 0)
-        newArray.reverse()
-    newArray.map(print)
-}
 //função que pega os doms
 const getHeight = () => {
     const checkboxHeight = document.getElementById("checkbox-height") // checkbox de altura
@@ -131,27 +116,19 @@ const getHeight = () => {
     for (let i of heigthChecked) {
         resultArrays = resultArrays.concat(height(i, pokemons))
     }
-
-    //result.map(print)
     return resultArrays
 }
 
 /*Função que filtra os checkboxs*/
 const advancedSearch = () => {
     clearDisplay()
-    /////////////const typeArray = pokemons.filter(typeFunction)
     const pokemonsType = pokemons.filter(typeFunction)//.map(print)
     const heightArray = getHeight()//.map(print)
-
-    //const resultFilters = pokemonsType.concat(heightArray)
+    const orderBy = document.getElementById("browsers").value
     const resultFilters = concatFilters(pokemonsType, heightArray, pokemons)
-    const nameAray = searchName(resultFilters)
-    console.log(nameAray)
-    //resetSearch()
-    nameAray.map(print)
-
-
-    //filters()
+    const nameArray = searchName(resultFilters)
+    order(orderBy, nameArray)
+    nameArray.map(print)
 }
 
 document.getElementById("search").addEventListener('input', advancedSearch)
@@ -159,7 +136,7 @@ document.getElementById("menu-filter").addEventListener('click', filters)
 document.getElementById("home").addEventListener('click', main)
 document.getElementById("advanced-search").addEventListener('click', advancedSearch)
 document.getElementById("reset-search").addEventListener('click', resetSearch)
-document.getElementById("browsers").addEventListener('input', order)
+document.getElementById("browsers").addEventListener('input', advancedSearch)
 document.getElementById("checkbox-height").addEventListener('input', advancedSearch)
 document.getElementById("checkbox-types").addEventListener('input', advancedSearch)
 
