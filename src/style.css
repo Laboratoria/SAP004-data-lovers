@@ -1,18 +1,41 @@
-body {
-    background-color: rgb(164, 207, 243);
-    margin: 10px 10px 10px 10px;
-    padding: 15px 15px 15px 15px;
+html {
+    background: url(Pokemonfundo2.jpg) no-repeat center fixed;
+    background-size: cover;
+    background-color: rgb(6, 6, 53);
+    margin: 25px;
 }
 
 .header-pokemon {
     width: 100%;
-    height: 220px;
+    height: 350px;
     text-align: center;
 }
 
 .img1-pokemon {
-    width: 320px;
-    height: 205px;
+    width: 90%;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 1em white, 0 0 1em white;
+}
+
+.order-buttons {
+    height: 50px;
+    width: 80px;
+    border: 5px solid;
+    background-color: yellow;
+    border-color: rgb(0, 140, 255);
+    border-radius: 10px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.all-buttons {
+    height: 50px;
+    width: 200px;
+    border: 5px solid;
+    background-color: yellow;
+    border-color: rgb(0, 140, 255);
+    border-radius: 10px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .pokemons {
