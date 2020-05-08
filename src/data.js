@@ -30,7 +30,7 @@ export const sortAlphaOrder = (pokemon, name, alfaOrder) => {
 
 // função de Ordenar 1-151 e 151-1
 export const sortNumOrder = (pokemon, id, alfaOrder) => {
-   if ( alfaOrder == "cresc") {
+  if ( alfaOrder == "cresc") {
     return pokemon.sort((start, end) => {
       if (end[id] < start[id]) return 1;
       else if (start[id]< end[id]) return -1;
@@ -45,7 +45,6 @@ export const sortNumOrder = (pokemon, id, alfaOrder) => {
     })
   }
 };
-
 
 
 
