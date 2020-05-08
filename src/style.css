@@ -19,6 +19,7 @@ body {
     line-height: 0.5px;
     height: auto;
     align-items: center;
+    justify-content: center;
     margin: 10px 10px 10px 10px;
     padding: 5px 5px 5px 5px;
 }
@@ -31,7 +32,7 @@ body {
     border-radius: 5px;
     border: 1px solid;
     color: black;
-    width: 250px;
+    width: 300px;
     height: 300x;
     margin: 10px 10px;
 }
@@ -40,6 +41,7 @@ body {
 
 .text-card {
     text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*classe das imagens das pequenas divs do main.js
