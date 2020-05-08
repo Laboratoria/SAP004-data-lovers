@@ -44,7 +44,9 @@ export const sortNumOrder = (pokemon, id, alfaOrder) => {
 };
 
 // função de Tipo
-export const filterType = 
+export const filterByType = pokemon.reduce(filteredTypes(displayByType, type){
+  
+})
 
 
 
