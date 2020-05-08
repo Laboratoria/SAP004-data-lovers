@@ -110,20 +110,16 @@
             </div>
           </form>
           <form id="checkbox-height">
-            <label>Altura:</label>
+            <label>Tamanho:</label>
             <input type="checkbox" name="heights" value="l"><label>Pequeno</label>
             <input type="checkbox" name="heights" value="m"><label>Médio</label>
             <input type="checkbox" name="heights" value="b"><label>Grande</label>
           </form>
           <!--Tipos e Fraquezaa-->
 
-          <div>
-            <ul class="filter advanced-search">
-              <li id="reset-search" class="button-search">Redefinir</li>
-              <li id="advanced-search" class="button-search">Pesquisar</li>
-            </ul>
 
-          </div>
+              <button id="reset-search" class="button-search">Redefinir</button>
+
 
         </div>
       </div>
@@ -131,14 +127,15 @@
     </div>
     <div >
       <div class="containers"><button class="button-filter" id="menu-filter">Filtros Avançados<img  src="img/icons8-filtro-25.png" ></button>
-
+      <form>
       <select id="browsers" class="button-filter">     
-        <option>Ordenar por</option>
+        <option value="2">Ordenar por</option>
         <option value="0">De A a Z</option>
         <option value="1">De Z a A</option>
         <option value="2">Do menor para o maior</option>
         <option value="3">Do maior para o menor</option>
-      </select></div>
+      </select>
+    </form></div>
       <div id="root" class="home"></div>
     </div>
 

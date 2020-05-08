@@ -1,7 +1,6 @@
 /*Bloco de configurações*/
 import { searchFunc } from './data.js';
 import { order } from './data.js';
-import { myFunctionClear } from './data.js';
 import { typeFunctionConcat } from './data.js';
 import { checkType } from './data.js';
 import { height } from './data.js';
@@ -102,9 +101,8 @@ const typeFunction = (p) => {
 
 /*Função que reseta o menu avançado*/
 const resetSearch = () => {
-    const checkbox = document.getElementById("checkbox-types")
-    myFunctionClear(checkbox.weakness)
-    myFunctionClear(checkbox.option)
+    document.querySelectorAll("input[type=checkbox]").forEach(check => check.checked = false)
+advancedSearch()
 }
 
 
@@ -131,14 +129,11 @@ const advancedSearch = () => {
     nameArray.map(print)
 }
 
-document.getElementById("search").addEventListener('input', advancedSearch)
+document.querySelectorAll('form').forEach(form => form.addEventListener('input', advancedSearch))
 document.getElementById("menu-filter").addEventListener('click', filters)
 document.getElementById("home").addEventListener('click', main)
-document.getElementById("advanced-search").addEventListener('click', advancedSearch)
 document.getElementById("reset-search").addEventListener('click', resetSearch)
-document.getElementById("browsers").addEventListener('input', advancedSearch)
-document.getElementById("checkbox-height").addEventListener('input', advancedSearch)
-document.getElementById("checkbox-types").addEventListener('input', advancedSearch)
+
 
 main()
 

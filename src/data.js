@@ -31,15 +31,6 @@ export const concatFilters = (pokemonsType, heightArray, pokemons) => {
     resultFilters = pokemons
   return resultFilters
 }
-//Limpar filtros
-export const myFunctionClear = (a) => {
-  if (a.length != 0) {
-    for (let i of a) {
-      if (i.checked)
-        i.checked = false;
-    }
-  }
-}
 
 /*Função que verifica quais checkboxs estão selecionados*/
 export const checkType = (a) => {
@@ -54,9 +45,9 @@ export const checkType = (a) => {
 //Filtra altura
 export const height = (heightPokemon, pokemons) => {
   let newArray = pokemons.sort(function (a, b) {
-    return ((a.height < b.height) ? 1 : ((b.height < a.height) ? -1 : 0))
+    return ((a.height > b.height) ? 1 : ((b.height > a.height) ? -1 : 0))
   })
-  let average = (parseFloat(newArray[4].height) - parseFloat(newArray[newArray.length - 1].height)) / 3
+  let average = (parseFloat(newArray[newArray.length - 4].height) - parseFloat(newArray[0].height)) / 3
 
   let resultMin
   let resultMax
