@@ -77,61 +77,64 @@ const removeCard = (index) => document.querySelector('.container-deck').removeCh
 //Chamada
 loadCards(data["pokemon"]);
 
+//Função para recuperar escolha de filtro do usuário
+const getTypeChoosedfunction = () => {
+    const select = document.getElementsByClassName('select')[0];
+    const optionValue = select.options[select.selectedIndex].value;
+    return optionValue;
+};
 
-//Implementando lógica dos filtros
-//Algoritmo para filtar os dados por tipo de pokemon
-//Objetivo: selecionar um tipo de pokemon no botão filtrar e na tela inicial visualizar apenas os pokemons daquiele tipo
 
-
-//Passos: *****CÓDIGO REFATORADO V1 *****
-//PASSO1.Criar uma função para reconhecer o grupo de pokemon escolhido do menu
-const getTypeChoosed = () => "Fire";
-//PASSO2.Recuperar o nome desse grupo
-console.log(getTypeChoosed()) //exemplo: retorna no console
-
-//PASSO3.Implementação do filtro de tipo
-//Refatorar depois pra não repetir as variáveis
-const filterType = (pokemon) => {
-    //recuperando o valor escolhido pelo usuário
-    let optionUser = getTypeChoosed();
-    //criando a lógica de busca
-    if (pokemon.type[0] === optionUser || pokemon.type[1] === optionUser) {
+//Implementação do filtro por tipo
+//Refatorar depois e tirar comments
+const createfilterType = (pokemon) => {
+    console.log(pokemon)
+        //recuperando o valor escolhido pelo usuário
+    let optionUser = getTypeChoosedfunction();
+    console.log(optionUser)
+        //criando a lógica de busca
+    if (pokemon.type[0] !== optionUser && pokemon.type[1] !== optionUser) {
         return pokemon
     }
 };
 
-//
-function applyFilterType(dataset) {
-    console.log(dataset.filter(filterType))
+
+const applyFilterTypeOnCards = () => {
+    let cardList = document.querySelectorAll('.container-card');
+    // console.log(cardList);
+    cardList.forEach(function(card) {
+        card.style.display = "block"
+    });
+    // cardList.map(card => card.style.display = "block");
+    let dataFiltered = data["pokemon"].filter(createfilterType);
+    console.log(dataFiltered);
+
+    //como fazer o array diff?Quero usá-lo para sumir com os cards não selecionados na tela inicial
+    //simulando um array diff qualquer
+    // let [a, b, , , c, d, e, , f, g, h, , i, j] = data["pokemon"];
+    // let dataNotFiltered = [a, b, c, d, e, f, g, h, i, j];
+    // console.log(dataNotFiltered);
+
+
+    // //sumir com cards não selecionados:
+    //1.Pegar os nós html que contém o número dos pokemons
+    let numberNodeList = document.querySelectorAll('.number-pok');
+
+    // //Para cada polemon não selecionado:
+    for (let item of dataFiltered) {
+        //Pegue o número deste pokemon
+        let pokemonNotFilteredNumber = item.num;
+
+        //Para cada container de número de pokemons:
+        for (let item of numberNodeList) {
+            //Verifique se o número do pokemon não selecionado é igual ao número que está inscrito dentro desse container:
+            if (pokemonNotFilteredNumber === item.textContent) {
+                //se sim, apague o seu nó avô (.container-card)
+                item.parentNode.parentNode.style.display = "none"
+            };
+        }
+    };
 };
-applyFilterType(data["pokemon"])
-
-
-//Chamando as funções para aplicar o filtro: Ou seja, a função applyFilterType está filtranbdo o banco de dados e usando o retorno da função filterType para passar pra ela qual o tipo a ser buscado no banco
-//ANTES: console.log(applyFilterType());
-//DEPOIS: 
-// console.log(applyFilterType(data["pokemon"]));
-
-
-
-//5.Fazer com que apenas os cards localizados aparecem na tela
-//Depois: 
-// const loadCards = (dataset) => {
-//     for (let i = 0; i < dataset.length; i++) {
-//         ...mesma declaração de antes
-//     }
-//     removeTemplateCard();
-// }
-//Chamada: loadCards(data["pokemon"])
-
-//Função para carregar os cards filtrados:
-//Passo1: sumir com o primeiro deck de cards
-//Passo2: fazer os cards de interesse aparecerem no segundo deck
-
-//1.Função para remover todos os cards da tela inicial
-
-
-//6.O usuário deve conseguir voltar pra tela inicial
 
 //Voltar para home page
 const goHomePage = () => window.location.reload()
@@ -140,3 +143,8 @@ const goLaboratoriaPage = () => window.location.href = "https://www.laboratoria.
 //Atribuição de eventos
 document.querySelector('#home').addEventListener('click', goHomePage);
 document.querySelector('#logo-lab').addEventListener('click', goLaboratoriaPage)
+document.getElementsByClassName('select')[0].addEventListener("change", () => {
+    getTypeChoosedfunction();
+    applyFilterTypeOnCards();
+});
+// document.getElementsByClassName('select')[0].addEventListener("click", applyFilterTypeOnCards);
