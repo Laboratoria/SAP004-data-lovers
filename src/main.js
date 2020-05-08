@@ -1,8 +1,10 @@
 /*Bloco de configurações*/
 import { searchFunc } from './data.js';
+import { myFunctionClear } from './data.js';
 import { typeFunctionConcat } from './data.js';
 import { checkType } from './data.js';
 import { height } from './data.js';
+import { concatFilters } from './data.js';
 import data from './data/pokemon/pokemon.js';
 const root = document.getElementById("root") // import div
 const pokemons = data.pokemon // pokemons = array
@@ -19,8 +21,10 @@ const print = pokemons => { //função para imprimir os pokemons
 
     card.classList.add("card")
     img.classList.add("picture") // coloca uma classe na imagem
-    cardInformation.innerHTML += `<br><h5>${pokemons.num}</h5><br><h3>${pokemons.name}</h4>` // coloca o nameInput
-    pokemons.type.forEach(a => {
+    let namePokemons = pokemons.name.replace("(Female)", "")
+    namePokemons = namePokemons.replace("(Male)", "")
+    cardInformation.innerHTML += `<br><h5>${pokemons.num}</h5><br><h3>${namePokemons}</h4>` // coloca o nameInput
+    pokemons.type.map(a => {
         const powerType = document.createElement("div")
         powerType.classList = (a)
         powerType.classList.add("power")
@@ -70,13 +74,13 @@ const viewAllElement = () => {
 }
 
 /*Função que pesquisa os nomes*/
-const searchName = () => {
+const searchName = (p) => {
     clearDisplay()
     let nameInput = document.getElementById("search").value
-    nameInput = nameInput.toUpperCase() 
-    const elementSearched = searchFunc(pokemons, nameInput)
-     
-    elementSearched.map(print)
+    nameInput = nameInput.toUpperCase()
+    const elementSearched = searchFunc(p, nameInput)
+    return elementSearched
+    //elementSearched.map(print)
 }
 /*Função de abrir e fechar menu avançado*/
 const filters = () => {
@@ -85,38 +89,17 @@ const filters = () => {
 }
 
 
-
-
 /*Funcao que verifica os tipos e fraquezas*/
 const typeFunction = (p) => {
     /*Puxa os checkboxs */
     const checkbox = document.getElementById("checkbox-types")
     const checkboxWeakness = checkType(checkbox.weakness)
     const checkboxType = checkType(checkbox.option)
-    return typeFunctionConcat(checkboxWeakness,checkboxType,p)
+    return typeFunctionConcat(checkboxWeakness, checkboxType, p)
 }
 
-/*Função que filtra os checkboxs*/
-const advancedSearch = () => {
-    clearDisplay()
-    /////////////const typeArray = pokemons.filter(typeFunction)
-    const pokemonsFiltred = pokemons.filter(typeFunction).map(print)
-    //resetSearch()
-    //const heightArray = getHeight()
-    heightArray.map(print)
 
 
-    filters()
-}
-//Limpar filtro
-const myFunctionClear = (a) => {
-    if (a.length != 0) {
-        for (let i of a) {
-            if (i.checked)
-                i.checked = false;
-        }
-    }
-}
 /*Função que reseta o menu avançado*/
 const resetSearch = () => {
     const checkbox = document.getElementById("checkbox-types")
@@ -128,49 +111,57 @@ const order = () => {
     clearDisplay()
     let newArray = [];
     const orderBy = document.getElementById("browsers").value
-    if (orderBy == 0) {
-        newArray = pokemons.sort(function (a, b) {
-            return ((a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))
-        })
-    }
-    else if (orderBy == 1) {
-        newArray = pokemons.sort(function (a, b) {
-            return ((a.name < b.name) ? 1 : ((b.name < a.name) ? -1 : 0))
-        })
-    }
-    else if (orderBy == 2) {
-        newArray = pokemons.sort(function (a, b) {
-            return ((a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0))
-        })
-    }
-    else if (orderBy == 3) {
-        newArray = pokemons.sort(function (a, b) {
-            return ((a.id < b.id) ? 1 : ((b.id < a.id) ? -1 : 0))
-        })
-    }
+    let objectParemeter
+    orderBy < 2 ? objectParemeter = "name" : objectParemeter = "id"
+
+    newArray = pokemons.sort(function (a, b) {
+        return ((a[objectParemeter] > b[objectParemeter]) ? 1 : ((b[objectParemeter] > a[objectParemeter]) ? -1 : 0))
+    })
+
+
+    if (orderBy % 2 != 0)
+        newArray.reverse()
     newArray.map(print)
 }
 //função que pega os doms
 const getHeight = () => {
-    let checkboxHeight = document.getElementById("checkbox-height") // checkbox de altura
-    checkboxHeight = checkType(checkboxHeight.height)
-    let result = []
+    const checkboxHeight = document.getElementById("checkbox-height") // checkbox de altura
+    let heigthChecked = checkType(checkboxHeight.heights)
     let resultArrays = []
-    for (let i of checkboxHeight) {
-        resultArrays  =  result.concat(height(i, pokemons))
+    for (let i of heigthChecked) {
+        resultArrays = resultArrays.concat(height(i, pokemons))
     }
-    console.log(resultArrays)
 
     //result.map(print)
     return resultArrays
 }
 
+/*Função que filtra os checkboxs*/
+const advancedSearch = () => {
+    clearDisplay()
+    /////////////const typeArray = pokemons.filter(typeFunction)
+    const pokemonsType = pokemons.filter(typeFunction)//.map(print)
+    const heightArray = getHeight()//.map(print)
 
-document.getElementById("search").addEventListener('input', searchName)
+    //const resultFilters = pokemonsType.concat(heightArray)
+    const resultFilters = concatFilters(pokemonsType, heightArray, pokemons)
+    const nameAray = searchName(resultFilters)
+    console.log(nameAray)
+    //resetSearch()
+    nameAray.map(print)
+
+
+    //filters()
+}
+
+document.getElementById("search").addEventListener('input', advancedSearch)
 document.getElementById("menu-filter").addEventListener('click', filters)
 document.getElementById("home").addEventListener('click', main)
 document.getElementById("advanced-search").addEventListener('click', advancedSearch)
 document.getElementById("reset-search").addEventListener('click', resetSearch)
 document.getElementById("browsers").addEventListener('input', order)
+document.getElementById("checkbox-height").addEventListener('input', advancedSearch)
+document.getElementById("checkbox-types").addEventListener('input', advancedSearch)
+
 main()
 

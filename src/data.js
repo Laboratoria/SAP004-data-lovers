@@ -1,3 +1,29 @@
+export const concatFilters = (pokemonsType, heightArray, pokemons) => {
+  let resultFilters = []
+  if (pokemonsType.length && heightArray.length) {
+      resultFilters = pokemonsType.filter((pokemonsType) => {
+          for (let i of heightArray) {
+              if (pokemonsType === i)
+                  return true
+          }
+      })
+  }
+  else
+      resultFilters = pokemonsType.concat(heightArray)
+  if (!resultFilters.length)
+      resultFilters = pokemons
+  return resultFilters
+}
+//Limpar filtro
+export const myFunctionClear = (a) => {
+  if (a.length != 0) {
+      for (let i of a) {
+          if (i.checked)
+              i.checked = false;
+      }
+  }
+}
+
 /*Função que verifica quais checkboxs estão selecionados*/
 export const checkType = (a) => {
   const newArray = []
