@@ -6,9 +6,9 @@ const pokemons = data.pokemon;
 
 // variáveis do HTML
 const searchBar = document.querySelector("#searchBar");
-const buttonOrder = document.querySelector("#buttonOrder");
-const buttonFilter = document.querySelector("#buttonFilter");
-const buttonSearch = document.querySelector("#buttonSearch");
+//const buttonOrder = document.querySelector("#buttonOrder");
+//const buttonFilter = document.querySelector("#buttonFilter");
+//const buttonSearch = document.querySelector("#buttonSearch");
 const pokemonsList = document.querySelector("#root");
 const buttonAZ = document.querySelector("#buttonAZ")
 const buttonZA = document.querySelector("#buttonZA")
@@ -25,6 +25,11 @@ buttonSearch.addEventListener("click", function () {
 });
 */
 
+
+  var alltipos = pokemons.reduce(function(prev, curr) {
+    return [...prev, ...curr.books];
+  }, console.log(alltipos));
+  
 
 // card do pokémon
 const card = (num, name, img, type) => {
