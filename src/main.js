@@ -10,10 +10,11 @@ const searchBar = document.querySelector("#searchBar");
 //const buttonFilter = document.querySelector("#buttonFilter");
 //const buttonSearch = document.querySelector("#buttonSearch");
 const pokemonsList = document.querySelector("#root");
-const buttonAZ = document.querySelector("#buttonAZ")
-const buttonZA = document.querySelector("#buttonZA")
-const buttonCresc = document.querySelector("#buttonCresc")
-const buttonDecre = document.querySelector("#buttonDecre")
+const buttonAZ = document.querySelector("#buttonAZ");
+const buttonZA = document.querySelector("#buttonZA");
+const buttonCresc = document.querySelector("#buttonCresc");
+const buttonDecre = document.querySelector("#buttonDecre");
+const buttonWater = document.querySelector("#buttonWater");
 
 // card do pokémon
 const card = (num, name, img, type) => {
@@ -65,25 +66,7 @@ buttonDecre.addEventListener("click", () => {
   displayPokemons(decre);
 })
 
-
-
-/* 
-// função para mostrar barra de pesquisa
-buttonSearch.addEventListener("click", function () {
-    searchBar.style.visibility = "visible"; 
-    buttonOrder.style.visibility = "hidden";
-    buttonFilter.style.visibility = "hidden";
-    buttonSearch.style.visibility = "hidden";
-});
-*/
-
-
-/*
-    //função tela inicial 
-let botaor = document.querySelector("#reset")
-botaor.addEventListener("click", function(event){ 
-        event.preventDefault()   ;
-        searchWrapper.reset(); 
-        }
-    );
-    */
+// botão Água
+buttonWater.addEventListener("click", () => {
+  const water = ;
+} )
