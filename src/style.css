@@ -1,120 +1,182 @@
-body{
-    background-image: url("image/lol-background3.jpg");
-    opacity: 90%;  
-    background-repeat: repeat-y;
-    background-attachment: scroll;
-    background-blend-mode: soft-light;
+body {
+  background-image: url("image/lol-background3.jpg");
+  opacity: 90%;
+  background-repeat: repeat-y;
+  background-attachment: scroll;
+  background-blend-mode: soft-light;
 }
 
-p{
-    font-family: 'Friz Quadrata Std',sans-serif;
+p {
+  font-family: "Friz Quadrata Std", sans-serif;
 }
 
 /****** Menus*********************************************************/
-.nav{
-    position: relative;
-    bottom:40%;
-    padding: 19px;
-    height: 300px;
-    line-height: 1.5;
-    color: white;
-    margin:5px ;
+.nav {
+  position: relative;
+  bottom: 40%;
+  padding: 19px;
+  height: 300px;
+  line-height: 1.5;
+  color: white;
+  margin: 5px;
 }
 
-.logo{
-    position: absolute;
-    bottom: 60%;
-    left: 35%;   
-    z-index: -1;       
+.logo {
+  position: absolute;
+  bottom: 60%;
+  left: 35%;
+  z-index: -1;
 }
 
-a:hover, a{
-    color: white;
-    text-decoration: none; 
-    outline: none;  
+a:hover,
+a {
+  color: white;
+  text-decoration: none;
+  outline: none;
 }
 
 .link {
-	background-color:#ce6d39;
-	border-radius:41px;
-	display:inline-block;
-	cursor:pointer;
-	font-size:14px;
-	padding:15px 23px;
-	text-shadow:-2px 2px 3px #ce6d39;
+  background-color: #ce6d39;
+  border-radius: 41px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 15px 23px;
+  text-shadow: -2px 2px 3px #ce6d39;
 }
 .link:hover {
-    background:linear-gradient(to bottom, #000000 5%, #C65146 100%);	  
+  background: linear-gradient(to bottom, #000000 5%, #c65146 100%);
 }
 
-.order{
-    box-shadow:inset 0px -3px 7px 0px #f17f42;
-    background-color:#ce6d39;
-    border-radius:18px;
-    color: #ffffff;
-    outline: none;
-    border:2px solid #0b0e07; 
+.order {
+  box-shadow: inset 0px -3px 7px 0px #f17f42;
+  background-color: #ce6d39;
+  border-radius: 18px;
+  color: #ffffff;
+  outline: none;
+  border: 2px solid #0b0e07;
 }
 /*****************************Texto Sobre********************************/
 
-.about-text{
-    font-family: 'Friz Quadrata Std',sans-serif;
-    color: white;
-    text-shadow: 2px 2px black;
-    text-align:center;
-    position: absolute;
-    top:30%;
-    margin: 5px;
+.about-text {
+  font-family: "Friz Quadrata Std", sans-serif;
+  color: white;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  margin: 5px;
 }
 
-.nav-sobre{
-    position: absolute;
-    bottom:40%;
-    padding: 19px;
-    height: 300px;
-    line-height: 1.5;
-    color: white;
-    margin:5px ;
+.nav-sobre {
+  position: absolute;
+  bottom: 40%;
+  padding: 19px;
+  height: 300px;
+  line-height: 1.5;
+  color: white;
+  margin: 5px;
 }
-.nav-form{
-    position: relative;
-    float: right;
-    bottom:40%;
-    padding: 19px;
-    height: 300px;
-    line-height: 1.5;
-    color: white;
-    margin:5px ;
-    outline: none;
+.nav-form {
+  position: relative;
+  float: right;
+  bottom: 40%;
+  padding: 19px;
+  height: 300px;
+  line-height: 1.5;
+  color: white;
+  margin: 5px;
+  outline: none;
 }
 
-#lol-list{
-    position: absolute;
-    top:30%;
+#lol-list {
+  position: absolute;
+  top: 30%;
 }
-.card{
-    display: inline-block;
-    clear: both;
-    font-family: 'Friz Quadrata Std',sans-serif;
-    color: white;
-    width: 170px;
-    min-width: 100px;
-    height: 250px;
-    margin: 10px;
-    padding: 2px;
-    border-radius: 10%;
-    text-align: center;
-    position: relative;
-    left: 5%;   
-    bottom: 50%;
-    background-image: radial-gradient(circle, #9055a2, #7b4d93, #674684, #543d74, #433564, #382f5b, #2e2a52, #242449, #1c2045, #141d41, #0b193c, #011638);
-    border: 2px solid black;
-    z-index: -1;
+.card {
+  display: inline-block;
+  clear: both;
+  font-family: "Friz Quadrata Std", sans-serif;
+  color: white;
+  width: 170px;
+  min-width: 100px;
+  height: 250px;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 10%;
+  text-align: center;
+  position: relative;
+  left: 5%;
+  bottom: 50%;
+  background-image: radial-gradient(
+    circle,
+    #9055a2,
+    #7b4d93,
+    #674684,
+    #543d74,
+    #433564,
+    #382f5b,
+    #2e2a52,
+    #242449,
+    #1c2045,
+    #141d41,
+    #0b193c,
+    #011638
+  );
+  border: 2px solid black;
+  z-index: -1;
 }
+/*Efeito parallax
+		--------------------------*/
+		.image1,.image2,.image3, .image4{
+      position: relative;
+      height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+      background-attachment: fixed;
+      font-family:"Friz Quadrata Std", sans-serif; 
+      font-weight: bolder;
+      color: white;
+      font-size: 1.3em;
+      text-shadow: 2px 2px black;
+      text-align: center;
+      line-height: 1.5;
+      z-index: -1;
+      opacity: 0.9;
+    }
     
+    .teste{
+      position: absolute;
+      top:40%;
+    }
+
+		.image1{
+      background-image: url(image/lol-background.jpg);
+      height: 500px;
+    
+      
 
 
+		}
 
-   
+		.image2{
+      background-image: url(image/lol-background5.jpg);
+      height: 500px;
+
+		}
+		
+		.image3{
+      background-image: url(image/lol-background4.jpg);
+      height: 500px;
+
+		}
+
+		.image4{
+      background-image: url(image/lol-background6.png);
+      height: 500px;
+
+		}
+	
 
 

@@ -1,57 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data LoLvers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
-   <header><img class="logo" src="image/logo.png"></header>
-   <nav  class="nav-sobre">
-    <div  class="link"><a href="index.html">Home</a></div>
-    <div  class="link"><a href="sobre.html">Sobre LOL</a></div>
-    <div  class="link"><a href="champions.html">Champions</a></div>
-  </nav>
-        <section class="nav-form">
-        <form method="post" >
-          <p>Odernar por:</p>
-          <select  class="order" name="Ordenar por:" id="ordenar">
-          <option  class="order" value="a-z">A-Z</option>
-          <option  class="order" value="z-a">Z-A</option>
-          <option  class="order" value="classes">Classes</option>
-         
-          </select>
-          </form>
-          <form method="post" >
-            <p>Filtrar por:</p>
-            <select class="order" name="Ordenar por:">
-            <option value="HP">Maior HP</option>
-            <option value="SP">Maior SP</option>
-            <option value="ARMOR">Maior Armor</option>
-           
-           
-            </select>
-           
-            </form>
-          </section>
+    <header><img class="logo" src="image/logo.png" /></header>
+    <nav class="nav-sobre">
+      <div class="link"><a href="index.html">Home</a></div>
+      <div class="link"><a href="sobre.html">Sobre LOL</a></div>
+      <div class="link"><a href="champions.html">Champions</a></div>
+    </nav>
+    <section class="nav-form">
+      <form method="post">
+        <p>Odernar por:</p>
+        <select class="order" name="Ordenar por:" id="ordenar">
+          <option class="order" value="a-z">A-Z</option>
+          <option class="order" value="z-a">Z-A</option>
+        </select>
+      </form>
+      <form method="post">
+        <p>Filtrar por:</p>
+        <select class="order"  name="Ordenar por:">
+          <option value="HP">Maior HP</option>
+          <option value="SP">Maior SP</option>
+          <option value="ARMOR">Maior Armor</option>
+        </select>
+      </form>
+    </section>
 
     <section>
       <div id="lol-list"></div>
-     <template id="lol-template">
-       <div class="card">
-         <h2 class="name">Name</h2>
-         <img class="img"/>
-         <h3 class="armor">Armor</h3>
-         <h3 class="MP">MP</h3>
-         <h3 class="HP">HP</h3>
-
-
-       </div>
-     </template>
+      <template id="lol-template">
+        <div class="card">
+          <h2 class="name">Name</h2>
+          <img class="img" />
+          <h3 class="armor">Armor</h3>
+          <h3 class="MP">MP</h3>
+          <h3 class="HP">HP</h3>
+        </div>
+      </template>
     </section>
 
-    
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
