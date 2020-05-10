@@ -15,12 +15,13 @@
   <!--  <div id="root"></div> -->
   <main>
 
-    <section>
+    <section class="section-buttons">
 
       <button id="A-Z" class="order-buttons">A-Z</button>
       <button id="Z-A" class="order-buttons">Z-A</button>
 
-      <select name="select-type" id="select-type" class="all-buttons">
+      <select name="select-type" id="select-type" class="options-type">
+        <option selected disabled>Selecione o tipo</option>
         <option value="Bug">Bug</option>
         <option value="Dragon">Dragon</option>
         <option value="Electric">Electric</option>
@@ -38,7 +39,7 @@
         <option value="Water">Water</option>
       </select>
 
-      <label><input type="text-area" id="filter-name" placeholder="ex: Pikachu" class="all-buttons"></label>
+      <label><input type="text-area" id="filter-name" placeholder="ex: Pikachu" class="filter-name"></label>
 
     </section>
   </main>
