@@ -4,39 +4,42 @@
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
 </head>
 
 <body>
   <header class="header-pokemon">
-    <img src="img pokemon.jpeg" alt="pokemon" class="img1-pokemon">
+    <img src="Pokemonheader.jpg" alt="pokemon" class="img1-pokemon">
   </header>
   <!--  <div id="root"></div> -->
   <main>
-    <section>
-      <label><input type="text" id="filter-name" placeholder="ex: Pikachu"></label>
-      <select name="select-type" id="select-type">
-          <option value="Bug">Bug</option>
-          <option value="Dragon">Dragon</option>
-          <option value="Electric">Electric</option>
-          <option value="Fighting">Fighting</option>
-          <option value="Fire" >Fire</option>
-          <option value="Flying">Flying</option>
-          <option value="Ghost">Ghost</option>
-          <option value="Grass">Grass</option>
-          <option value="Ground">Ground</option>
-          <option value="Ice">Ice</option>
-          <option value="Normal">Normal</option>
-          <option value="Poison">Poison</option>
-          <option value="Psychic">Psychic</option>
-          <option value="Rock">Rock</option>
-          <option value="Water">Water</option>
-      </select>
-      <button id="A-Z">A-Z</button>
-      <button id="Z-A">Z-A</button>
 
-      <!-- <label><input name="A-Z" id="A-Z" type="radio">A-Z</label>
-      <label><input name="A-Z" id="A-Z" type="radio">Z-A</label> -->
+    <section class="section-buttons">
+
+      <button id="A-Z" class="order-buttons">A-Z</button>
+      <button id="Z-A" class="order-buttons">Z-A</button>
+
+      <select name="select-type" id="select-type" class="options-type">
+        <option selected disabled>Selecione o tipo</option>
+        <option value="Bug">Bug</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Electric">Electric</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Fire">Fire</option>
+        <option value="Flying">Flying</option>
+        <option value="Ghost">Ghost</option>
+        <option value="Grass">Grass</option>
+        <option value="Ground">Ground</option>
+        <option value="Ice">Ice</option>
+        <option value="Normal">Normal</option>
+        <option value="Poison">Poison</option>
+        <option value="Psychic">Psychic</option>
+        <option value="Rock">Rock</option>
+        <option value="Water">Water</option>
+      </select>
+
+      <label><input type="text-area" id="filter-name" placeholder="ex: Pikachu" class="filter-name"></label>
 
     </section>
   </main>
@@ -48,4 +51,3 @@
   <script src="main.js" type="module"></script>
 
 </body>
-

@@ -11,14 +11,25 @@ function allList(list) {
 
         let cardItem = document.createElement("div"); //criando pequenos cards dentro da div maior do html
         cardItem.className = "div-child"; //criei essa cGlasse apenas para teste no css
+        
         let imgItem = document.createElement("img"); //criando div imagem dentro da div peq card
         imgItem.src = obj.img;  //setando qual valor do objeto aparecerá na div imagem
         imgItem.className = "img-item";
         cardItem.appendChild(imgItem); //colocando a div de img dentro da pequena div
 
-        let numberItem = document.createElement("h5");
+        let spaceTextCard = document.createElement("div");
+        
+        spaceTextCard.innerHTML += `<h5>${obj.num}</h5>
+        <h2>${obj.name.replace("(Female)", "").replace("(Male)", "")}</h2>
+        <p>Tipo: ${obj.type.join(", ")}</p><p>Ovo: ${obj.egg}</p>
+        <p>Fraquezas:</p><p>${obj.weaknesses.join(", ")}</p>`;
+               
+        spaceTextCard.className = "div-inside"
+        cardItem.appendChild(spaceTextCard);
+
+       /* let numberItem = document.createElement("h5");
         numberItem.className = "text-card";
-        numberItem.textContent = obj.num;
+        numberItem.innerHTML = obj.num;
         cardItem.appendChild(numberItem);
 
         let nameItem = document.createElement("h2"); //criando div para colocar o nome do pokemon
@@ -37,9 +48,11 @@ function allList(list) {
         cardItem.appendChild(eggItem);
 
         let weaknessesItem = document.createElement("p");
+
         weaknessesItem.className = "text-card";
-        weaknessesItem.textContent = `Fraquezas: ${obj.weaknesses}`;
-        cardItem.appendChild(weaknessesItem);
+        //weaknessesItem.textContent = `Fraquezas: ${obj.weaknesses}`;  
+        weaknessesItem.textContent = obj.weaknesses.join(", ");
+        cardItem.appendChild(weaknessesItem);*/
 
         cards.appendChild(cardItem);
     }
@@ -90,18 +103,11 @@ function descendingOrder(poke) {
 
 document.getElementById("select-type").addEventListener("change", searchType)
 
- function searchType() {
-     console.log("teste");
+function searchType() {
+    console.log("teste");
     const filterType = document.getElementById("select-type").value;
     const listType = pokemonGo.filter(function (search) {
         return search.type.includes(filterType);
     });
     allList(listType);
 }
-
-
-//ex Dani
-/* function filtraName(poke){
-     return (pokemonGo.name === name)
- }
- MyPokemon.filter(filterName)*/
