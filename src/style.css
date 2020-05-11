@@ -244,6 +244,7 @@ a:visited, a:active {
   #logoRM {
     width: 330px;
     margin-top: -36px;
+    flex-direction: column-reverse;
     justify-content: center;
   }
   
