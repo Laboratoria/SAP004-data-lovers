@@ -141,6 +141,34 @@ const applyFilterTypeOnCards = () => {
     };
 };
 
+//Função para recuperar escolha de ordenar do usuário
+const getOrderChoosedfunction = () => {
+    const selectOrder = document.getElementsByClassName('select')[1];
+    console.log(selectOrder)
+    const optionOrderValue = selectOrder.options[selectOrder.selectedIndex].value;
+    console.log(optionOrderValue)
+    return optionOrderValue;
+};
+
+
+const optionOrder = getOrderChoosedfunction();
+// criar função para ordenar pura passando parametros
+
+//operador ternário 
+
+// Ex: Então, a função de comparação tem a seguinte forma:
+// function comparar(a, b) {
+//   if (a < b ) {
+//     return -1;
+//   }
+//   if (a > b) {
+//     return 1;
+//   }
+//   // a deve ser igual a b
+//   return 0;
+// }
+
+
 
 // //modal
 const modal = document.querySelector('.modal-char');
@@ -200,3 +228,6 @@ document.getElementsByClassName('select')[0].addEventListener("change", () => {
     applyFilterTypeOnCards();
 });
 
+document.getElementsByClassName('select')[1].addEventListener("change",() => {
+    getOrderChoosedfunction();
+});
