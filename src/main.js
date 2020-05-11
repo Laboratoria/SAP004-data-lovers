@@ -1,4 +1,4 @@
-import { searchPokemon, sortAlphaOrder, sortNumOrder } from './data.js';
+import { searchPokemon, sortAlfaOrder, sortNumOrder, } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 // banco de dados
@@ -16,25 +16,6 @@ const buttonCresc = document.querySelector("#buttonCresc");
 const buttonDecre = document.querySelector("#buttonDecre");
 const buttonWater = document.querySelector("#buttonWater");
 
-<<<<<<< HEAD
-/* 
-// função para mostrar barra de pesquisa
-buttonSearch.addEventListener("click", function () {
-    searchBar.style.visibility = "visible"; 
-    buttonOrder.style.visibility = "hidden";
-    buttonFilter.style.visibility = "hidden";
-    buttonSearch.style.visibility = "hidden";
-});
-*/
-
-
-  var alltipos = pokemons.reduce(function(prev, curr) {
-    return [...prev, ...curr.books];
-  }, console.log(alltipos));
-  
-
-=======
->>>>>>> 1b3e0d8b34b8c8fcd42d93d859d4914e95ac5f84
 // card do pokémon
 const card = (num, name, img, type) => {
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
@@ -63,29 +44,33 @@ const displayPokemons = (pkm) => {
 
 // botão a-z 
 buttonAZ.addEventListener("click", () => {
-  const az = sortAlphaOrder(pokemons, "name", "az");
+  const az = sortAlfaOrder(pokemons, "name", "az");
   displayPokemons (az);
 });
 
 // botão z-a
 buttonZA.addEventListener("click", () => {
-  const za = sortAlphaOrder(pokemons, "name", "za");
+  const za = sortAlfaOrder(pokemons, "name", "za");
   displayPokemons(za);
 })
 
 // botão 1-151
 buttonCresc.addEventListener("click", () => {
-  const cresc = sortNumOrder(pokemons, "id", "cresc");
+  const cresc = sortAlfaOrder(pokemons, "id", "cresc");
   displayPokemons(cresc);
 })
 
 // botão 151-1
 buttonDecre.addEventListener("click", () => {
-  const decre = sortNumOrder(pokemons, "id", "decre");
+  const decre = sortAlfaOrder(pokemons, "id", "decre");
   displayPokemons(decre);
 })
 
 // botão Água
-buttonWater.addEventListener("click", () => {
-  const water = ;
-} )
+
+
+
+
+
+/*export const filtrar = () => {
+  console.log( data.pokemons.filter(elem => elem.type == "Water"))*/

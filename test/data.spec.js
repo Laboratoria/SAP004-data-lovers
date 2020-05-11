@@ -1,7 +1,7 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortAlphaOrder } from '.data/pokemo/pokemon.js';
 
 
-describe('example', () => {
+describe('Teste ordem az', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
   });
@@ -20,4 +20,14 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
+});
+
+describe('sortAlphaOrder',()=>{
+  it ('is a function', () => {
+    expect(typeof sortAlphaOrder()).toBe('function');
+  });
+  
+  it('returns' `sortAlphaOrder`, () => {
+    expect(typeof sortAlphaOrder()).toBe('sortAlphaOrder')
+  })
 });
