@@ -1,27 +1,28 @@
 import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 import pokemon from './data/pokemon/pokemon.js';
+console.log(data)
 
 
 
 //Variáveis globais: configuração
 const colorTypeList = {
-		Fire: "#FF8C00",
-		Ice: "#DBDDDD",
-		Flying: "#0E8AA5",
-		Psychic: "#D91CD1",
-		Grass: "#59B539",
-		Fighting: "#FEC807",
-		Ground: "#976B36",
-		Steel: "#DAA520",
-		Bug: "#1E6DE3",
-		Ghost: "#F6D7F6",
-		Dark: "#000000",
-		Electric: "#D7DB1E",
-		Rock: "#484848",
-		Poison: "#9D9F25",
-		Normal: "#DE2626",
-		Water: "#87CEEB",
+    Bug: "#1E6DE3",
+    Dark: "#000000",
+    Electric: "#D7DB1E",
+    Fighting: "#FEC807",
+    Fire: "#FF8C00",
+    Flying: "#0E8AA5",
+    Ghost: "#F6D7F6",
+    Grass: "#59B539",
+    Ground: "#976B36",
+    Ice: "#DBDDDD",
+    Normal: "#DE2626",
+    Poison: "#9D9F25",
+    Psychic: "#D91CD1",
+    Rock: "#484848",
+    Steel: "#DAA520",
+    Water: "#87CEEB",
 };
 
 const cloneCards = () => document.querySelector('.container-deck').appendChild(document.querySelector('.container-card').cloneNode(true));
@@ -58,35 +59,88 @@ const setInfosOnCard = (node, index, data, attribute) => {
 
 const setCardColor = (index) => document.querySelectorAll('.container-card')[index].style.backgroundColor = colorTypeList[data["pokemon"][index]["type"][0]];
 
-const loadCards = () => {
-		for (let i = 0; i < data["pokemon"].length; i++) {
-				cloneCards();
-				setInfosOnCard('.name-pok', i, data["pokemon"], 'name')
-				setInfosOnCard('.number-pok', i, data["pokemon"], 'num')
-				setInfosOnCard('.type-pok', i, data["pokemon"], 'type')
-				setInfosOnCard('.img-pok', i, data["pokemon"], 'img');
-				setCardColor(i);
-				document.querySelectorAll('.container-card')[i].addEventListener("click", () => {
-				clickCard(data["pokemon"][i].name,data["pokemon"][i].num,data["pokemon"][i].type,
-				data["pokemon"][i].img,data["pokemon"][i].height,data["pokemon"][i].weight,data["pokemon"][i].candy,
-				data["pokemon"][i].candy_count,data["pokemon"][i].egg,data["pokemon"][i].spawn_chance)});
-		}
-		removeTemplateCard();
+//Função para carregar cards com as informações dos pokemons
+const loadCards = (dataset) => {
+    for (let i = 0; i < dataset.length; i++) {
+        cloneCards();
+        setInfosOnCard('.name-pok', i, data["pokemon"], 'name')
+        setInfosOnCard('.number-pok', i, data["pokemon"], 'num')
+        setInfosOnCard('.type-pok', i, data["pokemon"], 'type')
+        setInfosOnCard('.img-pok', i, data["pokemon"], 'img');
+        setCardColor(i);
+        document.querySelectorAll('.container-card')[i].addEventListener("click", () => {
+        clickCard(data["pokemon"][i].name,data["pokemon"][i].num,data["pokemon"][i].type,
+        data["pokemon"][i].img,data["pokemon"][i].height,data["pokemon"][i].weight,data["pokemon"][i].candy,
+        data["pokemon"][i].candy_count,data["pokemon"][i].egg,data["pokemon"][i].spawn_chance)});
+    }
+    removeCard(dataset.length);
 }
 
-const removeTemplateCard = () => document.querySelector('.container-deck').removeChild(document.querySelectorAll('.container-card')[data["pokemon"].length]);
+//Função para remover template
+const removeCard = (index) => document.querySelector('.container-deck').removeChild(document.querySelectorAll('.container-card')[index]);
+
+//Chamada
+loadCards(data["pokemon"]);
+
+//Função para recuperar escolha de filtro do usuário
+const getTypeChoosedfunction = () => {
+    const select = document.getElementsByClassName('select')[0];
+    const optionValue = select.options[select.selectedIndex].value;
+    return optionValue;
+};
 
 
-//Chamada das funções
-loadCards();
+//Implementação do filtro por tipo
+//Refatorar depois e tirar comments
+const createfilterType = (pokemon) => {
+    console.log(pokemon)
+        //recuperando o valor escolhido pelo usuário
+    let optionUser = getTypeChoosedfunction();
+    console.log(optionUser)
+        //criando a lógica de busca
+    if (pokemon.type[0] !== optionUser && pokemon.type[1] !== optionUser) {
+        return pokemon
+    }
+};
 
-//Voltar para home page
-const goHomePage = () => window.location.reload()
-const goLaboratoriaPage = () => window.location.href = "https://www.laboratoria.la/"
 
-//Atribuição de eventos
-document.querySelector('#home').addEventListener('click', goHomePage);
-document.querySelector('#logo-lab').addEventListener('click', goLaboratoriaPage);
+const applyFilterTypeOnCards = () => {
+    let cardList = document.querySelectorAll('.container-card');
+    // console.log(cardList);
+    cardList.forEach(function(card) {
+        card.style.display = "block"
+    });
+    // cardList.map(card => card.style.display = "block");
+    let dataFiltered = data["pokemon"].filter(createfilterType);
+    console.log(dataFiltered);
+
+    //como fazer o array diff?Quero usá-lo para sumir com os cards não selecionados na tela inicial
+    //simulando um array diff qualquer
+    // let [a, b, , , c, d, e, , f, g, h, , i, j] = data["pokemon"];
+    // let dataNotFiltered = [a, b, c, d, e, f, g, h, i, j];
+    // console.log(dataNotFiltered);
+
+
+    // //sumir com cards não selecionados:
+    //1.Pegar os nós html que contém o número dos pokemons
+    let numberNodeList = document.querySelectorAll('.number-pok');
+
+    // //Para cada polemon não selecionado:
+    for (let item of dataFiltered) {
+        //Pegue o número deste pokemon
+        let pokemonNotFilteredNumber = item.num;
+
+        //Para cada container de número de pokemons:
+        for (let item of numberNodeList) {
+            //Verifique se o número do pokemon não selecionado é igual ao número que está inscrito dentro desse container:
+            if (pokemonNotFilteredNumber === item.textContent) {
+                //se sim, apague o seu nó avô (.container-card)
+                item.parentNode.parentNode.style.display = "none"
+            };
+        }
+    };
+};
+
 
 // //modal
 const modal = document.querySelector('.modal-char');
@@ -134,89 +188,14 @@ function clickCard (name,num,type,img,height,weight,candy,candy_count,egg,spawn_
 		
 }
 
+//Voltar para home page
+const goHomePage = () => window.location.reload()
+const goLaboratoriaPage = () => window.location.href = "https://www.laboratoria.la/"
 
-//INICIANDO A IMPLEMENTAÇÃO DO CÓDIGO DE FILTRO
-
-//Passos:
-//PASSO1.Criar uma função para reconhecer o grupo de pokemon escolhido 
-//Aqui estou simulando que o usuá"rio escolheu ‘fogo’. Falta implementar a lógica dessa função. Ju ficou de ver com a Palomita depois!
-// const ElementosOption= ["Filtar","Bug","Dark","Electric","Fighting","Fire","Flying","Ghost","Grass","Ground","Ice","Normal","Poison","Psychic","Rock","Steel","Water"];
-
-// const selectMenu = document.querySelector('.select')
-// console.log(selectMenu) 
-// selectMenu.addEventListener("click", () => {
-//     const ElementosOption= ["Filtar","Bug","Dark","Electric","Fighting","Fire","Flying","Ghost","Grass","Ground","Ice","Normal","Poison","Psychic","Rock","Steel","Water"];
-//     const optionMenu = document.getElementsByTagName('option')
-//     for (let i=0; i < optionMenu.length; i++){
-//         if(optionMenu[i].value === [])
-//         console.log(optionMenu)
-//     }
-
-// } )              //ou queryselector
-
-document.getElementsByClassName('select')[0].addEventListener("click",function (){
-		const select = document.getElementsByClassName('select')[0];
-		const optionValue = select.options[select.selectedIndex].value;
-		console.log(optionValue)
-		return optionValue;
-})
-
-
-///tentando obter a função debuscar os valores dos elementos clicados
-// function selecionarTexto(elementId, cod) {
-//     var elt = document.getElementById(elementId);
-//     var opt = elt.getElementsByTagName("option");
-//     for(var i = 0; i < opt.length; i++) {
-//       if(opt[i].value == cod) {
-//         alert(opt[i].text)
-
-
-// const getTypeOption = () => "Fire";
-// //PASSO2.Recuperar o nome desse grupo
-// console.log(getTypeOption()); //retorna 'Fire' no console. Ok, funciona!
-
-//PASSO3.Acessar o banco de dados +
-//PASSO4.Localizar os pokemons que sao daquele tipo no banco de dados
-//Criando a função de filtrar o tipo:
-//Atenção: alguns pokemons tem mais de um tipo (lista de tipos). Por isso na busca você deve explicitamente mostrar que ele deve rastrear tanto o tipo que está na primeira posição da lista de tipos (pokemon.type[0]) quanto na segunda posição(pokemon.type[1])
-// const filterType = (pokemon) => {
-//    //capturando o valor escolhido pelo usuário
-//    let optionUser = getTypeOption();
-//    //implementando a busca
-//    if (pokemon.type[0] === optionUser || pokemon.type[1] === optionUser) {
-//        return pokemon
-//    }
-// };
-
-//Aplicando a função de filtro no nosso banco
-// function applyFilterType() {
-//    return data["pokemon"].filter(filterType);
-// }
-
-//Chamando as funções para aplicar o filtro
-// console.log(applyFilterType());
-//Ou seja, a função applyFilterType está filtranbdo o banco de dados e usando o retorno da função filterType para passar pra ela qual o tipo a ser buscado no banco (no caso, fogo). Próximo passo, tornar a função escalável para filtrar por qualquer tipo, não só fogo
-
-//5.Fazer com que apenas os cards localizados aparecem na tela: fazer
-//6.O usuário deve conseguir voltar pra tela inicial: fazer
-
-
-
-
-// function getOptionType (){
-//     const fogo = document.getElementById("tipo-fire")
-//     fogo.addEventListener("click", (event) => {
-//     if (event.target == fogo){ 
-//         console.log("funcionou")
-//         }
-//     })
-// }
-// getOptionType();
-
-
-// // document.getElementById("value")[i].addEventListener("click", typefilter) 
-// const fire = "Fire"
-// function typefilter(dados,type) {
-//     return (dados.type == type)
-//     console.log(typefilter)
-// }
+//Atribuição de eventos
+document.querySelector('#home').addEventListener('click', goHomePage);
+document.querySelector('#logo-lab').addEventListener('click', goLaboratoriaPage)
+document.getElementsByClassName('select')[0].addEventListener("change", () => {
+    getTypeChoosedfunction();
+    applyFilterTypeOnCards();
+});

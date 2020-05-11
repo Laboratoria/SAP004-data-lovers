@@ -24,33 +24,33 @@
                 <div class="flex">
                     <!-- Filter -->
                     <form class="flex btn btn-menu btn-filter">
-                    <img class="img-btn-filter" src="/assets/filter.png">
-                    <select class="select font-22">
-                        <option class="type-option" value="Filtrar" selected>Filtrar</option>
-                        <option class="type-option" value="Bug">Bug</option>
-                        <option class="type-option" value="Dark">Dark</option>
-                        <option class="type-option" value="Electric">Electric</option>
-                        <option class="type-option" value="Fighting">Fighting</option>
-                        <option class="type-option" value="Fire">Fire</option>
-                        <option class="type-option" value="Flying">Flying</option>
-                        <option class="type-option" value="Ghost">Ghost</option>
-                        <option class="type-option" value="Grass">Grass</option>
-                        <option class="type-option" value="Ground">Ground</option>
-                        <option class="type-option" value="Ice">Ice</option>
-                        <option class="type-option" value="Normal">Normal</option>
-                        <option class="type-option" value="Poison">Poison</option>
-                        <option class="type-option" value="Psychic">Psychic</option>
-                        <option class="type-option" value="Rock">Rock</option>
-                        <option class="type-option" value="Steel">Steel</option>
-                        <option class="type-option" value="Water">Water                
-                    </option>
-                    </select>
-                </form>
+                        <img class="img-btn-filter" src="/assets/filter.png">
+                        <select class="select font-22">
+                            <option class="type-option" value="">Filtrar</option>
+                            <option class="type-option" value="Bug">Bug</option>
+                            <option class="type-option" value="Dark">Dark</option>
+                            <option class="type-option" value="Electric">Electric</option>
+                            <option class="type-option" value="Fighting">Fighting</option>
+                            <option class="type-option" value="Fire">Fire</option>
+                            <option class="type-option" value="Flying">Flying</option>
+                            <option class="type-option" value="Ghost">Ghost</option>
+                            <option class="type-option" value="Grass">Grass</option>
+                            <option class="type-option" value="Ground">Ground</option>
+                            <option class="type-option" value="Ice">Ice</option>
+                            <option class="type-option" value="Normal">Normal</option>
+                            <option class="type-option" value="Poison">Poison</option>
+                            <option class="type-option" value="Psychic">Psychic</option>
+                            <option class="type-option" value="Rock">Rock</option>
+                            <option class="type-option" value="Steel">Steel</option>
+                            <option class="type-option" value="Water">Water                 
+                        </option>
+                        </select>
+                    </form>
                     <!-- order -->
                     <form class="flex btn btn-menu">
                         <img class="img-btn-order" src="/assets/order.png">
                         <select place class="select font-22">
-                            <option value="filter">Ordenar</option>
+                            <option class="type-option" value="filter">Ordenar</option>
                             <option value="">Menor nº
                             </option>
                             <option value="">Maior nº</option>
@@ -99,7 +99,6 @@
             <!-- //fim template do card-->
             <!--tela secundaria-->
             <section id= "modal-characters" class=  "modal-char"> <!--class= " modal-char"-->
-
                 <section id= "modal-char-trans" class= "char-card-container"> 
                     <!--menu-characters-item-->
                     <div class= "modal-flex">
@@ -109,51 +108,48 @@
                         </div>   
                         <div id= "char-num"class= "char-num-style"></div>
                     </div>
-                    
                     <figure class= "img-container"><img id= "char-img" class= "char-img-style " ></figure>
-
                     <div class= btn-close-modal>
-
-                    <figure ><img class="close" src="../assets/icon.png "/></figure>
+                        <figure ><img class="close" src="../assets/icon.png "/></figure>
                     </div>
                     <section class= "sections"> 
                         <section id= "data-container" class= "modal-char-trans modal-data">
-                            <div class= "menu-char border"> 
-                                <!-- <label for="rd-data" class= "item-menu-char data">Dados</label> -->
+                            <!-- <div class= "menu-char border"> 
+                                <label for="rd-data" class= "item-menu-char data">Dados</label>
                                 
-                                <!-- <label for="rd-weak" class= "item-menu-char weaknesses">Fraqueza</label>
-                                <label for="rd-evo" class= "item-menu-char evolution">Evolução</label> -->
+                                <label for="rd-weak" class= "item-menu-char weaknesses">Fraqueza</label>
+                                <label for="rd-evo" class= "item-menu-char evolution">Evolução</label>
                                 <hr/>
-                            </div>
+                            </div> -->
                             <!-- <div classs=" scroll "> 
                                 <input type= "radio" name= "group" id= "rd-data" Checked= "true">
                                 <input type= "radio" name= "group" id= "rd-weak">
                                 <input type= "radio" name= "group" id= "rd-evo">
                             </div> -->
                             <div class= "modal-flex">
-                            <div id= "char-height" class= "char-height">Altura</div>
-                            <div id= "char-height-value" class= "char-value char-height-value"></div>
-                        </div>
-                        <div class= "modal-flex">
-                            <div id= "char-weight"class= "char-weight">Peso</div>
-                            <div id= "char-weight-value" class= "char-value char-weight-value"></div>
-                        </div>
-                        <div class= "modal-flex">
-                            <div id= "char-cand" class= "char-cand">Doce</div>
-                            <div id= "char-cand-value" class= "char-value char-cand-value"></div>
-                        </div>
-                        <div class= "modal-flex">
-                            <div id= "char-cand-count" class= "char-cand-count">Nº Doces</div>
-                            <div id= "char-cand-count-value" class= "char-value char-cand-count-value"></div>
-                        </div>
-                        <div class= "modal-flex">
-                            <div id= "Char-egg" class= "Char-egg" >Ovo</div>
-                            <div id= "Char-egg-value" class= "char-item char-value Char-egg-value"></div>
-                        </div>
-                        <div class= "modal-flex"> 
-                            <div id= "char-spawn-chance" class= "char-spawn-chance">Chance de Captura</div>
-                            <div id= "char-spawn-chance-value" class= "char-value char-spawn-chance-value"></div>
-                        <!-- </div> -->
+                                <div id= "char-height" class= "char-height">Altura</div>
+                                <div id= "char-height-value" class= "char-value char-height-value"></div>
+                            </div>
+                            <div class= "modal-flex">
+                                <div id= "char-weight"class= "char-weight">Peso</div>
+                                <div id= "char-weight-value" class= "char-value char-weight-value"></div>
+                            </div>
+                            <div class= "modal-flex">
+                                <div id= "char-cand" class= "char-cand">Doce</div>
+                                <div id= "char-cand-value" class= "char-value char-cand-value"></div>
+                            </div>
+                            <div class= "modal-flex">
+                                <div id= "char-cand-count" class= "char-cand-count">Nº Doces</div>
+                                <div id= "char-cand-count-value" class= "char-value char-cand-count-value"></div>
+                            </div>
+                            <div class= "modal-flex">
+                                <div id= "Char-egg" class= "Char-egg" >Ovo</div>
+                                <div id= "Char-egg-value" class= "char-item char-value Char-egg-value"></div>
+                            </div>
+                            <div class= "modal-flex"> 
+                                <div id= "char-spawn-chance" class= "char-spawn-chance">Chance de Captura</div>
+                                <div id= "char-spawn-chance-value" class= "char-value char-spawn-chance-value"></div>
+                            </div>
                         </section>
                     </section>  
                     <!-- <section id= "weak-container" class= "modal-char-trans-1 "> 
