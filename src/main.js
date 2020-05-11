@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { searchPokemon, sortAlfaOrder, sortNumOrder, } from './data.js';
-=======
 import { searchPokemon, sortOrder, filterByType } from './data.js';
->>>>>>> 56f45b80e576bfb0b6415cb939b7540933404902
 import data from './data/pokemon/pokemon.js';
 
 // banco de dados
@@ -79,40 +75,6 @@ const displayPokemons = (pkm) => {
 // ************************
 
 
-<<<<<<< HEAD
-// botão a-z 
-buttonAZ.addEventListener("click", () => {
-  const az = sortAlfaOrder(pokemons, "name", "az");
-  displayPokemons (az);
-});
-
-// botão z-a
-buttonZA.addEventListener("click", () => {
-  const za = sortAlfaOrder(pokemons, "name", "za");
-  displayPokemons(za);
-})
-
-// botão 1-151
-buttonCresc.addEventListener("click", () => {
-  const cresc = sortAlfaOrder(pokemons, "id", "cresc");
-  displayPokemons(cresc);
-})
-
-// botão 151-1
-buttonDecre.addEventListener("click", () => {
-  const decre = sortAlfaOrder(pokemons, "id", "decre");
-  displayPokemons(decre);
-})
-
-// botão Água
-
-
-
-
-
-/*export const filtrar = () => {
-  console.log( data.pokemons.filter(elem => elem.type == "Water"))*/
-=======
 
 // **** Botões Ordem ******
 
@@ -189,4 +151,3 @@ buttonPoison.addEventListener("click", () => displayPokemons(filterByType("Poiso
 buttonFlying.addEventListener("click", () => displayPokemons(filterByType("Flying", pokemons)));
 
 // ************************
->>>>>>> 56f45b80e576bfb0b6415cb939b7540933404902
