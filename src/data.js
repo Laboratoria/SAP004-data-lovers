@@ -39,3 +39,20 @@ export const buscador = (input, personagem) => {
   });
   return ordenadesgraça(filtro);
 };
+
+
+/* google.charts.load('current', {'packages' : ['corechart']});
+
+function desenharGrafico () {
+  const objectSize = Object.getOwnPropertyNames(data).length
+let statusA = elements.map(statusInfo => (statusInfo['status', 'Alive'])).reduce((a, b) => a + b) / objectSize;
+  let tabela = new google.visualization.DataTable();
+  tabela.addRows([
+    ['Alive', statusA],
+  ]);
+
+  let chart = new google.visualization.PieChart(document.getElementById('grafico'))
+  chart.draw(tabela)
+}
+
+google.charts.setOnLoadCallback(desenharGrafico); */
