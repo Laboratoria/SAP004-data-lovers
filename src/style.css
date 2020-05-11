@@ -1,325 +1,323 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 /*Demais estilizações*/
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 #home:hover,
 #logo-lab {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .font-22 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 input {
-    border: none;
-    outline: none;
-    background-color: transparent;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 
 .body-config {
-    margin: 0px auto;
-    background-color: #E5E5E5;
-    font-size: 22px;
+  margin: 0px auto;
+  background-color: #e5e5e5;
+  font-size: 22px;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .btn {
-    background: #FFFFFF;
-    opacity: 0.5;
-    border-radius: 25px;
-    color: black;
-    margin-left: 5px;
+  background: #ffffff;
+  opacity: 0.5;
+  border-radius: 25px;
+  color: black;
+  margin-left: 5px;
 }
 
 .btn-card {
-    height: 25px;
-    line-height: 25px;
-    font-size: 13px;
-    text-align: center;
-    margin: 3px 3px 3px 0px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 13px;
+  text-align: center;
+  margin: 3px 3px 3px 0px;
 }
 
 .btn-card-double {
-    width: 150px;
+  width: 150px;
 }
 
 .btn-menu {
-    padding: 10px;
-    width: 200px;
+  padding: 10px;
+  width: 200px;
 }
 
 .btn-filter {
-    padding: 0px 10px 0px 0px;
+  padding: 0px 10px 0px 0px;
 }
 
 .btn-search {
-    padding: 5px;
+  padding: 5px;
 }
 
 .btn-search input {
-    width: 200px;
-    margin-left: 5px;
+  width: 200px;
+  margin-left: 5px;
 }
 
 .select {
-    outline: none;
-    border: none;
-    background-color: transparent;
-    width: 170px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 170px;
 }
 
 .btn-menu:hover,
 .btn-search:hover,
 .select:hover {
-    cursor: pointer;
-    background-color: #FFFFFF;
-    opacity: 1;
+  cursor: pointer;
+  background-color: #ffffff;
+  opacity: 1;
 }
 
 .container {
-    background-color: #E5E5E5;
-    margin: 0px auto;
-    padding-bottom: 30px;
-    width: 1200px;
-    font-family: sans-serif;
+  background-color: #e5e5e5;
+  margin: 0px auto;
+  padding-bottom: 30px;
+  width: 1200px;
+  font-family: sans-serif;
 }
 
 .container-card {
-    width: 220px;
-    height: 220px;
-    margin: 15px 15px 15px 0px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-    padding: 15px;
-    color: white;
-    border: 1px solid gray;
-    background: url("/assets/pokeball_half.png") no-repeat right bottom;
+  width: 220px;
+  height: 220px;
+  margin: 15px 15px 15px 0px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  color: white;
+  border: 1px solid gray;
+  background: url("/assets/pokeball_half.png") no-repeat right bottom;
 }
 
 .container-card:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .container-deck {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-shrink: 1;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-shrink: 1;
 }
 
 .flex {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .flex-pok-type {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .inner-header {
-    margin: auto;
-    max-width: 1200px;
+  margin: auto;
+  max-width: 1200px;
 }
 
 .header {
-    padding: 10px 50px;
-    height: 70px;
-    margin-bottom: 30px;
-    background: rgba(40, 169, 146, 0.94);
+  padding: 10px 50px;
+  height: 70px;
+  margin-bottom: 30px;
+  background: rgba(40, 169, 146, 0.94);
 }
 
 .in-block {
-    display: inline-block;
+  display: inline-block;
 }
 
 .logo-align {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
 }
 
 .logo-item1 {
-    width: 110px;
-    height: 30px;
+  width: 110px;
+  height: 30px;
 }
 
 .logo-item2 {
-    width: 30px;
-    height: 30px;
-    margin-left: 45px;
+  width: 30px;
+  height: 30px;
+  margin-left: 45px;
 }
 
 .number-pok {
-    margin-top: 5px 0px;
-    font-size: 14px;
-    float: right;
-    padding-top: 6px;
-    margin-right: 5px;
+  margin-top: 5px 0px;
+  font-size: 14px;
+  float: right;
+  padding-top: 6px;
+  margin-right: 5px;
 }
 
 .img-pok {
-    width: 150px;
-    height: 150px;
-    margin-left: 15px;
-    padding-bottom: 10px;
+  width: 150px;
+  height: 150px;
+  margin-left: 15px;
+  padding-bottom: 10px;
 }
 
 .img-btn-filter {
-    width: 45px;
-    height: 45px;
-    margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  margin-left: 5px;
 }
 
 .img-btn-order {
-    width: 25px;
-    height: 20px;
-    margin-left: 5px;
+  width: 25px;
+  height: 20px;
+  margin-left: 5px;
 }
 
 .img-btn-search {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .bg-img-pok {
-    float: right;
-    opacity: 0.3;
-    width: 50px;
-    height: 100px;
+  float: right;
+  opacity: 0.3;
+  width: 50px;
+  height: 100px;
 }
 
 .footer-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    color: white;
-    padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  padding: 5px;
 }
 
 .footer-page img {
-    width: 25px;
-    height: 25px;
-    border-radius: 4px;
-    margin-right: 8px;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  margin-right: 8px;
 }
 
 /* tela secundária/características */
 
 .modal-char {
-    display:flex;
-    display: none;
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: visible; 
-    background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center; 
+  display: flex;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
 }
 
 .char-card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 210px;
-    height: 330px;
-    margin: 15% auto;
-    font-style: normal;
-    background: #FF8C00 url("./assets/pokeball_half2.png") no-repeat right top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 210px;
+  height: 330px;
+  margin: 15% auto;
+  font-style: normal;
+  background: #ff8c00 url("./assets/pokeball_half2.png") no-repeat right top;
 
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-    justify-content: space-between;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  justify-content: space-between;
 }
 
-.img-container{
-    position: relative;
+.img-container {
+  position: relative;
 }
 
 .char-name-style {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top:10px;
-    color: #FFFFFF;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ffffff;
 }
 
 .char-num-style {
-    font-size: 12px;
-    line-height: 15px;
-    font-weight: bold;
-    margin-top:16px;
-    color: #FFFFFF;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  margin-top: 16px;
+  color: #ffffff;
 }
 
 .char-img-style {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: -10px;
-    right: -50px;
-    z-index: 2;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -10px;
+  right: -50px;
+  z-index: 2;
 }
 
 .char-type-style {
-    padding:2.5px 20px;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: bold;
-    color: rgba(0, 0, 0);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    background: #FFFFFF;
-    opacity: 0.3;
-    text-align: center;
+  padding: 2.5px 20px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background: #ffffff;
+  opacity: 0.3;
+  text-align: center;
 }
 
-.modal-char-trans{
-    display: flex;
-    width: 200px;
-    height: 200px;
-    padding-top: 15px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    color:#505050;
-    background: #FFFFFF;
-    border-radius: 20px 20px 0px 0px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} 
+.modal-char-trans {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  padding-top: 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #505050;
+  background: #ffffff;
+  border-radius: 20px 20px 0px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .close {
-    position: relative;
-    width: 15px;
-    height: 15px;
-    left: 86px;
-    top: 45px; 
-    z-index: 1;    
-    cursor: pointer; 
+  position: relative;
+  width: 15px;
+  height: 15px;
+  left: 86px;
+  top: 45px;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .close:hover {
-    background: #FFFFFF;
-    opacity: 0.3;
+  background: #ffffff;
+  opacity: 0.3;
 }
 
 /* .menu-char{
@@ -327,21 +325,21 @@ input {
     text-align: center;
 } */
 
-hr{
-    border: 1.5px solid #E5E5E5;
+hr {
+  border: 1.5px solid #e5e5e5;
 }
 .modal-flex {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding:0 5%;
-    margin: 0.5% 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 5%;
+  margin: 0.5% 0;
 }
 
 .char-item {
-    text-align: right;
+  text-align: right;
 }
 
 .char-value {
-    font-weight: normal;
+  font-weight: normal;
 }
