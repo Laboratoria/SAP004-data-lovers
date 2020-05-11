@@ -2,15 +2,20 @@
   font-family: roboto;
   src: url(fonts/Roboto-Regular.ttf);
 }
+html,
+body {
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
 
 body {
   background-color: #081014;
   color: white;
-  margin: 0px;
+  font-family: roboto;
 }
 .buttons{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin-top: 30px;
 }
@@ -22,7 +27,6 @@ body {
   padding: 25px;
   margin-left: 25px;
   font-size: 20px;
-  font-family: roboto;
   -webkit-text-stroke-width: thin;
   -webkit-text-stroke-color: black;
   font-weight: bold;
@@ -50,7 +54,7 @@ body {
 }
 .botao:hover{
   transform-origin: center;
-  transform:rotateX(-90deg) translateY(100%);
+  transform:rotateX(90deg) translateY(20%);
 }
 
 .botao a:link,
@@ -59,28 +63,16 @@ a:visited, a:hover, a:active {
   color: #081014;
 }
 
-#btn-home:after {
-  content: "Home";
-}
-
-#btn-personagens:after {
-  content: "Personagens";
-}
-
-#btn-mundos:after {
-  content: "Mundos";
+.logo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #logoRM {
   width: 415px;
   position: absolute;
-  margin-left: calc(100%/2.8);
-  margin-top: 20px;
-}
-.itens-center{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: calc(100%/3);
+  margin-top: 50px;
 }
 
 #nave {
@@ -94,34 +86,31 @@ a:visited, a:hover, a:active {
 #portal2 {
   position: absolute;
   width: 350px;
-  margin-top: -89px;
-  left: 900px;
 }
 
 #title {
-  width: 300px;
+  display: block;
   margin-top: 220px;
   margin-left: 380px;
   font-size: xx-large;
 }
 
-#sinopse {
-  opacity: 0.9;
-  width: 400px;
-  margin-left: -330px;
-  margin-top: 280px;
-  box-sizing: content-box; 
-  border-radius: 20px;
-  background-color: #146666;
-  padding: 10px;
-  text-align: justify;
-  font-family: roboto;
+article {
+    opacity: 0.9;
+    width: 400px;
+   display: block;
+   margin-left: 340px;
+    border-radius: 20px;
+    background-color: #146666;
+    padding: 10px;
+   
 }
 
 iframe {
   margin-left: 790px;
   margin-top: -250px;
   border-radius: 15px;
+  
 }
 
 #root {
@@ -134,11 +123,10 @@ iframe {
 .made {
   display: flex;
   height: 20px;
-  min-height: 30px;
+  min-height: 30px; 
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  border-radius: 5px;
+  margin-top: 12px;
   color: #081014;
   background-color: #c3bd2e;
 }
@@ -147,15 +135,12 @@ iframe {
   color: #081014;
 }
 .made a:link,
-a:visited {
+a:visited, a:active {
   text-decoration: none
 }
 .made a:hover {
   text-decoration: underline;
   color: #081014;
-}
-.made a:active {
-  text-decoration: none
 }
 
 .cards{
@@ -185,7 +170,6 @@ a:visited {
 }
 .list{
   text-align: center;
-  font-family:roboto;
   font-size: 13px;
   margin-top: 0.5px;
 }
@@ -194,23 +178,114 @@ a:visited {
   font-size: 18px;
   margin-top: 0.5px;
 }
-.nav{
+.menu-filter{
+  display: flex;
+  flex-wrap: wrap;
   margin-top:200px;
-  font-family:roboto;
   margin-left:130px;
   }
-  .drop-menu{
-    border-radius:10px;
-    height: 30px;
+.drop-menu{
+  border-radius:10px;
+  height: 30px;
+  width: 150px;
+  font-weight:bold;
+  background-color:#c3bd2e;
+  transition: all 0.4s;
+  outline: none;
+  }
+   .drop-menu:hover{
+    -webkit-transform: scale(1);
+    transform: scale(1.1);
+    opacity:1;
+    }
+
+#busca {
+  display: flex;
+  flex-wrap: wrap;
+  height: 28px;
+  border-color: #c3bd2e;
+  border-radius: 10px;
+  border-width: 5px;
+  margin-top: -36px;
+  margin-left: 350px;
+  outline: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 145px;
+    flex-direction: column;
+  }
+.botao {
+  margin-top: 5px;
+}
+  header {
+  flex-direction: row-reverse;
+  text-align: center;
+  padding: 0px;
+}
+.menu-filter {
+  display: flex;
+  margin-top: 0px;
+  margin-left: 0;
+  position: absolute;
+  top: 535px;
+  left: calc(50% - 20%);
+}
+#busca {
+  margin-left: 0;
+  display: block;
+  position: absolute;
+  top: 511px;
+  left: calc(50% - 25%);
+}
+  #logoRM {
+    width: 330px;
+    margin-top: 0px;
+    justify-content: center;
+  }
+  
+  #nave {
+    flex-direction: column;
     width: 150px;
-    font-family:roboto;
-    font-weight:bold;
-    background-color:#c3bd2e;
-    transition: all 0.4s;
-    outline: none;
-    }
-    .drop-menu:hover{
-      -webkit-transform: scale(1);
-       transform: scale(1.1);
-       opacity:1;
-    }
+    margin-top: 358px;
+    margin-left: -36px;
+    position: absolute;
+    transform: rotate(-25deg);
+  }
+  
+  #portal2 {
+    position: static;
+    width: 150px;
+  }
+
+  #title {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: -51px;
+    margin-left: 133px;
+    font-size: xx-large;
+}
+  article {
+    flex-direction: column;
+    opacity: 0.9;
+    width: 200px;
+    margin-left: 110px;
+    border-radius: 20px;
+    background-color: #146666;
+    padding: 10px;
+    margin-top: 64px;
+     
+  }
+  
+  iframe {
+    display: flex;
+    flex-direction: column;
+    margin-top: 17px;
+    margin-left: 8px;
+    border-radius: 15px;
+  }
+}

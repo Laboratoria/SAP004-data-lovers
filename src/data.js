@@ -1,17 +1,6 @@
-import { pegaNameImage } from './functionsdata.js'
 import data from './data/rickandmorty/rickandmorty.js'
 
-export const ordenarAZ = () => {
-  return pegaNameImage().sort()
-};
-
-export const ordemQveio = () => {
-  return pegaNameImage();
-};
-
-export const ordenarZA = () => {
-  return ordenarAZ().reverse();
-};
+export const elements = data.results
 
 const ordenadesgraça = (vetor) => {
   return vetor.map(function (item) {
@@ -19,34 +8,34 @@ const ordenadesgraça = (vetor) => {
   })
 };
 
-export const elements = {
-  characterOrder: data.results,
-  statusA: "Alive",
-  statusD: "Dead",
-  statusU: "Unknown",
-  genderM: "Male",
-  genderF: "Female"
-}
+export const ordemQveio = () => {
+  return ordenadesgraça(elements);
+};
 
-export function filtraStatus(lista, valor) {
+export const ordenarAZ = () => {
+  return ordenadesgraça(elements).sort()
+};
+
+export const ordenarZA = () => {
+  return ordenarAZ().reverse();
+};
+
+export function filtraAll(lista, dados, valor) {
   let ordenafdp = [];
-  ordenafdp = lista.filter(function (item) {
-    if (item.status === valor) {
+  ordenafdp = lista.filter(item => {
+    if (item[dados] === valor) {
       return item;
     }
   });
   return ordenadesgraça(ordenafdp);
 }
 
-export function filtraGender(lista, valor) {
-  let ordenafdp = [];
-  ordenafdp = lista.filter(function (item) {
-    if (item.gender === valor) {
-      return item;
-    }
+export const buscador = (input, personagem) => {
+  let transformaInput = input.value.toLowerCase();
+  let filtro = personagem.filter((item) => {
+    let transformaData = item.name.toLowerCase();
+    let caracteresNome = transformaData.substr(0, transformaInput.length);
+    return (caracteresNome.includes(transformaInput));
   });
-  return ordenadesgraça(ordenafdp);
-}
-
-
-
+  return ordenadesgraça(filtro);
+};
