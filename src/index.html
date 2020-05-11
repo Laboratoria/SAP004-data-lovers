@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-
   <title>Pokédex</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,10 +10,9 @@
 <body>
 
   <header id="home">
-    <img src="img/pokemon.png">
   </header>
 
-  <nav>
+  <div>
     <ul>
       <li>
         <button id="buttonOrder">ORDEM</button>
@@ -28,7 +26,26 @@
       <li>
         <button id="buttonFilter">TIPO</button>
         <ul>
-          <li id="buttonWater">Água</li>
+          <li><button id="buttonSteel">Aço</button></li>
+          <li><button id="buttonWater">Água</button></li>
+          <li><button id="buttonDragon">Dragão</button></li>
+          <li><button id="buttonEletric">Elétrico</button></li>
+          <li><button id="buttonFairy">Fada</button></li>
+          <li><button id="buttonGhost">Fantasma</button></li>
+          <li><button id="buttonFire">Fogo</button></li>
+          <li><button id="buttonIce">Gelo</button></li>
+          <li><button id="buttonBug">Inseto</button></li>
+        </ul>
+        <ul>
+          <li><button id="buttonFighting">Lutador</button></li>
+          <li><button id="buttonNormal">Normal</button></li>
+          <li><button id="buttonDark">Noturno</button></li>
+          <li><button id="buttonRock">Pedra</button></li>
+          <li><button id="buttonGrass">Planta</button></li>
+          <li><button id="buttonPsychic">Psíquico</button></li>
+          <li><button id="buttonGround">Terrestre</button></li>
+          <li><button id="buttonPoison">Venenoso</button></li>
+          <li><button id="buttonFlying">Voador</button></li>
         </ul>
       </li>
       <li id="searchWrapper">
@@ -40,8 +57,8 @@
         </ul>
       </li>
     </ul>
-  </nav>
-
+  </div>
+  
   <main id="root">
     <!--cards vindos do banco de dados-->
   </main>
@@ -53,22 +70,3 @@
 </body>
 
 </html>
-
-<!--Aço
-Água
-Dragão
-Elétrico
-Fada
-Fantasma
-Fogo
-Gelo
-Inseto
-Lutador
-Normal
-Noturno
-Pedra
-Planta
-Psíquico
-Terrestre
-Venenoso
-Voador!-->
