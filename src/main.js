@@ -199,3 +199,4 @@ document.getElementsByClassName('select')[0].addEventListener("change", () => {
     getTypeChoosedfunction();
     applyFilterTypeOnCards();
 });
+
