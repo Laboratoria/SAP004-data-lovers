@@ -5835,9 +5835,9 @@ export default {
       name: "Twisted Fate",
       title: "the Card Master",
       img:
-        "https://www.masterypoints.com/assets/img/lol/champion_icons/Maokai.png",
+        "https://www.masterypoints.com/assets/img/lol/champion_icons/TwistedFate.png",
       splash:
-        "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Maokai_0.jpg",
+        "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_0.jpg",
       blurb:
         "Twisted Fate is an infamous card sharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking ...",
       info: {
