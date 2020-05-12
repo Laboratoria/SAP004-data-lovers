@@ -2,7 +2,7 @@ import data from './data/rickandmorty/rickandmorty.js'
 
 export const elements = data.results
 
-const ordenadesgraça = (vetor) => {
+export const ordenadesgraça = (vetor) => {
   return vetor.map(function (item) {
     return [item.name, item.image, item.gender, item.status, item.species]
   })

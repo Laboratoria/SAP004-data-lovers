@@ -12,7 +12,7 @@ function inserirNoHtml(vetor) {
     </div>`
   ).join("");
   document.getElementById('root').innerHTML = novaIsercao;
-};
+}
 
 const selectElement = document.querySelector('.drop-menu');
 selectElement.addEventListener('change', seletor)
