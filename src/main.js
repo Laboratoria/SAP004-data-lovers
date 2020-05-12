@@ -72,6 +72,7 @@ const displayPokemons = (pokemon) => {
     .join('');
   pokemonsList.innerHTML = cards;
 };
+
 // ************************
 
 

@@ -11,15 +11,14 @@ export const searchPokemon = (typedString, name, pokemonData) => {
 
 // função de Ordem pura
 export const sortOrder = (byOrder, order, pokemonData) => {
-  const direction = (byOrder === "az" || byOrder === "cresc")?1:-1;
-  return pokemonData.sort( (start, end) => {
-  if( end[order] < start[order]) return direction;
-    else if(start[order] < end[order]) return -direction;
-    else return 0;
-    })
+  const direction = (byOrder === "az" || byOrder === "cresc")? 1: -1;
+  return pokemonData.sort((start, end) => (end[order] < start[order]? direction: -direction));
 };
+
 
 // função de Filtro pura
 export const filterByType = (pokemonType, arrayType, pokemonData) => pokemonData.filter(pokemon => pokemon[arrayType].includes(pokemonType));
+
+
 
 
