@@ -19,8 +19,7 @@ body {
   justify-content: center;
   margin-top: 30px;
 }
-
-.botao {
+.btn {
   border: none;
   background-color: #c3bd2e;
   color: #081014;
@@ -36,32 +35,15 @@ body {
   cursor: pointer;
   transition: all 500ms ease;
   transform-style: preserve-3d;
-}
-
-.botao:after {
-  top: -100%;
-  left: 0px;
-  width: 100%;
-  padding: 25px;
-  position: absolute;
-  background: #081014;
-  color: #c2be49;
-  border-radius: 40px;
-  box-sizing: border-box;
-  transform-origin: left bottom;
-  transform: rotateX(90deg);
   outline: none;
 }
-.botao:hover {
+.btn:hover {
   transform-origin: center;
-  transform: rotateX(90deg) translateY(20%);
+  transform: rotateX(0) translateY(20%);
 }
-.botao a:link,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
-  color: #081014;
+
+#color{
+  background-color: #22a2bc;
 }
 
 .logo {
@@ -89,14 +71,14 @@ a:active {
   width: 350px;
 }
 
-#title {
+.title {
   display: block;
   margin-top: 220px;
   margin-left: 380px;
   font-size: xx-large;
 }
 
-article {
+.synopsis {
   opacity: 0.9;
   width: 400px;
   display: block;
@@ -162,16 +144,10 @@ a:active {
   opacity: 1;
 }
 
-.imagem {
+#imagem {
   border-radius: 590px;
   width: 150px;
   border: black solid;
-}
-
-.list {
-  text-align: center;
-  font-size: 13px;
-  margin-top: 0.5px;
 }
 
 #name {
@@ -202,7 +178,7 @@ a:active {
   opacity: 1;
 }
 
-#busca {
+#searchName {
   display: flex;
   flex-wrap: wrap;
   height: 28px;
@@ -215,6 +191,7 @@ a:active {
 }
 
 @media only screen and (max-width: 800px) {
+  
   header {
     flex-direction: row-reverse;
     text-align: center;
@@ -227,7 +204,7 @@ a:active {
     margin-top: 112px;
     flex-direction: column;
   }
-  .botao {
+  .btn {
     margin-top: 5px;
   }
 
@@ -250,7 +227,7 @@ a:active {
   #nave {
     flex-direction: column;
     width: 150px;
-    margin-top: 358px;
+    margin-top: 478px;
     margin-left: -36px;
     position: absolute;
     transform: rotate(-25deg);
@@ -261,15 +238,32 @@ a:active {
     width: 150px;
   }
 
-  #busca {
+  #searchName {
     margin-left: 0;
     display: block;
     position: absolute;
     top: 499px;
     left: calc(50% - 25%);
   }
+  .cards {
+    height:130px;
+    width: 250px;
+  }
+  #imagem {
+    width: 100px;
+    margin-left: -130px;
+  }
 
-  #title {
+  #name {
+    margin-left: 115px;
+    margin-top: -110.5px;
+  }
+
+  .info {
+    margin-left: 110px;
+  }
+
+  .title {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -278,11 +272,11 @@ a:active {
     font-size: xx-large;
   }
 
-  article {
+  .synopsis {
     flex-direction: column;
     opacity: 0.9;
     width: 200px;
-    margin-left: 110px;
+    margin-left: 120px;
     border-radius: 20px;
     background-color: #146666;
     padding: 10px;

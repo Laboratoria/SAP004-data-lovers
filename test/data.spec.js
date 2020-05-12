@@ -1,8 +1,8 @@
-import { ordenadesgraça, ordemQveio, ordenarAZ, ordenarZA, filtraAll, buscador } from '../src/data.js';
+import { getInfo, naturalOrder, orderAZ, orderZA, filterAll, searchName } from '../src/data.js';
 
 const data = {
   "results": [
-  {
+    {
       "id": 1,
       "name": "Rick Sanchez",
       "status": "Alive",
@@ -10,12 +10,12 @@ const data = {
       "type": "",
       "gender": "Male",
       "origin": {
-          "name": "Earth (C-137)",
-          "url": "https://rickandmortyapi.com/api/location/1"
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
       },
       "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg",
-  },
-  {
+    },
+    {
       "id": 2,
       "name": "Morty Smith",
       "status": "Alive",
@@ -23,12 +23,12 @@ const data = {
       "type": "",
       "gender": "Male",
       "origin": {
-          "name": "Earth (C-137)",
-          "url": "https://rickandmortyapi.com/api/location/1"
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
       },
       "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/2.jpeg"
-  },
-  {
+    },
+    {
       "id": 3,
       "name": "Summer Smith",
       "status": "Alive",
@@ -36,12 +36,12 @@ const data = {
       "type": "",
       "gender": "Female",
       "origin": {
-          "name": "Earth (Replacement Dimension)",
-          "url": "https://rickandmortyapi.com/api/location/20"
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
       },
       "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/3.jpeg"
-  },
-  {
+    },
+    {
       "id": 4,
       "name": "Beth Smith",
       "status": "Alive",
@@ -49,12 +49,12 @@ const data = {
       "type": "",
       "gender": "Female",
       "origin": {
-          "name": "Earth (Replacement Dimension)",
-          "url": "https://rickandmortyapi.com/api/location/20"
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
       },
       "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/4.jpeg"
-  },
-  {
+    },
+    {
       "id": 5,
       "name": "Jerry Smith",
       "status": "Alive",
@@ -62,69 +62,65 @@ const data = {
       "type": "",
       "gender": "Male",
       "origin": {
-          "name": "Earth (Replacement Dimension)",
-          "url": "https://rickandmortyapi.com/api/location/20"
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
       },
       "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/5.jpeg"
-  }]};
+    }]
+};
 
-describe('ordenadesgraça', () => {
+describe('getInfo', () => {
   it('is a function', () => {
-    expect(typeof ordenadesgraça).toBe('function');
+    expect(typeof getInfo).toBe('function');
   });
-
   it('returns `example`', () => {
-    expect(ordenadesgraça()).toBe('example');
+    expect(getInfo()).toBe('example');
   });
 });
 
-
-describe('ordemQveio', () => {
+describe('naturalOrder', () => {
   it('is a function', () => {
-    expect(typeof ordemQveio).toBe('function');
+    expect(typeof naturalOrder).toBe('function');
   });
-
-  it('returns `anotherExample`', () => {
-    expect(ordemQveio()).toBe('OMG');
+  it('returns `example`', () => {
+    expect(naturalOrder()).toBe('example');
   });
 });
 
-describe('ordenarAZ', () => {
+describe('orderAZ', () => {
   it('is a function', () => {
-    expect(typeof ordenarAZ).toBe('function');
+    expect(typeof orderAZ).toBe('function');
   });
-
   it('returns `example`', () => {
-    expect(ordenarAZ()).toBe('example');
+    expect(orderAZ()).toBe('example');
   });
 });
 
-describe('ordenarZA', () => {
+describe('orderZA', () => {
   it('is a function', () => {
-    expect(typeof ordenarZA).toBe('function');
+    expect(typeof orderZA).toBe('function');
   });
-
   it('returns `example`', () => {
-    expect(ordenarZA()).toBe('example');
+    expect(orderZA()).toBe('example');
   });
 });
 
-describe('filtraAll', () => {
+describe('filterAll', () => {
   it('is a function', () => {
-    expect(typeof filtraAll).toBe('function');
+    expect(typeof filterAll).toBe('function');
   });
 
   it('returns `example`', () => {
-    expect(filtraAll()).toBe('example');
+    expect(filterAll()).toBe('example');
   });
 });
 
-describe('buscador', () => {
+describe('searchName', () => {
   it('is a function', () => {
-    expect(typeof buscador).toBe('function');
+    expect(typeof searchName).toBe('function');
   });
 
   it('returns `example`', () => {
-    expect(buscador()).toBe('example');
+    expect(searchName()).toBe('example');
   });
 });

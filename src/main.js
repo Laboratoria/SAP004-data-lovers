@@ -1,40 +1,40 @@
-import {ordenarAZ, ordemQveio, ordenarZA, filtraAll, elements, buscador} from './data.js';
+import { orderAZ, naturalOrder, orderZA, filterAll, elements, searchName } from './data.js';
 
-function inserirNoHtml(vetor) {
-  let novaIsercao = "";
-  novaIsercao += vetor.map((item) =>
+function insertHtml(vector) {
+  let newInsertion = "";
+  newInsertion += vector.map((item) =>
     `<div class="cards">
-      <img class="imagem" src="${item[1]}" alt"${item[0]}>
+      <img id="imagem" src="${item[1]}" alt"${item[0]}>
       <div id="name"> <strong>${item[0]}</strong></div>
-      <p> <strong>Gender:</strong> ${item[2]}</p>
-      <p> <strong>Status:</strong> ${item[3]}</p>
-      <p> <strong>Species:</strong> ${item[4]}</p>
+      <p class="info"> <strong>Gender:</strong> ${item[2]}
+       <br><strong>Status:</strong> ${item[3]}
+      <br><strong>Species:</strong> ${item[4]}</p>
     </div>`
   ).join("");
-  document.getElementById('root').innerHTML = novaIsercao;
+  document.getElementById('root').innerHTML = newInsertion;
 }
 
 const selectElement = document.querySelector('.drop-menu');
-selectElement.addEventListener('change', seletor)
+selectElement.addEventListener('change', selector)
 
-const search = document.querySelector('#busca')
-search.addEventListener("keyup",() => inserirNoHtml(buscador(search, elements))); 
+const search = document.querySelector('#searchName')
+search.addEventListener("keyup", () => insertHtml(searchName(search, elements)));
 
-function seletor() {
+function selector() {
   if (selectElement.value === 'A-Z') {
-    return inserirNoHtml(ordenarAZ())
+    return insertHtml(orderAZ())
   } else if (selectElement.value === 'Z-A') {
-    return inserirNoHtml(ordenarZA())
+    return insertHtml(orderZA())
   } else if (selectElement.value === 'alive') {
-    return inserirNoHtml(filtraAll(elements, "status", "Alive"))
+    return insertHtml(filterAll(elements, "status", "Alive"))
   } else if (selectElement.value === 'dead') {
-    return inserirNoHtml(filtraAll(elements, "status", "Dead"))
+    return insertHtml(filterAll(elements, "status", "Dead"))
   } else if (selectElement.value === 'male') {
-    return inserirNoHtml(filtraAll(elements, "gender", "Male"))
+    return insertHtml(filterAll(elements, "gender", "Male"))
   } else if (selectElement.value === 'female') {
-    return inserirNoHtml(filtraAll(elements, "gender", "Female"))
+    return insertHtml(filterAll(elements, "gender", "Female"))
   } else {
-    return inserirNoHtml(ordemQveio())
+    return insertHtml(naturalOrder())
   }
 }
-seletor()
+selector()

@@ -12,38 +12,39 @@
 <body>
   <header>
     <div class="logo">
-      <img src="img/logo.png" id="logoRM" alt="logo"> 
+      <img src="img/logo.png" id="logoRM" alt="logo">
     </div>
-      <nav class="buttons">
-     <a href="index.html"><button class="botao" id="btn-home">Home</button></a>
-      <a href="personagens.html"><button class="botao" id="btn-personagens">Personagens</button></a>
-      <a href="mundos.html"><button class="botao" id="btn-mundos">Mundos</button></a>
-      <div class="canto-direito">
+    <nav class="buttons">
+      <a href="index.html"><button class="btn" id="btn-home">Home</button></a>
+      <a href="personagens.html"><button class="btn" id="color">Personagens</button></a>
+      <a href="mundos.html"><button class="btn">Mundos</button></a>
+      <div>
         <img src="img/portal2.png" id="portal2" alt="rrportal">
       </div>
-      </nav>
+    </nav>
   </header>
-      <div class="menu-filter">
-      <select class="drop-menu">
-        <option>Filtrar Por</option>
-        <option class="drop-menu" value="A-Z">A-Z</option>
-        <option class="drop-menu" value="Z-A">Z-A</option>
-        <option class="drop-menu" value="alive">Vivos</option>
-        <option class="drop-menu" value="dead">Mortos</option>
-        <option class="drop-menu" value="male">Homens</option>
-        <option class="drop-menu" value="female">Mulheres</option>
-      </select>
-    </div>
-    <div class="search">
-      <input id="busca" type="text" placeholder="Buscar por nomes">
-      </div>
-      <main>
+  <div class="menu-filter">
+    <select class="drop-menu">
+      <option>Filtrar Por</option>
+      <option class="drop-menu" value="A-Z">A-Z</option>
+      <option class="drop-menu" value="Z-A">Z-A</option>
+      <option class="drop-menu" value="alive">Vivos</option>
+      <option class="drop-menu" value="dead">Mortos</option>
+      <option class="drop-menu" value="male">Homens</option>
+      <option class="drop-menu" value="female">Mulheres</option>
+    </select>
+  </div>
+  <div class="search">
+    <input id="searchName" type="text" placeholder="Buscar por nomes">
+  </div>
+  <main>
     <div id="root"></div>
   </main>
-    <footer class="made">
-      <p>Desenvolvido por <a href="https://github.com/sabia997">Sabrina</a> e <a href="https://github.com/milaroque">Camila</a>
-      </p>
-    </footer>
+  <footer class="made">
+    <p>Desenvolvido por <a href="https://github.com/sabia997">Sabrina</a> e <a
+        href="https://github.com/milaroque">Camila</a>
+    </p>
+  </footer>
   <script src="main.js" type="module"></script>
 </body>
 
