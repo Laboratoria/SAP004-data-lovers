@@ -73,4 +73,4 @@ function searchType() {
         return search.type.includes(filterType);
     });
     allList(listType);
-}
+};
