@@ -25,41 +25,42 @@ const colorTypeList = {
     Water: "#87CEEB",
 };
 
+//Manipulação dos cards da tela inicial
 const cloneCards = () => document.querySelector('.container-deck').appendChild(document.querySelector('.container-card').cloneNode(true));
 
 const setInfosOnCard = (node, index, data, attribute) => {
-		let parentNode = document.querySelectorAll(node)[index]
-		parentNode.textContent = data[index][attribute];
+    let parentNode = document.querySelectorAll(node)[index]
+    parentNode.textContent = data[index][attribute];
 
-		//Tratando as exceções nas informações
-		const fixInfosDetails = () => {
-				switch (attribute) {
-						case 'name':
-								if (data[index][attribute] === "Nidoran ♀ (Female)") {
-										parentNode.textContent = 'Nidoran ♀';
-								}
-								if (data[index][attribute] === "Nidoran ♂ (Male)") {
-										parentNode.textContent = 'Nidoran ♂';
-								}
-								break;
-						case 'img':
-								parentNode.src = data[index][attribute];
-								break;
-						case 'type':
-								parentNode.style.width = "150px";
-								if (data[index][attribute].length > 1) {
-										parentNode.textContent = `${data[index][attribute][0]} - ${data[index][attribute][1]}`;
-								}
-								break;
-				}
-		}
-		fixInfosDetails();
+    //Tratando as exceções nas informações
+    const fixInfosDetails = () => {
+        switch (attribute) {
+            case 'name':
+                if (data[index][attribute] === "Nidoran ♀ (Female)") {
+                    parentNode.textContent = 'Nidoran ♀';
+                }
+                if (data[index][attribute] === "Nidoran ♂ (Male)") {
+                    parentNode.textContent = 'Nidoran ♂';
+                }
+                break;
+            case 'img':
+                parentNode.src = data[index][attribute];
+                break;
+            case 'type':
+                parentNode.style.width = "130px";
+
+                if (data[index][attribute].length > 1) {
+                    parentNode.textContent = `${data[index][attribute][0]} - ${data[index][attribute][1]}`;
+                }
+                break;
+        }
+    }
+    fixInfosDetails();
 
 }
-
 const setCardColor = (index) => document.querySelectorAll('.container-card')[index].style.backgroundColor = colorTypeList[data["pokemon"][index]["type"][0]];
 
-//Função para carregar cards com as informações dos pokemons
+
 const loadCards = (dataset) => {
     for (let i = 0; i < dataset.length; i++) {
         cloneCards();
@@ -69,20 +70,20 @@ const loadCards = (dataset) => {
         setInfosOnCard('.img-pok', i, data["pokemon"], 'img');
         setCardColor(i);
         document.querySelectorAll('.container-card')[i].addEventListener("click", () => {
-        clickCard(data["pokemon"][i].name,data["pokemon"][i].num,data["pokemon"][i].type,
-        data["pokemon"][i].img,data["pokemon"][i].height,data["pokemon"][i].weight,data["pokemon"][i].candy,
-        data["pokemon"][i].candy_count,data["pokemon"][i].egg,data["pokemon"][i].spawn_chance)});
+            clickCard(data["pokemon"][i].name, data["pokemon"][i].num, data["pokemon"][i].type,
+                data["pokemon"][i].img, data["pokemon"][i].height, data["pokemon"][i].weight, data["pokemon"][i].candy,
+                data["pokemon"][i].candy_count, data["pokemon"][i].egg, data["pokemon"][i].spawn_chance)
+        });
     }
     removeCard(dataset.length);
 }
 
-//Função para remover template
+
 const removeCard = (index) => document.querySelector('.container-deck').removeChild(document.querySelectorAll('.container-card')[index]);
 
-//Chamada
 loadCards(data["pokemon"]);
 
-//Função para recuperar escolha de filtro do usuário
+//Recuperar escolhas do usuário
 const getTypeChoosedfunction = () => {
     const select = document.getElementsByClassName('select')[0];
     const optionValue = select.options[select.selectedIndex].value;
@@ -90,8 +91,6 @@ const getTypeChoosedfunction = () => {
 };
 
 
-//Implementação do filtro por tipo
-//Refatorar depois e tirar comments
 const createfilterType = (pokemon) => {
     console.log(pokemon)
         //recuperando o valor escolhido pelo usuário
@@ -103,7 +102,6 @@ const createfilterType = (pokemon) => {
     }
 };
 
-
 const applyFilterTypeOnCards = () => {
     let cardList = document.querySelectorAll('.container-card');
     // console.log(cardList);
@@ -114,15 +112,6 @@ const applyFilterTypeOnCards = () => {
     let dataFiltered = data["pokemon"].filter(createfilterType);
     console.log(dataFiltered);
 
-    //como fazer o array diff?Quero usá-lo para sumir com os cards não selecionados na tela inicial
-    //simulando um array diff qualquer
-    // let [a, b, , , c, d, e, , f, g, h, , i, j] = data["pokemon"];
-    // let dataNotFiltered = [a, b, c, d, e, f, g, h, i, j];
-    // console.log(dataNotFiltered);
-
-
-    // //sumir com cards não selecionados:
-    //1.Pegar os nós html que contém o número dos pokemons
     let numberNodeList = document.querySelectorAll('.number-pok');
 
     // //Para cada polemon não selecionado:
@@ -141,7 +130,6 @@ const applyFilterTypeOnCards = () => {
     };
 };
 
-//Função para recuperar escolha de ordenar do usuário
 const getOrderChoosedfunction = () => {
     const selectOrder = document.getElementsByClassName('select')[1];
     console.log(selectOrder)
@@ -174,46 +162,46 @@ const optionOrder = getOrderChoosedfunction();
 const modal = document.querySelector('.modal-char');
 
 function openModal() {
-		modal.style.display= "block"
+    modal.style.display = "block"
 };
 
 const closeModal = document.querySelector('.close').addEventListener("click", () => {
-		modal.style.display= "none"
+    modal.style.display = "none"
 });
 
 window.addEventListener("click", (event) => {
-		if (event.target == modal) {
-				modal.style.display= "none"
-		}
+    if (event.target == modal) {
+        modal.style.display = "none"
+    }
 });
 
 
-function clickCard (name,num,type,img,height,weight,candy,candy_count,egg,spawn_chance) {
-		// const changingInfo = () => {
-		//     if (name === "Nidoran ♀ (Female)") {
-		//         name = "Nidoran ♀";    
-		//     }  else  if (name === "Nidoran ♂ (Male)") {
-		//         name = "Nidoran ♂";
-		//     } else if (type === "type[0],type[1]"){
-		//         type = `${type[0]} - ${type[1]}`;
-		//     } else (candy_count === ""){
-		//         candy_count = 0;
-		//     }
-		// }
-		// changingInfo();
-		console.log(name,num,type,img,height,weight,candy,candy_count,egg,spawn_chance)
-		document.getElementById("char-name").textContent = name
-		document.getElementById("char-num").textContent = num
-		document.getElementById("char-type").textContent = type
-		document.getElementById("char-img").src = img
-		document.getElementById("char-height-value").textContent = height
-		document.getElementById("char-weight-value").textContent = weight
-		document.getElementById("char-cand-value").textContent = candy
-		document.getElementById("char-cand-count-value").textContent = candy_count
-		document.getElementById("Char-egg-value").textContent = egg
-		document.getElementById("char-spawn-chance-value").textContent = spawn_chance
-		openModal();
-		
+function clickCard(name, num, type, img, height, weight, candy, candy_count, egg, spawn_chance) {
+    // const changingInfo = () => {
+    //     if (name === "Nidoran ♀ (Female)") {
+    //         name = "Nidoran ♀";    
+    //     }  else  if (name === "Nidoran ♂ (Male)") {
+    //         name = "Nidoran ♂";
+    //     } else if (type === "type[0],type[1]"){
+    //         type = `${type[0]} - ${type[1]}`;
+    //     } else (candy_count === ""){
+    //         candy_count = 0;
+    //     }
+    // }
+    // changingInfo();
+    console.log(name, num, type, img, height, weight, candy, candy_count, egg, spawn_chance)
+    document.getElementById("char-name").textContent = name
+    document.getElementById("char-num").textContent = num
+    document.getElementById("char-type").textContent = type
+    document.getElementById("char-img").src = img
+    document.getElementById("char-height-value").textContent = height
+    document.getElementById("char-weight-value").textContent = weight
+    document.getElementById("char-cand-value").textContent = candy
+    document.getElementById("char-cand-count-value").textContent = candy_count
+    document.getElementById("Char-egg-value").textContent = egg
+    document.getElementById("char-spawn-chance-value").textContent = spawn_chance
+    openModal();
+
 }
 
 //Voltar para home page
@@ -228,6 +216,6 @@ document.getElementsByClassName('select')[0].addEventListener("change", () => {
     applyFilterTypeOnCards();
 });
 
-document.getElementsByClassName('select')[1].addEventListener("change",() => {
+document.getElementsByClassName('select')[1].addEventListener("change", () => {
     getOrderChoosedfunction();
 });
