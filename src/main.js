@@ -8,7 +8,6 @@ console.log(data)
 //Variáveis globais: configuração
 const colorTypeList = {
     Bug: "#1E6DE3",
-    Dark: "#000000",
     Electric: "#D7DB1E",
     Fighting: "#FEC807",
     Fire: "#FF8C00",
@@ -82,20 +81,24 @@ const removeCard = (index) => document.querySelector('.container-deck').removeCh
 //Chamada
 loadCards(data["pokemon"]);
 
-//Função para recuperar escolha de filtro do usuário
-const getTypeChoosedfunction = () => {
-    const select = document.getElementsByClassName('select')[0];
-    const optionValue = select.options[select.selectedIndex].value;
-    return optionValue;
-};
 
+//Função para recuperar escolha de ordenar do usuário
+function getUserOption(SelectIndex){
+    const select = document.getElementsByClassName('select')[SelectIndex];
+    console.log(select)
+    const optionValue = select.options[select.selectedIndex].value;
+    console.log(`O valor do do option selecionado foi ${optionValue}`)
+    return optionValue;
+    };
+        
+    
 
 //Implementação do filtro por tipo
 //Refatorar depois e tirar comments
 const createfilterType = (pokemon) => {
     console.log(pokemon)
         //recuperando o valor escolhido pelo usuário
-    let optionUser = getTypeChoosedfunction();
+    let optionUser = getUserOption(0);
     console.log(optionUser)
         //criando a lógica de busca
     if (pokemon.type[0] !== optionUser && pokemon.type[1] !== optionUser) {
@@ -141,34 +144,36 @@ const applyFilterTypeOnCards = () => {
     };
 };
 
-//Função para recuperar escolha de ordenar do usuário
-const getOrderChoosedfunction = () => {
-    const selectOrder = document.getElementsByClassName('select')[1];
-    console.log(selectOrder)
-    const optionOrderValue = selectOrder.options[selectOrder.selectedIndex].value;
-    console.log(optionOrderValue)
-    return optionOrderValue;
-};
-
-
-const optionOrder = getOrderChoosedfunction();
-// criar função para ordenar pura passando parametros
-
-//operador ternário 
-
-// Ex: Então, a função de comparação tem a seguinte forma:
-// function comparar(a, b) {
-//   if (a < b ) {
-//     return -1;
-//   }
-//   if (a > b) {
-//     return 1;
-//   }
-//   // a deve ser igual a b
-//   return 0;
-// }
-
-
+//informação obtida ao clicar no campo ordenar
+function sortData(orderBy) {
+    const optionOrderUser = getUserOption(1)
+    if (optionOrderUser === "Menor-nº"||optionOrderUser === "A-Z"){
+            const ordenado = data["pokemon"].sort((a,b) =>{
+            if (a[orderBy] > b[orderBy]) {
+                return 1;
+            }
+            if (a[orderBy] < b[orderBy]) {
+                return -1;
+            }
+            
+            return 0;
+        })
+        console.log(ordenado)
+    } else if(optionOrderUser === "Maior-nº" || optionOrderUser === "A-Z"){
+        const ordenado = data["pokemon"].sort((a,b) =>{
+            if (a[orderBy] > b[orderBy]) {
+                return -1;
+            }
+            if (a[orderBy] < b[orderBy]) {
+                return 1;
+            }
+            
+            return 0;
+        })
+        console.log(ordenado)
+    }
+    }
+    
 
 // //modal
 const modal = document.querySelector('.modal-char');
@@ -224,10 +229,15 @@ const goLaboratoriaPage = () => window.location.href = "https://www.laboratoria.
 document.querySelector('#home').addEventListener('click', goHomePage);
 document.querySelector('#logo-lab').addEventListener('click', goLaboratoriaPage)
 document.getElementsByClassName('select')[0].addEventListener("change", () => {
-    getTypeChoosedfunction();
+    getUserOption(0);
     applyFilterTypeOnCards();
 });
 
 document.getElementsByClassName('select')[1].addEventListener("change",() => {
-    getOrderChoosedfunction();
+    
+        if (getUserOption(1)=== "Menor-nº" || getUserOption(1)=== "Maior-nº"){
+            sortData("id")
+        } else if (getUserOption(1)=== "A-Z" || getUserOption(1)=== "Z-A"){
+            sortData("name")
+        }
 });
