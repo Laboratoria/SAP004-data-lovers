@@ -24,3 +24,4 @@ export const sortOrder = (pokemon, order, byOrder) => {
 // função de Filtro
 export const filterByType = (pokemonType, pokemon) => pokemon.filter(pkm => pkm.type.includes(pokemonType));
 
+//
