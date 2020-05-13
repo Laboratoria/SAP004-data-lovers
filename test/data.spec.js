@@ -1,4 +1,4 @@
-import { filterByType, sortOrder } from '../src/data.js';
+import { filterByType, sortOrder, searchPokemon } from '../src/data.js';
 
 const pokemonMock = [{
   id: 1,
@@ -49,14 +49,15 @@ describe('Deve ordernar os pokémons de A-Z e Z-A ou 1-151 a 151-1', () => {
   });
 });
 
-/*
+
 describe('Deve buscar os pokémons pelo nome', () => {
   it('é uma função', () => {
     expect(typeof searchPokemon).toBe('function');
   });
   
-  it('retorna o pokémon pelo nome buscado', () => {
-    expect(searchPokemon("Bulbasaur", "name", pokemonMock)).toEqual([{"id": 1, "name": "Bulbasaur", "type": ["Grass", "Poison"]}]);
+  it('retorna pokémon pesquisado', () => {
+  const searchName = searchPokemon( "bulbasaur", "name", pokemonMock)[0];
+    expect(searchName.name).toEqual("Bulbasaur");
   });
 });
-*/
+

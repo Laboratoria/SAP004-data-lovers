@@ -59,15 +59,14 @@ const card = (num, name, img, type) => {
 pokemonData.map(pokemon => pokemonsList.innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));
 
 // cards filtrados
-searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar, "name", pokemonData)));
+earchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData)));
 
 const displayPokemons = (pokemon) => {
   const cards = pokemon
     .map((pokemon) => {
-      return `<figure class="card-pokemon"><p class="pokemon-num">${pokemon.num}</p>
-      <img src="${pokemon.img}" alt="Miniatura do pokémon ${pokemon.name} do tipo ${pokemon.type}">
-      <figcaption class="pokemon-name">${pokemon.name}</figcaption>
-      </figure>`;
+      return `<div class="pokemon-info" ><figure class="card-pokemon"><p class="pokemon-num">${pokemon.num}</p>
+      <img class="pokemon-image" src="${pokemon.img}" alt="Miniatura do pokémon ${pokemon.name} do tipo ${pokemon.type}">
+</figure> <div><figcaption class="pokemon-name">${pokemon.name}</figcaption> </div></div>`;
     })
     .join('');
   pokemonsList.innerHTML = cards;
