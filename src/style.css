@@ -96,6 +96,7 @@
   .icon-voador:before {
     content: "\e914";
   }
+
   
 body{
     background:white;
@@ -103,7 +104,6 @@ body{
     font-family: 'Maven Pro', sans-serif;
     
 }
-
 
 
 #root {
@@ -132,8 +132,6 @@ body{
 .pokemon-image{
     align-items: center;
 }
-
-
 
 
 .pokemon-info{
