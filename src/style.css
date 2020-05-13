@@ -357,7 +357,6 @@ hr {
     * {
         margin: 0px;
         padding: 0px;
-        font-size: 0.5em;
     }
     .logo-align {
         display: none;
@@ -365,63 +364,20 @@ hr {
     .header {
         background-color: transparent;
     }
-    .inner-header {
-        width: 320px;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        border: solid tomato;
-        width: 100%;
-    }
-    .inner-header>.flex {
+    /* .inner-header>.flex {
         flex-direction: column;
         align-items: flex-end;
-    }
+    } */
     .inner-header>.flex .btn {
+        position: absolute;
+        right: -165px;
         height: 30px;
         padding: 5px;
         opacity: 1;
         border: 1px solid gray;
         transform: all 0.5s;
         margin-bottom: 2px;
-    }
-    .select:hover {
-        background-color: transparent;
-    }
-    .btn-filter {
-        background-color: tomato;
-    }
-    .btn-order {
-        background-color: yellow;
-    }
-    .btn-search {
-        background-color: violet;
-    }
-    .btn-filter:hover {
-        width: 350px;
-        background-color: tomato;
-    }
-    .btn-order:hover {
-        width: 350px;
-        background-color: yellow;
-    }
-    .btn-search:hover {
-        width: 350px;
-        justify-content: flex-start;
-        background-color: violet;
-    }
-    .btn-search input {
-        width: 150px;
-    }
-    .img-btn-search,
-    .img-btn-order {
-        width: 22px;
-        height: 20px;
-        margin-right: 10px;
-    }
-    .img-btn-filter {
-        width: 35px;
-        height: 30px;
+        border-radius: 5px 0px 0px 5px;
     }
     .container {
         margin-top: 50px;
@@ -430,13 +386,61 @@ hr {
     .container-card {
         margin: 3px auto;
     }
+    .btn-filter {
+        background-color: tomato;
+        top: 5px;
+    }
+    .btn-order {
+        background-color: yellow;
+        top: 40px;
+    }
+    .btn-search {
+        background-color: violet;
+        top: 75px;
+    }
+    .btn-search input {
+        width: 160px;
+        padding: auto;
+    }
+    .btn-search input::placeholder {
+        font-size: large;
+        padding: 30px;
+    }
+    .inner-header .btn:hover {
+        width: 200px;
+        right: 0px;
+    }
+    .btn-filter:hover {
+        background-color: tomato;
+    }
+    .btn-order:hover {
+        background-color: yellow;
+    }
+    .btn-search:hover {
+        background-color: violet;
+    }
+    .select:hover {
+        background-color: transparent;
+    }
+    .img-btn-search {
+        width: 22px;
+        height: 20px;
+    }
+    .img-btn-order {
+        width: 22px;
+        height: 20px;
+    }
+    .img-btn-filter {
+        width: 45px;
+        height: 30px;
+        padding-right: 20px;
+    }
 }
 
 @media only screen and (min-width: 425px) and (max-width: 760px) {
     * {
         margin: 0px;
         padding: 0px;
-        font-size: 0.5em;
     }
     .logo-align {
         display: none;
@@ -444,71 +448,76 @@ hr {
     .header {
         background-color: transparent;
     }
-    .inner-header {
-        width: 320px;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        border: solid tomato;
-        width: 100%;
-    }
-    .inner-header>.flex {
+    /* .inner-header>.flex {
         flex-direction: column;
         align-items: flex-end;
-    }
+    } */
     .inner-header>.flex .btn {
+        position: absolute;
+        right: -165px;
         height: 30px;
         padding: 5px;
         opacity: 1;
         border: 1px solid gray;
-        transform: all 0.5s;
+        transform: all 0.7s;
         margin-bottom: 2px;
+        border-radius: 5px 0px 0px 5px;
+    }
+    .container {
+        margin-top: 50px;
+        width: 425px;
+    }
+    .container-card {
+        margin: 3px auto;
+    }
+    .btn-filter {
+        background-color: tomato;
+        top: 5px;
+    }
+    .btn-order {
+        background-color: yellow;
+        top: 40px;
+    }
+    .btn-search {
+        background-color: violet;
+        top: 75px;
+    }
+    .btn-search input {
+        width: 160px;
+        padding: auto;
+    }
+    .btn-search input::placeholder {
+        font-size: large;
+        padding: 30px;
+    }
+    .inner-header .btn:hover {
+        width: 200px;
+        right: 0px;
+    }
+    .btn-filter:hover {
+        background-color: tomato;
+    }
+    .btn-order:hover {
+        background-color: yellow;
+    }
+    .btn-search:hover {
+        background-color: violet;
     }
     .select:hover {
         background-color: transparent;
     }
-    .btn-filter {
-        background-color: tomato;
+    .img-btn-search {
+        width: 22px;
+        height: 20px;
     }
-    .btn-order {
-        background-color: yellow;
-    }
-    .btn-search {
-        background-color: violet;
-    }
-    .btn-filter:hover {
-        width: 350px;
-        background-color: tomato;
-    }
-    .btn-order:hover {
-        width: 350px;
-        background-color: yellow;
-    }
-    .btn-search:hover {
-        width: 350px;
-        justify-content: flex-start;
-        background-color: violet;
-    }
-    .btn-search input {
-        width: 150px;
-    }
-    .img-btn-search,
     .img-btn-order {
         width: 22px;
         height: 20px;
-        margin-right: 10px;
     }
     .img-btn-filter {
-        width: 35px;
+        width: 45px;
         height: 30px;
-    }
-    .container {
-        max-width: 425px;
-        margin-top: 50px;
-    }
-    .container-card {
-        width: 200px;
-        margin: 3px auto;
+        padding-right: 20px;
     }
 }
 
