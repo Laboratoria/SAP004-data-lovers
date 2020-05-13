@@ -1,47 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTES */
+
+/* Ícones */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?mlm3x3');
+    src:  url('fonts/icomoon.eot?mlm3x3#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?mlm3x3') format('truetype'),
+      url('fonts/icomoon.woff?mlm3x3') format('woff'),
+      url('fonts/icomoon.svg?mlm3x3#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-busca:before {
+    content: "\e900";
+  }
+  .icon-ordem:before {
+    content: "\e901";
+  }
+  .icon-tipo:before {
+    content: "\e902";
+  }
+  .icon-aco:before {
+    content: "\e903";
+  }
+  .icon-agua:before {
+    content: "\e904";
+  }
+  .icon-dragao:before {
+    content: "\e905";
+  }
+  .icon-eletrico:before {
+    content: "\e906";
+  }
+  .icon-fada:before {
+    content: "\e907";
+  }
+  .icon-fantasma:before {
+    content: "\e908";
+  }
+  .icon-fogo:before {
+    content: "\e909";
+  }
+  .icon-gelo:before {
+    content: "\e90a";
+  }
+  .icon-inseto:before {
+    content: "\e90b";
+  }
+  .icon-lutador:before {
+    content: "\e90c";
+  }
+  .icon-normal:before {
+    content: "\e90d";
+  }
+  .icon-noturno:before {
+    content: "\e90e";
+  }
+  .icon-pedra:before {
+    content: "\e90f";
+  }
+  .icon-planta:before {
+    content: "\e910";
+  }
+  .icon-psiquico:before {
+    content: "\e911";
+  }
+  .icon-terrestre:before {
+    content: "\e912";
+  }
+  .icon-venenoso:before {
+    content: "\e913";
+  }
+  .icon-voador:before {
+    content: "\e914";
+  }
+  
 body{
-    background: rgb(141, 206, 243);
+    background:white;
     font-family: sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     
 }
 
-* {
-    box-sizing: border-box;
-}
-header{
-    text-align: center;
-    margin: auto;
-    background: rgb(141, 206, 243);
-    
-    }
-    
-section{
-    margin: bottom 10px;
-}
-   #root {
+
+
+#root {
     padding-inline-start: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
 }
-character {
-    list-style-type: none;
-    background-color: #eaeaea;
-    border-radius: 3px;
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-template-areas:
-        'num image'
-        'name image';
-    text-align: auto; 
-    
+
+.botao{
+    display: flex;
 }
+
 .card-pokemon{
-    margin:auto;
-    border-radius: 3px;
-    background-color: #eaeaea;
+    position: relative;   
     display: grid;
-    padding: 10px 30px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 14.29%;
+    background: #FFFFFF;
+/* Bordas */
+    border: 1.64444px solid #A5A5A5;
+    border-radius: 8.22222px;
+}
+.pokemon-image{
+    align-items: center;
+}
+
+
+
+
+.pokemon-info{
+    border: solid 3px black;
+
+}
+    /* pokémon 
+
+
+position: absolute;
+ padding: 10px 30px;
+
+*/
     
 }
 .pokemon-name{
@@ -50,12 +155,121 @@ character {
 .pokemon-num{
     text-align: end;
 }
+/* 
+/* Aço */
+{
 
-#searchBar{
-    margin-left: 35%;
-    margin-bottom: 20px;
-    width: 400px;
-    height: 30px;
-    border-radius: 20px;
+background: #5AA7AA;
+
+
+
+
+/* Água 
+
+
+background: #68B5E5;
+
+/* Dragão 
+
+
+background: #0A6DCA;
+
+/* Elétrico 
+
+
+background: #FFC700;
+
+/* Fada 
+
+
+background: #F29FE5;
+
+/* Fantasma 
+
+
+background: #7272D2;
+
+/* Fogo 
+
+
+background: #FF8713;
+
+/* Gelo 
+
+
+background: #77D3C3;
+
+/* Inseto 
+
+
+background: #A2C629;
+
+/* Lutador 
+
+
+background: #E80011;
+
+/* Normal 
+
+
+background: #9B9BA3;
+
+
+/* Noturno 
+
+background: #5D5F6A;
+
+/* Pedra 
+
+
+background: #D5AD30;
+
+/* Planta 
+
+
+background: #34C677;
+
+/* Psíquico 
+
+
+background: #FE7571;
+
+/* Terrestre 
+
+
+background: #D17F46;
+
+/* Venenoso 
+
+
+background: #C645E1;
+
+/* Voador 
+
+
+background: #9FB9EB;
+
+/* Bordas 
+
+
+background: #A5A5A5;
+
+/* Pokémon 
+
+
+background: #333333;
+
+/* Menu 
+
+
+background: #9F9F9F;
+
+/* Branco 
+
+
+background: #FFFFFF;
+
 }
+*/
+
 

@@ -1,33 +1,63 @@
-import { sortAlphaOrder } from '.data/pokemo/pokemon.js';
+import { filterByType, sortOrder, searchPokemon } from '../src/data.js';
 
+const pokemonMock = [{
+  id: 1,
+  name: "Bulbasaur",
+  type: ["Grass", "Poison"],
+  },
+  {
+  id: 4,
+  name: "Charmander",
+  type: ["Fire"],
+  }
+];
 
-describe('Teste ordem az', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('Deve filtrar o pokémon por tipo', () => {
+  it('é uma função', () => {
+    expect(typeof filterByType).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('retorna o objeto do pokémon quando filtrado por tipo', () => {
+    expect(filterByType("Grass", "type", pokemonMock)).toEqual([{"id": 1, "name": "Bulbasaur", "type": ["Grass", "Poison"]}]);
   });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+describe('Deve ordernar os pokémons de A-Z e Z-A ou 1-151 a 151-1', () => {
+  it('é uma função', () => {
+    expect(typeof sortOrder).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
-
-describe('sortAlphaOrder',()=>{
-  it ('is a function', () => {
-    expect(typeof sortAlphaOrder()).toBe('function');
+  it('retorna uma lista de pokémons ordenados de a-z', () => {
+    const firstPosition = sortOrder("az", "name", pokemonMock)[0];
+    expect(firstPosition.name).toBe("Bulbasaur");
   });
   
-  it('returns' `sortAlphaOrder`, () => {
-    expect(typeof sortAlphaOrder()).toBe('sortAlphaOrder')
-  })
+  it('retorna uma lista de pokémons ordenados de z-a', () => {
+    const firstPosition = sortOrder("za", "name", pokemonMock)[0];
+    expect(firstPosition.name).toBe("Charmander");
+  });
+
+  it('retorna uma lista de pokémons ordenados de 1-151', () => {
+    const firstPosition = sortOrder("cresc", "id", pokemonMock)[0];
+    expect(firstPosition.id).toBe(1);
+  });
+  
+  it('retorna uma lista de pokémons ordenados de 151-1', () => {
+    const firstPosition = sortOrder("decre", "id", pokemonMock)[0];
+    expect(firstPosition.id).toBe(4);
+  });
 });
+
+
+describe('Deve buscar os pokémons pelo nome', () => {
+  it('é uma função', () => {
+    expect(typeof searchPokemon).toBe('function');
+  });
+  
+  it('retorna pokémon pesquisado', () => {
+  const searchName = searchPokemon( "bulbasaur", "name", pokemonMock)[0];
+    expect(searchName.name).toEqual("Bulbasaur");
+  });
+});
+
