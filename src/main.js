@@ -20,7 +20,7 @@ const aboutTheGameDiv = document.getElementById("about-the-game-div");
 const compareChampion = document.getElementById("compare-champions");
 const youtubeMedia = document.getElementById("youtube-media");
 
-var champion = data.data;
+const champion = data.data;
 
 
 function showChampions() {
@@ -39,11 +39,11 @@ function showChampions() {
   youtubeMedia.style.visibility = "hidden";
   youtubeMedia.style.display = "none";
 
-
+  let template = "";
   for (let persona in data.data) {
-    document.getElementById("see-characters-here").innerHTML += `
+    template += `
     <div class="champions-card">
-    <img class="image common" src="${champion[persona].img}">
+    <p class="image-splash"><img class="image common" src="${champion[persona].splash}"></p>
     <p class="name common">Name: ${persona}</p>
     <p class="title common">${champion[persona].title}</p>
     <p class="role common">Role: ${champion[persona].tags}</p>
@@ -53,9 +53,8 @@ function showChampions() {
     <p class="info-champ common">Difficulty: ${champion[persona].info.difficulty}</p>
     </div>
     `;
-
   };
-
+  document.getElementById("see-characters-here").innerHTML = template;
 };
 
 function showAboutGame() {
@@ -112,7 +111,7 @@ function showYoutubers() {
 document.getElementById("send-ordination").addEventListener("click", sortCharacters);
 
     
-function sortCharacters(event) {
+function sortCharacters() {
 
     if (document.getElementById("AZ").checked){
 
@@ -130,10 +129,11 @@ function sortCharacters(event) {
       arrayPersonas.push(persona);   
       };
 
+      let template = "";
       for (let persona of arrayPersonas.sort()) {
-      document.getElementById("see-characters-sort-here-AZ").innerHTML += `
+      template += `
       <div class="champions-card">
-      <img class="image common" src="${champion[persona].img}">
+      <p class="image-splash"><img class="image common" src="${champion[persona].splash}"></p>
       <p class="name common">Name: ${persona}</p>
       <p class="title common">${champion[persona].title}</p>
       <p class="role common">Role: ${champion[persona].tags}</p>
@@ -144,6 +144,7 @@ function sortCharacters(event) {
       </div>
       `;
       };
+      document.getElementById("see-characters-sort-here-AZ").innerHTML = template;
       
     }else if(document.getElementById("ZA").checked){
 
@@ -161,10 +162,11 @@ function sortCharacters(event) {
       arrayPersonas.push(persona);   
       };
 
+      let template = "";
       for (let persona of arrayPersonas.sort().reverse()) {
-      document.getElementById("see-characters-sort-here-ZA").innerHTML += `
+      template += `
       <div class="champions-card">
-      <img class="image common" src="${champion[persona].img}">
+      <p class="image-splash"><img class="image common" src="${champion[persona].splash}"></p>
       <p class="name common">Name: ${persona}</p>
       <p class="title common">${champion[persona].title}</p>
       <p class="role common">Role: ${champion[persona].tags}</p>
@@ -174,7 +176,8 @@ function sortCharacters(event) {
       <p class="info-champ common">Difficulty: ${champion[persona].info.difficulty}</p>
       </div>
       `;
-       };
+      };
+      document.getElementById("see-characters-sort-here-ZA").innerHTML = template;
 
     };
 };

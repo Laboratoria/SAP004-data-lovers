@@ -1,112 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>League of Legends Tool</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>League of Legends Tool</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
 
-   <div class="header-link">
-        <header title="League of Legends Tool - Main Page">League of Legends Tool</header>
-   </div>
+<body>
 
-    <nav class="menu">
-      <ul>
-        <button id="about-game" class="style-buttons">
-          <li>Sobre o Jogo</li>
-        </button> 
+  <div class="header-link">
+    <a href="index.html">
+      <header title="League of Legends Tool - Main Page">League of Legends Tool</header>
+    </a>
+  </div>
 
-        <button id="show-champions" class="style-buttons">
+  <nav class="menu">
+    <ul>
+      <button id="about-game" class="style-buttons">
+        <li>Sobre o Jogo</li>
+      </button>
+
+      <button id="show-champions" class="style-buttons">
         <li>Campeões</li>
-        </button>
+      </button>
 
-        <button id="compare-champ-but" class="style-buttons">
+      <button id="compare-champ-but" class="style-buttons">
         <li>Compare</li>
-        </button>
+      </button>
 
-        <button id="but-youtube" class="style-buttons">
-          <li>Youtube</li>
-          </button>
-      </ul>        
-      
-    </nav>
+      <button id="but-youtube" class="style-buttons">
+        <li>Youtube</li>
+      </button>
+    </ul>
 
-    <br>
+  </nav>
 
-    <section>
-      <main>
-        <div id="lol-tool-intro" class="style-view">
-          <h1>League of Legends Tool</h1>
-          <p>O League of Legends Tool é um site que reúne as informações mais importantes
-          e mais requisitadas pelas jogadoras do, tão famoso, League of Legends. Aqui é possível 
-          encontrar desde informações mais básicas sobre cada um dos Campeões, até 
+  <br>
+
+  <section>
+    <main>
+      <div id="lol-tool-intro" class="style-view">
+        <h1>League of Legends Tool</h1>
+        <p>O League of Legends Tool é um site que reúne as informações mais importantes
+          e mais requisitadas pelas jogadoras do, tão famoso, League of Legends. Aqui é possível
+          encontrar desde informações mais básicas sobre cada um dos Campeões, até
           informações sobre youtubers mulheres que também são jogadoras de League of Legends.</p>
-        </div>
-      </main>
-    </section>
-    
-    <section id="about-the-game-div" class="style-view insivible-class">
-      <h1>Sobre o Jogo</h1>
-      <p>League of Legends é um jogo de estratégia em que duas equipes de cinco
+      </div>
+    </main>
+  </section>
+
+  <section id="about-the-game-div" class="style-view insivible-class">
+    <h1>Sobre o Jogo</h1>
+    <p>League of Legends é um jogo de estratégia em que duas equipes de cinco
       poderosos Campeões se enfrentam para destruir a base uma da outra. Escolha
       entre mais de 140 Campeões para realizar jogadas épicas, assegurar abates
       e destruir torres conforme você luta até a vitória.</p>
-    </section>
-    
-    <section id="characters-div" class="style-view insivible-class">
-      <h1>Campeões</h1>
+  </section>
 
- <!--     <label>
-        <select id="sort-characters" name="sort-characters">
-          <option value="selec-one">Select One …</option>
-          <option value="AZ">A-Z</option>
-          <option value="ZA">Z-A</option>
-        </select>
-      </label>    -->
+  <section id="characters-div" class="style-view insivible-class">
+    <h1>Campeões</h1>
 
-      <legend>Select One:</legend>                
-        <label>                    
+    <!--     <label>
+<select id="sort-characters" name="sort-characters">
+<option value="selec-one">Select One …</option>
+<option value="AZ">A-Z</option>
+<option value="ZA">Z-A</option>
+</select>
+</label>    -->
+    <div id="sort-div">
+      <legend>Select One:</legend>
+      <label>
         <input id="AZ" type="radio" name="ordination" value="AZ"> A-Z
-        <br>
-        </label>
-        <label>
+      </label>
+      <label>
         <input id="ZA" type="radio" name="ordination" value="ZA"> Z-A
-        <br>
-        </label>
-        <button id="send-ordination">Ordenar Personagens</button>
-                    
+      </label>
+      <br>
+      <button id="send-ordination">Ordenar</button>
+    </div>
+    <!--PARTE DOS FILTROS-->
+<!--
+      <div id="filter-div">
+      <legend>Select One:</legend>
+      <label>
+        <input type="radio" name="filter" value="filter-role" id="assassin">Assassin
+        <input type="radio" name="filter" value="filter-role" id="fighter">Fighter
+        <input type="radio" name="filter" value="filter-role" id="mage">Mage
+        <input type="radio" name="filter" value="filter-role" id="marksman">Marksman
+        <input type="radio" name="filter" value="filter-role" id="support">Support
+        <input type="radio" name="filter" value="filter-role" id="tank">Tank
+      </label>
+      <br>
+      <button id="filter-champions">Filtrar</button> 
+    </div>
+-->
+    <!--PARTE DOS FILTROS-->
+    <!--PARTE DE BUSCA-->
+    <div id="search-div">
+      <input type="text" id="search-entry" placeholder="Digite aqui...">
+      <button id="search-button">Buscar</button>
+    </div>
+    <!--PARTE DE BUSCA-->
+    <button type="submit" id="reset-button">Reset</button>
+    <div id="see-characters-here"></div>
+    <div id="see-characters-sort-here-AZ"></div>
+    <div id="see-characters-sort-here-ZA"></div>
+    <div id="see-filtered-champions-here"></div>
+  </section>
 
-      <div id="see-characters-here"></div>
-      <div id="see-characters-sort-here-AZ"></div>
-      <div id="see-characters-sort-here-ZA"></div>
-    </section>
- 
-    <section id="compare-champions" class="insivible-class style-view">
-        <p>Compare Campeões</p>
-      </div>
-    </section>
+  <section id="compare-champions" class="insivible-class style-view">
+    <p>Compare Campeões</p>
+  </section>
 
-    <section id="youtube-media" class="style-view insivible-class">
-        <h1>Youtubers Mulheres</h1>
-      <p>
-          <ul>
-              <li>Thaiga</li> 
-              <li>Queen</li> 
-              <li>Riyuuka</li>
-          </ul>
-      </p>
-    </section>
+  <section id="youtube-media" class="style-view insivible-class">
+    <h1>Youtubers Mulheres</h1>
+    <p>
+    <ul>
+      <li>Thaiga</li>
+      <li>Queen</li>
+      <li>Riyuuka</li>
+    </ul>
+    </p>
+  </section>
 
 
   <footer class="made-by">Copyright (c) 2020 by Amanda e Larissa</footer>
   <div id="root"></div>
 
-  
+
   <script src="main.js" type="module"></script>
-  </body>
+</body>
 
 </html>

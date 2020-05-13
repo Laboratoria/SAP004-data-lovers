@@ -23,6 +23,10 @@ header{
     border-color: #97723d;
 }
 
+a {
+    text-decoration: none;
+}
+
 .menu ul {
     padding:0px;
     padding-bottom: 10px;
@@ -43,6 +47,7 @@ h1{
     text-shadow: 2px 3px 2px #97723d;
     display: inline-flexbox;
     margin-top: 0%;
+    margin-bottom: 0%;
 }
 
 .style-buttons{
@@ -65,34 +70,26 @@ h1{
     background: #bda275c7;
 }
 
-.characters-list{
-    text-align: left;
-    font-size: ;
-    display: flex;
-    flex-wrap: wrap;
+#send-ordination, #filter-champions, #search-button, #reset-button {
+    border-radius: 3px;
+    background-color: #bda275;
+    font-size: 13px;
+    border: solid 1px black;
 }
-.characters-list > div{
-    margin: 10px;
-    align-items: center;
-}
-.champions-list{
-    display: inline;
-    margin-right: 10px;
-}
+
 .champions-card{
-    display: inline-block;
+    display: inline-grid;
     border-style: groove;
     border-width: 4px;
     border-color: #34dce8;
     background: #fbd27361;
-    width: 395px;
+    width: 304px;
+    height: 445px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
-img:hover{
-    transform: scale(1.5);
-    cursor: pointer;
-    cursor: url('cursor-lol.cur'), default;
-}
-.image, .name, .title, .role{
+
+.image, .name, .title, .role, .info-champ{
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -101,8 +98,15 @@ img:hover{
 }
 .image{
     align-items: center;
-    padding-top: 10px;
+    padding-top: 0px;
+    max-width: 304px;
 }
+
+.image-splash {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
 .made-by{
     text-align: center;
     bottom: 0;
@@ -116,92 +120,109 @@ img:hover{
     display: none;
 }
 
+/*TEMPORÁRIO*/
+#see-filtered-champions-here {
+    border-style: inset;
+    border-width: 2px;
+    border-color: blue;
+}
 
-
-/VERSÃO MOBILE/
-@media only screen and (max-width: 800px){
-    html{
-        background-image: url("seamless-wallpaper-mobile.jpg");
-        background-size: 100%;
-        background-repeat: inherit;
-        font-family: 'Girassol';
+/*VERSÃO MOBILE*/
+@media only screen and (max-width: 800px) {
+    html {
+      /* background-image: ; */
+      background-size: 100%;
+      background-repeat: inherit;
+      font-family: "Girassol";
     }
-    header{
-        background: #ffffff3d;;
-        font-size: 41px;
-        text-align: center;
-        border-style: double;
-        border-color: black;
-        border-width: 15px;
-        color: #97723d;
-        text-shadow: 2px 3px 2px black;
+    p {
+      font-size: 20px;
+    }
+    header {
+      background: #ffffff3d;
+      font-size: 41px;
+      text-align: center;
+      border-style: double;
+      border-color: black;
+      border-width: 15px;
+      color: #97723d;
+      text-shadow: 2px 3px 2px black;
     }
     .menu ul {
-        padding:0px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        margin:0px;
-        background-color: #ffffff3d;;
-        list-style: none;
-        text-align: center;
-        font-size: 30px;
+      padding: 0px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      margin: 0px;
+      background-color: #ffffff3d;
+      list-style: none;
+      text-align: center;
+      font-size: 30px;
     }
     .menu li {
-        display: inline-block;
-        width: 150px;
+      display: inline-block;
+      width: 150px;
     }
-    h1{
-        text-shadow: 2px 3px 2px #97723d;
-        display: inline-flexbox;
-        margin-top: 0px;
-        font-size: 30px;
+    h1 {
+      text-shadow: 2px 3px 2px #97723d;
+      display: inline-flexbox;
+      margin-top: 0px;
+      font-size: 30px;
     }
-    .characters-list{
-        text-align: left;
-        font-size: ;
-        display: flex;
-        flex-wrap: wrap;
+    .about-the-game-button, .characters-button, .youtube-button, .compare-button {
+      border-radius: 3px;
+      background-color: #bda275;
+      font-size: 20px;
+      font-family: "Girassol";
+      border: solid 1px black;
     }
-    .characters-list > div{
-        margin: 10px;
-        align-items: center;
+    .introduction-site, .introduction-game, .youtubers-list, .characters-list, .compare-characters {
+      text-align: center;
+      font-size: 20px;
     }
-    .champions-list{
-        display: inline;
-        margin-right: 10px;
+    #sort-div, #filter-div {
+      display: inline-block;
+      font-size: 15px;
+      border-width: 4px;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 269px;
+      text-align: center;
     }
-    .champions-card{
-        display: inline-block;
-        margin-bottom: 10px;
-        border-style: groove;
-        border-width: 4px;
-        border-color: #34dce8;
-        background: #fbd27361;
-        width: 60%;
+    #send-ordination, #filter-champions {
+      border-radius: 3px;
+      font-size: 13px;
+      border: solid 1px black;
     }
-    .about-the-game-button, .characters-button, .youtube-button, .compare-button{
-        border-radius: 3px;
-        background-color: #bda275;
-        font-size: 20px;
-        font-family: 'Girassol';
-        border: solid 1px black;
+    .style-view {
+      padding: 5px;
     }
-    .introduction-site, .introduction-game, .youtubers-list, .characters-list, .compare-characters{
-        text-align: center;
-        font-size: 20px;
-
+    .champions-card {
+      display: inline-block;
+      border-style: groove;
+      border-width: 4px;
+      border-color: #34dce8;
+      background: #fbd27361;
+      width: 95%;
+      height: 90%;
+      margin-bottom: 10px;
     }
-    .characters-list{
-        text-align: left;
-        font-size: 20px;
-
-        background: #ffffff3d;
-        background: #bda275c7;
+    .image {
+      align-items: center;
+      padding-top: 0%;
+      max-width: 100%;
     }
-    .made-by{
-        text-align: center;
-        bottom: 0;
-        position: end;
-        width: 100%;
-        background: #ffffff3d;
+    /*.characters-list{
+          text-align: left;
+          font-size: 20px;
+          background: #ffffff3d;
+          background: #bda275c7;
+      }*/
+    .made-by {
+      text-align: center;
+      bottom: 0;
+      position: end;
+      width: 100%;
+      background: #ffffff3d;
     }
+  }
