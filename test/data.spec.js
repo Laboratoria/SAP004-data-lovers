@@ -55,10 +55,9 @@ describe('Deve buscar os pokémons pelo nome', () => {
     expect(typeof searchPokemon).toBe('function');
   });
   
-  
-it('retorna pokemon pesquisado', () => {
+  it('retorna pokémon pesquisado', () => {
   const searchName = searchPokemon( "bulbasaur", "name", pokemonMock)[0];
     expect(searchName.name).toEqual("Bulbasaur");
-});
+  });
 });
 

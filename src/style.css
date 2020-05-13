@@ -1,8 +1,102 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* FONTES */
+
+/* Ícones */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?mlm3x3');
+    src:  url('fonts/icomoon.eot?mlm3x3#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?mlm3x3') format('truetype'),
+      url('fonts/icomoon.woff?mlm3x3') format('woff'),
+      url('fonts/icomoon.svg?mlm3x3#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-busca:before {
+    content: "\e900";
+  }
+  .icon-ordem:before {
+    content: "\e901";
+  }
+  .icon-tipo:before {
+    content: "\e902";
+  }
+  .icon-aco:before {
+    content: "\e903";
+  }
+  .icon-agua:before {
+    content: "\e904";
+  }
+  .icon-dragao:before {
+    content: "\e905";
+  }
+  .icon-eletrico:before {
+    content: "\e906";
+  }
+  .icon-fada:before {
+    content: "\e907";
+  }
+  .icon-fantasma:before {
+    content: "\e908";
+  }
+  .icon-fogo:before {
+    content: "\e909";
+  }
+  .icon-gelo:before {
+    content: "\e90a";
+  }
+  .icon-inseto:before {
+    content: "\e90b";
+  }
+  .icon-lutador:before {
+    content: "\e90c";
+  }
+  .icon-normal:before {
+    content: "\e90d";
+  }
+  .icon-noturno:before {
+    content: "\e90e";
+  }
+  .icon-pedra:before {
+    content: "\e90f";
+  }
+  .icon-planta:before {
+    content: "\e910";
+  }
+  .icon-psiquico:before {
+    content: "\e911";
+  }
+  .icon-terrestre:before {
+    content: "\e912";
+  }
+  .icon-venenoso:before {
+    content: "\e913";
+  }
+  .icon-voador:before {
+    content: "\e914";
+  }
+  
 body{
     background:white;
     font-family: sans-serif;
