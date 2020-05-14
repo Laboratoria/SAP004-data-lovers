@@ -1,4 +1,4 @@
-import { example } from './data.js';
+import { apllyAscendingOrder, applyDescendingOrder, applySearchType, applySearchName } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -15,34 +15,18 @@ function allList(list) {
         cardItem.innerHTML += `<img src = ${obj.img} class = "img-item"><h5>${obj.num}</h5>
         <h2>${obj.name.replace("(Female)", "").replace("(Male)", "")}</h2>
         <p>Tipo: ${obj.type.join(", ")}</p><p>Ovo: ${obj.egg}</p>
-        <h3>Fraquezas:</h3><p>${obj.weaknesses.join(", ")}</p>`;  
+        <h3>Fraquezas:</h3><p>${obj.weaknesses.join(", ")}</p>`;
 
         cards.appendChild(cardItem);
     }
 }
 allList(pokemonGo);
 
-document.getElementById("filter-name").addEventListener("keyup", searchName);
-
-function searchName(search) {
-    const filterName = document.getElementById("filter-name").value;
-    const newList = pokemonGo.filter(function (search) {
-        return search.name.toLowerCase().indexOf(filterName.toLowerCase()) > -1;
-    });
-    allList(newList);
-}
-
 document.getElementById("A-Z").addEventListener("click", ascendingOrder);
 
 function ascendingOrder(poke) {
     const orderResult = pokemonGo.sort(function (a, b) {
-        if (a.name > b.name) {
-            return 1;
-        }
-        if (a.name < b.name) {
-            return -1;
-        }
-        return 0;
+        return apllyAscendingOrder(a, b);
     });
 
     allList(orderResult);
@@ -52,13 +36,7 @@ document.getElementById("Z-A").addEventListener("click", descendingOrder);
 
 function descendingOrder(poke) {
     const orderResult = pokemonGo.sort(function (a, b) {
-        if (a.name > b.name) {
-            return -1;
-        }
-        if (a.name < b.name) {
-            return 1;
-        }
-        return 0;
+        return applyDescendingOrder(a, b);
     });
 
     allList(orderResult);
@@ -67,10 +45,38 @@ function descendingOrder(poke) {
 document.getElementById("select-type").addEventListener("change", searchType)
 
 function searchType() {
-    console.log("teste");
     const filterType = document.getElementById("select-type").value;
     const listType = pokemonGo.filter(function (search) {
-        return search.type.includes(filterType);
+        return applySearchType(search, filterType);
     });
     allList(listType);
 };
+
+document.getElementById("filter-name").addEventListener("keyup", searchName);
+
+function searchName(search) {
+    const filterName = document.getElementById("filter-name").value;
+    const newList = pokemonGo.filter(function (search) {
+        return applySearchName(search, filterName);
+    })
+    allList(newList);
+};
+/*function searchName(search) {
+    const filterName = document.getElementById("filter-name").value;
+    const newList = pokemonGo.filter(function (search) {
+        return search.name.toLowerCase().indexOf(filterName.toLowerCase()) > -1;
+    });
+    allList(newList);
+}*/
+/*cards.addEventListener("change", () => {
+    const filtered = window.filterSearch(pokemonGo, cards.value, "type");
+    allList(filtered);
+    cards.innerHTML = `
+      <p class="text-percentage">
+        Os pokémons do tipo ${cards.value} representam ${statistics(filtered, pokemonGo)}% dos pokemóns da primeira geração.
+      </p>`;
+  });
+
+  function statistics (dataType, data) {
+    return ((dataType.length*100)/data.length).toFixed(2);
+  };*/
