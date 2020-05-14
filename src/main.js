@@ -124,16 +124,18 @@ window.addEventListener("click", (event) => {
 });
 
 
-
 // ----------- Filtragem e Ordenação de dados -------------//
 
 //Recuperação da escolha dos usuários
 function getUserOption(SelectIndex) {
     const select = document.getElementsByClassName('select')[SelectIndex];
-    const optionValue = select.options[select.selectedIndex].value;
-    return optionValue;
-};
 
+    const optionValue = select.options[select.selectedIndex].value;
+    console.log(`O valor do do option selecionado foi ${optionValue}`)
+    return optionValue;
+    };
+        
+    
 
 //Filtro:
 const createfilterType = (pokemon) => {
@@ -170,38 +172,6 @@ const applyFilterTypeOnCards = (data) => {
     };
 };
 
-
-//Antes:
-// function sortData(orderBy) {
-//     const optionOrderUser = getUserOption(1)
-//     if (optionOrderUser === "Menor-nº" || optionOrderUser === "A-Z") {
-//         const ordenado = data["pokemon"].sort((a, b) => {
-//             if (a[orderBy] > b[orderBy]) {
-//                 return 1;
-//             }
-//             if (a[orderBy] < b[orderBy]) {
-//                 return -1;
-//             }
-
-//             return 0;
-//         })
-//         console.log(ordenado)
-//     } else if (optionOrderUser === "Maior-nº" || optionOrderUser === "A-Z") {
-//         const ordenado = data["pokemon"].sort((a, b) => {
-//             if (a[orderBy] > b[orderBy]) {
-//                 return -1;
-//             }
-//             if (a[orderBy] < b[orderBy]) {
-//                 return 1;
-//             }
-
-//             return 0;
-//         })
-//         console.log(ordenado)
-//     }
-// }
-
-
 //Ordenação:
 function sortData(orderBy) {
     //recuperar escolha do usuário sobre que tipo de ordem
@@ -215,9 +185,8 @@ function sortData(orderBy) {
         ordenado = data["pokemon"].sort((a, b) => a[orderBy] > b[orderBy] ? -1 : 1)
     }
     console.log(ordenado);
-    loadCards(ordenado)
-}
-
+    loadCards(ordenado);
+    };
 
 //Voltar para home page
 const goHomePage = () => window.location.reload()
@@ -228,6 +197,7 @@ document.querySelector('#home').addEventListener('click', goHomePage);
 document.querySelector('#logo-lab').addEventListener('click', goLaboratoriaPage)
 document.getElementsByClassName('select')[0].addEventListener("change", () => {
     getUserOption(0);
+
     applyFilterTypeOnCards(data.pokemon);
 });
 
@@ -239,3 +209,4 @@ document.getElementsByClassName('select')[1].addEventListener("change", () => {
         sortData("name")
     }
 });
+
