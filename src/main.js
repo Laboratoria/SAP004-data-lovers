@@ -68,15 +68,3 @@ function searchName(search) {
     });
     allList(newList);
 }*/
-/*cards.addEventListener("change", () => {
-    const filtered = window.filterSearch(pokemonGo, cards.value, "type");
-    allList(filtered);
-    cards.innerHTML = `
-      <p class="text-percentage">
-        Os pokémons do tipo ${cards.value} representam ${statistics(filtered, pokemonGo)}% dos pokemóns da primeira geração.
-      </p>`;
-  });
-
-  function statistics (dataType, data) {
-    return ((dataType.length*100)/data.length).toFixed(2);
-  };*/
