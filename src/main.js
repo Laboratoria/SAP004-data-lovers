@@ -6,12 +6,11 @@ const championsArray = Object.values(data.data);
 
 const aboutGameButton = document.getElementById("about-game");
 aboutGameButton.addEventListener("click", showAboutGame);
-
 const compareChampionButton = document.getElementById("compare-champ-but");
 compareChampionButton.addEventListener("click", showCompChan);
-
 const youtubeButton = document.getElementById("but-youtube");
 youtubeButton.addEventListener("click", showYoutubers);
+
 
 const charactersDiv = document.getElementById("characters-div");
 const lolToolIntro = document.getElementById("lol-tool-intro");
@@ -72,12 +71,10 @@ function showYoutubers() {
   youtubeMedia.style.display = "block";
 };
 
-
-const userInput = document.getElementById('search-entry');
-const searchButton = document.getElementById('search-button');
+/*----------------------------------------------------------*/
 
 
-function showChampions(arrayCharacters) {
+function showChampions(arrayCharacters) {     //MOSTRA PERSONAGENS EM FORMA DE CARDS DENTRO DA CHARACTERS-DIV
   document.getElementById("characters-div").style.visibility = "visible";
   document.getElementById("characters-div").style.display = "block";
 
@@ -114,30 +111,36 @@ function showChampions(arrayCharacters) {
   
 };
 
-function showChampionsForButton(){
-showChampions(championsArray);    //MOSTRA PERSONAGENS NOS CARDS
+function showChampionsForButton(){  //CHAMA A FUNÇÃO showChampions PASSANDO O ARREY DE PERSONAGENS 
+showChampions(championsArray);    
 };
 
-const showChampionsButton = document.getElementById("show-champions");
-showChampionsButton.addEventListener("click", showChampionsForButton);
+document.getElementById("show-champions").addEventListener("click", showChampionsForButton);  //MOSTRA PERSONAGENS NOS CARDS QUANDO O BOTÃO "CAMPEÕES" É CLICADO
+/*----------------------------------------------------------*/
 
 
+const userInput = document.getElementById('search-entry');
+const searchButton = document.getElementById('search-button');
 
-function championsByName(arrayCharactersForFilter){
-  return arrayCharactersForFilter.filter(champion => champion.name.toUpperCase().includes(userInput.value.toUpperCase())); //PESQUISA DENTRO DOS DADOS OQUE O USUÁRIO FORNECE
+function searchChampionsByName(arrayCharactersForFilter){  //PESQUISA DENTRO DOS DADOS OQUE O USUÁRIO FORNECE
+  return arrayCharactersForFilter.filter(champion => champion.name.toUpperCase().includes(userInput.value.toUpperCase())); 
 };
 
-searchButton.addEventListener('click', () => showChampions(championsByName(championsArray))); //MOSTRA OS RESULTADOS DA PESQUISA
+searchButton.addEventListener('click', () => showChampions(searchChampionsByName(championsArray))); //MOSTRA OS RESULTADOS DA PESQUISA QUANDO O BOTÃO "BUSCAR" É CLICADO
+/*----------------------------------------------------------*/
 
 
-
-function sortCharacters(arrayCharactersForSort) {
-return arrayCharactersForSort.slice().sort();  //ORDENA OS PERSONAGENS
+function sortCharactersAZ(arrayCharactersForSort) {  //ORDENA OS PERSONAGENS EM ORDERM AZ
+return arrayCharactersForSort.slice().sort();  
 };
 
-document.getElementById("AZ").addEventListener("click", () => showChampions(sortCharacters(championsArray)));
-document.getElementById("ZA").addEventListener("click", () => showChampions(sortCharacters(championsArray).reverse()));
+function sortCharactersZA(arrayCharactersForSort) {  //ORDENA OS PERSONAGENS EM ORDERM ZA
+  return arrayCharactersForSort.slice().sort().reverse();  
+  };
 
+document.getElementById("AZ").addEventListener("click", () => showChampions(sortCharactersAZ(championsArray)));
+document.getElementById("ZA").addEventListener("click", () => showChampions(sortCharactersZA(championsArray)));
+/*----------------------------------------------------------*/
 
 
 
