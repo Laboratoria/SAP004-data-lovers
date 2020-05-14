@@ -23,7 +23,7 @@ function allList(list) {
 allList(pokemonGo);
 
 document.getElementById("A-Z").onclick = (poke) => {
-    const orderResult = pokemonGo.sort( (a, b) => 
+    const orderResult = pokemonGo.sort((a, b) =>
         (apllyAscendingOrder(a, b))
     );
     allList(orderResult);
@@ -39,7 +39,13 @@ function ascendingOrder(poke) {
     allList(orderResult);
 }*/
 
-document.getElementById("Z-A").addEventListener("click", descendingOrder);
+document.getElementById("Z-A").onclick = (poke) => {
+    const orderResult = pokemonGo.sort((a, b) =>
+        (applyDescendingOrder(a, b))
+    );
+    allList(orderResult);
+}
+/*document.getElementById("Z-A").addEventListener("click", descendingOrder);
 
 function descendingOrder(poke) {
     const orderResult = pokemonGo.sort(function (a, b) {
@@ -47,9 +53,17 @@ function descendingOrder(poke) {
     });
 
     allList(orderResult);
+}*/
+
+document.getElementById("select-type").onchange = () => {
+    const filterType = document.getElementById("select-type").value;
+    const listType = pokemonGo.filter((search) =>
+        (applySearchType(search, filterType))
+    );
+    allList(listType);
 }
 
-document.getElementById("select-type").addEventListener("change", searchType)
+/*document.getElementById("select-type").addEventListener("change", searchType)
 
 function searchType() {
     const filterType = document.getElementById("select-type").value;
@@ -57,9 +71,18 @@ function searchType() {
         return applySearchType(search, filterType);
     });
     allList(listType);
-};
+};*/
 
-document.getElementById("filter-name").addEventListener("keyup", searchName);
+document.getElementById("filter-name").onkeyup = (search) => {
+    const filterName = document.getElementById("filter-name").value;
+    const newList = pokemonGo.filter((search) =>
+        (applySearchName(search, filterName))
+    );
+    allList(newList);
+}
+
+
+/*document.getElementById("filter-name").addEventListener("keyup", searchName);
 
 function searchName(search) {
     const filterName = document.getElementById("filter-name").value;
@@ -67,11 +90,4 @@ function searchName(search) {
         return applySearchName(search, filterName);
     })
     allList(newList);
-};
-/*function searchName(search) {
-    const filterName = document.getElementById("filter-name").value;
-    const newList = pokemonGo.filter(function (search) {
-        return search.name.toLowerCase().indexOf(filterName.toLowerCase()) > -1;
-    });
-    allList(newList);
-}*/
+};*/
