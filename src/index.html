@@ -11,63 +11,67 @@
 
 <body>
 
-  <header id="home">
+  <header class="menu">
+    <div class="nav">
+      <button type="reset" class="logo">Pokédex</button> 
+      <ul>
+        <li>
+          <button id="buttonOrder" class="nav-menu blue"><span class="icon-ordem"></span>ORDEM</button>
+          <ul>
+            <li><button id="buttonCresc" class="nav-item blue">1 &gt; 151</button></li>
+            <li><button id="buttonDecre" class="nav-item blue">151 &gt; 1</button></li>
+            <li><button id="buttonAZ" class="nav-item blue">A &gt; Z</button></li>
+            <li><button id="buttonZA" class="nav-item blue">Z &gt; A</button></li>
+          </ul>
+        </li>
+        <li>
+          <button id="buttonType" class="nav-menu yellow"><span class="icon-tipo"></span>TIPO</button>
+          <ul>
+            <li><button id="buttonSteel" class="nav-item yellow"><span class="icon-aco"></span>Aço</button></li>
+            <li><button id="buttonWater" class="nav-item yellow"><span class="icon-agua"></span>Água</button></li>
+            <li><button id="buttonDragon" class="nav-item yellow"><span class="icon-dragao"></span>Dragão</button></li>
+            <li><button id="buttonEletric" class="nav-item yellow"><span class="icon-eletrico"></span>Elétrico</button></li>
+            <li><button id="buttonFairy" class="nav-item yellow"><span class="icon-fada"></span>Fada</button></li>
+            <li><button id="buttonGhost" class="nav-item yellow"><span class="icon-fantasma"></span>Fantasma</button></li>
+            <li><button id="buttonFire" class="nav-item yellow"><span class="icon-fogo"></span>Fogo</button></li>
+            <li><button id="buttonIce" class="nav-item yellow"><span class="icon-gelo"></span>Gelo</button></li>
+            <li><button id="buttonBug" class="nav-item yellow"><span class="icon-inseto"></span>Inseto</button></li>
+          </ul>
+          <ul>
+            <li><button id="buttonFighting" class="nav-item yellow"><span class="icon-lutador"></span>Lutador</button></li>
+            <li><button id="buttonNormal" class="nav-item yellow"><span class="icon-normal"></span>Normal</button></li>
+            <li><button id="buttonDark" class="nav-item yellow"><span class="icon-noturno"></span>Noturno</button></li>
+            <li><button id="buttonRock" class="nav-item yellow"><span class="icon-pedra"></span>Pedra</button></li>
+            <li><button id="buttonGrass" class="nav-item yellow"><span class="icon-planta"></span>Planta</button></li>
+            <li><button id="buttonPsychic" class="nav-item yellow"><span class="icon-psiquico"></span>Psíquico</button></li>
+            <li><button id="buttonGround" class="nav-item yellow"><span class="icon-terrestre"></span>Terrestre</button></li>
+            <li><button id="buttonPoison" class="nav-item yellow"><span class="icon-venenoso"></span>Venenoso</button></li>
+            <li><button id="buttonFlying" class="nav-item yellow"><span class="icon-voador"></span>Voador</button></li>
+          </ul>
+        </li>
+        <li id="searchWrapper">
+          <button id="buttonSearch"><span class="icon-busca"></span>BUSCA</button>
+          <ul>
+            <li>
+              <input type="text" name="busca" id="searchBar" placeholder="NOME DO POKÉMON" />
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </header>
-
-  <div>
-    <ul>
-      <li>
-        <button id="buttonOrder"><span class="icon-ordem"></span>ORDEM</button>
-        <ul>
-          <li><button id="buttonCresc">1 &gt; 151</button></li>
-          <li><button id="buttonDecre">151 &gt; 1</button></li>
-          <li><button id="buttonAZ">A &gt; Z</button></li>
-          <li><button id="buttonZA">Z &gt; A</button></li>
-        </ul>
-      </li>
-      <li>
-        <button id="buttonFilter"><span class="icon-tipo"></span>TIPO</button>
-        <ul>
-          <li><button id="buttonSteel"><span class="icon-aco"></span>Aço</button></li>
-          <li><button id="buttonWater"><span class="icon-agua"></span>Água</button></li>
-          <li><button id="buttonDragon"><span class="icon-dragao"></span>Dragão</button></li>
-          <li><button id="buttonEletric"><span class="icon-eletrico"></span>Elétrico</button></li>
-          <li><button id="buttonFairy"><span class="icon-fada"></span>Fada</button></li>
-          <li><button id="buttonGhost"><span class="icon-fantasma"></span>Fantasma</button></li>
-          <li><button id="buttonFire"><span class="icon-fogo"></span>Fogo</button></li>
-          <li><button id="buttonIce"><span class="icon-gelo"></span>Gelo</button></li>
-          <li><button id="buttonBug"><span class="icon-inseto"></span>Inseto</button></li>
-        </ul>
-        <ul>
-          <li><button id="buttonFighting"><span class="icon-lutador"></span>Lutador</button></li>
-          <li><button id="buttonNormal"><span class="icon-normal"></span>Normal</button></li>
-          <li><button id="buttonDark"><span class="icon-noturno"></span>Noturno</button></li>
-          <li><button id="buttonRock"><span class="icon-pedra"></span>Pedra</button></li>
-          <li><button id="buttonGrass"><span class="icon-planta"></span>Planta</button></li>
-          <li><button id="buttonPsychic"><span class="icon-psiquico"></span>Psíquico</button></li>
-          <li><button id="buttonGround"><span class="icon-terrestre"></span>Terrestre</button></li>
-          <li><button id="buttonPoison"><span class="icon-venenoso"></span>Venenoso</button></li>
-          <li><button id="buttonFlying"><span class="icon-voador"></span>Voador</button></li>
-        </ul>
-      </li>
-      <li id="searchWrapper">
-        <button id="buttonSearch"><span class="icon-busca"></span>BUSCA</button>
-        <ul>
-          <li>
-            <input type="text" name="busca" id="searchBar" placeholder="NOME DO POKÉMON" />
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
   
-  <main id="root">
-    <!--cards vindos do banco de dados-->
+  <!--
+    <main id="root">
+    cards vindos do banco de dados
   </main>
+  
+
 
   <footer>
     <p>&copy; Adriana & Tamires</p>
   </footer>
+  -->
   <script src="main.js" type="module"></script>
 </body>
 

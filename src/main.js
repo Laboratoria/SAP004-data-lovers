@@ -10,7 +10,7 @@ const pokemonData = data.pokemon;
 // ids do Nav 
 const searchBar = document.querySelector("#searchBar");
 //const buttonOrder = document.querySelector("#buttonOrder");
-//const buttonFilter = document.querySelector("#buttonFilter");
+//const buttonType = document.querySelector("#buttonType");
 //const buttonSearch = document.querySelector("#buttonSearch");
 const pokemonsList = document.querySelector("#root");
 
@@ -59,7 +59,7 @@ const card = (num, name, img, type) => {
 pokemonData.map(pokemon => pokemonsList.innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));
 
 // cards filtrados
-earchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData)));
+searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData)));
 
 const displayPokemons = (pokemon) => {
   const cards = pokemon

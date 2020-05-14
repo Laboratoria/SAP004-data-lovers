@@ -153,12 +153,10 @@ position: absolute;
 .pokemon-num{
     text-align: end;
 }
-/* 
-/* Aço */
-{
 
+/* Aço 
 background: #5AA7AA;
-
+*/
 
 
 
@@ -271,3 +269,53 @@ background: #FFFFFF;
 */
 
 
+/* HEADER */
+
+.menu {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.nav {
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  width: 91vw;
+}
+
+.logo {
+  align-items: center;
+  border-width: 0;
+  color: #A5A5A5;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 1.75em;
+  font-weight: 700;
+  justify-content: left;
+}
+
+.nav-menu {
+
+}
+
+.nav-item {
+
+}
+
+/* COLORS */
+.blue {
+
+}
+
+.yellow {
+
+}
+
+.red {
+
+}
