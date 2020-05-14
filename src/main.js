@@ -1,25 +1,56 @@
-import { searchPokemon, sortAlfaOrder, sortNumOrder, filtrar } from './data.js';
+import { searchPokemon, sortOrder, filterByType } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 // banco de dados
 const pokemonData = data.pokemon;
 
-// ids do HTML
+
+// **** ids HTML *********
+
+// ids do Nav 
 const searchBar = document.querySelector("#searchBar");
 //const buttonOrder = document.querySelector("#buttonOrder");
 //const buttonFilter = document.querySelector("#buttonFilter");
 //const buttonSearch = document.querySelector("#buttonSearch");
 const pokemonsList = document.querySelector("#root");
+
+// ids de Ordem
 const buttonAZ = document.querySelector("#buttonAZ");
 const buttonZA = document.querySelector("#buttonZA");
 const buttonCresc = document.querySelector("#buttonCresc");
 const buttonDecre = document.querySelector("#buttonDecre");
+
+// ids de Tipo
+const buttonSteel = document.querySelector("#buttonSteel");
 const buttonWater = document.querySelector("#buttonWater");
+const buttonDragon = document.querySelector("#buttonDragon");
+const buttonEletric = document.querySelector("#buttonEletric");
+const buttonFairy = document.querySelector("#buttonFairy");
+const buttonGhost = document.querySelector("#buttonGhost");
+const buttonFire = document.querySelector("#buttonFire");
+const buttonIce = document.querySelector("#buttonIce");
+const buttonBug = document.querySelector("#buttonBug");
+const buttonFighting = document.querySelector("#buttonFighting");
+const buttonNormal = document.querySelector("#buttonNormal");
+const buttonDark = document.querySelector("#buttonDark");
+const buttonRock = document.querySelector("#buttonRock");
+const buttonGrass = document.querySelector("#buttonGrass");
+const buttonPsychic = document.querySelector("#buttonPsychic");
+const buttonGround = document.querySelector("#buttonGround");
+const buttonPoison = document.querySelector("#buttonPoison");
+const buttonFlying = document.querySelector("#buttonFlying");
+
+// ************************
+
+
+
+// **** Card **************
 
 // card do pokémon
 const card = (num, name, img, type) => {
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
   <img src="${img}" alt="Miniatura do pokémon ${name} do tipo ${type}">
+  <p class="pokemon-type">${type}</p>
   <figcaption class="pokemon-name">${name}</figcaption>
   </figure>`
 };
@@ -43,11 +74,6 @@ const displayPokemons = (pokemon) => {
 
 // ************************
 
-// botão a-z 
-buttonAZ.addEventListener("click", () => {
-  const az = sortAlfaOrder(pokemons, "name", "az");
-  displayPokemons (az);
-});
 
 
 // **** Botões Ordem ******
@@ -82,3 +108,4 @@ buttonGround.addEventListener("click", () => displayPokemons(filterByType("Groun
 buttonPoison.addEventListener("click", () => displayPokemons(filterByType("Poison", "type", pokemonData)));
 buttonFlying.addEventListener("click", () => displayPokemons(filterByType("Flying", "type", pokemonData)));
 
+// ************************
