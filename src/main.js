@@ -22,7 +22,14 @@ function allList(list) {
 }
 allList(pokemonGo);
 
-document.getElementById("A-Z").addEventListener("click", ascendingOrder);
+document.getElementById("A-Z").onclick = (poke) => {
+    const orderResult = pokemonGo.sort( (a, b) => 
+        (apllyAscendingOrder(a, b))
+    );
+    allList(orderResult);
+}
+
+/*document.getElementById("A-Z").addEventListener("click", ascendingOrder);
 
 function ascendingOrder(poke) {
     const orderResult = pokemonGo.sort(function (a, b) {
@@ -30,7 +37,7 @@ function ascendingOrder(poke) {
     });
 
     allList(orderResult);
-}
+}*/
 
 document.getElementById("Z-A").addEventListener("click", descendingOrder);
 
