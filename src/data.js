@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-export const apllyAscendingOrder = (a, b) => {
-  /* if (a.name > b.name) {
-=======
 export const apllyAscendingOrder = (a, b) => 
- /* if (a.name > b.name) {
->>>>>>> b6ab0d2ca2c959c10cc8f53d50881913e8cafe59
+  /* if (a.name > b.name) {
     return 1;
   }
   if (a.name < b.name) {
