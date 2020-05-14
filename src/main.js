@@ -79,8 +79,9 @@ const loadCards = (dataset) => {
 const removeCard = (index) => document.querySelector('.container-deck').removeChild(document.querySelectorAll('.container-card')[index]);
 
 //Chamada
+console.log(loadCards)
+// loadCards(data["pokemon"]);
 loadCards(data["pokemon"]);
-
 
 //Função para recuperar escolha de ordenar do usuário
 function getUserOption(SelectIndex){
@@ -89,9 +90,7 @@ function getUserOption(SelectIndex){
     const optionValue = select.options[select.selectedIndex].value;
     console.log(`O valor do do option selecionado foi ${optionValue}`)
     return optionValue;
-    };
-        
-    
+};
 
 //Implementação do filtro por tipo
 //Refatorar depois e tirar comments
@@ -104,6 +103,7 @@ const createfilterType = (pokemon) => {
     if (pokemon.type[0] !== optionUser && pokemon.type[1] !== optionUser) {
         return pokemon
     }
+    console.log(createfilterType)
 };
 
 
@@ -145,7 +145,11 @@ const applyFilterTypeOnCards = () => {
 };
 
 //informação obtida ao clicar no campo ordenar
-function sortData(orderBy) {
+//Pensei em colocar as funções de filtrar e ordenar no início da tela e chamar a função sortData() 
+//dentro na tela inicial e na filtragem, não sei se isso é uma boaprática.
+//pensei em refatorar a parte repetida do sort() para ordenação utilizando o .reverse.
+
+const sortData = (orderBy)=> {
     const optionOrderUser = getUserOption(1)
     if (optionOrderUser === "Menor-nº"||optionOrderUser === "A-Z"){
             const ordenado = data["pokemon"].sort((a,b) =>{
@@ -159,7 +163,7 @@ function sortData(orderBy) {
             return 0;
         })
         console.log(ordenado)
-    } else if(optionOrderUser === "Maior-nº" || optionOrderUser === "A-Z"){
+    } else if(optionOrderUser === "Maior-nº" || optionOrderUser === "Z-A"){
         const ordenado = data["pokemon"].sort((a,b) =>{
             if (a[orderBy] > b[orderBy]) {
                 return -1;
@@ -172,8 +176,7 @@ function sortData(orderBy) {
         })
         console.log(ordenado)
     }
-    }
-    
+}
 
 // //modal
 const modal = document.querySelector('.modal-char');
@@ -199,9 +202,14 @@ function clickCard (name,num,type,img,height,weight,candy,candy_count,egg,spawn_
 		//         name = "Nidoran ♀";    
 		//     }  else  if (name === "Nidoran ♂ (Male)") {
 		//         name = "Nidoran ♂";
-		//     } else if (type === "type[0],type[1]"){
-		//         type = `${type[0]} - ${type[1]}`;
-		//     } else (candy_count === ""){
+		//     } else if (type === "type[0],type[1]"){ 
+        //         console.log(type)
+        //         type = `${type[0]} - ${type[1]}`;
+        //     } else if (candy === "Nidoran ♀ (Female) Candy"){
+        //         candy = "Nidoran ♀ Candy";
+        //     } else if (candy === "Nidoran ♂ (Male)"){
+        //         candy = "Nidoran ♂ Candy";
+		//     } else if (candy_count === " "){
 		//         candy_count = 0;
 		//     }
 		// }
@@ -239,5 +247,7 @@ document.getElementsByClassName('select')[1].addEventListener("change",() => {
             sortData("id")
         } else if (getUserOption(1)=== "A-Z" || getUserOption(1)=== "Z-A"){
             sortData("name")
+        
         }
+        
 });
