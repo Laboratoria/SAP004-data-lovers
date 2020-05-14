@@ -125,7 +125,9 @@ window.addEventListener("click", (event) => {
 
 
 
-// ----------- Filtragem e Ordenação de dados -------------//
+// ----------- Filtragem, Ordenação e Busca de dados -------------//
+
+//filterData(data, condition): esta função receberia os dados e nos retornaria os que cumprem com a condição.
 
 //Recuperação da escolha dos usuários
 function getUserOption(SelectIndex) {
@@ -171,39 +173,12 @@ const applyFilterTypeOnCards = (data) => {
 };
 
 
-//Antes:
-// function sortData(orderBy) {
-//     const optionOrderUser = getUserOption(1)
-//     if (optionOrderUser === "Menor-nº" || optionOrderUser === "A-Z") {
-//         const ordenado = data["pokemon"].sort((a, b) => {
-//             if (a[orderBy] > b[orderBy]) {
-//                 return 1;
-//             }
-//             if (a[orderBy] < b[orderBy]) {
-//                 return -1;
-//             }
-
-//             return 0;
-//         })
-//         console.log(ordenado)
-//     } else if (optionOrderUser === "Maior-nº" || optionOrderUser === "A-Z") {
-//         const ordenado = data["pokemon"].sort((a, b) => {
-//             if (a[orderBy] > b[orderBy]) {
-//                 return -1;
-//             }
-//             if (a[orderBy] < b[orderBy]) {
-//                 return 1;
-//             }
-
-//             return 0;
-//         })
-//         console.log(ordenado)
-//     }
-// }
-
-
 //Ordenação:
 function sortData(orderBy) {
+    //Recuperar exibição dos cards ocultos em filtros anteriores
+    let cardList = document.querySelectorAll('.container-card');
+    cardList.forEach((card) => card.style.display = "block");
+
     //recuperar escolha do usuário sobre que tipo de ordem
     const optionOrderUser = getUserOption(1);
     //Declaração da variável a ser manipulada dentro da função, dependendo da esolha do usuário
@@ -218,6 +193,8 @@ function sortData(orderBy) {
     loadCards(ordenado)
 }
 
+//Busca:
+//código
 
 //Voltar para home page
 const goHomePage = () => window.location.reload()
@@ -230,7 +207,6 @@ document.getElementsByClassName('select')[0].addEventListener("change", () => {
     getUserOption(0);
     applyFilterTypeOnCards(data.pokemon);
 });
-
 document.getElementsByClassName('select')[1].addEventListener("change", () => {
 
     if (getUserOption(1) === "Menor-nº" || getUserOption(1) === "Maior-nº") {
