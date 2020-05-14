@@ -18,13 +18,19 @@ const selectElement = document.querySelector('.drop-menu');
 selectElement.addEventListener('change', selector)
 
 const search = document.querySelector('#searchName')
-search.addEventListener("keyup", () => insertHtml(searchName(search, elements)));
+search.addEventListener("keyup", () => {
+  let search2 = document.querySelector('#searchName').value
+  insertHtml(searchName(elements, search2))
+});
+
+/* const search = document.querySelector('#searchName')
+search.addEventListener("keyup", () => insertHtml(searchName(search, elements))); */
 
 function selector() {
   if (selectElement.value === 'A-Z') {
-    return insertHtml(orderAZ())
+    return insertHtml(orderAZ(elements))
   } else if (selectElement.value === 'Z-A') {
-    return insertHtml(orderZA())
+    return insertHtml(orderZA(elements))
   } else if (selectElement.value === 'alive') {
     return insertHtml(filterAll(elements, "status", "Alive"))
   } else if (selectElement.value === 'dead') {
@@ -34,7 +40,7 @@ function selector() {
   } else if (selectElement.value === 'female') {
     return insertHtml(filterAll(elements, "gender", "Female"))
   } else {
-    return insertHtml(naturalOrder())
+    return insertHtml(naturalOrder(elements))
   }
 }
 selector()

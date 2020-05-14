@@ -1,80 +1,49 @@
-import { getInfo, naturalOrder, orderAZ, orderZA, filterAll, searchName } from '../src/data.js';
+import { getInfo, orderAZ, orderZA, naturalOrder, filterAll, searchName, countGender, countStatus} from '../src/data.js';
+const data = [
+      {
+          "name": "Rick",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Male",
+        },
+        {
+          "name": "Morty",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Male",
+        },
+        {
+          "name": "Summer",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Female",
+        },
+        {
+          "name": "Beth",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Female",
+        },
+        {
+          "name": "Jerry",
+          "status": "Dead",
+          "species": "Human",
+          "type": "",
+          "gender": "Male",
+        }]; 
 
-const data = {
-  "results": [
-    {
-      "id": 1,
-      "name": "Rick Sanchez",
-      "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
-      "origin": {
-        "name": "Earth (C-137)",
-        "url": "https://rickandmortyapi.com/api/location/1"
-      },
-      "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg",
-    },
-    {
-      "id": 2,
-      "name": "Morty Smith",
-      "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
-      "origin": {
-        "name": "Earth (C-137)",
-        "url": "https://rickandmortyapi.com/api/location/1"
-      },
-      "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/2.jpeg"
-    },
-    {
-      "id": 3,
-      "name": "Summer Smith",
-      "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Female",
-      "origin": {
-        "name": "Earth (Replacement Dimension)",
-        "url": "https://rickandmortyapi.com/api/location/20"
-      },
-      "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/3.jpeg"
-    },
-    {
-      "id": 4,
-      "name": "Beth Smith",
-      "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Female",
-      "origin": {
-        "name": "Earth (Replacement Dimension)",
-        "url": "https://rickandmortyapi.com/api/location/20"
-      },
-      "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/4.jpeg"
-    },
-    {
-      "id": 5,
-      "name": "Jerry Smith",
-      "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
-      "origin": {
-        "name": "Earth (Replacement Dimension)",
-        "url": "https://rickandmortyapi.com/api/location/20"
-      },
-      "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/5.jpeg"
-    }]
-};
-
-describe('getInfo', () => {
+describe('function getInfo', () => {
   it('is a function', () => {
     expect(typeof getInfo).toBe('function');
   });
-  it('returns `example`', () => {
-    expect(getInfo()).toBe('example');
+  it('returns items in array when searching for items', () => {
+    expect(getInfo(data, "name", "status", "species", "type", "gender")).toEqual([["Rick", undefined, "Male", "Alive", "Human",], 
+    ["Morty", undefined, "Male", "Alive", "Human",], ["Summer", undefined, "Female", "Alive", "Human",],
+    ["Beth", undefined, "Female", "Alive", "Human",], ["Jerry", undefined, "Male", "Dead", "Human",]]);
   });
 });
 
@@ -82,8 +51,10 @@ describe('naturalOrder', () => {
   it('is a function', () => {
     expect(typeof naturalOrder).toBe('function');
   });
-  it('returns `example`', () => {
-    expect(naturalOrder()).toBe('example');
+  it('returns array of characters in the sequence they are in', () => {
+    expect(naturalOrder(data, "name", "status", "species", "type", "gender")).toEqual([["Rick", undefined, "Male", "Alive", "Human",], 
+    ["Morty", undefined, "Male", "Alive", "Human",], ["Summer", undefined, "Female", "Alive", "Human",],
+    ["Beth", undefined, "Female", "Alive", "Human",], ["Jerry", undefined, "Male", "Dead", "Human",]]);
   });
 });
 
@@ -91,8 +62,10 @@ describe('orderAZ', () => {
   it('is a function', () => {
     expect(typeof orderAZ).toBe('function');
   });
-  it('returns `example`', () => {
-    expect(orderAZ()).toBe('example');
+  it('returns array in alphabetical order', () => {
+    expect(orderAZ(data, "name")).toEqual([["Beth", undefined, "Female", "Alive", "Human",],
+    ["Jerry", undefined, "Male", "Dead", "Human",], ["Morty", undefined, "Male", "Alive", "Human",],
+    ["Rick", undefined, "Male", "Alive", "Human",], ["Summer", undefined, "Female", "Alive", "Human",]]);
   });
 });
 
@@ -100,8 +73,10 @@ describe('orderZA', () => {
   it('is a function', () => {
     expect(typeof orderZA).toBe('function');
   });
-  it('returns `example`', () => {
-    expect(orderZA()).toBe('example');
+  it('returns array from Z to A', () => {
+    expect(orderZA(data, "name")).toEqual([["Summer", undefined, "Female", "Alive", "Human",], 
+    ["Rick", undefined, "Male", "Alive", "Human",], ["Morty", undefined, "Male", "Alive", "Human",],
+    ["Jerry", undefined, "Male", "Dead", "Human",], ["Beth", undefined, "Female", "Alive", "Human",]]);
   });
 });
 
@@ -110,8 +85,8 @@ describe('filterAll', () => {
     expect(typeof filterAll).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(filterAll()).toBe('example');
+  it('returns array of "Jerry" when searching for name and "Jerry"', () => {
+    expect(filterAll(data, "name", "Jerry")).toEqual([["Jerry", undefined, "Male", "Dead", "Human",]]);
   });
 });
 
@@ -120,7 +95,28 @@ describe('searchName', () => {
     expect(typeof searchName).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(searchName()).toBe('example');
+  it('should return an "rick" for "rick"', () => {
+    expect(searchName(data, "rick")).toEqual([["Rick", undefined, "Male", "Alive", "Human",]])
+  });
+});
+
+describe('countGender', () => {
+  it('is a function', () => {
+    expect(typeof countGender).toBe('function');
+  });
+
+  it('should return the gender count', () => {
+    expect(countGender(data, "gender")).toEqual([["Gender Female", 2], ["Gender Male", 3], ["Unknown", undefined], 
+    ["Genderless", undefined]])
+  });
+});
+
+describe('countStatus', () => {
+  it('is a function', () => {
+    expect(typeof countStatus).toBe('function');
+  });
+
+  it('should return the status count', () => {
+    expect(countStatus(data, "status")).toEqual([["Alive", 4], ["Dead", 1], ["Unknown", undefined,]])
   });
 });
