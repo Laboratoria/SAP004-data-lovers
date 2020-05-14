@@ -31,9 +31,9 @@ export function filterAll(list, data, value) {
 }
 
 export const searchName = (list, letters) => {
-  let filter = list.filter(item => item.name.toLowerCase().includes(letters.toLowerCase())); 
+  let filter = list.filter(item => item.name.toLowerCase().includes(letters.toLowerCase()));
   return getInfo(filter);
-  };
+};
 
 /*   export const searchName = (input, character) => {
     let transformInput = input.value.toLowerCase();
@@ -45,44 +45,44 @@ export const searchName = (list, letters) => {
     return getInfo(filter);
   }; */
 
-  export const countGender = (list) => {
-    let data = list.map(function (item) {
-      return item.gender
-    })
-    let countedNames = data.reduce(function (allNames, name) { 
-      if (name in allNames) {
-        allNames[name]++;
-      }
-      else {
-        allNames[name] = 1;
-      }
-      return allNames;
-    }, {});
-  
-      let legend = [["Gender Female",countedNames.Female],
-      ["Gender Male",countedNames.Male],
-      ["Unknown",countedNames.unknown],
-      ["Genderless",countedNames.Genderless]]
-      
-  
-    return legend
-  }
-  export const countStatus = (list) => {
-    let data = list.map(function (item) {
-      return item.status
-    })
-    let countedNames = data.reduce(function (allNames, name) { 
-      if (name in allNames) {
-        allNames[name]++;
-      }
-      else {
-        allNames[name] = 1;
-      }
-      return allNames;
-    }, {});
-  
-      let legend = [["Alive",countedNames.Alive],
-      ["Dead",countedNames.Dead],
-      ["Unknown",countedNames.unknown]]
-      return legend
-  }
+export const countGender = (list) => {
+  let data = list.map(function (item) {
+    return item.gender
+  })
+  let countedNames = data.reduce(function (allNames, name) {
+    if (name in allNames) {
+      allNames[name]++;
+    }
+    else {
+      allNames[name] = 1;
+    }
+    return allNames;
+  }, {});
+
+  let legend = [["Gender Female", countedNames.Female],
+  ["Gender Male", countedNames.Male],
+  ["Unknown", countedNames.unknown],
+  ["Genderless", countedNames.Genderless]]
+
+
+  return legend
+}
+export const countStatus = (list) => {
+  let data = list.map(function (item) {
+    return item.status
+  })
+  let countedNames = data.reduce(function (allNames, name) {
+    if (name in allNames) {
+      allNames[name]++;
+    }
+    else {
+      allNames[name] = 1;
+    }
+    return allNames;
+  }, {});
+
+  let legend = [["Alive", countedNames.Alive],
+  ["Dead", countedNames.Dead],
+  ["Unknown", countedNames.unknown]]
+  return legend
+}
