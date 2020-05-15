@@ -22,7 +22,7 @@ function allList(list) {
 }
 allList(pokemonGo);
 
-document.getElementById("A-Z").onclick = (poke) => {
+document.getElementById("A-Z").onclick = () => {
     const orderResult = pokemonGo.sort((a, b) =>
         (apllyAscendingOrder(a, b))
     );
@@ -39,7 +39,7 @@ function ascendingOrder(poke) {
     allList(orderResult);
 }*/
 
-document.getElementById("Z-A").onclick = (poke) => {
+document.getElementById("Z-A").onclick = () => {
     const orderResult = pokemonGo.sort((a, b) =>
         (applyDescendingOrder(a, b))
     );
@@ -73,7 +73,7 @@ function searchType() {
     allList(listType);
 };*/
 
-document.getElementById("filter-name").onkeyup = (search) => {
+document.getElementById("filter-name").onkeyup = () => {
     const filterName = document.getElementById("filter-name").value;
     const newList = pokemonGo.filter((search) =>
         (applySearchName(search, filterName))
