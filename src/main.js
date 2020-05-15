@@ -21,86 +21,91 @@ const radioZA = document.getElementById("ZA");
 
 
 aboutGameButton.addEventListener("click", showAboutGame);
-compareChampionButton.addEventListener("click", showCompChan);
+compareChampionButton.addEventListener("click", () => showCompChan(championsArray));
 youtubeButton.addEventListener("click", showYoutubers);
 
-buttonShowChampions.addEventListener("click", () => showChampions(championsArray) ); 
+buttonShowChampions.addEventListener("click", () => showChampions(championsArray)); 
 searchButton.addEventListener('click', () => showChampions(searchChampionsByName(championsArray)));
 radioAZ.addEventListener("click", () => showChampions(sortCharactersAZ(championsArray)));
 radioZA.addEventListener("click", () => showChampions(sortCharactersZA(championsArray)));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // CALCULO AGREGADO
 
-
-var x = document.getElementById("level-of-information");
-var i = x.selectedIndex;
-var valorDoLevel = x.options[i].value;
-
-
-
 /*
+var selectTypesOfInformation = document.getElementById("types-of-information");
+var selectedselectTypesOfInformation = selectTypesOfInformation.selectedIndex;
+var typeOfInfo = selectTypesOfInformation.options[selectedselectTypesOfInformation].value;
 
-function calculoAgregado(numNivel, tipoDeInfo){
 
-    let tipoDeInfo = prompt('Escolha uma info: "attack", "defense", "magic, "difficulty"');
+var selectLevelOfInformation = document.getElementById("level-of-information");
+var selectedIndexOfLevelOfInformation = selectLevelOfInformation.selectedIndex;
+var levelValue = Number(selectLevelOfInformation.options[selectedIndexOfLevelOfInformation].value);
 
-    let names = [];
-    let total = [];
+
+function percentageByTypeAndLevel(typeOfInfoArg, levelValueArg){
+
+    let numberOfChampions = [];
+    let totalOfChampions = [];
 
     for (let persona of championsArray) {
-      total.push(persona.id);
+      totalOfChampions.push(persona.id);
 
-      if(persona.info.tipoDeInfo >= numNivel){
-        names.push(persona.id);
+      if(persona.info[typeOfInfoArg] >= levelValueArg){
+        numberOfChampions.push(persona.id);
       };
     };
 
-    let porcentagem = (names.length * 100) / total.length;
+   return percentageOfChampions =  parseInt((numberOfChampions.length * 100) / totalOfChampions.length);
 };
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+------------------------------------------------------------------
 
 
 

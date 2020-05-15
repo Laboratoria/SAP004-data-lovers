@@ -197,6 +197,12 @@ h1{
     .style-view {
       padding: 5px;
     }
+    /*
+    .for-display{
+      display: inline-flexbox;
+    }
+    */
+
     .champions-card {
       display: inline-block;
       border-style: groove;

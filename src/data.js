@@ -5,24 +5,23 @@ const compareChampion = document.getElementById("compare-champions");
 const youtubeMedia = document.getElementById("youtube-media");
 
 
-export function showAboutGame() {
-    charactersDiv.style.visibility = "hidden";
-    charactersDiv.style.display = "none";
-  
-    lolToolIntro.style.visibility = "hidden";
-    lolToolIntro.style.display = "none";
-  
-    aboutTheGameDiv.style.visibility = "visible";
-    aboutTheGameDiv.style.display = "block";
-  
-    compareChampion.style.visibility = "hidden";
-    compareChampion.style.display = "none";
-  
-    youtubeMedia.style.visibility = "hidden";
-    youtubeMedia.style.display = "none";
+export function percentageByTypeAndLevel(typeOfInfoArg, levelValueArg, championsArrayArg){
+
+    let numberOfChampions = [];
+    let totalOfChampions = [];
+
+    for (let persona of championsArrayArg) {
+      totalOfChampions.push(persona.id);
+
+      if(persona.info[typeOfInfoArg] >= levelValueArg){
+        numberOfChampions.push(persona.id);
+      };
+    };
+
+   return parseInt((numberOfChampions.length * 100) / totalOfChampions.length);
 };
 
-export  function showCompChan() {
+export  function showCompChan(arraycharacterForAggregateCalculation) {
     charactersDiv.style.visibility = "hidden";
     charactersDiv.style.display = "none";
   
@@ -38,6 +37,40 @@ export  function showCompChan() {
     youtubeMedia.style.visibility = "hidden";
     youtubeMedia.style.display = "none";
 
+    document.getElementById("see-data-here-button").addEventListener("click", showResultForTheInformationProvided);
+    
+    function showResultForTheInformationProvided() {
+
+        var selectTypesOfInformation = document.getElementById("types-of-information");
+        var selectedselectTypesOfInformation = selectTypesOfInformation.selectedIndex;
+        var typeOfInfo = selectTypesOfInformation.options[selectedselectTypesOfInformation].value;
+
+
+        var selectLevelOfInformation = document.getElementById("level-of-information");
+        var selectedIndexOfLevelOfInformation = selectLevelOfInformation.selectedIndex;
+        var levelValue = Number(selectLevelOfInformation.options[selectedIndexOfLevelOfInformation].value);
+    
+        let resultForTheInformationProvided = percentageByTypeAndLevel(typeOfInfo, levelValue, arraycharacterForAggregateCalculation);
+    
+        document.getElementById("see-data-here").innerHTML = resultForTheInformationProvided + "% dos Campeões tem " +typeOfInfo + " maior igual que " + levelValue;
+    };         
+};
+
+export function showAboutGame() {
+    charactersDiv.style.visibility = "hidden";
+    charactersDiv.style.display = "none";
+  
+    lolToolIntro.style.visibility = "hidden";
+    lolToolIntro.style.display = "none";
+  
+    aboutTheGameDiv.style.visibility = "visible";
+    aboutTheGameDiv.style.display = "block";
+  
+    compareChampion.style.visibility = "hidden";
+    compareChampion.style.display = "none";
+  
+    youtubeMedia.style.visibility = "hidden";
+    youtubeMedia.style.display = "none";
 };
 
 export function showYoutubers() {
@@ -56,7 +89,6 @@ export function showYoutubers() {
     youtubeMedia.style.visibility = "visible";
     youtubeMedia.style.display = "block";
 };
-
 
 export  function showChampions(arrayCharacters) {     //MOSTRA PERSONAGENS EM FORMA DE CARDS DENTRO DA CHARACTERS-DIV
     document.getElementById("characters-div").style.visibility = "visible";
