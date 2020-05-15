@@ -27,34 +27,28 @@ document.getElementById("A-Z").onclick = () => {
     allList(orderResult);
 }
 
-/*document.getElementById("A-Z").addEventListener("click", ascendingOrder);
-
-function ascendingOrder(poke) {
-    const orderResult = pokemonGo.sort(function (a, b) {
-        return apllyAscendingOrder(a, b);
-    });
-
-    allList(orderResult);
-}*/
-
 document.getElementById("Z-A").onclick = () => {
     const orderResult = applyDescendingOrder(pokemonGo)
     allList(orderResult);
 }
-/*document.getElementById("Z-A").addEventListener("click", descendingOrder);
 
-function descendingOrder(poke) {
-    const orderResult = pokemonGo.sort(function (a, b) {
-        return applyDescendingOrder(a, b);
-    });
-
-    allList(orderResult);
+/*document.getElementById("select-type").onchange = () => {
+    const filterType = document.getElementById("select-type").value;
+    const listType = (applySearchType(pokemonGo, filterType))
+    allList(listType);
 }*/
 
 document.getElementById("select-type").onchange = () => {
     const filterType = document.getElementById("select-type").value;
-    const listType = (applySearchType(pokemonGo, filterType))
-    allList(listType);
+    const listType = (applySearchType(pokemonGo, filterType));
+
+    document.getElementById("statistics") = () => {
+        const statisticsType = pokemonGo.filterType.innerHTML;
+        alert (statisticsType, "ola");
+        //statisticsType = pokemonGo.filterType / pokemonGo.type.length * 100;
+    }
+
+    allList(listType, statisticsType);
 }
 
 document.getElementById("filter-name").onkeyup = () => {
@@ -62,14 +56,3 @@ document.getElementById("filter-name").onkeyup = () => {
     const newList = (applySearchName(pokemonGo, filterName))
     allList(newList);
 }
-
-
-/*document.getElementById("filter-name").addEventListener("keyup", searchName);
-
-function searchName(search) {
-    const filterName = document.getElementById("filter-name").value;
-    const newList = pokemonGo.filter(function (search) {
-        return applySearchName(search, filterName);
-    })
-    allList(newList);
-};*/
