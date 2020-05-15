@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body { 
+  font-family: 'Maven Pro', sans-serif;
+}
+
+
 /* FONTES */
 @font-face {
   font-family: 'icomoon';
@@ -53,6 +58,212 @@
 .icon-terrestre:before {content: "\e912";}
 .icon-venenoso:before {content: "\e913";}
 .icon-voador:before {content: "\e914";}
+
+
+/* HEADER */
+.menu {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: white;
+}
+
+.nav {
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  width: 91vw;
+}
+
+.logo {
+  align-items: center;
+  color: #A5A5A5;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 1.75em;
+  font-weight: 700;
+  justify-content: left;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav li{
+  justify-content: space-evenly;
+}
+
+.nav ul ul {
+  display: block;
+}
+
+.nav-button {
+  color: #A5A5A5;
+  border-top: 5px solid;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  height: 55px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 12.5vw;
+  background-color: transparent;
+}
+
+.nav .icon-ordem:before {
+  font-size: 21px;
+  display: block;
+  margin: 3px 0 5px 0;
+}
+
+.nav .icon-tipo:before {
+  font-size: 19px;
+  display: block;
+  margin: 3px 0 5px 0;
+}
+
+.nav .icon-busca:before {
+  font-size: 19px;
+  display: block;
+  margin: 3px 0 5px 0;
+}
+
+/*
+.nav-item {
+}
+*/
+
+
+/* MAIN */
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+h2{
+  width: 41px;
+  height: 14px;
+  left: 15px;
+  top: 66px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+}
+
+
+/* LISTA */
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  margin-top: 70px;
+  object-position: center;
+}
+
+/* CARD */
+.card-pokemon { 
+  border: 1px solid #A5A5A5;
+  border-radius: 5px; 
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.card-pokemon:active,.card-pokemon:hover{
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.card-pokemon img {
+  object-fit: contain;
+  width: 70px;
+  height: 70px;
+}
+
+.pokemon-num {
+  text-align: end;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #A5A5A5;
+  padding: 4px 5px 0;
+}
+
+.pokemon-type {
+  display: none;
+}
+
+.pokemon-name {
+  text-align: left;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 1px;
+}
+
+
+@media(min-width: 400px){
+  .pokemon-list {
+    grid-template-columns: repeat(4, 90px);
+  }
+}
+
+
+
+
+
+/*
+@media(min-width:1200px){
+  .pokemon-list{
+  border: solid 3px yellow;
+  width:80%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow:wrap;
+  margin-top: 3%;
+  }
+  .card-pokemon{
+  width: 150px;
+  height: 150px;
+  border: 1px solid #A5A5A5;
+  border-radius: 5px;
+  margin-bottom: 3%;
+  font-size: 14px;
+  margin: 10px; 
+  
+  
+  }
+  .card-pokemon:active,
+  .card-pokemon:hover{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+img,.pokemon-image{
+  object-fit: contain;
+  width: 105px;
+  height: 105px;
+  text-align: center;
+  display: flex;
+  }
+
+  .pokemon-name{
+    width: 145px;
+}
+}
+*/
+
+
+
+
 
 /* COLORS 
 .blue {
@@ -179,328 +390,6 @@ background: #9F9F9F;
 background: #FFFFFF;
 
 }
-*/
-
-
-body { 
-  font-family: 'Maven Pro', sans-serif;
-}
-
-/* HEADER */
-.menu {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-  display: flex;
-  height: 55px;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-}
-
-.nav {
-  display: flex;
-  height: inherit;
-  justify-content: space-between;
-  width: 91vw;
-}
-
-.logo {
-  align-items: center;
-  color: #A5A5A5;
-  font-family: Maven Pro;
-  font-style: normal;
-  font-size: 1.75em;
-  font-weight: 700;
-  justify-content: left;
-}
-
-.nav ul {
-  list-style-type: none;
-  display: flex;
-}
-
-.nav li{
-  justify-content: space-evenly;
-}
-
-.nav ul ul {
-  display: block;
-}
-
-.nav-button {
-  color: #A5A5A5;
-  border-top: 5px solid;
-  font-family: Maven Pro;
-  font-style: normal;
-  font-size: 0.55em;
-  font-weight: 700;
-  height: 55px;
-  letter-spacing: 0.05em;
-  text-align: center;
-  width: 12.5vw;
-  background-color: transparent;
-}
-
-.nav .icon-ordem:before {
-  font-size: 21px;
-  display: block;
-  margin: 3px 0 5px 0;
-}
-
-.nav .icon-tipo:before {
-  font-size: 19px;
-  display: block;
-  margin: 3px 0 5px 0;
-}
-
-.nav .icon-busca:before {
-  font-size: 19px;
-  display: block;
-  margin: 3px 0 5px 0;
-}
-
-/*
-.nav-item {
-}
-*/
-
-
-main{
-  display: flex;
-  justify-content: center;
-}
-
-h2{
-  width: 41px;
-  height: 14px;
-  left: 15px;
-  top: 66px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 14px;
-  text-align: left;
-}
-
-/* LISTA */
-.pokemon-list {
-  display: grid;
-  grid-template-columns: repeat(3, 90px);
-  justify-content: center;
-  align-content: center;
-  grid-gap: 10px;
-  margin-top: 10px;
-  object-position: center;
-}
-
-/* CARD */
-.card-pokemon { 
-  border: 1px solid #A5A5A5;
-  border-radius: 5px; 
-  height: 90px;
-  width: 90px;
-  text-align: center;
-  margin-top: 15px;
-}
-
-.card-pokemon:active,.card-pokemon:hover{
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.card-pokemon img {
-  object-fit: contain;
-  width: 70px;
-  height: 70px;
-}
-
-.pokemon-num {
-  text-align: end;
-  font-size: 0.75em;
-  font-weight: 500;
-  color: #A5A5A5;
-  padding: 4px 5px 0;
-}
-
-.pokemon-type {
-  display: none;
-}
-
-.pokemon-name {
-  text-align: left;
-  font-size: 0.8em;
-  font-weight: 700;
-  color: #333333;
-  margin-top: 1px;
-}
-
-
-@media(min-width: 400px){
-  .pokemon-list {
-    grid-template-columns: repeat(4, 90px);
-  }
-}
-
-
-
-
-
-/*
-@media(min-width:1200px){
-  .pokemon-list{
-  border: solid 3px yellow;
-  width:80%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow:wrap;
-  margin-top: 3%;
-  }
-  .card-pokemon{
-  width: 150px;
-  height: 150px;
-  border: 1px solid #A5A5A5;
-  border-radius: 5px;
-  margin-bottom: 3%;
-  font-size: 14px;
-  margin: 10px; 
-  
-  
-  }
-  .card-pokemon:active,
-  .card-pokemon:hover{
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-  }
-img,.pokemon-image{
-  object-fit: contain;
-  width: 105px;
-  height: 105px;
-  text-align: center;
-  display: flex;
-  }
-
-  .pokemon-name{
-    width: 145px;
-}
-}
-*/
-
-
-
-
-
-/* 
-/* Aço 
-
-
-background: #5AA7AA;
-*/
-
-
-
-/* Água 
-
-
-background: #68B5E5;
-
-/* Dragão 
-
-
-background: #0A6DCA;
-
-/* Elétrico 
-
-
-background: #FFC700;
-
-/* Fada 
-
-
-background: #F29FE5;
-
-/* Fantasma 
-
-
-background: #7272D2;
-
-/* Fogo 
-
-
-background: #FF8713;
-
-/* Gelo 
-
-
-background: #77D3C3;
-
-/* Inseto 
-
-
-background: #A2C629;
-
-/* Lutador 
-
-
-background: #E80011;
-
-/* Normal 
-
-
-background: #9B9BA3;
-
-
-/* Noturno 
-
-background: #5D5F6A;
-
-/* Pedra 
-
-
-background: #D5AD30;
-
-/* Planta 
-
-
-background: #34C677;
-
-/* Psíquico 
-
-
-background: #FE7571;
-
-/* Terrestre 
-
-
-background: #D17F46;
-
-/* Venenoso 
-
-
-background: #C645E1;
-
-/* Voador 
-
-
-background: #9FB9EB;
-
-/* Bordas 
-
-
-background: #A5A5A5;
-
-/* Pokémon 
-
-
-background: #333333;
-
-/* Menu 
-
-
-background: #9F9F9F;
-
-/* Branco 
-
-
-background: #FFFFFF;
-
 */
 
 
