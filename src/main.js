@@ -1,7 +1,7 @@
 import { showAboutGame,
          showCompChan, 
          showYoutubers, 
-         showChampions,
+         showChampionsInCards,
          searchChampionsByName, 
          sortCharactersAZ,
          sortCharactersZA } from './data.js';
@@ -24,10 +24,10 @@ aboutGameButton.addEventListener("click", showAboutGame);
 compareChampionButton.addEventListener("click", () => showCompChan(championsArray));
 youtubeButton.addEventListener("click", showYoutubers);
 
-buttonShowChampions.addEventListener("click", () => showChampions(championsArray)); 
-searchButton.addEventListener('click', () => showChampions(searchChampionsByName(championsArray)));
-radioAZ.addEventListener("click", () => showChampions(sortCharactersAZ(championsArray)));
-radioZA.addEventListener("click", () => showChampions(sortCharactersZA(championsArray)));
+buttonShowChampions.addEventListener("click", () => showChampionsInCards(championsArray)); 
+searchButton.addEventListener('click', () => showChampionsInCards(searchChampionsByName(championsArray)));
+radioAZ.addEventListener("click", () => showChampionsInCards(sortCharactersAZ(championsArray)));
+radioZA.addEventListener("click", () => showChampionsInCards(sortCharactersZA(championsArray)));
 
 
 

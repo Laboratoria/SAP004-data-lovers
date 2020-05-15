@@ -90,7 +90,29 @@ export function showYoutubers() {
     youtubeMedia.style.display = "block";
 };
 
-export  function showChampions(arrayCharacters) {     //MOSTRA PERSONAGENS EM FORMA DE CARDS DENTRO DA CHARACTERS-DIV
+export function championsInCards(arrayCharactersArg){
+
+    let template = "";
+
+    for (let persona of arrayCharactersArg) {
+      template += `
+      <div class="champions-card">
+      <p class="image-splash"><img class="image common" src="${persona.splash}"></p>
+      <p class="name common">Name: ${persona.name}</p>
+      <p class="title common">${persona.title}</p>
+      <p class="role common">Role: ${persona.tags}</p>
+      <p class="info-champ common">Attack: ${persona.info.attack}</p>
+      <p class="info-champ common">Defense: ${persona.info.defense}</p>
+      <p class="info-champ common">Magic: ${persona.info.magic}</p>
+      <p class="info-champ common">Difficulty: ${persona.info.difficulty}</p>
+      </div>
+      `;
+    };
+
+    return template;
+};
+
+export  function showChampionsInCards(arrayCharacters) {     //MOSTRA PERSONAGENS EM FORMA DE CARDS DENTRO DA CHARACTERS-DIV
     document.getElementById("characters-div").style.visibility = "visible";
     document.getElementById("characters-div").style.display = "block";
   
@@ -108,22 +130,7 @@ export  function showChampions(arrayCharacters) {     //MOSTRA PERSONAGENS EM FO
   
     document.getElementById("see-characters-here").innerHTML = "";
   
-    let template = ""
-    for (let persona of arrayCharacters) {
-      template += `
-      <div class="champions-card">
-      <p class="image-splash"><img class="image common" src="${persona.splash}"></p>
-      <p class="name common">Name: ${persona.name}</p>
-      <p class="title common">${persona.title}</p>
-      <p class="role common">Role: ${persona.tags}</p>
-      <p class="info-champ common">Attack: ${persona.info.attack}</p>
-      <p class="info-champ common">Defense: ${persona.info.defense}</p>
-      <p class="info-champ common">Magic: ${persona.info.magic}</p>
-      <p class="info-champ common">Difficulty: ${persona.info.difficulty}</p>
-      </div>
-      `;
-    }; 
-    document.getElementById("see-characters-here").innerHTML = template;
+    document.getElementById("see-characters-here").innerHTML = championsInCards(arrayCharacters);
     
 };
 
