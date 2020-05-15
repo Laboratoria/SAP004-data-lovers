@@ -1,5 +1,13 @@
-//import { example } from './data.js';
+import { showAboutGame,
+         showCompChan, 
+         showYoutubers, 
+         showChampions,
+         searchChampionsByName, 
+         sortCharactersAZ,
+         sortCharactersZA } from './data.js';
+
 import data from "./data/lol/lol.js";
+
 
 const championsArray = Object.values(data.data);
 
@@ -12,135 +20,14 @@ const youtubeButton = document.getElementById("but-youtube");
 youtubeButton.addEventListener("click", showYoutubers);
 
 
-const charactersDiv = document.getElementById("characters-div");
-const lolToolIntro = document.getElementById("lol-tool-intro");
-const aboutTheGameDiv = document.getElementById("about-the-game-div");
-const compareChampion = document.getElementById("compare-champions");
-const youtubeMedia = document.getElementById("youtube-media");
+document.getElementById("show-champions").addEventListener("click", () => showChampions(championsArray) );  //MOSTRA PERSONAGENS NOS CARDS QUANDO O BOTÃO "CAMPEÕES" É CLICADO
 
+document.getElementById('search-button').addEventListener('click', () => showChampions(searchChampionsByName(championsArray))); //MOSTRA OS RESULTADOS DA PESQUISA QUANDO O BOTÃO "BUSCAR" É CLICADO
 
-
-function showAboutGame() {
-  charactersDiv.style.visibility = "hidden";
-  charactersDiv.style.display = "none";
-
-  lolToolIntro.style.visibility = "hidden";
-  lolToolIntro.style.display = "none";
-
-  aboutTheGameDiv.style.visibility = "visible";
-  aboutTheGameDiv.style.display = "block";
-
-  compareChampion.style.visibility = "hidden";
-  compareChampion.style.display = "none";
-
-  youtubeMedia.style.visibility = "hidden";
-  youtubeMedia.style.display = "none";
-};
-
-function showCompChan() {
-  charactersDiv.style.visibility = "hidden";
-  charactersDiv.style.display = "none";
-
-  lolToolIntro.style.visibility = "hidden";
-  lolToolIntro.style.display = "none";
-
-  aboutTheGameDiv.style.visibility = "hidden";
-  aboutTheGameDiv.style.display = "none";
-
-  compareChampion.style.visibility = "visible";
-  compareChampion.style.display = "block";
-
-  youtubeMedia.style.visibility = "hidden";
-  youtubeMedia.style.display = "none";
-};
-
-function showYoutubers() {
-  charactersDiv.style.visibility = "hidden";
-  charactersDiv.style.display = "none";
-
-  lolToolIntro.style.visibility = "hidden";
-  lolToolIntro.style.display = "none";
-
-  aboutTheGameDiv.style.visibility = "hidden";
-  aboutTheGameDiv.style.display = "none";
-
-  compareChampion.style.visibility = "hidden";
-  compareChampion.style.display = "none";
-
-  youtubeMedia.style.visibility = "visible";
-  youtubeMedia.style.display = "block";
-};
-
-/*----------------------------------------------------------*/
-
-
-function showChampions(arrayCharacters) {     //MOSTRA PERSONAGENS EM FORMA DE CARDS DENTRO DA CHARACTERS-DIV
-  document.getElementById("characters-div").style.visibility = "visible";
-  document.getElementById("characters-div").style.display = "block";
-
-  document.getElementById("lol-tool-intro").style.visibility = "hidden";
-  document.getElementById("lol-tool-intro").style.display = "none";
-
-  document.getElementById("about-the-game-div").style.visibility = "hidden";
-  document.getElementById("about-the-game-div").style.display = "none";
-
-  document.getElementById("compare-champions").style.visibility = "hidden";
-  document.getElementById("compare-champions").style.display = "none";
-
-  document.getElementById("youtube-media").style.visibility = "hidden";
-  document.getElementById("youtube-media").style.display = "none";
-
-  document.getElementById("see-characters-here").innerHTML = "";
-
-  let template = ""
-  for (let persona of arrayCharacters) {
-    template += `
-    <div class="champions-card">
-    <p class="image-splash"><img class="image common" src="${persona.splash}"></p>
-    <p class="name common">Name: ${persona.name}</p>
-    <p class="title common">${persona.title}</p>
-    <p class="role common">Role: ${persona.tags}</p>
-    <p class="info-champ common">Attack: ${persona.info.attack}</p>
-    <p class="info-champ common">Defense: ${persona.info.defense}</p>
-    <p class="info-champ common">Magic: ${persona.info.magic}</p>
-    <p class="info-champ common">Difficulty: ${persona.info.difficulty}</p>
-    </div>
-    `;
-  }; 
-  document.getElementById("see-characters-here").innerHTML = template;
-  
-};
-
-function showChampionsForButton(){  //CHAMA A FUNÇÃO showChampions PASSANDO O ARREY DE PERSONAGENS 
-showChampions(championsArray);    
-};
-
-document.getElementById("show-champions").addEventListener("click", showChampionsForButton);  //MOSTRA PERSONAGENS NOS CARDS QUANDO O BOTÃO "CAMPEÕES" É CLICADO
-/*----------------------------------------------------------*/
-
-
-const userInput = document.getElementById('search-entry');
-const searchButton = document.getElementById('search-button');
-
-function searchChampionsByName(arrayCharactersForFilter){  //PESQUISA DENTRO DOS DADOS OQUE O USUÁRIO FORNECE
-  return arrayCharactersForFilter.filter(champion => champion.name.toUpperCase().includes(userInput.value.toUpperCase())); 
-};
-
-searchButton.addEventListener('click', () => showChampions(searchChampionsByName(championsArray))); //MOSTRA OS RESULTADOS DA PESQUISA QUANDO O BOTÃO "BUSCAR" É CLICADO
-/*----------------------------------------------------------*/
-
-
-function sortCharactersAZ(arrayCharactersForSort) {  //ORDENA OS PERSONAGENS EM ORDERM AZ
-return arrayCharactersForSort.slice().sort();  
-};
-
-function sortCharactersZA(arrayCharactersForSort) {  //ORDENA OS PERSONAGENS EM ORDERM ZA
-  return arrayCharactersForSort.slice().sort().reverse();  
-  };
 
 document.getElementById("AZ").addEventListener("click", () => showChampions(sortCharactersAZ(championsArray)));
 document.getElementById("ZA").addEventListener("click", () => showChampions(sortCharactersZA(championsArray)));
-/*----------------------------------------------------------*/
+
 
 
 
