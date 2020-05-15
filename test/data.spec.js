@@ -340,13 +340,3 @@ describe('function applySearchName', () => {
     expect(result[0].name).toEqual("Bulbasaur");
   });
 })
-
-/*describe('function applySearchType', () => {
-  it('is a function', () => {
-    expect(typeof applySearchType).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});*/
