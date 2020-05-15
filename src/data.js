@@ -30,12 +30,12 @@ export function filterAll(list, data, value) {
   return getInfo(arrayAllFilter);
 }
 
-export const searchName = (list, letters) => {
+/* export const searchName = (list, letters) => {
   let filter = list.filter(item => item.name.toLowerCase().includes(letters.toLowerCase()));
   return getInfo(filter);
-};
+}; */
 
-/*   export const searchName = (input, character) => {
+  export const searchName = (input, character) => {
     let transformInput = input.value.toLowerCase();
     let filter = character.filter((item) => {
       let transformData = item.name.toLowerCase();
@@ -43,7 +43,7 @@ export const searchName = (list, letters) => {
       return (characterName.includes(transformInput));
     });
     return getInfo(filter);
-  }; */
+  };
 
 export const countGender = (list) => {
   let data = list.map(function (item) {

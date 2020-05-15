@@ -43,7 +43,7 @@ body {
 }
 
 #color{
-  background-color: #22a2bc;
+  background-image: linear-gradient(to right, #22a2bd, #c3bd2e);
 }
 
 .logo {
@@ -200,6 +200,11 @@ a:active {
   margin-top: 230px;
 }
 
+.chart-align {
+  width: 100px;
+  height: 300px;
+}
+
 @media only screen and (max-width: 800px) {
   
   header {
@@ -300,18 +305,16 @@ a:active {
     margin-left: 8px;
     border-radius: 15px;
   }
+  
   .charts {
-    width: 80%;
-    font-size: 15;
-    margin-top: 0;
-  }
-  #chart1{
-    margin-top: -28px;
-    margin-left: -135px;
+    width: auto;
+    font-size: 15px;
+    margin-top: 0; 
   }
 
-  #chart2{
-    margin-top: -28px;
-    margin-left: -135px;
+  .chart-align{
+    height: 135px;
+    margin-top: -10px;
+    margin-left: -85px;
   }
 }

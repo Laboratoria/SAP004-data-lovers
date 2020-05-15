@@ -17,14 +17,14 @@ function insertHtml(vector) {
 const selectElement = document.querySelector('.drop-menu');
 selectElement.addEventListener('change', selector)
 
-const search = document.querySelector('#searchName')
+/* const search = document.querySelector('#searchName')
 search.addEventListener("keyup", () => {
   let search2 = document.querySelector('#searchName').value
   insertHtml(searchName(elements, search2))
-});
+}); */
 
-/* const search = document.querySelector('#searchName')
-search.addEventListener("keyup", () => insertHtml(searchName(search, elements))); */
+const search = document.querySelector('#searchName')
+search.addEventListener("keyup", () => insertHtml(searchName(search, elements)));
 
 function selector() {
   if (selectElement.value === 'A-Z') {
