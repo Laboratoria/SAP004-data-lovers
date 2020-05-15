@@ -1,12 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
 }
 
-/* FONTES */
+body { 
+  font-family: 'Maven Pro', sans-serif;
+}
 
-/* Ícones */
+
+/* FONTES */
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?mlm3x3');
@@ -20,7 +23,7 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
+/* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   font-style: normal;
   font-weight: normal;
@@ -28,80 +31,116 @@
   text-transform: none;
   line-height: 1;
 
-  /* Better Font Rendering =========== */
+/* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-busca:before {
-  content: "\e900";
-}
-.icon-ordem:before {
-  content: "\e901";
-}
-.icon-tipo:before {
-  content: "\e902";
-}
-.icon-aco:before {
-  content: "\e903";
-}
-.icon-agua:before {
-  content: "\e904";
-}
-.icon-dragao:before {
-  content: "\e905";
-}
-.icon-eletrico:before {
-  content: "\e906";
-}
-.icon-fada:before {
-  content: "\e907";
-}
-.icon-fantasma:before {
-  content: "\e908";
-}
-.icon-fogo:before {
-  content: "\e909";
-}
-.icon-gelo:before {
-  content: "\e90a";
-}
-.icon-inseto:before {
-  content: "\e90b";
-}
-.icon-lutador:before {
-  content: "\e90c";
-}
-.icon-normal:before {
-  content: "\e90d";
-}
-.icon-noturno:before {
-  content: "\e90e";
-}
-.icon-pedra:before {
-  content: "\e90f";
-}
-.icon-planta:before {
-  content: "\e910";
-}
-.icon-psiquico:before {
-  content: "\e911";
-}
-.icon-terrestre:before {
-  content: "\e912";
-}
-.icon-venenoso:before {
-  content: "\e913";
-}
-.icon-voador:before {
-  content: "\e914";
-}
+/* Ícones */
+.icon-busca:before {content: "\e900";}
+.icon-ordem:before {content: "\e901";}
+.icon-tipo:before {content: "\e902";}
+.icon-aco:before {content: "\e903";}
+.icon-agua:before {content: "\e904";}
+.icon-dragao:before {content: "\e905";}
+.icon-eletrico:before {content: "\e906";}
+.icon-fada:before {content: "\e907";}
+.icon-fantasma:before {content: "\e908";}
+.icon-fogo:before {content: "\e909";}
+.icon-gelo:before {content: "\e90a";}
+.icon-inseto:before {content: "\e90b";}
+.icon-lutador:before {content: "\e90c";}
+.icon-normal:before {content: "\e90d";}
+.icon-noturno:before {content: "\e90e";}
+.icon-pedra:before {content: "\e90f";}
+.icon-planta:before {content: "\e910";}
+.icon-psiquico:before {content: "\e911";}
+.icon-terrestre:before {content: "\e912";}
+.icon-venenoso:before {content: "\e913";}
+.icon-voador:before {content: "\e914";}
 
 
-body{
-  background:white;
-  font-family: 'Maven Pro', sans-serif;  
+/* HEADER */
+.menu {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: white;
 }
+
+.nav {
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  width: 91vw;
+}
+
+.logo {
+  align-items: center;
+  color: #A5A5A5;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 1.75em;
+  font-weight: 700;
+  justify-content: left;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav li{
+  justify-content: space-evenly;
+}
+
+.nav ul ul {
+  display: block;
+}
+
+.nav-button {
+  color: #A5A5A5;
+  border-top: 5px solid;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  height: 55px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 12.5vw;
+  background-color: transparent;
+}
+
+.nav .icon-ordem:before {
+  font-size: 21px;
+  display: block;
+  margin: 3px 0 5px 0;
+}
+
+.nav .icon-tipo:before {
+  font-size: 19px;
+  display: block;
+  margin: 3px 0 5px 0;
+}
+
+.nav .icon-busca:before {
+  font-size: 19px;
+  display: block;
+  margin: 3px 0 5px 0;
+}
+
+/*
+.nav-item {
+}
+*/
+
+
+/* MAIN */
 
 main{
   display: flex;
@@ -120,6 +159,7 @@ h2{
   text-align: left;
 }
 
+
 /* LISTA */
 .pokemon-list {
   display: grid;
@@ -127,7 +167,7 @@ h2{
   justify-content: center;
   align-content: center;
   grid-gap: 10px;
-  margin-top: 10px;
+  margin-top: 70px;
   object-position: center;
 }
 
@@ -138,7 +178,7 @@ h2{
   height: 90px;
   width: 90px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .card-pokemon:active,.card-pokemon:hover{
@@ -147,8 +187,8 @@ h2{
 
 .card-pokemon img {
   object-fit: contain;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
 }
 
 .pokemon-num {
@@ -168,7 +208,7 @@ h2{
   font-size: 0.8em;
   font-weight: 700;
   color: #333333;
-  margin-top: 1px;
+  padding-top: 5px;
 }
 
 
@@ -178,6 +218,13 @@ h2{
   }
 }
 
+.pokemon-name {
+  text-align: left;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 1px;
+}
 
 
 
@@ -225,10 +272,20 @@ img,.pokemon-image{
 
 
 
-/* 
+/* COLORS 
+.blue {
+
+}
+
+.yellow {
+
+}
+
+.red {
+
+}
+
 /* Aço 
-
-
 background: #5AA7AA;
 */
 
@@ -340,5 +397,6 @@ background: #9F9F9F;
 background: #FFFFFF;
 
 */
+
 
 
