@@ -23,9 +23,7 @@ function allList(list) {
 allList(pokemonGo);
 
 document.getElementById("A-Z").onclick = () => {
-    const orderResult = pokemonGo.sort((a, b) =>
-        (apllyAscendingOrder(a, b))
-    );
+    const orderResult = apllyAscendingOrder(pokemonGo)
     allList(orderResult);
 }
 
@@ -40,9 +38,7 @@ function ascendingOrder(poke) {
 }*/
 
 document.getElementById("Z-A").onclick = () => {
-    const orderResult = pokemonGo.sort((a, b) =>
-        (applyDescendingOrder(a, b))
-    );
+    const orderResult = applyDescendingOrder(pokemonGo)
     allList(orderResult);
 }
 /*document.getElementById("Z-A").addEventListener("click", descendingOrder);
@@ -57,27 +53,13 @@ function descendingOrder(poke) {
 
 document.getElementById("select-type").onchange = () => {
     const filterType = document.getElementById("select-type").value;
-    const listType = pokemonGo.filter((search) =>
-        (applySearchType(search, filterType))
-    );
+    const listType = (applySearchType(pokemonGo, filterType))
     allList(listType);
 }
 
-/*document.getElementById("select-type").addEventListener("change", searchType)
-
-function searchType() {
-    const filterType = document.getElementById("select-type").value;
-    const listType = pokemonGo.filter(function (search) {
-        return applySearchType(search, filterType);
-    });
-    allList(listType);
-};*/
-
 document.getElementById("filter-name").onkeyup = () => {
     const filterName = document.getElementById("filter-name").value;
-    const newList = pokemonGo.filter((search) =>
-        (applySearchName(search, filterName))
-    );
+    const newList = (applySearchName(pokemonGo, filterName))
     allList(newList);
 }
 
