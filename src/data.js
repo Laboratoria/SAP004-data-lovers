@@ -15,7 +15,6 @@ export const sortOrder = (byOrder, order, pokemonData) => {
   return pokemonData.sort((start, end) => (end[order] < start[order]? direction: -direction));
 };
 
-
 // função de Filtro pura
 export const filterByType = (pokemonType, arrayType, pokemonData) => pokemonData.filter(pokemon => pokemon[arrayType].includes(pokemonType));
 
