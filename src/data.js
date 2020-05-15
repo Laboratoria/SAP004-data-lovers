@@ -8,7 +8,7 @@ export const apllyAscendingOrder = (a, b) =>
   }
   return 0;*/
 
-     (((a.name > b.name) ? 1 : (a.name < b.name) ? -1 : 0));
+  (((a.name > b.name) ? 1 : (a.name < b.name) ? -1 : 0));
 
 
 export const applyDescendingOrder = (a, b) => 
