@@ -134,11 +134,8 @@ export  function showChampionsInCards(arrayCharacters) {     //MOSTRA PERSONAGEN
     
 };
 
-export function searchChampionsByName(arrayCharactersForFilter){  //PESQUISA DENTRO DOS DADOS OQUE O USUÁRIO FORNECE
-    return arrayCharactersForFilter.filter(champion => champion.name.toUpperCase().includes(document.getElementById('search-entry').value.toUpperCase())); 
-
-    //INSERIR NOVO ARGUMENTO DE ENTRADA QUE SERÁ OQUE O USUÁRIO QUER PESQUISAR
-
+export function searchChampionsByName(arrayCharactersForFilter, whatTheUserWantsTosearch){  //PESQUISA DENTRO DOS DADOS OQUE O USUÁRIO FORNECE
+    return arrayCharactersForFilter.filter(championFilter => championFilter.name.toUpperCase().includes(whatTheUserWantsTosearch.toUpperCase())); 
 };
 
 export function championsInCardsForSort(arrayCharactersForSort, objectWithOtherObjectsInside){

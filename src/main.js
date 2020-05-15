@@ -21,13 +21,16 @@ const searchButton =document.getElementById('search-button');
 const radioAZ = document.getElementById("AZ");
 const radioZA = document.getElementById("ZA");
 
-
 aboutGameButton.addEventListener("click", showAboutGame);
 compareChampionButton.addEventListener("click", () => showCompChan(championsArray));
 youtubeButton.addEventListener("click", showYoutubers);
 
 buttonShowChampions.addEventListener("click", () => showChampionsInCards(championsArray)); // RECEBE ARRAY DE OBJETOS
-searchButton.addEventListener('click', () => showChampionsInCards(searchChampionsByName(championsArray)));
+
+searchButton.addEventListener('click', () => {
+  let inputValueToSearch = document.getElementById("search-entry").value;
+  showChampionsInCards(searchChampionsByName(championsArray, inputValueToSearch))
+});
 
 radioAZ.addEventListener("click", () => showChampionsInCardsForSort(sortCharactersAZ(champion), champion));
 radioZA.addEventListener("click", () => showChampionsInCardsForSort(sortCharactersZA(champion), champion));
