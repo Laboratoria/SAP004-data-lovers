@@ -37,6 +37,7 @@ export  function showCompChan() {
   
     youtubeMedia.style.visibility = "hidden";
     youtubeMedia.style.display = "none";
+
 };
 
 export function showYoutubers() {
@@ -93,7 +94,6 @@ export  function showChampions(arrayCharacters) {     //MOSTRA PERSONAGENS EM FO
     document.getElementById("see-characters-here").innerHTML = template;
     
 };
-
 
 export function searchChampionsByName(arrayCharactersForFilter){  //PESQUISA DENTRO DOS DADOS OQUE O USUÁRIO FORNECE
     return arrayCharactersForFilter.filter(champion => champion.name.toUpperCase().includes(document.getElementById('search-entry').value.toUpperCase())); 

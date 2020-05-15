@@ -1,4 +1,7 @@
-import { example } from '../src/data.js';
+import { showChampions,
+         searchChampionsByName,
+         sortCharactersAZ,
+         sortCharactersZA } from '../src/data.js';
 
 
 describe('example', () => {

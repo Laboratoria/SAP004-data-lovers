@@ -23,10 +23,67 @@ const radioZA = document.getElementById("ZA");
 aboutGameButton.addEventListener("click", showAboutGame);
 compareChampionButton.addEventListener("click", showCompChan);
 youtubeButton.addEventListener("click", showYoutubers);
+
 buttonShowChampions.addEventListener("click", () => showChampions(championsArray) ); 
 searchButton.addEventListener('click', () => showChampions(searchChampionsByName(championsArray)));
 radioAZ.addEventListener("click", () => showChampions(sortCharactersAZ(championsArray)));
 radioZA.addEventListener("click", () => showChampions(sortCharactersZA(championsArray)));
+
+
+// CALCULO AGREGADO
+
+
+var x = document.getElementById("level-of-information");
+var i = x.selectedIndex;
+var valorDoLevel = x.options[i].value;
+
+
+
+/*
+
+function calculoAgregado(numNivel, tipoDeInfo){
+
+    let tipoDeInfo = prompt('Escolha uma info: "attack", "defense", "magic, "difficulty"');
+
+    let names = [];
+    let total = [];
+
+    for (let persona of championsArray) {
+      total.push(persona.id);
+
+      if(persona.info.tipoDeInfo >= numNivel){
+        names.push(persona.id);
+      };
+    };
+
+    let porcentagem = (names.length * 100) / total.length;
+};
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
