@@ -66,7 +66,7 @@ const displayPokemons = (pokemon) => {
     .map((pokemon) => {
       return `<div class="pokemon-info" ><figure class="card-pokemon"><p class="pokemon-num">${pokemon.num}</p>
       <img class="pokemon-image" src="${pokemon.img}" alt="Miniatura do pokémon ${pokemon.name} do tipo ${pokemon.type}">
-</figure> <div><figcaption class="pokemon-name">${pokemon.name}</figcaption> </div></div>`;
+</figure> <p><figcaption class="pokemon-name">${pokemon.name}</figcaption> </p></div>`;
     })
     .join('');
   pokemonsList.innerHTML = cards;
