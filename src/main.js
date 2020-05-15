@@ -11,22 +11,22 @@ import data from "./data/lol/lol.js";
 
 const championsArray = Object.values(data.data);
 
-
 const aboutGameButton = document.getElementById("about-game");
-aboutGameButton.addEventListener("click", showAboutGame);
 const compareChampionButton = document.getElementById("compare-champ-but");
-compareChampionButton.addEventListener("click", showCompChan);
 const youtubeButton = document.getElementById("but-youtube");
+const buttonShowChampions = document.getElementById("show-champions");
+const searchButton =document.getElementById('search-button');
+const radioAZ = document.getElementById("AZ");
+const radioZA = document.getElementById("ZA");
+
+
+aboutGameButton.addEventListener("click", showAboutGame);
+compareChampionButton.addEventListener("click", showCompChan);
 youtubeButton.addEventListener("click", showYoutubers);
-
-
-document.getElementById("show-champions").addEventListener("click", () => showChampions(championsArray) );  //MOSTRA PERSONAGENS NOS CARDS QUANDO O BOTÃO "CAMPEÕES" É CLICADO
-
-document.getElementById('search-button').addEventListener('click', () => showChampions(searchChampionsByName(championsArray))); //MOSTRA OS RESULTADOS DA PESQUISA QUANDO O BOTÃO "BUSCAR" É CLICADO
-
-
-document.getElementById("AZ").addEventListener("click", () => showChampions(sortCharactersAZ(championsArray)));
-document.getElementById("ZA").addEventListener("click", () => showChampions(sortCharactersZA(championsArray)));
+buttonShowChampions.addEventListener("click", () => showChampions(championsArray) ); 
+searchButton.addEventListener('click', () => showChampions(searchChampionsByName(championsArray)));
+radioAZ.addEventListener("click", () => showChampions(sortCharactersAZ(championsArray)));
+radioZA.addEventListener("click", () => showChampions(sortCharactersZA(championsArray)));
 
 
 
