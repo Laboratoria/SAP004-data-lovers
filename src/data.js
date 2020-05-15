@@ -136,12 +136,72 @@ export  function showChampionsInCards(arrayCharacters) {     //MOSTRA PERSONAGEN
 
 export function searchChampionsByName(arrayCharactersForFilter){  //PESQUISA DENTRO DOS DADOS OQUE O USUÁRIO FORNECE
     return arrayCharactersForFilter.filter(champion => champion.name.toUpperCase().includes(document.getElementById('search-entry').value.toUpperCase())); 
+
+    //INSERIR NOVO ARGUMENTO DE ENTRADA QUE SERÁ OQUE O USUÁRIO QUER PESQUISAR
+
 };
 
-export function sortCharactersAZ(arrayCharactersForSortAZ) {  //ORDENA OS PERSONAGENS EM ORDERM AZ
-return arrayCharactersForSortAZ.slice().sort();  
+export function championsInCardsForSort(arrayCharactersForSort, objectWithOtherObjectsInside){
+
+    let template = "";
+
+      for (let persona of arrayCharactersForSort) {
+      template += `
+      <div class="champions-card">
+      <p class="image-splash"><img class="image common" src="${objectWithOtherObjectsInside[persona].splash}"></p>
+      <p class="name common">Name: ${persona}</p>
+      <p class="title common">${objectWithOtherObjectsInside[persona].title}</p>
+      <p class="role common">Role: ${objectWithOtherObjectsInside[persona].tags}</p>
+      <p class="info-champ common">Attack: ${objectWithOtherObjectsInside[persona].info.attack}</p>
+      <p class="info-champ common">Defense: ${objectWithOtherObjectsInside[persona].info.defense}</p>
+      <p class="info-champ common">Magic: ${objectWithOtherObjectsInside[persona].info.magic}</p>
+      <p class="info-champ common">Difficulty: ${objectWithOtherObjectsInside[persona].info.difficulty}</p>
+      </div>
+      `;
+      };
+    return template;
+};
+
+export function showChampionsInCardsForSort(arrayCharactersForShowSort, objectWithOtherObjectsInsideForSort) {
+
+    document.getElementById("characters-div").style.visibility = "visible";
+    document.getElementById("characters-div").style.display = "block";
+  
+    document.getElementById("lol-tool-intro").style.visibility = "hidden";
+    document.getElementById("lol-tool-intro").style.display = "none";
+  
+    document.getElementById("about-the-game-div").style.visibility = "hidden";
+    document.getElementById("about-the-game-div").style.display = "none";
+  
+    document.getElementById("compare-champions").style.visibility = "hidden";
+    document.getElementById("compare-champions").style.display = "none";
+  
+    document.getElementById("youtube-media").style.visibility = "hidden";
+    document.getElementById("youtube-media").style.display = "none";
+  
+    document.getElementById("see-characters-here").innerHTML = "";
+  
+    document.getElementById("see-characters-here").innerHTML = championsInCardsForSort(arrayCharactersForShowSort, objectWithOtherObjectsInsideForSort);
+
+
+};
+
+export function sortCharactersAZ(ObjectCharactersForSortAZ) {  //ORDENA OS PERSONAGENS EM ORDERM AZ
+    let arrayPersonas = [];
+
+      for (let persona in ObjectCharactersForSortAZ){    
+      arrayPersonas.push(persona);   
+      };
+
+    return arrayPersonas.sort();
 };
     
-export function sortCharactersZA(arrayCharactersForSortZA) {  //ORDENA OS PERSONAGENS EM ORDERM ZA
-return arrayCharactersForSortZA.slice().sort().reverse();  
+export function sortCharactersZA(ObjectCharactersForSortZA) {  //ORDENA OS PERSONAGENS EM ORDERM ZA
+    let arrayPersonas = [];
+
+    for (let persona in ObjectCharactersForSortZA){    
+    arrayPersonas.push(persona);   
+    };
+
+    return arrayPersonas.sort().reverse();
 };
