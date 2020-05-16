@@ -225,7 +225,11 @@ h2{
   color: #333333;
   margin-top: 1px;
 }
-
+@media( min-width: 800px){
+  .pokemon-list {
+    grid-template-columns: repeat(5, 120px);
+    
+}
 
 
 
