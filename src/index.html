@@ -6,64 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
 <body>
 
-  <header class="menu">
-    <div class="nav">
-      <button type="reset" class="logo">Pokédex</button> 
-      <ul>
-        <li>
-          <button id="buttonOrder" class="nav-button blue"><span class="icon-ordem"></span>ORDEM</button>
-        
-          <ul>
-            <li><button id="buttonCresc" class="nav-item blue">1 &gt; 151</button></li>
-            <li><button id="buttonDecre" class="nav-item blue">151 &gt; 1</button></li>
-            <li><button id="buttonAZ" class="nav-item blue">A &gt; Z</button></li>
-            <li><button id="buttonZA" class="nav-item blue">Z &gt; A</button></li>
-          </ul>
-          
-        </li>
-        <li>
-          <button id="buttonType" class="nav-button yellow"><span class="icon-tipo"></span>TIPO</button>
-          
-          <ul>
-            <li><button id="buttonSteel" class="nav-item yellow"><span class="icon-aco"></span>Aço</button></li>
-            <li><button id="buttonWater" class="nav-item yellow"><span class="icon-agua"></span>Água</button></li>
-            <li><button id="buttonDragon" class="nav-item yellow"><span class="icon-dragao"></span>Dragão</button></li>
-            <li><button id="buttonEletric" class="nav-item yellow"><span class="icon-eletrico"></span>Elétrico</button></li>
-            <li><button id="buttonFairy" class="nav-item yellow"><span class="icon-fada"></span>Fada</button></li>
-            <li><button id="buttonGhost" class="nav-item yellow"><span class="icon-fantasma"></span>Fantasma</button></li>
-            <li><button id="buttonFire" class="nav-item yellow"><span class="icon-fogo"></span>Fogo</button></li>
-            <li><button id="buttonIce" class="nav-item yellow"><span class="icon-gelo"></span>Gelo</button></li>
-            <li><button id="buttonBug" class="nav-item yellow"><span class="icon-inseto"></span>Inseto</button></li>
-          </ul>
-          <ul>
-            <li><button id="buttonFighting" class="nav-item yellow"><span class="icon-lutador"></span>Lutador</button></li>
-            <li><button id="buttonNormal" class="nav-item yellow"><span class="icon-normal"></span>Normal</button></li>
-            <li><button id="buttonDark" class="nav-item yellow"><span class="icon-noturno"></span>Noturno</button></li>
-            <li><button id="buttonRock" class="nav-item yellow"><span class="icon-pedra"></span>Pedra</button></li>
-            <li><button id="buttonGrass" class="nav-item yellow"><span class="icon-planta"></span>Planta</button></li>
-            <li><button id="buttonPsychic" class="nav-item yellow"><span class="icon-psiquico"></span>Psíquico</button></li>
-            <li><button id="buttonGround" class="nav-item yellow"><span class="icon-terrestre"></span>Terrestre</button></li>
-            <li><button id="buttonPoison" class="nav-item yellow"><span class="icon-venenoso"></span>Venenoso</button></li>
-            <li><button id="buttonFlying" class="nav-item yellow"><span class="icon-voador"></span>Voador</button></li>
-          </ul>
-        </li>
-        -->
-        <li id="searchWrapper">
-          <button id="buttonSearch" class="nav-button red"><span class="icon-busca"></span>BUSCA</button>
-          <ul>
-            
-            <li>
-              <input type="text" name="busca" id="searchBar" placeholder="NOME DO POKÉMON" />
-            </li>
+  <header >
+    <!-- Menu de navegação -->
+    <div class="navbar">
+      <div class="menu">
+        <button type="reset" class="logo">Pokédex</button> 
+        <ul class="submenu">
+          <li>
+            <button id="buttonOrder" class="sub-button blue"><span class="icon-ordem"></span>ORDEM</button>
+            <ul class="submenu-options">
+              <li><button id="buttonCresc" class="sub-item full-blue">1 &gt; 151</button></li>
+              <li><button id="buttonDecre" class="sub-item full-blue">151 &gt; 1</button></li>
+              <li><button id="buttonAZ" class="sub-item full-blue">A &gt; Z</button></li>
+              <li><button id="buttonZA" class="sub-item full-blue">Z &gt; A</button></li>
+            </ul>
+          </li>
+          <li>
+            <button id="buttonType" class="sub-button yellow"><span class="icon-tipo"></span>TIPO</button>
+            <!--
+            <ul class="submenu-options">
+              <li><button id="buttonSteel" class="nav-item yellow"><span class="icon-aco"></span>Aço</button></li>
+              <li><button id="buttonWater" class="nav-item yellow"><span class="icon-agua"></span>Água</button></li>
+              <li><button id="buttonDragon" class="nav-item yellow"><span class="icon-dragao"></span>Dragão</button></li>
+              <li><button id="buttonEletric" class="nav-item yellow"><span class="icon-eletrico"></span>Elétrico</button></li>
+              <li><button id="buttonFairy" class="nav-item yellow"><span class="icon-fada"></span>Fada</button></li>
+              <li><button id="buttonGhost" class="nav-item yellow"><span class="icon-fantasma"></span>Fantasma</button></li>
+              <li><button id="buttonFire" class="nav-item yellow"><span class="icon-fogo"></span>Fogo</button></li>
+              <li><button id="buttonIce" class="nav-item yellow"><span class="icon-gelo"></span>Gelo</button></li>
+              <li><button id="buttonBug" class="nav-item yellow"><span class="icon-inseto"></span>Inseto</button></li>
+            </ul>
+            <ul class="submenu-options">
+              <li><button id="buttonFighting" class="nav-item yellow"><span class="icon-lutador"></span>Lutador</button></li>
+              <li><button id="buttonNormal" class="nav-item yellow"><span class="icon-normal"></span>Normal</button></li>
+              <li><button id="buttonDark" class="nav-item yellow"><span class="icon-noturno"></span>Noturno</button></li>
+              <li><button id="buttonRock" class="nav-item yellow"><span class="icon-pedra"></span>Pedra</button></li>
+              <li><button id="buttonGrass" class="nav-item yellow"><span class="icon-planta"></span>Planta</button></li>
+              <li><button id="buttonPsychic" class="nav-item yellow"><span class="icon-psiquico"></span>Psíquico</button></li>
+              <li><button id="buttonGround" class="nav-item yellow"><span class="icon-terrestre"></span>Terrestre</button></li>
+              <li><button id="buttonPoison" class="nav-item yellow"><span class="icon-venenoso"></span>Venenoso</button></li>
+              <li><button id="buttonFlying" class="nav-item yellow"><span class="icon-voador"></span>Voador</button></li>
+            </ul>
           -->
-          </ul>
-        </li>
-      </ul>
+          </li>
+          <li id="searchWrapper">
+            <button id="buttonSearch" class="sub-button red"><span class="icon-busca"></span>BUSCA</button>
+            <!--
+            <ul class="submenu-options">
+              <li>
+                <input type="text" name="busca" id="searchBar" placeholder="NOME DO POKÉMON" />
+              </li>
+            </ul>
+          -->
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   
