@@ -48,8 +48,9 @@ const buttonFlying = document.querySelector("#buttonFlying");
 
 // card do pokémon
 const card = (num, name, img, type) => {
+
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
-  <img src="${img}" alt="Miniatura do pokémon ${name} do tipo ${type}">
+  <img src="${img}" alt="Miniatura do pokémon ${name}">
   <p class="pokemon-type">${type}</p>
   <figcaption class="pokemon-name">${name}</figcaption>
   </figure>`
@@ -59,19 +60,34 @@ const card = (num, name, img, type) => {
 pokemonData.map(pokemon => pokemonsList.innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));
 
 
+/*
+// transformar palavra em ícone
+let icon = (type) =>{
+  for (type of icon) {
+    type.replace("Stell", `<span class="icon-aco"></span>`);
+    type.replace("Water", `<span class="icon-agua"></span>`);
+  }
+}
+pokemonData.map(pokemon => icon (pokemon.type));
+*/
+
 // cards filtrados
 searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData)));
 
 const displayPokemons = (pokemon) => {
   const cards = pokemon
     .map((pokemon) => {
-      return `<div class="pokemon-info" ><figure class="card-pokemon"><p class="pokemon-num">${pokemon.num}</p>
-      <img class="pokemon-image" src="${pokemon.img}" alt="Miniatura do pokémon ${pokemon.name} do tipo ${pokemon.type}">
-</figure> <p><figcaption class="pokemon-name">${pokemon.name}</figcaption> </p></div>`;
+      return `<figure class="card-pokemon"><p class="pokemon-num">${pokemon.num}</p>
+      <img src="${pokemon.img}" alt="Miniatura do pokémon ${pokemon.name}">
+      <p class="pokemon-type">${pokemon.type}</p>
+      <figcaption class="pokemon-name">${pokemon.name}</figcaption>
+      </figure>`;
     })
     .join('');
   pokemonsList.innerHTML = cards;
 };
+
+
 
 // ************************
 
@@ -89,9 +105,16 @@ buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "
 
 
 // **** Botões Tipo *******
+/*buttonNormal.addEventListener("click", function (){
+  
+  let kanto = document.querySelector("#calc")
+  const numpok = (filterByType.length / 151)*100
+  kanto.innerHTML= `Em <strong>Kanto</strong> há ${numpok}% deste tipo de Pokemon`
+  return pokemonData
+})*/
 
 buttonSteel.addEventListener("click", () => displayPokemons(filterByType("Steel", "type", pokemonData)));
-buttonWater.addEventListener("click", () => displayPokemons(filterByType("Water", "type", pokemonData)));
+buttonWater.addEventListener("click", () => displayPokemons(filterByType("Water", "type", pokemonData)) ); 
 buttonDragon.addEventListener("click", () => displayPokemons(filterByType("Dragon", "type", pokemonData)));
 buttonEletric.addEventListener("click", () => displayPokemons(filterByType("Electric", "type", pokemonData)));
 buttonFairy.addEventListener("click", () => displayPokemons(filterByType("Fairy", "type", pokemonData)));
