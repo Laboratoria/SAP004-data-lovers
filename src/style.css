@@ -1,235 +1,247 @@
-*{
-    cursor: url('cursor-lol.cur'), default;
-    font-family: 'Cinzel', serif;
+* {
+  cursor: url("cursor-lol.cur"), default;
+  font-family: "Cinzel", serif;
+}
+html {
+  background-image: url("wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+header {
+  background: #ffffff3d;
+  font-size: 90px;
+  text-align: center;
+  color: #97723d;
+  text-shadow: 2px 3px 2px black;
+  border-style: ridge;
+  border-color: #97723d;
+  border-width: 5px;
+  border-radius: 20px;
+}
+a {
+  text-decoration: none;
+}
+.menu ul {
+  padding: 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0px;
+  border-radius: 20px;
+  list-style: none;
+  text-align: center;
+  font-size: 20px;
+}
+.menu li {
+  display: inline-block;
+  width: 150px;
+}
+h1 {
+  text-shadow: 2px 3px 2px #97723d;
+  display: inline-flexbox;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+.style-buttons {
+  border-radius: 3px;
+  background-color: #bda275;
+  font-size: 18px;
+  border: solid 1px black;
+}
+.style-view {
+  text-align: center;
+  font-size: 30px;
+  color: bold;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-style: ridge;
+  border-width: 5px;
+  border-radius: 20px;
+  border-color: #97723d;
+  background: #bda275c7;
+}
+#sort-div, #filter-div, #search-div {
+  display: inline-block;
+  background: #fbd27361;
+  font-size: 15px;
+  text-align: center;
+  border-style: inset;
+  border-width: 4px;
+  border-radius: 5px;
+  border-color: #34dce8;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#send-ordination, #filter-champions, #search-button, #reset-button, #see-data-here-button{
+  border-radius: 3px;
+  background-color: #bda275;
+  font-size: 13px;
+  border: solid 1px black;
+}
+#compare-champions{
+  padding-bottom: 15px;
+}
+#div-skill-number{
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.for-display{
+  height: 30px;
+}
+#see-data-here-button{
+  height: 45px;
+  width: 150px;
+}
+.champions-card {
+  display: inline-grid;
+  border-style: groove;
+  border-width: 4px;
+  border-color: #34dce8;
+  background: #fbd27361;
+  width: 304px;
+  height: 445px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.image, .name, .title, .key, .role, .info-champ {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.image, .name, .title {
+  text-align: center;
+}
+.image {
+  align-items: center;
+  padding-top: 0%;
+  max-width: 304px;
+}
+.image-splash {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+.made-by {
+  text-align: center;
+  bottom: 0;
+  position: end;
+  width: 100%;
+  border-radius: 10px;
+  background: #ffffff3d;
+}
+.insivible-class {
+  visibility: hidden;
+  display: none;
 }
 
-html{
-    background-image: url("wallpaper.jpg");
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-header{
+/*VERSÃO MOBILE*/
+@media only screen and (max-width: 800px) {
+  html {
+    /* background-image: ; */
+    background-size: 100%;
+    background-repeat: inherit;
+    font-family: "Girassol";
+  }
+  p {
+    font-size: 20px;
+  }
+  header {
     background: #ffffff3d;
-    font-size: 90px;
+    font-size: 41px;
     text-align: center;
+    border-style: double;
+    border-color: black;
+    border-width: 15px;
     color: #97723d;
     text-shadow: 2px 3px 2px black;
-    border-style: ridge;
-    border-width: 5px;
-    border-radius: 20px;
-    border-color: #97723d;
-}
-
-a {
-    text-decoration: none;
-}
-
-.menu ul {
-    padding:0px;
+  }
+  .menu ul {
+    padding: 0px;
     padding-bottom: 10px;
     padding-top: 10px;
-    margin:0px;
-    border-radius: 20px;
+    margin: 0px;
+    background-color: #ffffff3d;
     list-style: none;
     text-align: center;
-    font-size: 20px;
-}
-
-.menu li {
+    font-size: 30px;
+  }
+  .menu li {
     display: inline-block;
     width: 150px;
-}
-
-h1{
+  }
+  h1 {
     text-shadow: 2px 3px 2px #97723d;
     display: inline-flexbox;
-    margin-top: 0%;
-    margin-bottom: 0%;
-}
-
-.style-buttons{
-    border-radius: 3px;
-    background-color: #bda275;
-    font-size: 18px;
-    border: solid 1px black;
-}
-
-.style-view{
-    text-align: center;
+    margin-top: 0px;
     font-size: 30px;
-    color: bold;
-    padding-left: 25px;
-    padding-right: 25px;
-    border-style: ridge;
-    border-width: 5px;
-    border-radius: 20px;
-    border-color: #97723d;
-    background: #bda275c7;
-}
-
-#send-ordination, #filter-champions, #search-button, #reset-button {
+  }
+  .about-the-game-button, .characters-button, .youtube-button, .compare-button {
     border-radius: 3px;
     background-color: #bda275;
+    font-size: 20px;
+    font-family: "Girassol";
+    border: solid 1px black;
+  }
+  .introduction-site, .introduction-game, .youtubers-list, .characters-list, .compare-characters {
+    text-align: center;
+    font-size: 20px;
+  }
+  #sort-div, #filter-div {
+    display: inline-block;
+    font-size: 15px;
+    border-width: 4px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 269px;
+    text-align: center;
+  }
+  #send-ordination, #filter-champions {
+    border-radius: 3px;
     font-size: 13px;
     border: solid 1px black;
-}
-
-.champions-card{
-    display: inline-grid;
+  }
+  .style-view {
+    padding: 5px;
+  }
+  .champions-card {
+    display: inline-block;
     border-style: groove;
     border-width: 4px;
     border-color: #34dce8;
     background: #fbd27361;
-    width: 304px;
-    height: 445px;
-    font-size: 20px;
+    width: 95%;
+    height: 90%;
     margin-bottom: 10px;
-}
-
-.image, .name, .title, .role, .info-champ{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.image, .name, .title{
-    text-align: center;
-}
-.image{
+  }
+  #div-skill-number{
+    height: 130px;
+    display: block;
     align-items: center;
-    padding-top: 0px;
-    max-width: 304px;
-}
-
-.image-splash {
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-}
-
-.made-by{
+    justify-content: space-evenly;
+    padding-bottom: 75px;
+  }
+  .for-display{
+    height: 30px;
+  }
+  #maior-igual-que{
+    margin-bottom: 0px;
+  }
+  #see-data-here-button{
+    height: 45px;
+    width: 150px;
+  }
+  .image {
+    align-items: center;
+    padding-top: 0%;
+    max-width: 100%;
+  }
+  .made-by {
     text-align: center;
     bottom: 0;
     position: end;
     width: 100%;
-    border-radius: 10px;
     background: #ffffff3d;
-}
-.insivible-class{
-    visibility: hidden;
-    display: none;
-}
-
-/*TEMPORÁRIO
-#see-filtered-champions-here {
-    border-style: inset;
-    border-width: 2px;
-    border-color: blue;
-}
-*/
-
-/*VERSÃO MOBILE*/
-@media only screen and (max-width: 800px) {
-    html {
-      /* background-image: ; */
-      background-size: 100%;
-      background-repeat: inherit;
-      font-family: "Girassol";
-    }
-    p {
-      font-size: 20px;
-    }
-    header {
-      background: #ffffff3d;
-      font-size: 41px;
-      text-align: center;
-      border-style: double;
-      border-color: black;
-      border-width: 15px;
-      color: #97723d;
-      text-shadow: 2px 3px 2px black;
-    }
-    .menu ul {
-      padding: 0px;
-      padding-bottom: 10px;
-      padding-top: 10px;
-      margin: 0px;
-      background-color: #ffffff3d;
-      list-style: none;
-      text-align: center;
-      font-size: 30px;
-    }
-    .menu li {
-      display: inline-block;
-      width: 150px;
-    }
-    h1 {
-      text-shadow: 2px 3px 2px #97723d;
-      display: inline-flexbox;
-      margin-top: 0px;
-      font-size: 30px;
-    }
-    .about-the-game-button, .characters-button, .youtube-button, .compare-button {
-      border-radius: 3px;
-      background-color: #bda275;
-      font-size: 20px;
-      font-family: "Girassol";
-      border: solid 1px black;
-    }
-    .introduction-site, .introduction-game, .youtubers-list, .characters-list, .compare-characters {
-      text-align: center;
-      font-size: 20px;
-    }
-    #sort-div, #filter-div {
-      display: inline-block;
-      font-size: 15px;
-      border-width: 4px;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-      width: 269px;
-      text-align: center;
-    }
-    #send-ordination, #filter-champions {
-      border-radius: 3px;
-      font-size: 13px;
-      border: solid 1px black;
-    }
-    .style-view {
-      padding: 5px;
-    }
-    /*
-    .for-display{
-      display: inline-flexbox;
-    }
-    */
-
-    .champions-card {
-      display: inline-block;
-      border-style: groove;
-      border-width: 4px;
-      border-color: #34dce8;
-      background: #fbd27361;
-      width: 95%;
-      height: 90%;
-      margin-bottom: 10px;
-    }
-    .image {
-      align-items: center;
-      padding-top: 0%;
-      max-width: 100%;
-    }
-    /*.characters-list{
-          text-align: left;
-          font-size: 20px;
-          background: #ffffff3d;
-          background: #bda275c7;
-      }*/
-    .made-by {
-      text-align: center;
-      bottom: 0;
-      position: end;
-      width: 100%;
-      background: #ffffff3d;
-    }
   }
+}

@@ -28,19 +28,20 @@ youtubeButton.addEventListener("click", showYoutubers);
 buttonShowChampions.addEventListener("click", () => showChampionsInCards(championsArray)); // RECEBE ARRAY DE OBJETOS
 
 searchButton.addEventListener('click', () => {
-  let inputValueToSearch = document.getElementById("search-entry").value;
+  const inputValueToSearch = document.getElementById("search-entry").value;
   showChampionsInCards(searchChampionsByName(championsArray, inputValueToSearch))
 });
 
 radioAZ.addEventListener("click", () => showChampionsInCardsForSort(sortCharactersAZ(champion), champion));
 radioZA.addEventListener("click", () => showChampionsInCardsForSort(sortCharactersZA(champion), champion));
 
-
-
-
-
-
-
+const userInput = document.getElementById("search-entry");
+userInput.addEventListener("keypress" , (event) => {
+  if (event.keyCode === 13) {
+    const inputValueToSearch = document.getElementById("search-entry").value;
+    showChampionsInCards(searchChampionsByName(championsArray, inputValueToSearch))
+  }
+})
 
 
 
