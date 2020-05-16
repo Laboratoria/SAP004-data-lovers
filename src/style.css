@@ -1,166 +1,351 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body { 
+  font-family: 'Maven Pro', sans-serif;
+}
+
 
 /* FONTES */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?mlm3x3');
+  src:  url('fonts/icomoon.eot?mlm3x3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?mlm3x3') format('truetype'),
+    url('fonts/icomoon.woff?mlm3x3') format('woff'),
+    url('fonts/icomoon.svg?mlm3x3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+/* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /* Ícones */
-@font-face {
-    font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?mlm3x3');
-    src:  url('fonts/icomoon.eot?mlm3x3#iefix') format('embedded-opentype'),
-      url('fonts/icomoon.ttf?mlm3x3') format('truetype'),
-      url('fonts/icomoon.woff?mlm3x3') format('woff'),
-      url('fonts/icomoon.svg?mlm3x3#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
-  
-  [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+.icon-busca:before {content: "\e900";}
+.icon-ordem:before {content: "\e901";}
+.icon-tipo:before {content: "\e902";}
+.icon-aco:before {content: "\e903";}
+.icon-agua:before {content: "\e904";}
+.icon-dragao:before {content: "\e905";}
+.icon-eletrico:before {content: "\e906";}
+.icon-fada:before {content: "\e907";}
+.icon-fantasma:before {content: "\e908";}
+.icon-fogo:before {content: "\e909";}
+.icon-gelo:before {content: "\e90a";}
+.icon-inseto:before {content: "\e90b";}
+.icon-lutador:before {content: "\e90c";}
+.icon-normal:before {content: "\e90d";}
+.icon-noturno:before {content: "\e90e";}
+.icon-pedra:before {content: "\e90f";}
+.icon-planta:before {content: "\e910";}
+.icon-psiquico:before {content: "\e911";}
+.icon-terrestre:before {content: "\e912";}
+.icon-venenoso:before {content: "\e913";}
+.icon-voador:before {content: "\e914";}
 
-  .icon-busca:before {
-    content: "\e900";
-  }
-  .icon-ordem:before {
-    content: "\e901";
-  }
-  .icon-tipo:before {
-    content: "\e902";
-  }
-  .icon-aco:before {
-    content: "\e903";
-  }
-  .icon-agua:before {
-    content: "\e904";
-  }
-  .icon-dragao:before {
-    content: "\e905";
-  }
-  .icon-eletrico:before {
-    content: "\e906";
-  }
-  .icon-fada:before {
-    content: "\e907";
-  }
-  .icon-fantasma:before {
-    content: "\e908";
-  }
-  .icon-fogo:before {
-    content: "\e909";
-  }
-  .icon-gelo:before {
-    content: "\e90a";
-  }
-  .icon-inseto:before {
-    content: "\e90b";
-  }
-  .icon-lutador:before {
-    content: "\e90c";
-  }
-  .icon-normal:before {
-    content: "\e90d";
-  }
-  .icon-noturno:before {
-    content: "\e90e";
-  }
-  .icon-pedra:before {
-    content: "\e90f";
-  }
-  .icon-planta:before {
-    content: "\e910";
-  }
-  .icon-psiquico:before {
-    content: "\e911";
-  }
-  .icon-terrestre:before {
-    content: "\e912";
-  }
-  .icon-venenoso:before {
-    content: "\e913";
-  }
-  .icon-voador:before {
-    content: "\e914";
-  }
-  
-body{
-    background:white;
-    font-family: sans-serif;
-    font-family: 'Maven Pro', sans-serif;
-    
+
+/* HEADER */
+.menu {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100vw;
+  background-color: white;
 }
 
-
-
-#root {
-    padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
+.nav {
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  width: 290px;
 }
 
-.botao{
-    display: flex;
+.logo {
+  align-items: center;
+  color: #A5A5A5;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 1.75em;
+  font-weight: 700;
+  justify-content: left;
 }
 
-.card-pokemon{
-    position: relative;   
-    display: grid;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 14.29%;
-    background: #FFFFFF;
-/* Bordas */
-    border: 1.64444px solid #A5A5A5;
-    border-radius: 8.22222px;
-}
-.pokemon-image{
-    align-items: center;
+.nav ul {
+  list-style-type: none;
+  display: flex;
 }
 
-
-
-
-.pokemon-info{
-    border: solid 3px black;
-
+.nav li{
+  justify-content: space-evenly;
 }
-    /* pokémon 
 
+.nav ul ul {
+  display: block;
+}
 
-position: absolute;
- padding: 10px 30px;
+.nav-button {
+  color: #A5A5A5;
+  border-top: 5px solid;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  height: 55px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 12.5vw;
+  background-color: transparent;
+}
 
+.nav .icon-ordem:before {
+  font-size: 21px;
+  display: block;
+  margin: 3px 0 5px 0;
+}
+
+.nav .icon-tipo:before {
+  font-size: 19px;
+  display: block;
+  margin: 3px 0 5px 0;
+}
+
+.nav .icon-busca:before {
+  font-size: 19px;
+  display: block;
+  margin: 3px 0 5px 0;
+}
+
+/*
+.nav-item {
+}
 */
-    
+
+
+/* MAIN */
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 120px;
 }
-.pokemon-name{
-    text-align: center;
+
+h2{
+  width: 41px;
+  height: 14px;
+  left: 15px;
+  top: 66px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
 }
-.pokemon-num{
+
+
+/* LISTA */
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  margin-top: 70px;
+}
+
+/* CARD */
+.card-pokemon { 
+  border: 1px solid #A5A5A5;
+  border-radius: 5px; 
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-pokemon:active,.card-pokemon:hover{
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.card-pokemon img {
+  object-fit: contain;
+  width: 65px;
+  height: 65px;
+}
+
+.pokemon-num {
+  text-align: end;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #A5A5A5;
+  padding: 4px 5px 0;
+}
+
+.pokemon-type {
+  display: none;
+}
+
+.pokemon-name {
+  text-align: left;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #333333;
+  padding-top: 5px;
+}
+
+
+@media(min-width: 414px){
+  .nav {
+    width: 390px;
+  }
+
+  .pokemon-list {
+    grid-template-columns: repeat(4, 90px);
+  }
+}
+
+@media(min-width: 600px){
+  .nav {
+    width: 510px;
+  }
+
+  .pokemon-list {
+    grid-template-columns: repeat(4, 120px);
+  }
+  
+  .card-pokemon { 
+    height: 120px;
+    width: 120px;
+    margin-top:25px;
+  }
+
+  .card-pokemon img {
+    object-fit: contain;
+    width: 95px;
+    height: 95px;
+    position: relative;
+    bottom: 13px;
+  }
+
+  .pokemon-num {
+    font-size: 0.85em;
+  }
+
+  .pokemon-type {
+    display: block;
+    position: relative;
+    bottom: 20px;
+    right: 5px;
     text-align: end;
+  }
+  
+  .pokemon-name {
+    font-size: 1em;
+    position: relative;
+    bottom: 20px;
+  }
+
+
 }
-/* 
-/* Aço */
-{
 
+/*
+@media( min-width: 800px){
+  .nav {
+    width: 5px;
+  }
+  .pokemon-list {
+    grid-template-columns: repeat(5, 120px);
+  }
+  .card-pokemon{    
+    height: 135px;
+    width: 135px;
+  }
+  .card-pokemon img {
+  width: 105px;
+  height: 105px;
+  }
+
+
+/*
+@media(min-width:1200px){
+  .pokemon-list{
+  border: solid 3px yellow;
+  width:80%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow:wrap;
+  margin-top: 3%;
+  }
+  .card-pokemon{
+  width: 150px;
+  height: 150px;
+  border: 1px solid #A5A5A5;
+  border-radius: 5px;
+  margin-bottom: 3%;
+  font-size: 14px;
+  margin: 10px; 
+  
+  
+  }
+  .card-pokemon:active,
+  .card-pokemon:hover{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+img,.pokemon-image{
+  object-fit: contain;
+  width: 105px;
+  height: 105px;
+  text-align: center;
+  display: flex;
+  }
+
+  .pokemon-name{
+    width: 145px;
+}
+}
+*/
+
+
+
+
+
+/* COLORS 
+.blue {
+
+}
+
+.yellow {
+
+}
+
+.red {
+
+}
+
+/* Aço 
 background: #5AA7AA;
-
+*/
 
 
 
@@ -271,4 +456,6 @@ background: #FFFFFF;
 
 }
 */
+
+
 

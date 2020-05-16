@@ -10,7 +10,7 @@ const pokemonData = data.pokemon;
 // ids do Nav 
 const searchBar = document.querySelector("#searchBar");
 //const buttonOrder = document.querySelector("#buttonOrder");
-//const buttonFilter = document.querySelector("#buttonFilter");
+//const buttonType = document.querySelector("#buttonType");
 //const buttonSearch = document.querySelector("#buttonSearch");
 const pokemonsList = document.querySelector("#root");
 
@@ -48,8 +48,9 @@ const buttonFlying = document.querySelector("#buttonFlying");
 
 // card do pokémon
 const card = (num, name, img, type) => {
+
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
-  <img src="${img}" alt="Miniatura do pokémon ${name} do tipo ${type}">
+  <img src="${img}" alt="Miniatura do pokémon ${name}">
   <p class="pokemon-type">${type}</p>
   <figcaption class="pokemon-name">${name}</figcaption>
   </figure>`
@@ -58,19 +59,35 @@ const card = (num, name, img, type) => {
 // mapping para gerar o card
 pokemonData.map(pokemon => pokemonsList.innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));
 
+
+/*
+// transformar palavra em ícone
+let icon = (type) =>{
+  for (type of icon) {
+    type.replace("Stell", `<span class="icon-aco"></span>`);
+    type.replace("Water", `<span class="icon-agua"></span>`);
+  }
+}
+pokemonData.map(pokemon => icon (pokemon.type));
+*/
+
 // cards filtrados
-earchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData)));
+searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData)));
 
 const displayPokemons = (pokemon) => {
   const cards = pokemon
     .map((pokemon) => {
-      return `<div class="pokemon-info" ><figure class="card-pokemon"><p class="pokemon-num">${pokemon.num}</p>
-      <img class="pokemon-image" src="${pokemon.img}" alt="Miniatura do pokémon ${pokemon.name} do tipo ${pokemon.type}">
-</figure> <div><figcaption class="pokemon-name">${pokemon.name}</figcaption> </div></div>`;
+      return `<figure class="card-pokemon"><p class="pokemon-num">${pokemon.num}</p>
+      <img src="${pokemon.img}" alt="Miniatura do pokémon ${pokemon.name}">
+      <p class="pokemon-type">${pokemon.type}</p>
+      <figcaption class="pokemon-name">${pokemon.name}</figcaption>
+      </figure>`;
     })
     .join('');
   pokemonsList.innerHTML = cards;
 };
+
+
 
 // ************************
 
