@@ -109,6 +109,10 @@ h3 {
     height: 40%;
 }
 
+.statistics{
+    color: white;
+    text-align: center;
+}
 /*classe do texto das pequenas divs do main.js*/
 
 /*.div-inside {

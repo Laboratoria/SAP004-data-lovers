@@ -131,7 +131,7 @@ const pokemonZa = [
       "name": "Ivysaur"
     }]
   },
- {
+  {
     "id": 2,
     "num": "002",
     "name": "Ivysaur",
