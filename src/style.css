@@ -288,7 +288,7 @@ body {
   border-top: 4px solid #E80011;
 }
 
-.button-red:hover .submenu-option-red {
+.button-red:hover .submenu-option-red{
   display: block;
 }
 
