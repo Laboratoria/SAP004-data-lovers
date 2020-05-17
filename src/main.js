@@ -160,6 +160,8 @@ buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "
 
 // **** Botões Tipo *******
 
+
+
 buttonSteel.addEventListener("click", () => displayPokemons(filterByType("Steel", "type", pokemonData)));
 buttonWater.addEventListener("click", () => displayPokemons(filterByType("Water", "type", pokemonData)));
 buttonDragon.addEventListener("click", () => displayPokemons(filterByType("Dragon", "type", pokemonData)));
@@ -179,4 +181,3 @@ buttonGround.addEventListener("click", () => displayPokemons(filterByType("Groun
 buttonPoison.addEventListener("click", () => displayPokemons(filterByType("Poison", "type", pokemonData)));
 buttonFlying.addEventListener("click", () => displayPokemons(filterByType("Flying", "type", pokemonData)));
 
-// ************************

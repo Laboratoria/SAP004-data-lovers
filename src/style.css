@@ -466,7 +466,8 @@ h2{
   .pokemon-name {
     font-size: 1em;
     position: relative;
-  }
+    bottom: 15px;
+ }
 }
 
 @media( min-width: 800px){
