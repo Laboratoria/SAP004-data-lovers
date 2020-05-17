@@ -1,10 +1,10 @@
 // função de Busca pura
 export const searchPokemon = (typedString, name, pokemonData) => {
-    let searchString = typedString.value.toLowerCase();
+    
     let filteredPokemons = pokemonData.filter(pokemon => {
       let pokemonString = pokemon[name].toLowerCase();
-      let beginOfString = pokemonString.substr(0,searchString.length);
-    return (beginOfString.includes(searchString));
+      let beginOfString = pokemonString.substr(0,typedString.length);
+    return (beginOfString.includes(typedString));
   });
   return filteredPokemons;
 };
@@ -17,7 +17,5 @@ export const sortOrder = (byOrder, order, pokemonData) => {
 
 // função de Filtro pura
 export const filterByType = (pokemonType, arrayType, pokemonData) => pokemonData.filter(pokemon => pokemon[arrayType].includes(pokemonType));
-
-
 
 
