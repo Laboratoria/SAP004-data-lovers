@@ -63,7 +63,7 @@ body {
 /* HEADER */
 .navbar {
   background-color: white;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 6px 0px #CCC;
   display: flex;
   height: 55px;
   justify-content: center;
@@ -94,7 +94,6 @@ body {
 }
 
 .submenu {
-  float: right;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -135,72 +134,180 @@ body {
   margin: 0 0 5px 0;
 }
 
-.blue {
-  border-top: 4px solid #0a6dca;
-}
-
-.blue:hover, .blue:active {
-  color: #0a6dca;
-}
-
-.yellow {
-  border-top: 4px solid #FFC700 ;
-}
-
-.yellow:hover, .yellow:active {
-  color: #FFC700;
-}
-
-.red {
-  border-top: 4px solid #E80011;
-}
-
-.red:hover, .red:active {
-  color: #E80011;
-}
-
-.submenu-options {
-  border-bottom: 1px solid  #A5A5A5;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-  display: none;
-  position: absolute;
-  list-style-type: none;
-  width: 55px;
-  z-index: -1;
-}
-
-.submenu:hover .submenu-options {
-  display: block;
-}
-
-.sub-item {
+/* Menu Order */
+.sub-button-blue {
   color: #A5A5A5;
   background-color: white;
   border: none;
+  border-top: 4px solid  #0a6dca;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  height: 55px;
+  outline: none;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 40px;
+}
+
+.sub-button-blue:hover, .sub-button-blue:focus, .sub-button-blue:focus-within .sub-button-blue:active {
+  color: #0a6dca;
+}
+
+.submenu-options-blue {
   border-bottom: 1px solid  #A5A5A5;
+  box-shadow: 0px 3px 6px 0px #CCC;
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  width: 90px;
+}
+
+.button-blue:hover .submenu-options-blue{
+  display: block;
+}
+
+.sub-item-blue {
+  color: #A5A5A5;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #0a6dca;
   font-family: Maven Pro;
   font-style: normal;
   font-size: 0.75em;
   font-weight: 600;
-  height: 25px;
+  height: 30px;
   outline: none;
   text-align: center;
-  width: 55px;
+  width: 90px;
 }
 
-.full-blue {
-  border-bottom: 1px solid #0a6dca;
-}
-
-.full-blue:hover, .full-blue:active {
+.sub-item-blue:hover, .sub-item-blue:active {
   color: #0a6dca;
   background-color: #D4DFF5;
 }
-/*
-.nav-item {
-}
-*/
 
+/* Menu Tipo */
+.sub-button-yellow {
+  color: #A5A5A5;
+  background-color: white;
+  border: none;
+  border-top: 4px solid  #FFC700;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  height: 55px;
+  outline: none;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 40px;
+}
+
+.sub-button-yellow:hover, .sub-button-yellow:focus, .sub-button-yellow:focus-within .sub-button-yellow:active {
+  color: #FFC700;
+}
+
+.submenu-options-yellow {
+  border-bottom: 1px solid  #A5A5A5;
+  box-shadow: 0px 3px 6px 0px #CCC;  
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  width: 200px;
+  right: 5%;
+  box-sizing: content-box;
+}
+
+.button-yellow:hover .submenu-options-yellow{
+  display: flex;
+}
+
+.submenu-col1 {
+  display: inline-block;
+  list-style-type: none;
+  border-right: 1px solid #FFC700;
+}
+
+.submenu-col2 {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.sub-item-yellow {
+  color: #A5A5A5;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #FFC700;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.75em;
+  font-weight: 600;
+  height: 30px;
+  outline: none;
+  text-align: left;
+  width: 100px;
+}
+
+.sub-item-yellow span{
+  padding:0 8px;
+  text-align: center;
+}
+
+.sub-item-yellow:hover, .sub-item-yellow:active {
+  color: #FFC700;
+  background-color: #FFF3C7;
+}
+
+/* Menu Busca */
+.sub-button-red {
+  color: #A5A5A5;
+  background-color: white;
+  border: none;
+  border-top: 4px solid  #E80011;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  height: 55px;
+  outline: none;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 40px;
+}
+
+.submenu-option-red {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  top: 0;
+  right: 15px;
+  padding: 11px 0 0;
+  background-color: white;
+  border-top: 4px solid #E80011;
+}
+
+.button-red:hover .submenu-option-red{
+  display: block;
+}
+
+.sub-item-red {
+  background: #EAEAEA;
+  border-radius: 2px;
+  border:none;
+  height: 30px;
+  width: 150px;
+  box-sizing: content-box;
+  padding-left: 10px;
+}
+
+.sub-item-red input::placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.75em;
+  color: #9F9F9F;
+}
 
 /* MAIN */
 
