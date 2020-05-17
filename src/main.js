@@ -186,9 +186,16 @@ buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "
 
 
 // **** Botões Tipo *******
+/*buttonNormal.addEventListener("click", function (){
+  
+  let kanto = document.querySelector("#calc")
+  const numpok = (filterByType.length / 151)*100
+  kanto.innerHTML= `Em <strong>Kanto</strong> há ${numpok}% deste tipo de Pokemon`
+  return pokemonData
+})*/
 
 buttonSteel.addEventListener("click", () => displayPokemons(filterByType("Steel", "type", pokemonData)));
-buttonWater.addEventListener("click", () => displayPokemons(filterByType("Water", "type", pokemonData)));
+buttonWater.addEventListener("click", () => displayPokemons(filterByType("Water", "type", pokemonData)) ); 
 buttonDragon.addEventListener("click", () => displayPokemons(filterByType("Dragon", "type", pokemonData)));
 buttonEletric.addEventListener("click", () => displayPokemons(filterByType("Electric", "type", pokemonData)));
 buttonFairy.addEventListener("click", () => displayPokemons(filterByType("Fairy", "type", pokemonData)));

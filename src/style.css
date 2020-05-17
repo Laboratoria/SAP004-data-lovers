@@ -502,13 +502,7 @@ h2{
   font-size: 20px;
   
   }
-  /*
-  .card-pokemon:hover{
-  transform: scale(1.5);
-  background-color: whitesmoke;
-  z-index: 1;
-}
-*/
+  
   .card-pokemon img {
     width: 115px;
     height: 115px;
@@ -524,10 +518,4 @@ h2{
     bottom: 22px;
     right: 5px;
     text-align: end;
-  }
-
-/*
-  .pokemon-name{
-    bottom: 24px;
-    font-size: 0px;
   }
