@@ -59,6 +59,25 @@ body {
 .icon-venenoso:before {content: "\e913";}
 .icon-voador:before {content: "\e914";}
 
+/* COLORS */
+.stell { color: #5AA7AA;}
+.water {color: #68B5E5;} 
+.dragon {color: #0A6DCA;}
+.eletric {color: #FFC700;}
+.fairy {color: #F29FE5;}
+.ghost {color: #7272D2;}
+.fire {color: #FF8713;}
+.ice {color: #77D3C3;}
+.bug {color: #A2C629;}
+.fighting {color: #E80011;}
+.normal {color: #9B9BA3;}
+.dark {color: #5D5F6A;}
+.rock {color: #D5AD30;}
+.grass {color: #34C677;}
+.psychic {color: #FE7571;}
+.ground {color: #D17F46;}
+.poison {color: #C645E1;}
+.flying {color: #9FB9EB;}
 
 /* HEADER */
 .navbar {
@@ -345,6 +364,7 @@ h2{
 /* CARD */
 .card-pokemon { 
   border: 1px solid #A5A5A5;
+  box-shadow: 0px 2px 4px 0px #CCC;
   border-radius: 5px; 
   height: 90px;
   width: 90px;
@@ -352,9 +372,11 @@ h2{
   margin-top: 20px;
 }
 
+/*
 .card-pokemon:active,.card-pokemon:hover{
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 4px 0px #CCC;
 }
+*/
 
 .card-pokemon img {
   object-fit: contain;
@@ -410,10 +432,10 @@ h2{
 
   .card-pokemon img {
     object-fit: contain;
-    width: 95px;
-    height: 95px;
+    width: 90px;
+    height: 90px;
     position: relative;
-    bottom: 13px;
+    bottom: 5px;
   }
 
   .pokemon-num {
@@ -423,20 +445,19 @@ h2{
   .pokemon-type {
     display: block;
     position: relative;
-    bottom: 20px;
+    bottom: 15px;
     right: 5px;
     text-align: end;
+    font-size: 0.9em;
   }
   
   .pokemon-name {
     font-size: 1em;
     position: relative;
-    bottom: 20px;
   }
 
 
 }
-
 
 @media( min-width: 800px){
   .nav {
@@ -481,11 +502,7 @@ h2{
   font-size: 20px;
   
   }
-  .card-pokemon:hover{
-    transform: scale(3);
-  background-color: rgb(255, 240, 240);
-  z-index: 1;
-}
+  
   .card-pokemon img {
     width: 115px;
     height: 115px;
@@ -502,147 +519,3 @@ h2{
     right: 5px;
     text-align: end;
   }
-
-  .pokemon-name{
-    bottom: 24px;
-    font-size: ;
-}
-}
-.calc{
-  margin-top: 30px;
-  display: flex;
-  font-size: 70px;
-}
-
-
-
-
-/* COLORS 
-.blue {
-
-}
-
-.yellow {
-
-}
-
-.red {
-
-}
-
-/* Aço 
-background: #5AA7AA;
-*/
-
-
-
-/* Água 
-
-
-background: #68B5E5;
-
-/* Dragão 
-
-
-background: #0A6DCA;
-
-/* Elétrico 
-
-
-background: #FFC700;
-
-/* Fada 
-
-
-background: #F29FE5;
-
-/* Fantasma 
-
-
-background: #7272D2;
-
-/* Fogo 
-
-
-background: #FF8713;
-
-/* Gelo 
-
-
-background: #77D3C3;
-
-/* Inseto 
-
-
-background: #A2C629;
-
-/* Lutador 
-
-
-background: #E80011;
-
-/* Normal 
-
-
-background: #9B9BA3;
-
-
-/* Noturno 
-
-background: #5D5F6A;
-
-/* Pedra 
-
-
-background: #D5AD30;
-
-/* Planta 
-
-
-background: #34C677;
-
-/* Psíquico 
-
-
-background: #FE7571;
-
-/* Terrestre 
-
-
-background: #D17F46;
-
-/* Venenoso 
-
-
-background: #C645E1;
-
-/* Voador 
-
-
-background: #9FB9EB;
-
-/* Bordas 
-
-
-background: #A5A5A5;
-
-/* Pokémon 
-
-
-background: #333333;
-
-/* Menu 
-
-
-background: #9F9F9F;
-
-/* Branco 
-
-
-background: #FFFFFF;
-
-}
-*/
-
-
-
