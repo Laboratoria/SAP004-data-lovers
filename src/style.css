@@ -59,11 +59,30 @@ body {
 .icon-venenoso:before {content: "\e913";}
 .icon-voador:before {content: "\e914";}
 
+/* COLORS */
+.stell { color: #5AA7AA;}
+.water {color: #68B5E5;} 
+.dragon {color: #0A6DCA;}
+.eletric {color: #FFC700;}
+.fairy {color: #F29FE5;}
+.ghost {color: #7272D2;}
+.fire {color: #FF8713;}
+.ice {color: #77D3C3;}
+.bug {color: #A2C629;}
+.fighting {color: #E80011;}
+.normal {color: #9B9BA3;}
+.dark {color: #5D5F6A;}
+.rock {color: #D5AD30;}
+.grass {color: #34C677;}
+.psychic {color: #FE7571;}
+.ground {color: #D17F46;}
+.poison {color: #C645E1;}
+.flying {color: #9FB9EB;}
 
 /* HEADER */
 .navbar {
   background-color: white;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 6px 0px #CCC;
   display: flex;
   height: 55px;
   justify-content: center;
@@ -94,7 +113,6 @@ body {
 }
 
 .submenu {
-  float: right;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -135,72 +153,180 @@ body {
   margin: 0 0 5px 0;
 }
 
-.blue {
-  border-top: 4px solid #0a6dca;
-}
-
-.blue:hover, .blue:active {
-  color: #0a6dca;
-}
-
-.yellow {
-  border-top: 4px solid #FFC700 ;
-}
-
-.yellow:hover, .yellow:active {
-  color: #FFC700;
-}
-
-.red {
-  border-top: 4px solid #E80011;
-}
-
-.red:hover, .red:active {
-  color: #E80011;
-}
-
-.submenu-options {
-  border-bottom: 1px solid  #A5A5A5;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-  display: none;
-  position: absolute;
-  list-style-type: none;
-  width: 55px;
-  z-index: -1;
-}
-
-.submenu:hover .submenu-options {
-  display: block;
-}
-
-.sub-item {
+/* Menu Order */
+.sub-button-blue {
   color: #A5A5A5;
   background-color: white;
   border: none;
+  border-top: 4px solid  #0a6dca;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  height: 55px;
+  outline: none;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 40px;
+}
+
+.sub-button-blue:hover, .sub-button-blue:focus, .sub-button-blue:focus-within .sub-button-blue:active {
+  color: #0a6dca;
+}
+
+.submenu-options-blue {
   border-bottom: 1px solid  #A5A5A5;
+  box-shadow: 0px 3px 6px 0px #CCC;
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  width: 90px;
+}
+
+.button-blue:hover .submenu-options-blue{
+  display: block;
+}
+
+.sub-item-blue {
+  color: #A5A5A5;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #0a6dca;
   font-family: Maven Pro;
   font-style: normal;
   font-size: 0.75em;
   font-weight: 600;
-  height: 25px;
+  height: 30px;
   outline: none;
   text-align: center;
-  width: 55px;
+  width: 90px;
 }
 
-.full-blue {
-  border-bottom: 1px solid #0a6dca;
-}
-
-.full-blue:hover, .full-blue:active {
+.sub-item-blue:hover, .sub-item-blue:active {
   color: #0a6dca;
   background-color: #D4DFF5;
 }
-/*
-.nav-item {
-}
-*/
 
+/* Menu Tipo */
+.sub-button-yellow {
+  color: #A5A5A5;
+  background-color: white;
+  border: none;
+  border-top: 4px solid  #FFC700;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  height: 55px;
+  outline: none;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 40px;
+}
+
+.sub-button-yellow:hover, .sub-button-yellow:focus, .sub-button-yellow:focus-within .sub-button-yellow:active {
+  color: #FFC700;
+}
+
+.submenu-options-yellow {
+  border-bottom: 1px solid  #A5A5A5;
+  box-shadow: 0px 3px 6px 0px #CCC;  
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  width: 200px;
+  right: 5%;
+  box-sizing: content-box;
+}
+
+.button-yellow:hover .submenu-options-yellow{
+  display: flex;
+}
+
+.submenu-col1 {
+  display: inline-block;
+  list-style-type: none;
+  border-right: 1px solid #FFC700;
+}
+
+.submenu-col2 {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.sub-item-yellow {
+  color: #A5A5A5;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #FFC700;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.75em;
+  font-weight: 600;
+  height: 30px;
+  outline: none;
+  text-align: left;
+  width: 100px;
+}
+
+.sub-item-yellow span{
+  padding:0 8px;
+  text-align: center;
+}
+
+.sub-item-yellow:hover, .sub-item-yellow:active {
+  color: #FFC700;
+  background-color: #FFF3C7;
+}
+
+/* Menu Busca */
+.sub-button-red {
+  color: #A5A5A5;
+  background-color: white;
+  border: none;
+  border-top: 4px solid  #E80011;
+  font-family: Maven Pro;
+  font-style: normal;
+  font-size: 0.55em;
+  font-weight: 700;
+  height: 55px;
+  outline: none;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 40px;
+}
+
+.submenu-option-red {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  top: 0;
+  right: 15px;
+  padding: 11px 0 0;
+  background-color: white;
+  border-top: 4px solid #E80011;
+}
+
+.button-red:hover .submenu-option-red{
+  display: block;
+}
+
+.sub-item-red {
+  background: #EAEAEA;
+  border-radius: 2px;
+  border:none;
+  height: 30px;
+  width: 150px;
+  box-sizing: content-box;
+  padding-left: 10px;
+}
+
+.sub-item-red input::placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.75em;
+  color: #9F9F9F;
+}
 
 /* MAIN */
 
@@ -238,6 +364,7 @@ h2{
 /* CARD */
 .card-pokemon { 
   border: 1px solid #A5A5A5;
+  box-shadow: 0px 2px 4px 0px #CCC;
   border-radius: 5px; 
   height: 90px;
   width: 90px;
@@ -245,9 +372,11 @@ h2{
   margin-top: 20px;
 }
 
+/*
 .card-pokemon:active,.card-pokemon:hover{
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 4px 0px #CCC;
 }
+*/
 
 .card-pokemon img {
   object-fit: contain;
@@ -303,10 +432,10 @@ h2{
 
   .card-pokemon img {
     object-fit: contain;
-    width: 95px;
-    height: 95px;
+    width: 90px;
+    height: 90px;
     position: relative;
-    bottom: 13px;
+    bottom: 5px;
   }
 
   .pokemon-num {
@@ -316,20 +445,19 @@ h2{
   .pokemon-type {
     display: block;
     position: relative;
-    bottom: 20px;
+    bottom: 15px;
     right: 5px;
     text-align: end;
+    font-size: 0.9em;
   }
   
   .pokemon-name {
     font-size: 1em;
     position: relative;
-    bottom: 20px;
   }
 
 
 }
-
 
 @media( min-width: 800px){
   .nav {
@@ -374,11 +502,13 @@ h2{
   font-size: 20px;
   
   }
+  /*
   .card-pokemon:hover{
-    transform: scale(3);
-  background-color: rgb(255, 240, 240);
+  transform: scale(1.5);
+  background-color: whitesmoke;
   z-index: 1;
 }
+*/
   .card-pokemon img {
     width: 115px;
     height: 115px;
@@ -398,142 +528,10 @@ h2{
 
   .pokemon-name{
     bottom: 24px;
-    font-size: ;
+    
 }
 }
-.calc{
-  margin-top: 30px;
-  display: flex;
-  font-size: 70px;
-}
 
 
 
-
-/* COLORS 
-.blue {
-
-}
-
-.yellow {
-
-}
-
-.red {
-
-}
-
-/* Aço 
-background: #5AA7AA;
-*/
-
-
-
-/* Água 
-
-
-background: #68B5E5;
-
-/* Dragão 
-
-
-background: #0A6DCA;
-
-/* Elétrico 
-
-
-background: #FFC700;
-
-/* Fada 
-
-
-background: #F29FE5;
-
-/* Fantasma 
-
-
-background: #7272D2;
-
-/* Fogo 
-
-
-background: #FF8713;
-
-/* Gelo 
-
-
-background: #77D3C3;
-
-/* Inseto 
-
-
-background: #A2C629;
-
-/* Lutador 
-
-
-background: #E80011;
-
-/* Normal 
-
-
-background: #9B9BA3;
-
-
-/* Noturno 
-
-background: #5D5F6A;
-
-/* Pedra 
-
-
-background: #D5AD30;
-
-/* Planta 
-
-
-background: #34C677;
-
-/* Psíquico 
-
-
-background: #FE7571;
-
-/* Terrestre 
-
-
-background: #D17F46;
-
-/* Venenoso 
-
-
-background: #C645E1;
-
-/* Voador 
-
-
-background: #9FB9EB;
-
-/* Bordas 
-
-
-background: #A5A5A5;
-
-/* Pokémon 
-
-
-background: #333333;
-
-/* Menu 
-
-
-background: #9F9F9F;
-
-/* Branco 
-
-
-background: #FFFFFF;
-
-
-*/
 
