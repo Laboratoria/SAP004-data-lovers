@@ -410,6 +410,7 @@ h2{
     width: 390px;
   }
 
+
   .pokemon-list {
     grid-template-columns: repeat(4, 90px);
   }
@@ -419,7 +420,18 @@ h2{
   .nav {
     width: 510px;
   }
-
+  .menu {
+    width: 500px;
+  }
+  .logo {font-size: 3em;
+    }
+    .submenu{
+      width: 133px;
+      font-size: 20px;
+    }
+    .sub-button-blue, .sub-button-yellow, .sub-button-red{
+      width: 52px;
+    }
   .pokemon-list {
     grid-template-columns: repeat(4, 120px);
   }
@@ -461,6 +473,10 @@ h2{
   .nav {
     width: 530px;
   }
+  .menu{
+    width: 685px;
+  }
+  
   .pokemon-list {
     grid-template-columns: repeat(5, 135px);
     grid-gap: 17px;
@@ -488,17 +504,15 @@ h2{
   .nav {
     width: 800px;
   }
+  .submenu{
+    position: relative;
+  }
   .pokemon-list{
-    grid-template-columns: repeat(6, 150px);
+    grid-template-columns: repeat(6, 135px);
     grid-gap: 20px
     
   }
-  .card-pokemon{
-  width: 150px;
-  height: 150px;
-  font-size: 20px;
   
-  }
   /*
   .card-pokemon:hover{
   transform: scale(1.5);
@@ -506,28 +520,6 @@ h2{
   z-index: 1;
 }
 */
-  .card-pokemon img {
-    width: 115px;
-    height: 115px;
-    }
-    
-  .pokemon-num {
-    font-size: 1em;
-  }
-
-  .pokemon-type {
-    display: block;
-    position: relative;
-    bottom: 22px;
-    right: 5px;
-    text-align: end;
-  }
-
-  .pokemon-name{
-    bottom: 24px;    
 }
-}
-
-
 
 
