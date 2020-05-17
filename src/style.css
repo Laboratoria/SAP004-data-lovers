@@ -455,8 +455,6 @@ h2{
     font-size: 1em;
     position: relative;
   }
-
-
 }
 
 @media( min-width: 800px){
@@ -466,7 +464,6 @@ h2{
   .pokemon-list {
     grid-template-columns: repeat(5, 135px);
     grid-gap: 17px;
-
   }
   
   
@@ -527,8 +524,7 @@ h2{
   }
 
   .pokemon-name{
-    bottom: 24px;
-    
+    bottom: 24px;    
 }
 }
 

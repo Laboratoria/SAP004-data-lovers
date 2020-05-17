@@ -4,7 +4,6 @@ import data from './data/pokemon/pokemon.js';
 // banco de dados
 const pokemonData = data.pokemon;
 
-
 // **** ids HTML *********
 
 // ids do Nav 
@@ -39,10 +38,6 @@ const buttonPsychic = document.querySelector("#buttonPsychic");
 const buttonGround = document.querySelector("#buttonGround");
 const buttonPoison = document.querySelector("#buttonPoison");
 const buttonFlying = document.querySelector("#buttonFlying");
-
-// ************************
-
-
 
 // **** Card **************
 
@@ -87,7 +82,7 @@ const card = (num, name, img, type) => {
     } else if (name === "Flying"){
       return name.replace("Flying", `<span class="icon-voador flying"></span>`);
     }
-  }).join('')
+  }).join(' ')
   
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
   <img src="${img}" alt="Miniatura do pokémon ${name}">
@@ -98,18 +93,6 @@ const card = (num, name, img, type) => {
 
 // mapping para gerar o card
 pokemonData.map(pokemon => pokemonsList.innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));
-
-
-/*
-// transformar palavra em ícone
-let icon = (type) =>{
-  for (type of icon) {
-    type.replace("Stell", `<span class="icon-aco"></span>`);
-    type.replace("Water", `<span class="icon-agua"></span>`);
-  }
-}
-pokemonData.map(pokemon => icon (pokemon.type));
-*/
 
 // cards filtrados
 searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData)));
@@ -156,7 +139,7 @@ const displayPokemons = (pokemon) => {
         } else if (name === "Flying"){
           return name.replace("Flying", `<span class="icon-voador flying"></span>`);
         }
-      }).join('')
+      }).join(' ')
       
       return `<figure class="card-pokemon"><p class="pokemon-num">${pokemon.num}</p>
       <img src="${pokemon.img}" alt="Miniatura do pokémon ${pokemon.name}">
@@ -168,22 +151,12 @@ const displayPokemons = (pokemon) => {
   pokemonsList.innerHTML = cards;
 };
 
-
-
-// ************************
-
-
-
 // **** Botões Ordem ******
 
 buttonAZ.addEventListener("click", () => displayPokemons(sortOrder("az", "name", pokemonData)));
 buttonZA.addEventListener("click", () => displayPokemons(sortOrder("za", "name", pokemonData)));
 buttonCresc.addEventListener("click", () => displayPokemons(sortOrder("cresc", "id", pokemonData)));
 buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "id", pokemonData)));
-
-// ************************
-
-
 
 // **** Botões Tipo *******
 
