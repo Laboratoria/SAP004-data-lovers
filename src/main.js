@@ -4,7 +4,6 @@ import data from './data/pokemon/pokemon.js';
 // banco de dados
 const pokemonData = data.pokemon;
 
-
 // **** ids HTML *********
 
 // ids do Nav 
@@ -40,10 +39,6 @@ const buttonGround = document.querySelector("#buttonGround");
 const buttonPoison = document.querySelector("#buttonPoison");
 const buttonFlying = document.querySelector("#buttonFlying");
 
-// ************************
-
-
-
 // **** Card **************
 
 // card do pokémon
@@ -56,8 +51,8 @@ const card = (num, name, img, type) => {
       return name.replace("Water", `<span class="icon-agua water"></span>`);
     } else if (name === "Dragon"){
       return name.replace("Dragon", `<span class="icon-dragao dragon"></span>`);
-    } else if (name === "Eletric"){
-      return name.replace("Eletric", `<span class="icon-eletrico eletric"></span>`);
+    } else if (name === "Electric"){
+      return name.replace("Electric", `<span class="icon-eletrico eletric"></span>`);
     } else if (name === "Fairy"){
       return name.replace("Fairy", `<span class="icon-fada fairy"></span>`);
     } else if (name === "Ghost"){
@@ -87,6 +82,7 @@ const card = (num, name, img, type) => {
     } else if (name === "Flying"){
       return name.replace("Flying", `<span class="icon-voador flying"></span>`);
     }
+  }).join(' ')
   })
   
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
@@ -125,8 +121,8 @@ const displayPokemons = (pokemon) => {
           return name.replace("Water", `<span class="icon-agua water"></span>`);
         } else if (name === "Dragon"){
           return name.replace("Dragon", `<span class="icon-dragao dragon"></span>`);
-        } else if (name === "Eletric"){
-          return name.replace("Eletric", `<span class="icon-eletrico eletric"></span>`);
+        } else if (name === "Electric"){
+          return name.replace("Electric", `<span class="icon-eletrico eletric"></span>`);
         } else if (name === "Fairy"){
           return name.replace("Fairy", `<span class="icon-fada fairy"></span>`);
         } else if (name === "Ghost"){
@@ -156,7 +152,7 @@ const displayPokemons = (pokemon) => {
         } else if (name === "Flying"){
           return name.replace("Flying", `<span class="icon-voador flying"></span>`);
         }
-      })
+      }).join(' ')
       
       return `<figure class="card-pokemon"><p class="pokemon-num">${pokemon.num}</p>
       <img src="${pokemon.img}" alt="Miniatura do pokémon ${pokemon.name}">
@@ -169,21 +165,12 @@ const displayPokemons = (pokemon) => {
 };
 
 
-
-// ************************
-
-
-
 // **** Botões Ordem ******
 
 buttonAZ.addEventListener("click", () => displayPokemons(sortOrder("az", "name", pokemonData)));
 buttonZA.addEventListener("click", () => displayPokemons(sortOrder("za", "name", pokemonData)));
 buttonCresc.addEventListener("click", () => displayPokemons(sortOrder("cresc", "id", pokemonData)));
 buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "id", pokemonData)));
-
-// ************************
-
-
 
 // **** Botões Tipo *******
 /*buttonNormal.addEventListener("click", function (){
@@ -194,8 +181,10 @@ buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "
   return pokemonData
 })*/
 
+const Kanto = document.querySelector("#casa")
+
 buttonSteel.addEventListener("click", () => displayPokemons(filterByType("Steel", "type", pokemonData)));
-buttonWater.addEventListener("click", () => displayPokemons(filterByType("Water", "type", pokemonData)) ); 
+buttonWater.addEventListener("click", () => displayPokemons(filterByType("Water", "type", pokemonData)),Kanto.innerHTML=filterByType.length);console.log(Kanto)
 buttonDragon.addEventListener("click", () => displayPokemons(filterByType("Dragon", "type", pokemonData)));
 buttonEletric.addEventListener("click", () => displayPokemons(filterByType("Electric", "type", pokemonData)));
 buttonFairy.addEventListener("click", () => displayPokemons(filterByType("Fairy", "type", pokemonData)));
@@ -213,4 +202,3 @@ buttonGround.addEventListener("click", () => displayPokemons(filterByType("Groun
 buttonPoison.addEventListener("click", () => displayPokemons(filterByType("Poison", "type", pokemonData)));
 buttonFlying.addEventListener("click", () => displayPokemons(filterByType("Flying", "type", pokemonData)));
 
-// ************************
