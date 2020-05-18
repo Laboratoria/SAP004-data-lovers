@@ -83,6 +83,7 @@ const card = (num, name, img, type) => {
       return name.replace("Flying", `<span class="icon-voador flying"></span>`);
     }
   }).join(' ')
+  })
   
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
   <img src="${img}" alt="Miniatura do pokémon ${name}">
@@ -93,6 +94,18 @@ const card = (num, name, img, type) => {
 
 // mapping para gerar o card
 pokemonData.map(pokemon => pokemonsList.innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));
+
+
+/*
+// transformar palavra em ícone
+let icon = (type) =>{
+  for (type of icon) {
+    type.replace("Stell", `<span class="icon-aco"></span>`);
+    type.replace("Water", `<span class="icon-agua"></span>`);
+  }
+}
+pokemonData.map(pokemon => icon (pokemon.type));
+*/
 
 // cards filtrados
 searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData)));
@@ -151,6 +164,7 @@ const displayPokemons = (pokemon) => {
   pokemonsList.innerHTML = cards;
 };
 
+
 // **** Botões Ordem ******
 
 buttonAZ.addEventListener("click", () => displayPokemons(sortOrder("az", "name", pokemonData)));
@@ -159,6 +173,13 @@ buttonCresc.addEventListener("click", () => displayPokemons(sortOrder("cresc", "
 buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "id", pokemonData)));
 
 // **** Botões Tipo *******
+/*buttonNormal.addEventListener("click", function (){
+  
+  let kanto = document.querySelector("#calc")
+  const numpok = (filterByType.length / 151)*100
+  kanto.innerHTML= `Em <strong>Kanto</strong> há ${numpok}% deste tipo de Pokemon`
+  return pokemonData
+})*/
 
 const Kanto = document.querySelector("#casa")
 
