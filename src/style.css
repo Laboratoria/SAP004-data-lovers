@@ -330,6 +330,12 @@ body {
   color: #9F9F9F;
 }
 
+
+.calc {
+  margin-top: 150px;
+  font-size: 20px;
+}
+
 /* MAIN */
 main{
   display: flex;
