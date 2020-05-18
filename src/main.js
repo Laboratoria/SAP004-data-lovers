@@ -83,7 +83,6 @@ const card = (num, name, img, type) => {
       return name.replace("Flying", `<span class="icon-voador flying"></span>`);
     }
   }).join(' ')
-  })
   
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
   <img src="${img}" alt="Miniatura do pokémon ${name}">
