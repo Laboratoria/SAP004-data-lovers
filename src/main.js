@@ -63,7 +63,7 @@ function statistics () {
     }
 
     allList(listType, statisticsType);*/
-}
+
 
 document.getElementById("filter-name").onkeyup = () => {
     const filterName = document.getElementById("filter-name").value;
