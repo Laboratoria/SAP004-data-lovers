@@ -155,7 +155,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: right top;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100%;
   }
 
   p {
