@@ -152,8 +152,9 @@ h1 {
     /* background-position: right top;  background-attachment: fixed; */   
     font-family: "Girassol";
     background-image: url("wallpaper-for-phone.jpg");
-    background-repeat: no-repeat;
+    background-repeat: round;
     background-size: cover;
+    background-position: center;
   }
 
   p {
