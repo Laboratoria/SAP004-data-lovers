@@ -8,10 +8,6 @@
 * [4. Considerações gerais](#4-consideracoes-gerais)
 * [5. Critérios mínimos de aceitação do projeto](#5-criterios-minimos-de-aceitacao-do-projeto)
 * [6. Hacker edition](#6-hacker-edition)
-* [7. Considerações técnicas](#7-considerações-técnicas)
-* [8. Guias, dicas e leituras complementares](#8-pistas-dicas-e-leituras-complementares)
-* [9. Checklist](#9-checklist)
-
 ***
 
 ## 1. Preâmbulo
@@ -47,13 +43,6 @@ Segundo a [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-
 
 
 ## 6. Hacker edition
-
-As seções chamadas _Hacker Edition_ são **opcionais**. Se já tiver terminado
-todos os requisitos anteriores e tiver tempo, pode tentar completá-las. Dessa
-forma, você pode aprofundar e/ou exercitar mais os objetivos de aprendizagem
-deste projeto.
-
-Features/características extra sugeridas:
 
 * Ao invés de consumir dados estáticos do repositório, pode fazer isso de forma
   dinâmica, carregando um arquivo JSON com `fetch`. A pasta `src/data` contém

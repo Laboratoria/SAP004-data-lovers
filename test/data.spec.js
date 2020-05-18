@@ -83,6 +83,7 @@ describe('Teste para a função refente ao cálculo agregado: percentageByTypeAn
 
   it('A função retorna uma porcentagem de acordo com os parâmetros passados pelo usuário', () => {
     expect(percentageByTypeAndLevel("magic", 5, championsArray)).toBe(66);
+    
   });
 
 });

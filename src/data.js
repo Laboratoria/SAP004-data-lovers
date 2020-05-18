@@ -37,3 +37,13 @@ export function sortCharactersZA(ObjectCharactersForSortZA) {  //ORDENA OS PERSO
 
     return arrayPersonas.sort().reverse();
 }
+
+export function filterChampionsByTypeAndLevel(arrayCharactersForFilterBTL, typeOfInfoArgBTL, levelValueArgBTL) {
+
+  function isBigEnough(value) {
+    return value.info[typeOfInfoArgBTL] >= levelValueArgBTL;
+  } 
+  
+  return arrayCharactersForFilterBTL.filter(isBigEnough); 
+
+}
