@@ -40,7 +40,6 @@ document.getElementById("select-type").onchange = () => {
     const filterCalcType = (resultCalcType(pokemonGo, filterType))
     document.getElementById("statistics").innerHTML = `<p>Os Pokémons do tipo ${filterType} representam ${filterCalcType} % dos Pokémons da primeira geração.</p>`;
     allList(listType);
-<<<<<<< HEAD
     statistics ()
 } 
 
@@ -64,9 +63,7 @@ function statistics () {
     }
 
     allList(listType, statisticsType);*/
-=======
 }
->>>>>>> 42b479179eafbaa8d9dec3463f306f624c2b6ec8
 
 document.getElementById("filter-name").onkeyup = () => {
     const filterName = document.getElementById("filter-name").value;
