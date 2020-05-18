@@ -1,6 +1,6 @@
-import { searchPokemon, sortOrder, filterByType, porcentPokemon } from './data.js';
+import { searchPokemon, sortOrder, filterByType, porcentPokemon, } from './data.js';
 import data from './data/pokemon/pokemon.js';
-
+import icons from './icons.js';
 // banco de dados
 const pokemonData = data.pokemon;
 
@@ -44,7 +44,7 @@ const buttonFlying = document.querySelector("#buttonFlying");
 // card do pokémon
 const card = (num, name, img, type) => {
 
-  let icon = type.map(function(name){
+  /*let icon = type.map(function(name){
     if (name === "Stell"){
       return name.replace("Stell", `<span class="icon-aco stell"></span>`);
     } else if (name === "Water"){
@@ -81,7 +81,10 @@ const card = (num, name, img, type) => {
       return name.replace("Poison", `<span class="icon-venenoso poison"></span>`);
     } else if (name === "Flying"){
       return name.replace("Flying", `<span class="icon-voador flying"></span>`);
-    }
+    }*/
+    let icon = type.map(function(name){
+      const iconName = name.toLowerCase();
+      return`<span class="${icons[iconName]}"></span>`
   }).join(' ')
   
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
