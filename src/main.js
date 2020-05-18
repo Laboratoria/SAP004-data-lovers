@@ -46,7 +46,6 @@ function statistics () {
     const filterCalcType = pokemonGo.filter (search => search.type.includes(filterType))
     const result = Math.round(((filterCalcType.length * 100) /pokemonGo.length) *100)/100
     document.getElementById("statistics").innerHTML = `Existem ${result} % dos Pokémons do tipo ${filterType}`;
-
 } 
 
 /*document.getElementById("select-type").addEventListener ("change", calcType);
