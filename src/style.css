@@ -59,7 +59,7 @@ h1 {
   border-width: 5px;
   border-radius: 20px;
   border-color: #97723d;
-  background: #bda275c7;
+  background: #bda275c7; 
 }
 .for-div {
   display: inline-block;
@@ -112,12 +112,12 @@ h1 {
   margin-bottom: 10px;
 }
 
-.image, .name, .title, .key, .role, .info-champ {
+.common-class-for-information {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.image, .name, .title {
+.common-class-for-alignment {
   text-align: center;
 }
 
