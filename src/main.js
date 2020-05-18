@@ -38,7 +38,7 @@ document.getElementById("select-type").onchange = () => {
     const filterType = document.getElementById("select-type").value;
     const listType = (applySearchType(pokemonGo, filterType))
     const filterCalcType = (resultCalcType(pokemonGo, filterType))
-    document.getElementById("statistics").innerHTML = `<p>Os Pokémons do tipo ${filterCalcType} representam ${filterType} % dos Pokémons da primeira geração.</p>`;
+    document.getElementById("statistics").innerHTML = `<p>Os Pokémons do tipo ${filterType} representam ${filterCalcType} % dos Pokémons da primeira geração.</p>`;
     allList(listType);
 }
 
