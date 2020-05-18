@@ -8,6 +8,9 @@ export const applyDescendingOrder = (pokemonGo) => pokemonGo.sort((a, b) =>
 export const applySearchType = (pokemonGo, filterType) => pokemonGo.filter((search) =>
   (search.type.includes(filterType)));
 
+export const applyCalcType = (pokemonGo, filterCalcType) => pokemonGo.filter((search) =>
+  (search.type.includes(filterCalcType)));
+
 export const applySearchName = (pokemonGo, filterName) => pokemonGo.filter((search) =>
   (search.name.toLowerCase().indexOf(filterName.toLowerCase()) > -1));
 
