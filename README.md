@@ -1,7 +1,7 @@
 # Rick and Morty (Data Lovers)
 ### O que é a aplicação?
 Essa aplicação tem por objetivo atender aos usuários que desejam uma lista interativa de personagens da série Rick and Morty, que o permite conhecer o status (vivo ou morto), o gênero e a espécie do personagem, além de apresentar ao usuário que não conhece a série informações sobre a mesma (trailer e sinopse). Ela também apresenta dados numéricos à respeito da série, sendo eles número de mortos e sexo dos personagens.
-
+Para acessá-la [clique aqui](https://github.com/milaroque/SAP004-data-lovers/src)
 ### O processo de criação
 
 O processo de criação da página esteve conectado às histórias de usuário, por isso fez sentido dividi-lo em 3 páginas distintas, onde a primeira, a Home, está ligada às necessidades do usuário contemplado pela primeira história, que consiste em exibir informações básicas sobre a série e um trailer.  
