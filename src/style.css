@@ -149,13 +149,11 @@ h1 {
 /*VERSÃO MOBILE*/
 @media only screen and (max-width: 800px) {
   html {
-    /* background-image: ; */   
+    /* background-position: right top;  background-attachment: fixed; */   
     font-family: "Girassol";
     background-image: url("wallpaper-for-phone.jpg");
     background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
   }
 
   p {
