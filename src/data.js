@@ -1,4 +1,3 @@
-
 export const apllyAscendingOrder = (pokemonGo) => pokemonGo.sort((a, b) =>
   (((a.name > b.name) ? 1 : (a.name < b.name) ? -1 : 0)));
 
