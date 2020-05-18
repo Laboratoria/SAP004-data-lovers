@@ -193,8 +193,15 @@ function sortData(orderBy) {
     loadCards(ordenado)
 }
 
-//Busca:
-//código
+
+//Stats
+const computeStats = (data) => {
+    console.log(`Minha % é de ${data}`);
+    console.log(data)
+}
+
+//chamada Stats
+computeStats(data)
 
 //Voltar para home page
 const goHomePage = () => window.location.reload()
