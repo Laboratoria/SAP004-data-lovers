@@ -1,4 +1,4 @@
-import { example } from './data.js';
+import { filterData, sortData } from './data.js';
 import data from './data/pokemon/pokemon.js';
 import pokemon from './data/pokemon/pokemon.js';
 console.log(data)
@@ -82,20 +82,21 @@ loadCards(data["pokemon"]);
 //Configurações do modal (card estendido)
 function clickCard(name, num, type, img, height, weight, candy, candy_count, egg, spawn_chance) {
     const changingInfo = () => {
-		    if (name === "Nidoran ♀ (Female)") {
-		        name = "Nidoran ♀";    
-		    } else if  (name === "Nidoran ♂ (Male)") {
-		        name = "Nidoran ♂";
-		    } else if (type === "type[0]","type[1]"){
-                console.log(type)
-                type = type.join(" - ");
-            } else if (candy === "Nidoran ♀ (Female) Candy"){
-                candy = "Nidoran ♀ Candy";
-            } else if (candy === "Nidoran ♂ (Male) Candy"){
-                candy = "Nidoran ♂ Candy";
-		    } else if (candy_count === "undefined"){
-		        candy_count = 0;
-		    }
+		if (name === "Nidoran ♀ (Female)") {
+		    name = "Nidoran ♀";    
+		} else if  (name === "Nidoran ♂ (Male)") {
+		    name = "Nidoran ♂";
+		} else if (type === "type[0]","type[1]"){
+        console.log(type)
+            type = type.join(" - ");
+        } else if (candy === "Nidoran ♀ (Female) Candy"){
+            console.log(candy)
+            candy = "Nidoran ♀ Candy";
+        } else if (candy === "Nidoran ♂ (Male) Candy"){
+            candy = "Nidoran ♂ Candy";
+		} else if (candy_count === "undefined"){
+		    candy_count = 0;
+		}
 		}
 		changingInfo();  
     document.getElementById("char-name").textContent = name
@@ -106,6 +107,7 @@ function clickCard(name, num, type, img, height, weight, candy, candy_count, egg
     document.getElementById("char-height-value").textContent = height
     document.getElementById("char-weight-value").textContent = weight
     document.getElementById("char-cand-value").textContent = candy
+    console.log(candy)
     document.getElementById("char-cand-count-value").textContent = candy_count
     console.log(candy_count)
     document.getElementById("Char-egg-value").textContent = egg
@@ -134,36 +136,26 @@ window.addEventListener("click", (event) => {
 
 //Recuperação da escolha dos usuários
 function getUserOption(SelectIndex) {
-    const select = document.getElementsByClassName('select')[SelectIndex];
-
+    const select = document.getElementsByClassName('select')[SelectIndex]
     const optionValue = select.options[select.selectedIndex].value;
     console.log(`O valor do do option selecionado foi ${optionValue}`)
     return optionValue;
 };
 
 //Filtro:
-const createfilterType = (pokemon) => {
-    //Objetivo: esconder pokemons não selecionados
-    let optionUser = getUserOption(0);
-    if (pokemon.type[0] !== optionUser && pokemon.type[1] !== optionUser) {
-        console.log(pokemon)
-        return pokemon;
-    }
-};
-
-const applyFilterTypeOnCards = (data) => {
-    //Recuperar exibição dos cards ocultos em filtros anteriores
+const filterType = () =>{
+    const condition = getUserOption(0);
+    // console.log(condition)
+    //Recuperar exibição dos cards ocultos em filtros anteriores    
     let cardList = document.querySelectorAll('.container-card');
-    console.log(cardList)
+    // console.log(cardList)
     cardList.forEach((card) => card.style.display = "block");
     //Lista de cards não selecionados que serão ocultos
-    let dataFiltered = data.filter(createfilterType);
-    console.log(dataFiltered);
-
-    //Lista de elementos html que contém o núm dos pokemons
-    let numberNodeList = document.querySelectorAll('.number-pok');
+    const pokemonFiltered = filterData(data["pokemon"],condition);
+    console.log(pokemonFiltered)
+    let numberNodeList = document.querySelectorAll('.number-pok')
     //Para cada polemon não selecionado:
-    for (let item of dataFiltered) {
+    for (let item of pokemonFiltered) {
         //Pegue o número deste pokemon
         let pokemonNotFilteredNumber = item.num;
         //Para cada elemento html com o n° dos pokemons:
@@ -174,24 +166,15 @@ const applyFilterTypeOnCards = (data) => {
                 item.parentNode.parentNode.style.display = "none"
             };
         }
-    };
+    };    
 };
 
 // //Ordenação:
-function sortData(orderBy) {
-    //recuperar escolha do usuário sobre que tipo de ordem
-    const optionOrderUser = getUserOption(1);
-    //Declaração da variável a ser manipulada dentro da função, dependendo da esolha do usuário
-    let ordenado
-    if (optionOrderUser === "Menor-nº" || optionOrderUser === "A-Z") {
-        ordenado = data["pokemon"].sort((a, b) => a[orderBy] > b[orderBy] ? 1 : -1)
-    }
-    if (optionOrderUser === "Maior-nº" || optionOrderUser === "Z-A") {
-        ordenado = data["pokemon"].sort((a, b) => a[orderBy] > b[orderBy] ? -1 : 1)
-    }
-    console.log(ordenado);
-    loadCards(ordenado);
-    };
+const orderData = (sortBy) =>{
+    const sortOrder = getUserOption(1);
+    const pokemonOrded = sortData(data["pokemon"], sortBy, sortOrder);
+    loadCards(pokemonOrded)
+}
 
 //Voltar para home page
 const goHomePage = () => window.location.reload()
@@ -200,19 +183,22 @@ const goLaboratoriaPage = () => window.location.href = "https://www.laboratoria.
 //Atribuição de eventos
 document.querySelector('#home').addEventListener('click', goHomePage);
 document.querySelector('#logo-lab').addEventListener('click', goLaboratoriaPage)
-document.getElementsByClassName('select')[0].addEventListener("change", () => {
+
+const optionTyperUser = document.getElementsByClassName('select')[0]
+optionTyperUser.addEventListener("change", () => {
     getUserOption(0);
-
-    applyFilterTypeOnCards(data.pokemon);
+    filterType();
+    
 });
 
-document.getElementsByClassName('select')[1].addEventListener("change", () => {
-
+const optionOrderUser = document.getElementsByClassName('select')[1]
+optionOrderUser.addEventListener("change", () => {
     if (getUserOption(1) === "Menor-nº" || getUserOption(1) === "Maior-nº") {
-        sortData("id")
+        orderData("id")
     } else if (getUserOption(1) === "A-Z" || getUserOption(1) === "Z-A") {
-        sortData("name")
+        orderData("name")
     }
-
+    
 });
+
 
