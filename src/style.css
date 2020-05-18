@@ -48,8 +48,11 @@ html {
     right: 10%;
 }
 
-/*classe da div de cards do html*/
+.statistics {
+    color: white;
+}
 
+/*classe da div de cards do html*/
 .pokemons {
     display: flex;
     flex-direction: row;

@@ -1,4 +1,4 @@
-import { apllyAscendingOrder, applyDescendingOrder, applySearchType, applySearchName } from './data.js';
+import { apllyAscendingOrder, applyDescendingOrder, applySearchType, applyCalcType, applySearchName } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -32,23 +32,10 @@ document.getElementById("Z-A").onclick = () => {
     allList(orderResult);
 }
 
-/*document.getElementById("select-type").onchange = () => {
+document.getElementById("select-type").onchange = () => {
     const filterType = document.getElementById("select-type").value;
     const listType = (applySearchType(pokemonGo, filterType))
     allList(listType);
-}*/
-
-document.getElementById("select-type").onchange = () => {
-    const filterType = document.getElementById("select-type").value;
-    const listType = (applySearchType(pokemonGo, filterType));
-
-    document.getElementById("statistics") = () => {
-        const statisticsType = pokemonGo.filterType.innerHTML;
-        alert (statisticsType, "ola");
-        //statisticsType = pokemonGo.filterType / pokemonGo.type.length * 100;
-    }
-
-    allList(listType, statisticsType);
 }
 
 document.getElementById("filter-name").onkeyup = () => {
