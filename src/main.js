@@ -1,4 +1,4 @@
-import { apllyAscendingOrder, applyDescendingOrder, applySearchType, applySearchName } from './data.js';
+import { apllyAscendingOrder, applyDescendingOrder, applySearchType, resultCalcType, applySearchName  } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -9,8 +9,8 @@ function allList(list) {
     document.getElementById("cards").innerHTML = "";
     for (let obj of list) {
 
-        let cardItem = document.createElement("div"); //criando pequenos cards dentro da div maior do html
-        cardItem.className = "div-child"; //criei essa cGlasse apenas para teste no css
+        let cardItem = document.createElement("div"); 
+        cardItem.className = "div-child";
 
         cardItem.innerHTML += `<img src = ${obj.img} class = "img-item"><h5>${obj.num}</h5>
         <h2>${obj.name.replace("(Female)", "").replace("(Male)", "")}</h2>
@@ -25,19 +25,22 @@ allList(pokemonGo);
 document.getElementById("A-Z").onclick = () => {
     const orderResult = apllyAscendingOrder(pokemonGo)
     allList(orderResult)
-    document.getElementById("statistics").innerHTML ="";
+    document.getElementById("statistics").innerHTML = "";
 }
 
 document.getElementById("Z-A").onclick = () => {
     const orderResult = applyDescendingOrder(pokemonGo)
     allList(orderResult);
-    document.getElementById("statistics").innerHTML ="";
+    document.getElementById("statistics").innerHTML = "";
 }
 
 document.getElementById("select-type").onchange = () => {
     const filterType = document.getElementById("select-type").value;
     const listType = (applySearchType(pokemonGo, filterType))
+    const filterCalcType = (resultCalcType(pokemonGo, filterType))
+    document.getElementById("statistics").innerHTML = `<p>Os Pokémons do tipo ${filterType} representam ${filterCalcType} % dos Pokémons da primeira geração.</p>`;
     allList(listType);
+<<<<<<< HEAD
     statistics ()
 } 
 
@@ -61,9 +64,13 @@ function statistics () {
     }
 
     allList(listType, statisticsType);*/
+=======
+}
+>>>>>>> 42b479179eafbaa8d9dec3463f306f624c2b6ec8
 
 document.getElementById("filter-name").onkeyup = () => {
     const filterName = document.getElementById("filter-name").value;
     const newList = (applySearchName(pokemonGo, filterName))
     allList(newList);
+    document.getElementById("statistics").innerHTML = "";
 }
