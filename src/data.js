@@ -7,7 +7,7 @@ export const applyDescendingOrder = (pokemonGo) => pokemonGo.sort((a, b) =>
 export const applySearchType = (pokemonGo, filterType) => pokemonGo.filter((search) =>
   (search.type.includes(filterType)));
 
-  export const resultCalcType = (pokemonGo, filterType) => 
+export const resultCalcType = (pokemonGo, filterType) =>
   ((pokemonGo.length) / 100) * (filterType.length).toFixed(2);
 
 export const applySearchName = (pokemonGo, filterName) => pokemonGo.filter((search) =>
