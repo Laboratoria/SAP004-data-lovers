@@ -32,6 +32,7 @@ html {
     border-color: rgb(0, 140, 255);
     border-radius: 10px;
     font-family: 'Luckiest Guy', cursive;
+    color: black;
 }
 
 .order-buttons {
@@ -49,10 +50,11 @@ html {
 }
 
 .statistics {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /*classe da div de cards do html*/
+
 .pokemons {
     display: flex;
     flex-direction: row;
@@ -79,7 +81,6 @@ html {
     /*color: black;*/
     color: white;
     font-size: 15px;
-    
     /*text-shadow: 0 0 3px rgb(255, 204, 19), 0 0 3px rgb(255, 204, 19);*/
     letter-spacing: 3px;
     border: 1px solid;
@@ -100,9 +101,8 @@ h3 {
     color: navy;
     text-align: left;
     font-weight: bolder;
-
-   /* color: rgb(0, 140, 255);*/
-    }
+    /* color: rgb(0, 140, 255);*/
+}
 
 /*classe das imagens das pequenas divs do main.js*/
 
@@ -112,10 +112,11 @@ h3 {
     height: 40%;
 }
 
-.statistics{
+.statistics {
     color: white;
     text-align: center;
 }
+
 /*classe do texto das pequenas divs do main.js*/
 
 /*.div-inside {
