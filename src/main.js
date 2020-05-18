@@ -180,10 +180,11 @@ buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "
   return pokemonData
 })*/
 
-const Kanto = document.querySelector("#casa")
+/*const Kanto = document.querySelector("#casa")
+Kanto.innerHTML=filterByType.length);console.log(Kanto)*/
 
 buttonSteel.addEventListener("click", () => displayPokemons(filterByType("Steel", "type", pokemonData)));
-buttonWater.addEventListener("click", () => displayPokemons(filterByType("Water", "type", pokemonData)),Kanto.innerHTML=filterByType.length);console.log(Kanto)
+buttonWater.addEventListener("click", () => displayPokemons(filterByType("Water", "type", pokemonData)));
 buttonDragon.addEventListener("click", () => displayPokemons(filterByType("Dragon", "type", pokemonData)));
 buttonEletric.addEventListener("click", () => displayPokemons(filterByType("Electric", "type", pokemonData)));
 buttonFairy.addEventListener("click", () => displayPokemons(filterByType("Fairy", "type", pokemonData)));
