@@ -149,10 +149,13 @@ h1 {
 /*VERSÃO MOBILE*/
 @media only screen and (max-width: 800px) {
   html {
-    /* background-image: ; */
-    background-size: 100%;
-    background-repeat: inherit;
+    /* background-image: ; */   
     font-family: "Girassol";
+    background-image: url("wallpaper-for-phone.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
   p {
@@ -165,7 +168,7 @@ h1 {
     text-align: center;
     border-style: ridge;
     border-color: #97723d;
-    border-width: 15px;
+    border-width: 10px;
     color: #97723d;
     text-shadow: 2px 3px 2px black;
   }
