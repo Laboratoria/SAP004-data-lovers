@@ -1,404 +1,46 @@
-# Data Lovers
+# Rick and Morty (Data Lovers)
+### O que é a aplicação?
+Essa aplicação tem por objetivo atender aos usuários que desejam uma lista interativa de personagens da série Rick and Morty, que o permite conhecer o status (vivo ou morto), o gênero e a espécie do personagem, além de apresentar ao usuário que não conhece a série informações sobre a mesma (trailer e sinopse). Ela também apresenta dados numéricos à respeito da série, sendo eles número de mortos e sexo dos personagens.
 
-## Índice
+### O processo de criação
 
-* [1. Preâmbulo](#1-preâmbulo)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-consideracoes-gerais)
-* [5. Critérios mínimos de aceitação do projeto](#5-criterios-minimos-de-aceitacao-do-projeto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Considerações técnicas](#7-considerações-técnicas)
-* [8. Guias, dicas e leituras complementares](#8-pistas-dicas-e-leituras-complementares)
-* [9. Checklist](#9-checklist)
-
-***
-
-## 1. Preâmbulo
-
-Segundo a [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
-90% dos dados que existem hoje foram gerados durante os últimos dois anos.
-A cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem
-precedentes.
-
-Apesar disso, os dados por si só são de pouca utilidade. Para que essas grandes
-quantidades de dados se convertam em **informação** compreensível para os
-usuários, precisamos entender e processar estes dados. Uma forma simples de
-fazer isso é criando _interfaces_ e _visualizações_.
-
-Na imagem seguinte, você pode ver como os dados que estão na parte esquerda
-podem ser usados para construir a interface amigável e compreensível que está
-na parte direita.
-
-![json-interface](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
-
-## 2. Resumo do projeto
-
-Neste projeto você **construirá uma _página web_ para visualizar um conjunto
-(set) de dados_** que se adeque às necessidades de seu usuário.
-
-Como entregável final terá uma página web que permita **visualizar dados,
-filtrá-los, ordená-los e fazer algum cálculo agregado**. Por cálculo agregado
-nos referimos aos diversos cálculos que podem ser feitos com os dados para mostrar a
-informação mais relevante para os usuários (médias, valores máximos e mínimos,
-etc).
-
-Para este projeto trazemos uma série de dados de _temáticas diferentes_ para
-que você explore e decida com qual delas deseja trabalhar. Escolhemos
-especificamente estes conjuntos de dados porque cremos que se adequem bem a
-esta etapa de sua aprendizagem.
-
-Uma vez que você defina sua área de interesse, busque entender quem é seu
-usuário e o que exatamente ele necessita saber ou ver, para que assim possa
-construir a interface que o ajude a interagir e entender melhor os dados.
-
-Este são os dados que propomos:
-
-* [Pokémon](src/data/pokemon/pokemon.json):
-  Neste conjunto você encontrará uma lista com os 151 Pokémon da região de
-  Kanto, com suas respectivas estatísticas utilizadas no jogo [Pokémon GO](http://pokemongolive.com).
-  - [Pesquisa com jogadores de Pokémon Go](src/data/pokemon/README.pt-BR.md)
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este conjunto mostra a lista de campeões do jogo League of
-  Legends (LoL).
-  - [Pesquisa com jogadores de LoL](src/data/lol/README.md)
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Lista de personagens da série Rick & Morty. Você pode revisar a documentação
-  da API neste [link](https://rickandmortyapi.com).
-  - [Pesquisa com seguidores de Rick and Morty](src/data/rickandmorty/README.md)
-
-## 3. Objetivos de aprendizagem
-
-O objetivo principal deste projeto é que aprenda a desenhar e construir uma
-interface web onde se possa visualizar e manipular dados, entendendo o que o
-usuário necessita.
-
-Em outras palavras, você aprenderá a:
-
-* Aplicar e aprofundar tudo o que aprendeu no projeto anterior.
-* Pensar nas **necessidades dos usuários** para criar histórias de usuário.
-* Escrever e trabalhar com **histórias de usuário**, suas definições de pronto
-  (_definition of done_) e critérios de aceitação como ferramentas centrais
-  de organização e planejamento de seu trabalho.
-* Definir que dados utilizar e de que forma exibí-los em seu produto,
-  baseando-se no seu **entendimento do usuário**.
-* Iterar o desenho do produto, baseando-se nos resultados dos
-  **testes de usabilidade**.
-* Manipular **arrays e objetos**.
-* **Manipular o DOM** (agregar elementos de forma dinâmica)
-* **Manejar eventos do DOM** para permitir interação com o usuário (filtros,
-  ordenação, etc).
-* Entender os benefícios e complexidades de **trabalhar em equipe** em um
-  ambiente de incerteza.
-
-## 4. Considerações gerais
-
-* Este projeto será executado em duplas.
-* Este projeto será entregue através do GitHub e a interface deve ser publicada
-  no [GitHub Pages](https://pages.github.com/).
-* Tempo para completá-lo: três semanas.
-
-## 5. Critérios mínimos de aceitação do projeto
-
-Os critérios considerados para que tenha terminado este projeto são:
-
-### Definição de produto
-
-Documente brevemente seu trabalho no arquivo `README.md` de seu repositório,
-contando como foi o processo de desenho e como você acredita que o produto
-possa resolver o problema (ou problemas) de seu usuário.
+O processo de criação da página esteve conectado às histórias de usuário, por isso fez sentido dividi-lo em 3 páginas distintas, onde a primeira, a Home, está ligada às necessidades do usuário contemplado pela primeira história, que consiste em exibir informações básicas sobre a série e um trailer.  
+Ao longo do processo mudamos o estilo de cores a disposição de botões e informações, principalmente para ser fiel ao feedback de diferentes usuários que, ao interagirem com a aplicação, nos relataram suas dificuldades, incômodos etc.
+## Histórias de usuário e protótipos
 
 ### Histórias de usuário
+Dividimos o projeto em 4 histórias de usuários.
+ - **Primeira História**
+Aparece apenas a Home com a sinopse e um trailer da animação a ser desenvolvida.
 
-Uma vez que entenda a necessidade dos usuários, escreva as [Histórias de
-Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representem
-tudo que o usuário precisa fazer/ver. As **histórias de usuário** devem ser o
-resultado de seu processo de investigação/pesquisa de seus usuários.
+ - **Segunda História**
+O usuário pode acessar uma página com os personagens da série em que poderá ordená-los em ordem alfabética de A a Z e de Z a A 
 
-Não esqueça de incluir a definição de pronto (_definition of done_) e os
-critérios de aceitação para cada uma.
+ - **Terceira História**
+ O usuário além de acessar a página com os personagens e ordená-los em ordem alfabética, terá acesso a outros filtros (Status (vivo ou morto) e Gênero (homem ou mulher)). Além de todas as funções da aplicação estarem passando nos testes.
+ 
+ - **Quarta História**
+  Apresentar gráficos com dados sobre a série.
 
-Na medida do possível, termine uma história de usuário antes de passar para a
-seguinte (cumpra com as definições de pronto + critérios de aceitação).
+### Protótipos 
+*Primeira ideia* : haveria uma barra para o menu e as informações sobre os personagens apareceriam após clicarmos em suas fotos foi descartada por não ser prático ao usuário clicar para então obter a informação. E o fundo foi descartado por ser muito poluído.
+![json-interface](https://lh3.googleusercontent.com/5MP_8fdejovs055qqxIv3V5PpJvpRr4Nt8hoKvohsp9zdPgPVvbq9CC1VcjxgX1Ohr3Nqrp6JI3iaedko7Po5vv0l3lfmtkIHmDM8NNTd04kyKOU9UG-egIk2Z2sE1OiyqVnU1z6DwxAm-WE3nbqaDKdEUGb5lBTc1MJ6CH4_CoWAH2NMotIOV8paFfNAAqC9GAfPwhZd_-Gw8t9kBqSp4hf1odVEo5hDhm3Ajjx0MyKRuppuYlV5gVSs4cuoNi2j4_OjjAxKQa41AhrzO2lq5MDSTnJWesPqHlelyRocLSi7tS-Yy23-CVSviP0bH6m-7NJf6y1DejvXXHwqR4GrCupvNde2xKoNvvhb3SmeuUdt-ztLOjJaLa0Xn0qPwuu5VO3djZjrbnnQcfj7eVA-qRW5OpXS1kQQbGyLokuWY56gKQv7GtY24_hM0mAMFhl9UvVEhYHi-xUNjTjLcLvoIY_QiwIbOjQ6G-ErJ-DAXg24soaiBWVc4vWdIzm4FuCIwFEySMghlTQvmBBk8Wo-PuBD3TSkAEXATfBUSMas9uqLSttVAnoadPXqJbputNvZ9wD7eRsvM_rKCmicExOBCA-c29d6R3ZNhJhTxU1ngoNbn4QlZ6kyaHmv9jgcTsJ7pqhkWFjGY2ZoAMwYIn_osh9eohpBSE7G9iyjdseZfrYwoDwvpPxYtmzxyo15g=w1169-h370-no?authuser=0)
 
-### Desenho de interface do usuário
+Também elaboramos uma versão responsiva que posteriormente se mostrou pouco eficiente:
+![json-interface](https://lh3.googleusercontent.com/bK806vkntSCgd50fNwcjr9GTIklyzB6goXVbPIPraOMNG6F6_V7GDPRV4nyN1y8okSgB4Y3138-JUAGtUsyt4qUZZ2ZIA2Q-eDQl1bYr3lh4M1_WEllwJ5y56CZArQ4t3sFHHv3sYSh_G4gVdABMOi702GU2c3uqyAVbLt2NMZ4S0S4e8_SbV6IWQkSQm72pJ5pqvWZtgLs9cZyry6f1qyEaQVq-4lBfUZjm9bFDn1-x89RQL_nChtlIoj3xEIUyGnuS7Eye_ss5-ocrofMrcCuo53Zx-eNIlcip4pHVzENcYgJFE830wzZOKjeiyBWmHzYOy4dDaUMXW_0QLBpGi-D1xNOxOG40_Hh1c0XgbijRNT2UskvbBb9uXzzxpy0df4gbyptKCsE8gxE1nqx1voP85O2EqWbYN6Zs3nIPvLyH9r_d6b69UmYsgNrUY2bGwCKIP0M_r4FkfX703ags18RYZ6vraJ8kS_vy5RyERw1GgZVl8pyE9c-9S9u3AjttFKzYGIcv6JBM8Orl91FSSWOz-OxHOdIkBiQ7FIK3xCU9aTXfvsD6i_dkR1LXEvXxCBFiRvIzK7FmmR81nZQ4Kp_plfsdsALw8M8OcWB_l8n3EdwpfrfsFAUfpFdXmc6dL_Wu68xL2ImhGGIA9s5XoLze2c_vtbx2ryc_InHUOWeUPHvCUVyjzw7Q254eRA=w617-h412-no?authuser=0)
 
-#### Protótipo de baixa fidelidade
+Por fim optamos pelo visual abaixo, que foi o que melhor se adequou às nossas limitações e ao que era importante ao usuário.
 
-Durante seu trabalho você deverá fazer e iterar rascunhos de sua solução usando
-lápis e papel. Recomendamos que fotografe todas as iterações que fizer, suba
-para seu repositório e as mencione no `README.md`.
+ - **Versão para computadores**
 
-#### Testes de usabilidade
+*Home*
+![json-interface](https://lh3.googleusercontent.com/JhCaxuVXaQUIfq0_MK0EHvvJ8dUJAI5Cn9_gi-V8nBE1aY0jnWUYEMIqxD2OnNCoGyx53K-W4biZJ2eP1NNqgTlAdfEncqT3JFwRNdOKoDdsLKoUCOwZztp3OQUCLUd2rbcOXGiOvoko0PrvRCKH_8PJ_TEKWf05W1ui6GjmqRhuNanysYPPms7fu-MMamrbmKtOnYvNgckMPJjPdFM2sohejfCdj0J9xud60tPj53zAPt2wcaghUXofPvTsLdltSlrOBEilSPUn2fZ6pAYOCeuziKGBcasl-Yp0oG4o2qMf8piUP2cGUrknrAFBPWUcBLL-VFkOquXvPfVfOGo0_ydesqJ6M5sH8BBvYXG-IYBz8yo_9u7aDLYfEI737ocweJl-DsRx1a86MeXelPv_oOHfu5nImnHxzIas5mwBNA4ctILSuxrqWGnDNG6dEbbIoEIcR2D3UAPTPen-5hWkwgLAiHwkb4-SSdPOjKrLVvt89D53QWlm5dbug9ZQ01Al-09DaQPMzbJk__9goZY8KF8ayMMpCiIiCMRQzNtjNMcCzhEwbyADvniOlzAfVDLP42gmqXwLid2LhIsCFzxxzIRAVK-DXVTHgDCuaz67AiyaTraZ21e1yTOgY_Bu5BNEf61EZbu0hk6t4Xkg63D4ANKbLfzRFPmvBKJdV56pprNGhV-WbuOpjqmpnjikyw=w1365-h669-no?authuser=0)
 
-Durante o desafio você deverá fazer testes de usabilidade com usuários
-diferentes, e com base nos resultados desses testes, iterar seus desenhos de
-interface. Conte-nos quais problemas de usabilidade você detectou através dos
-testes e como os resolveu na proposta final.
+*Tela de exibição dos personagens*
+![json-interface](https://lh3.googleusercontent.com/_wR99V4f5Mhcqh1CFXuYdRmLNrZzkOwh6frmzRJbRz8ON9iUtAuP6ad6Y-6hABHRXysvwSi4wyOm9ow3iWfaxN-hKBGgR3ZzWgGHbk23n5b_6x8hwpuylFJtkfNuN1v8JBqqlFiCh7cbrF9byzQDTCfTrQEpKNdfApT4JZQBXhXAvp-8mytik2qUKbrOGjHDbRtT3lbZck63Tm-8y05s9FpEZHAeRHHaxiyRDq22CYDNdNh1WHm7cbVNnFAD_4TjLpeRzpdtxU9Aztf9fE_GhNFHCdoNwBOKkt4Xte39i9YP6xoro3Dz-ztbbzutxde0KWqHPIj2UAVHiEJhg8H_HZ0Ti8U6x6L-ouwRmA0eTVzpleMKa6wZlSEsBJUlKTFZfqXhUIhDjnk0CV6tntS03gm9FdXOtg-1yLyg272ixcKQwNsg_wqjxtJPQ3fhi1h_-X5kEI-k_0YRS7IxDi_xnP12t3N0mpYLJlrpmQJtehPUOCB04kg0d-PueVy_7rNBpWfhIobJJhew63H9CVgq2Amb1kkV2qG896K7v5-1e4EMINXOpuj2dkYmq2Lvo5z5ASxf-xpufaICVZuRJ2TDLqs-AZY6RdfuXpTTQhrLXpzJ5tNIpfd4OEuyDNuSm2WNPbwrVAmGaC25mXbEPyJ1K2Y-qMOSv1q86gh5-Qs3ft2o26BX6fMu6EE0k5Fr2Q=w1346-h669-no?authuser=0)
 
-### Implementação da interface de usuário (HTML/CSS/JS)
+*Tela para apresentação de dados adicionais*
+![json-interface](https://lh3.googleusercontent.com/3OPyrl3hAkMyaz7mRPGJq9WkYn5Z8QuQCHh7nQ_VYcJzv-S5OPQc9_N4E5Q0nyWtieev2RHtJ38QXkFbMErsRz7TpkDp841HdnlfRBnaytB_0SZWYeNHeuhd3Dal_FIbi4JgK4hCBIqsnGwqpvEnvIkGgmzMJHouJKPN_6XvGVgzgAaki2Q8L4lu-7h3O-deCQ__ryT4t42VWPsn51KQq7i5KD8ctn6wXOHKEMaSElbeWd8svruKR-o9Ozu3dEhMjoYKHDqPYFdRfIVks-X4WWwoewe_Z3AvjPbedTY2qWzE2p-i2kMLjBpBSaUAOIf2uNIR_FKaEHiDJ2PPcqBB8rlQkBxybyfgxY4tHpD6qqJNHKC11PaodCxMjWVKei1ZyZ9xTkvqbQJqyfRTJDOjuvG0SGngeqlqqSENlWTHxXO9X1txmgMGPvVTfrU2n-h5rPhQ3yOwG_yILZteGZkGyWuPmAp_OlY9_RujQy9ur-HXtL2ncwy0XX4--b4W4HREGhDu3rfSnRHPeHnke4Sn2SJqpGHF7IN8SXNDy58piugneq3YdIQ1Awu_d_24e5saWcbVP2uIqQ4KjA-W0FeEzQWsPpXrpCYl43MR1Q18y2fM3OiSlTMFlu7SwNdJ9bRc7SpEGf5etNlqgSghqyQFE9YaR0XKb47XOCJh8Mjl4CkRCF9Lr4e2YfiKBPtcSA=w1347-h669-no?authuser=0)
 
-Após desenhar sua interface de usuário, deverá trabalhar na sua implementação.
-**Não** é necessário que construa a interface exatamente da mesma forma que
-desenhou. Terá um tempo limitado para trabalhar no projeto, então você deve
-priorizar as tarefas.
-
-No mínimo, sua implementação deverá:
-
-1. Mostrar os dados em uma interface: pode ser em cards, tabelas, listas, etc.
-2. Permitir ao usuário interagir com a interface para obter as informações que necessita;
-3. Ser _responsivo_, ou seja, deve ser visualizada sem problemas a partir de
-   diversos tamanhos de tela: celulares, tablets, notebooks, etc.
-
-### Testes unitários
-
-O _boilerplate_ do projeto não inclui testes unitários. Assim, você terá que
-escrever seus próprios testes para as funções encarregadas de _processar_,
-_filtrar_ e _ordenar_ os dados, assim como _calcular_ estatísticas.
-
-Seus testes unitários devem ter cobertura mínima de 70% de _statements_
-(_sentenças_), _functions_ (_funções_), _lines_ (_linhas_), e _branches_
-(_ramos_) do arquivo `src/data.js`, que irá conter suas funções e que está
-detalhado na seção de [Considerações técnicas](#srcdatajs).
-
-## 6. Hacker edition
-
-As seções chamadas _Hacker Edition_ são **opcionais**. Se já tiver terminado
-todos os requisitos anteriores e tiver tempo, pode tentar completá-las. Dessa
-forma, você pode aprofundar e/ou exercitar mais os objetivos de aprendizagem
-deste projeto.
-
-Features/características extra sugeridas:
-
-* Ao invés de consumir dados estáticos do repositório, pode fazer isso de forma
-  dinâmica, carregando um arquivo JSON com `fetch`. A pasta `src/data` contém
-  uma versão `.js` e uma `.json` de cada conjunto de dados.
-* Adicione à sua interface visualização de dados em forma de gráficos. Para
-  isso, recomendamos explorar bibliotecas de gráficos como [Chart.js](https://www.chartjs.org/)
-  ou [Google Charts](https://developers.google.com/chart/).
-* 100% de cobertura nos testes.
-
-## 7. Considerações técnicas
-
-A lógica do projeto deve estar implementada somente em JavaScript (ES6), HTML e
-CSS. Neste projeto não está permitido o uso de bibliotecas e frameworks, apenas
-[vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-com exceção das bibliotecas para gráficos (ver
-[_Parte opcional_](#6-hacker-edition) acima).
-
-Não se deve utilizar a _pseudo-variável_ `this`.
-
-O _boilerplate_ contém uma estrutura de arquivos como ponto de partida, assim
-como toda a configuração de dependências:
-
-```text
-.
-├── EXTRA.md
-├── README.md
-├── package.json
-├── src
-|  ├── data (de acordo com o data que forem trabalhar)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |     ├── rickandmorty.js
-|  |     └── rickandmorty.json
-|  |     └── README.md
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.spec.js
-
-directory: 6 file: 17
-```
-
-### `src/index.html`
-
-Como no projeto anterior, existe um arquivo `index.html`. Como já sabe, aqui
-entra a página que vai ser exibida ao usuário. Também serve para indicar quais
-scripts serão utilizados e juntar tudo o que foi feito.
-
-### `src/main.js`
-
-Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver
-com a exibição dos dados na tela. Com isto nos referimos basicamente à
-interação com o DOM. Operações como criação de nós, registro de manejadores de
-eventos (_event listeners_ ou _event handlers_) e etc.
-
-Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e
-pastas, sempre e quando a estrutura estiver clara para suas colegas.
-
-Neste arquivo você encontrará uma série de _imports comentados_. Para carregar
-diferentes fontes de dados, você deverá "descomentar" estes _imports_. Cada um
-destes _imports_ criará uma variável `data` com os dados correspondentes à fonte
-escolhida.
-
-Por exemplo, se "descomentamos" a seguinte linha:
-
-```js
-// import data from './data/pokemon/pokemon.js';
-```
-
-A linha ficaria assim:
-
-```js
-import data from './data/pokemon/pokemon.js';
-```
-
-E agora teríamos a variável `data` disponível em `src/main.js`.
-
-### `src/data.js`
-
-O coração deste projeto é a manipulação de dados através de arrays e objetos.
-
-Recomendamos que este arquivo contenha toda a funcionalidade que corresponda a
-obter, processar e manipular dados (suas funções):
-
-* `filterData(data, condition)`: esta função receberia os dados e nos
-  retornaria os que cumprem com a condição.
-
-* `sortData(data, sortBy, sortOrder)`: esta função recebe três parâmetros.
-  O primeiro, `data`, nos entrega os dados.
-  O segundo, `sortBy`, diz respeito a qual das informações quer usar para
-  ordenar.
-  O terceiro, `sortOrder`, indica se quer ordenar de maneira crescente ou
-  decrescente.
-
-* `computeStats(data)`: essa função nos permite fazer cálculos estatísticos
-  básicos para serem exibidos de acordo com o que os dados permitem.
-
-Estes nomes de funções e parâmetros são somente referência, o que vocês decidir
-utilizar vai depender da sua implementação.
-
-Estas funções devem ser [_puras_](https://imasters.com.br/desenvolvimento/serie-js-e-vida-pure-functions-funcoes-puras)
-e independentes do DOM. Estas funções serão depois usadas a partir do arquivo
-`src/main.js`, ao carregar a página e a cada vez que o usuário interagir com
-a interface (cliques, seleções, filtros, ordenação, etc).
-
-### `src/data`
-
-Nesta pasta estão os dados de diferentes fontes. Você vai encontrar uma pasta
-para cada fonte, e dentro de cada pasta estão dois arquivos: um com a extensão
-`.js` e outro `.json`. Ambos os arquivos contém os mesmos dados; a diferença é
-que podemos usar o `.js` com uma tag `<script>`, enquanto o `.json` servirá
-para, opcionalmnente, ser carregado de forma assíncrona com
-[`fetch()`](https://developer.mozilla.org/pt-br/docs/Web/API/Fetch_API)
-(ver seção da [_Parte Opcional_](#6-hacker-edition)).
-
-### `test/data.spec.js`
-
-Você também deverá fazer os teste unitários das funções implementadas no
-arquivo `data.js`.
-
-***
-
-## 8. Guias, dicas e leituras complementares
-
-### Primeiros passos
-
-Antes de começar a escrever o código, você deve definir seu produto com base no
-conhecimento que puder obter a respeito de seus usuários. Estas perguntas podem
-ajudar:
-
-* Quem são os usuários principais do produto?
-* Quais são os objetivos dos usuários com relação ao produto?
-* Quais são os dados mais relevantes que querem ver na interface e por quê?
-* Quando utilizam ou utilizariam o produto?
-* Toda sua investigação prévia deve ter como resultado as histórias de
-  usuário de seu projeto.
-* Não faça os protótipos de alta fidelidade de todas as suas histórias. Comece somente pela que necessite para seu Sprint 1.
-
-Quando estiver pronta para codar, sugerimos começar desta forma:
-
-1. Uma das integrantes da dupla deve fazer um :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) do repositório de sua
-   turma (a equipe de formação fornecerá o link). A outra integrante da dupla
-   deve fazer um fork **a partir do repositório de sua companheira** e
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) um
-   `remote` a partir dele.
-
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   seu _fork_ para seu computador (cópia local).
-
-3. Instale as dependências do projeto com o comando `npm install`, assumindo
-   que já tenha instalado o [Node.js](https://nodejs.org/) (que inclui [npm](https://docs.npmjs.com/)).
-
-4. Se tudo correr bem, deve ser capaz de executar os :traffic_light:
-   testes unitários (unit tests) com o comando `npm test`.
-
-5. Para ver a interface de seu programa no navegador, utilize o comando
-   `npm start` para subir o servidor web no endereço `http://localhost:5000`.
-
-6. Comece a codar! :rocket:
-
-***
-
-### Conteúdo de referência
-
-#### UX Design (Experiência do usuário)
-
-* Pesquisa com usuarios / entrevistas
-* Princípios de design/UI
-
-#### Desenvolvimento Front-End
-
-* Unidade de testes do curso de JavaScript do LMS.
-* Unidade de arrays do curso de JavaScript do LMS.
-* Unidade de objetos do curso de JavaScript do LMS.
-* Unidade de funções do curso de JavaScript do LMS.
-* Unidade de DOM do curso de JavaScript do LMS.
-* [Array no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
-* [Array.sort no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-* [Array.map no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-* [Array.filter no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro)
-* [Array.reduce no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-* [Array.forEach no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-* [Object.keys no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
-* [Object.entries no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
-* [Fetch API no MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-pt.html)
-* [Modulos: Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-* [Modulos: Import](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
-
-#### Ferramentas
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
-
-#### Organização do trabalho
-
-* [Histórias de Usuário](https://www.youtube.com/watch?v=sEtiCJfXTE8)
-* [Definição de pronto](https://www.youtube.com/watch?v=Kfss63Q42F8)
-* [Critérios de aceitação](https://medium.com/@karladiasn/user-stories-e-crit%C3%A9rios-de-aceita%C3%A7%C3%A3o-317c48403fcd)
-* [Guia para Data Lovers](https://docs.google.com/presentation/d/1bOq8ns5wsvXdksdqYL3aQoxzFQsXTVlyvlV-yxI2oBM/present?token=AC4w5VhHBbEEA9u2w8bm3Ey1Cse349frbg%3A1567540902700&includes_info_params=1&eisi=CM_ytPW4teQCFQrJgQodeTcEZg#slide=id.g5282e1a53f_1_106)
-
-***
-
-## 9. Checklist
-
-* [ ] Usar VanillaJS.
-* [ ] Não utilizar `this`.
-* [ ] Passa pelo linter (`npm run pretest`)
-* [ ] Passa pelos testes (`npm test`)
-* [ ] Testes unitários cobrem um mínimo de 70% de statements, functions,
-  lines e branches.
-* [ ] Inclui uma _definição de produto_ clara e informativa no `README.md`.
-* [ ] Inclui histórias de usuário no `README.md`.
-* [ ] Inclui rascunho da solução (protótipo de baixa fidelidade) no
-  `README.md`.
-* [ ] Inclui uma lista de problemas detectados nos testes de usabilidade no `README.md`.
-* [ ] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
-* [ ] UI: Permite ordenar dados por um ou mais campos (asc e desc).
-* [ ] UI: Permite filtrar dados com base em uma condição.
-* [ ] UI: É _responsivo_.
+ - **Versão para celulares e tablets**
+ ![json-interface](https://lh3.googleusercontent.com/R04XcGCV0AYBvAw_3w3gZWCCdLtuwWfIyy_4_fXCCeCseE-9y2x5-SLl6DjwaAH2meLWEfQp7J-FdIxVjRIkELsolZTxZxjWfdBghgGoRjLkHxl49ehpfz57_hW9eLyuklJx5-gi5WLFrVAUE_TAZfnUYj_ziae-IrCZLcRQES_o0K42paX5AokPo7vVbhO_8hjx1BtqG2OezPD7du9ibPflLrPlpDmxwJDxKynWj23umKsuL95itSFE9jGqrSbKWHouIDU1TDk_8GVQtVx9wsMlVi9zvypa-JQIeN4pTSq-uaHoRvwdsyeeLFTf-r5rr1CUwmsXZl4k15d53muBh1KM_ZMXGHjW0Xx7cqu7v5DikQgRRqMGkit6FO_e1uiuHr5A2viid1omhF70_s3NT5_EvNojnYLGFL-7saFSFkNakzbtVr7uqxUlp1mHLhNaYs__mLwftMvUXdmwORigZURw9uxQEdTC4subtE3NDSXp7JKj5pxY0k-jhrIzWWnVv37InlRj6wOoXWFMLfie9JRkt2thwaOuDSu55aXW3X__YPbVn9okcWFdvksei27ODk2qm2a7osacEcTgM3qZB_XAwRRHJ7AN4GAfJiBW0My4I6LCjb2S-7LIoJzPWmkUBXSWCzKcU5KK2v4SJN0PNJrEHhghaAtA7MF3dDXXwrRALjVdZ0szQbkeGBZ0Kg=w688-h419-no?authuser=0)

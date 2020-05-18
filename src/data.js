@@ -30,26 +30,20 @@ export function filterAll(list, data, value) {
   return getInfo(arrayAllFilter);
 }
 
-/* export const searchName = (list, letters) => {
-  let filter = list.filter(item => item.name.toLowerCase().includes(letters.toLowerCase()));
+export const searchName = (input, character) => {
+  const filter = character.filter(item => {
+  const transformData = item.name.toLowerCase();
+  const characterName = transformData.substr(0, input.length);
+    return (characterName.includes(input));
+  });
   return getInfo(filter);
-}; */
-
-  export const searchName = (input, character) => {
-    let transformInput = input.value.toLowerCase();
-    let filter = character.filter((item) => {
-      let transformData = item.name.toLowerCase();
-      let characterName = transformData.substr(0, transformInput.length);
-      return (characterName.includes(transformInput));
-    });
-    return getInfo(filter);
-  };
+};
 
 export const countGender = (list) => {
-  let data = list.map(function (item) {
+  const data = list.map(function (item) {
     return item.gender
   })
-  let countedNames = data.reduce(function (allNames, name) {
+  const countedNames = data.reduce(function (allNames, name) {
     if (name in allNames) {
       allNames[name]++;
     }
@@ -59,8 +53,8 @@ export const countGender = (list) => {
     return allNames;
   }, {});
 
-  let legend = [["Gender Female", countedNames.Female],
-  ["Gender Male", countedNames.Male],
+  const legend = [["Female", countedNames.Female],
+  ["Male", countedNames.Male],
   ["Unknown", countedNames.unknown],
   ["Genderless", countedNames.Genderless]]
 
@@ -68,10 +62,10 @@ export const countGender = (list) => {
   return legend
 }
 export const countStatus = (list) => {
-  let data = list.map(function (item) {
+  const data = list.map(function (item) {
     return item.status
   })
-  let countedNames = data.reduce(function (allNames, name) {
+  const countedNames = data.reduce(function (allNames, name) {
     if (name in allNames) {
       allNames[name]++;
     }
@@ -81,7 +75,7 @@ export const countStatus = (list) => {
     return allNames;
   }, {});
 
-  let legend = [["Alive", countedNames.Alive],
+  const legend = [["Alive", countedNames.Alive],
   ["Dead", countedNames.Dead],
   ["Unknown", countedNames.unknown]]
   return legend

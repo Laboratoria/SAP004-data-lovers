@@ -10,5 +10,8 @@
   "rules": {
     "no-console": "warn",
     "import/extensions": 0
+  },
+  "globals": {
+    "google": "readonly"
   }
 }
