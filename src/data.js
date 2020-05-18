@@ -13,3 +13,5 @@ export const applyCalcType = (pokemonGo, filterCalcType) => pokemonGo.filter((se
 
 export const applySearchName = (pokemonGo, filterName) => pokemonGo.filter((search) =>
   (search.name.toLowerCase().indexOf(filterName.toLowerCase()) > -1));
+
+
