@@ -172,6 +172,7 @@ body {
 
 .sub-button-blue:hover, .sub-button-blue:focus, .sub-button-blue:focus-within .sub-button-blue:active {
   color: #0a6dca;
+  
 }
 
 .submenu-options-blue {
@@ -183,7 +184,7 @@ body {
   width: 90px;
 }
 
-.button-blue:hover .submenu-options-blue{
+.button-blue:hover .submenu-options-blue {
   display: block;
 }
 
@@ -410,7 +411,14 @@ h2{
     width: 390px;
   }
 
-
+  .button-red:hover .submenu-option-red {
+    display: block;
+    width: 170px;
+    height: 48px;
+  }
+  .sub-button-blue, .sub-button-yellow, .sub-button-red{
+    width: 52px;
+  }
   .pokemon-list {
     grid-template-columns: repeat(4, 90px);
   }
@@ -432,6 +440,7 @@ h2{
     .sub-button-blue, .sub-button-yellow, .sub-button-red{
       width: 52px;
     }
+  
   .pokemon-list {
     grid-template-columns: repeat(4, 120px);
   }
@@ -477,7 +486,11 @@ h2{
   .menu{
     width: 685px;
   }
-  
+  .button-red:hover .submenu-option-red {
+    display: block;
+    width: 195px;
+    height: 48px;
+  }
   .pokemon-list {
     grid-template-columns: repeat(5, 135px);
     grid-gap: 17px;
@@ -507,6 +520,11 @@ h2{
   }
   .submenu{
     position: relative;
+  }
+  .button-red:hover .submenu-option-red {
+    display: block;
+    width: 139px;
+    height: 55px;
   }
   .pokemon-list{
     grid-template-columns: repeat(6, 135px);
