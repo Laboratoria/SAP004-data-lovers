@@ -128,7 +128,7 @@ function showCompChan(arraycharacterForAggregateCalculation) {
   
       let resultForTheInformationProvided = percentageByTypeAndLevel(typeOfInfo, levelValue, arraycharacterForAggregateCalculation);
   
-      document.getElementById("see-data-here").innerHTML = resultForTheInformationProvided + "% dos Campeões tem " +typeOfInfo + " maior igual que " + levelValue + ". <br> Os campeões que tem " +typeOfInfo + " maior igual que " + levelValue + " são: <br>";
+      document.getElementById("see-data-here").innerHTML = "Aproximadamente " + resultForTheInformationProvided + "% dos Campeões tem " +typeOfInfo + " maior igual que " + levelValue + ". <br> Os campeões que tem " +typeOfInfo + " maior igual que " + levelValue + " são: <br>";
   
       document.getElementById("see-champions-with-corresponding-data").innerHTML = championsInCards(filterChampionsByTypeAndLevel(arraycharacterForAggregateCalculation, typeOfInfo, levelValue));
 
