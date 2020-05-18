@@ -155,3 +155,40 @@ footer {
         height: 30%;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    html {
+        margin: 5px 5px 5px 5px;
+    }
+    .order-buttons, .options-type, .filter-name {
+        width: 35px;
+        font-size: 12px;
+        
+    }
+    .options-type, .filter-name {
+        width: 70px;
+    }
+    .filter-name {
+        position: relative;
+        right: 0px;
+    }
+    .pokemons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex: 1;
+        text-align: center;
+    }
+    .div-child {
+        width: 110px;
+        height: 230px;
+        margin: 3px 3px;
+        font-size: 10px;
+    }
+    .img-item {
+        text-align: center;
+        width: 40%;
+        height: 20%;
+    }
+}
