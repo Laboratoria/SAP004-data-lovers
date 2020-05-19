@@ -104,7 +104,6 @@ body {
   align-items: center;
   color: #a5a5a5;
   display: flex;
-  font-family: Maven Pro;
   font-style: normal;
   font-size: 1.75em;
   font-weight: 700;
@@ -180,7 +179,6 @@ body {
 
 .sub-button-blue:hover, .sub-button-blue:focus, .sub-button-blue:focus-within .sub-button-blue:active {
   color: #0a6dca;
-
 }
 
 .submenu-options-blue {
@@ -205,7 +203,7 @@ body {
   font-style: normal;
   font-size: 0.75em;
   font-weight: 600;
-  height: 30px;
+  height: 28px;
   outline: none;
   text-align: center;
   width: 90px;
@@ -231,6 +229,7 @@ body {
   letter-spacing: 0.05em;
   text-align: center;
   width: 40px;
+  position: relative;
 }
 
 .sub-button-yellow:hover, .sub-button-yellow:focus, .sub-button-yellow:focus-within .sub-button-yellow:active {
@@ -238,14 +237,15 @@ body {
 }
 
 .submenu-options-yellow {
+  display: flex;
   border-bottom: 1px solid  #a5a5a5;
   box-shadow: 0px 3px 6px 0px #CCC;  
   display: none;
   position: absolute;
   list-style-type: none;
   width: 200px;
-  right: 5%;
   box-sizing: content-box;
+  right: 5vw;
 }
 
 .button-yellow:hover .submenu-options-yellow{
@@ -272,7 +272,7 @@ body {
   font-style: normal;
   font-size: 0.75em;
   font-weight: 600;
-  height: 30px;
+  height: 28px;
   outline: none;
   text-align: left;
   width: 100px;
@@ -348,7 +348,7 @@ section {
   display: flex;
   justify-content: center;
   color: #a5a5a5;
-  margin: 55px 0 15px;
+  margin: 55px 0 20px;
 }
 
 .types div{
@@ -365,7 +365,7 @@ section {
 }
 
 .types p{
-  font-size: 0.85em;
+  font-size: 0.72em;
   font-weight: 400;
   line-height: 1.46em;
   text-align: left;
@@ -425,7 +425,7 @@ h2{
 
 .pokemon-num {
   text-align: end;
-  font-size: 0.85em;
+  font-size: 0.75em;
   font-weight: 400;
   color: #a5a5a5;
   padding: 4px 5px 0;
@@ -452,19 +452,47 @@ h2{
   .submenu {
     width:172px;
   }
-
-  .button-red:hover .submenu-option-red {
-    display: block;
-    width: 170px;
-    height: 48px;
-  }
   
   .sub-button-blue, .sub-button-yellow, .sub-button-red{
     width: 52px;
   }
 
+  .submenu-options-blue, .sub-item-blue {
+    width: 114px;
+  }
+
+  .submenu-options-yellow {
+    left: 53vw;
+  }
+
+  .button-red:hover .submenu-option-red {
+    display: block;
+    width: 174px;
+    height: 48px;
+  }
+
+  .submenu-option-red{
+    left: 52vw;
+  }
+
+  .sub-item-red {
+    width: 166px;
+  }
+
   .pokemon-list {
     grid-template-columns: repeat(4, 90px);
+  }
+
+  .types div {
+    width: 386px;
+  }
+
+  .types h2 {
+    font-size: 1.3em;
+  }
+
+  .types p {
+    font-size: 0.75em;
   }
 }
 
@@ -474,30 +502,50 @@ h2{
   }
 
   .menu {
-    width: 500px;
+    width: 510px;
   }
   
   .logo {
-    font-size: 3em;
+    font-size: 2.3em;
   }
-    
+  
   .submenu{
-    width: 133px;
-    font-size: 20px;
+    width: 175px;
+    font-size: 1.15em;
   }
   
   .sub-button-blue, .sub-button-yellow, .sub-button-red{
     width: 52px;
   }
   
+  .submenu-options-yellow {
+    width: 230px;
+    left: 54vw;
+  }
+
+  .sub-item-yellow {
+    width: 115px;
+  }
+
+  .sub-item-yellow span {
+    padding: 0 11px 0 11px;
+  }
+
+  .sub-item-blue, .sub-item-yellow {
+    height: 32px;
+  }
+
+  .submenu-option-red {
+    left: 63vw;
+  }
+
   .pokemon-list {
     grid-template-columns: repeat(4, 120px);
   }
-  
+
   .card-pokemon { 
     height: 120px;
     width: 120px;
-    margin-top:25px;
   }
 
   .card-pokemon img {
@@ -525,24 +573,88 @@ h2{
     font-size: 1em;
     position: relative;
     bottom: 15px;
+    padding-top: 6px;
+  }
+
+  .types div {
+    width: 510px;
+    margin-top: 30px;
+  }
+
+  .types p {
+    font-size: 0.85em;
   }
 }
 
 @media(min-width: 800px){
-  .nav {
-    width: 530px;
+  .navbar {
+    height: 60px;
   }
   
   .menu{
-    width: 685px;
+    width: 745px;
   }
   
+  .submenu {
+    width: 230px;
+    font-size: 1.3em;
+  }
+
+  .sub-button-blue, .sub-button-yellow, .sub-button-red {
+    width: 70px;
+    height: 60px;
+  }
+  
+  .submenu .icon-ordem {
+    font-size: 23px;
+    margin: 2px 0 4px 0;
+  }
+
+  .submenu .icon-tipo, .submenu .icon-busca {
+    font-size: 22px;
+    margin: 3px 0 5px 0;
+  }
+
+  .submenu-options-blue{
+    width: 130px;
+  }
+
+  .submenu-options-yellow{
+    width: 130px;
+  }
+
+  .sub-item-blue, .sub-item-yellow {
+    width: 130px;
+    height: 36px;
+  }
+
+  .submenu-option-red {
+    left: 67vw;
+  }
+
+  .sub-item-red {
+    width: 227px;
+    height: 40px;
+    font-size: 0.75em;
+  }
+
   .button-red:hover .submenu-option-red {
-    display: block;
-    width: 195px;
-    height: 48px;
+  width: 215px;
+  padding: 8px 0 0;
   }
-  
+
+  .types {
+    margin: 60px 0 32px;
+  }
+
+  .types div {
+    width: 745px;
+  }
+
+  .types p {
+    width: 610px;
+  }
+
   .pokemon-list {
     grid-template-columns: repeat(5, 135px);
     grid-gap: 17px;
@@ -551,7 +663,7 @@ h2{
   .card-pokemon{    
     height: 135px;
     width: 135px;
-    transition: transform 500ms;
+    margin-bottom: 18px;
   }
   
   .card-pokemon img {
@@ -559,40 +671,43 @@ h2{
     height: 105px;
   }
   
+  .pokemon-num {
+    font-size: 0.90em;
+  }
+
   .pokemon-type {
     bottom: 15px;
   }
   
   .pokemon-name {
     bottom: 16px;
+    padding-top: 8px;
   }
 }
 
 @media(min-width:1200px){
-  .nav {
-    width: 800px;
+  .menu {
+    width: 912px;
   }
   
-  .submenu{
-    position: relative;
+  .submenu-options-yellow {
+    left: 60vw;
   }
-  
-  .button-red:hover .submenu-option-red {
-    display: block;
-    width: 139px;
-    height: 55px;
+
+  .submenu-option-red {
+    left: 68vw;
   }
-  
+
+  .types div {
+    width: 912px;
+  }
+
   .pokemon-list{
     grid-template-columns: repeat(6, 135px);
     grid-gap: 20px
   }
 
   .pokemon-type {
-    display: block;
-    position: relative;
-    bottom: 22px;
-    right: 5px;
-    text-align: end;
+    bottom: 15px;
   }
-}  
+}
