@@ -235,5 +235,5 @@ templateHTML(titulo, paragrafo, porcentagem, type, percent)
     <p>${paragrafo}</p>
     <p><span class="num ${type}">${percent}%</span> dos pokémons de Kanto.<p>
     </div>`
-  ;
+};
 */
