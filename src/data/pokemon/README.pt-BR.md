@@ -1,33 +1,49 @@
-# Pokémon
+# DATA LOVERS
 
-​Pokémon GO é uma experiência de jogo internacional que tem mais de um bilhão de
-downloads e foi nomeado "o melhor jogo para celular" pelo Game Developers Choice
-Awards e "a melhor aplicação do ano" pelo TechCrunch (extraído do Google Play).
-Os usuários do jogo se tornam "Mestres/ treinadores Pokémons" e podem:
+## Sobre o projeto
 
-- **Descubrir o mundo Pokémon:** explorar e descubrir novos Pokémon onde quer
-  que estejam.
-- **Pegar** diferentes Pokémon para completar seu Pokédex.
-- **Lutar** contra Pokémon de outros treinadores e conquiste ginásios.
-- **Competir** em batalhas épicas contra outros treinadores.
-- **Junte-se** a outros treinadores para capturar Pokémon poderosos durante os
-  ataques.
+O projeto foi realizado em dupla, tendo como objetivo trabalhar a manipulação de dados, através de um arquivo de dados pré-determinado. A página da web, deve permitir que o usuário visualize informações dos Pokémons da primeira geração, de acordo com a sua busca, sendo por ordenação de A-Z / Z-A, filtrando por tipo, ou pesquisando pelo nome do Pokémon.
 
-## Constatações
+## Definição do produto
 
-​Para entender melhor as necessidades complementares dos usuários do aplicativo,
-fizemos uma investigação rápida (pesquisa) e estas são algumas das descobertas.
+Aplicação web onde o usuário poderá obter informações que possibilitem a tomada de decisão sobre qual pokemon utilizar em uma determinada jogada, como a escolha do tipo certo para enfrentar um líder de ginásio, por exemplo, ao pesquisar quais são as suas fraquezas.
 
-- Os Pokémons têm características únicas que determinam as decisões tomadas pelo
-  usuário (tipo, fraqueza, peso, multiplicador, etc.)
-- Um mestre Pokémon antes de sair para caças os Pokémons tem que conhecer os 10
-  principais Pokémons que aparecem com mais frequências
-- Os Pokémons têm diferentes tipos e fraquezas em combate. Estas características
-  são importantes na escolha do Pokémon mais adequado para sua batalha. Às
-  vezes, você tem que escolher aqueles com menos fraquezas e saber de que tipo
-  eles são. Portanto, é importante que um mestre de Pokémon seja capaz de
-  ordená-los por essas 2 características.
-- Os Pokémons evoluem e é importante para um mestre Pokémon saber quantas e
-  quais evoluções eles têm antes e depois.
-- Pokémon comem _candies_ e um mestre Pokémon precisa saber quantos _candies_ um
-  Pokémon precisa para evoluir.
+Acesse pelo site:
+
+`https://gisele-cesar.github.io/SAP004-data-lovers/src` ou clique [aqui](https://gisele-cesar.github.io/SAP004-data-lovers/src)
+
+## Personas
+
+Samuel Caetano: 37 anos, casado, jogador incansável de Pokémon. No jogo seu objetivo é jogar apenas com os melhores jogadores para conquistar ginásios 
+
+Gustavo Cesar: 18 anos, estudante, jogador ativo de Pokémon. No jogo seu objetivo é alcançar a evolução dos Pokémons de forma rápida, sem que a necessidade de doces seja a única forma de alcançar essa evolução. 
+
+## Histórias de usuário
+
+* 1.Visualizar Pokémons na tela
+* 2.Criar botão para ordenar de A-Z / Z-A
+* 3.Criar filtro de busca por nome
+* 4.Adicionar filtro de busca por Tipo 
+* 5.Ao fazer a busca por tipo o usuário obtém informação da porcentagem do tipo selecionado na tela. 
+
+## Protótipo
+
+O protótipo solicitado foi de baixa qualidade como mostra na imagem a seguir:
+
+## Funcionalidades da aplicação
+
+A página permite que o usuário faça a busca por ordenação de A-Z ou Z-A, filtrando por tipo, ou pesquisando pelo nome do Pokémon. Na pesquisa por tipo também é possível ter acesso a informações de cálculo.
+
+## Testes de Usabilidade
+
+Foi identificado que ao ser selecionado qualquer botão as informações de estatísticas continuavam a apresentar para o usuário, então incluímos nas funções mais uma linha de código para que a informação da porcentagem apareça apenas no momento que o botão do tipo for selecionado.
+
+## Ferramentas Utilizadas:
+
+* Vanilla JavaScript
+* HTML
+* CSS
+* GIT
+* GitHub
+* Visual Studio Code
+* Jest
