@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 body { 
   font-family: 'Maven Pro', sans-serif;
 }
@@ -94,15 +102,14 @@ body {
 
 .logo {
   align-items: center;
-  background-color: white;
-  border: none;
-  outline: none;
-  color: #A5A5A5;
+  color: #a5a5a5;
+  display: flex;
   font-family: Maven Pro;
   font-style: normal;
   font-size: 1.75em;
   font-weight: 700;
-  justify-content: left;
+  justify-content: flex-start;
+  text-decoration: none;
 }
 
 .menu {
@@ -120,10 +127,10 @@ body {
 }
 
 .sub-button {
-  color: #A5A5A5;
+  color: #a5a5a5;
   background-color: white;
   border: none;
-  border-top: 4px solid  #A5A5A5;
+  border-top: 4px solid  #a5a5a5;
   font-family: Maven Pro;
   font-style: normal;
   font-size: 0.55em;
@@ -156,7 +163,7 @@ body {
 
 /* Menu Order */
 .sub-button-blue {
-  color: #A5A5A5;
+  color: #a5a5a5;
   background-color: white;
   border: none;
   border-top: 4px solid  #0a6dca;
@@ -177,7 +184,7 @@ body {
 }
 
 .submenu-options-blue {
-  border-bottom: 1px solid  #A5A5A5;
+  border-bottom: 1px solid  #a5a5a5;
   box-shadow: 0px 3px 6px 0px #CCC;
   display: none;
   position: absolute;
@@ -190,7 +197,7 @@ body {
 }
 
 .sub-item-blue {
-  color: #A5A5A5;
+  color: #a5a5a5;
   background-color: white;
   border: none;
   border-bottom: 1px solid #0a6dca;
@@ -211,7 +218,7 @@ body {
 
 /* Menu Tipo */
 .sub-button-yellow {
-  color: #A5A5A5;
+  color: #a5a5a5;
   background-color: white;
   border: none;
   border-top: 4px solid  #FFC700;
@@ -231,7 +238,7 @@ body {
 }
 
 .submenu-options-yellow {
-  border-bottom: 1px solid  #A5A5A5;
+  border-bottom: 1px solid  #a5a5a5;
   box-shadow: 0px 3px 6px 0px #CCC;  
   display: none;
   position: absolute;
@@ -257,7 +264,7 @@ body {
 }
 
 .sub-item-yellow {
-  color: #A5A5A5;
+  color: #a5a5a5;
   background-color: white;
   border: none;
   border-bottom: 1px solid #FFC700;
@@ -283,7 +290,7 @@ body {
 
 /* Menu Busca */
 .sub-button-red {
-  color: #A5A5A5;
+  color: #a5a5a5;
   background-color: white;
   border: none;
   border-top: 4px solid  #E80011;
@@ -330,10 +337,44 @@ body {
   color: #9F9F9F;
 }
 
+.sub-item-red input:focus{
+  outline: none;
+}
+section {
+  margin-top: 0;
+}
 
-.calc {
-  margin-top: 150px;
-  font-size: 20px;
+.types {
+  display: flex;
+  justify-content: center;
+  color: #a5a5a5;
+  margin: 55px 0 15px;
+}
+
+.types div{
+  width: 290px;
+  margin-top: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted #a5a5a5;
+}
+
+.types h2{
+  font-size: 1.4em;
+  margin: 0 0 10px;
+  display: inline;
+}
+
+.types p{
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 1.46em;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.num {
+  font-size: 1.4em;
+  font-weight: 700;
 }
 
 /* MAIN */
@@ -342,7 +383,6 @@ main{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 120px;
 }
 
 h2{
@@ -364,18 +404,17 @@ h2{
   justify-content: center;
   align-content: center;
   grid-gap: 10px;
-  margin-top: 70px;
 }
 
 /* CARD */
 .card-pokemon { 
-  border: 1px solid #A5A5A5;
+  border: 1px solid #a5a5a5;
   box-shadow: 0px 2px 4px 0px #CCC;
   border-radius: 5px; 
   height: 90px;
   width: 90px;
   text-align: center;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .card-pokemon img {
@@ -386,9 +425,9 @@ h2{
 
 .pokemon-num {
   text-align: end;
-  font-size: 0.75em;
-  font-weight: 500;
-  color: #A5A5A5;
+  font-size: 0.85em;
+  font-weight: 400;
+  color: #a5a5a5;
   padding: 4px 5px 0;
 }
 
@@ -398,7 +437,7 @@ h2{
 
 .pokemon-name {
   text-align: left;
-  font-size: 0.8em;
+  font-size: 0.85em;
   font-weight: 700;
   color: #333333;
   padding-top: 5px;
@@ -406,8 +445,12 @@ h2{
 
 
 @media(min-width: 414px){
-  .nav {
-    width: 390px;
+  .menu {
+    width: 386px;
+  }
+
+  .submenu {
+    width:172px;
   }
 
   .button-red:hover .submenu-option-red {
