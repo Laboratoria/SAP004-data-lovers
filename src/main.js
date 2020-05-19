@@ -2,8 +2,16 @@ import { searchPokemon, sortOrder, filterByType, porcentPokemon } from './data.j
 import data from './data/pokemon/pokemon.js';
 import icons from './icons.js';
 
-// banco de dados
 const pokemonData = data.pokemon;
+
+if (pokemonData.pokemon.name == "Nidoran ♀ (Female)" ) {
+  pokemonData.pokemon.name.replace("(Female)", "")
+}
+
+
+
+// banco de dados
+
 
 // **** ids HTML *********
 
@@ -45,7 +53,8 @@ const card = (num, name, img, type) => {
   const iconName = name.toLowerCase();
     return`<span class="${icons[iconName]}"></span>`
   }).join(' ')
-  
+
+    
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
   <img src="${img}" alt="Miniatura do pokémon ${name}">
   <p class="pokemon-type">${icon}</p>
@@ -235,5 +244,4 @@ templateHTML(titulo, paragrafo, porcentagem, type, percent)
     <p>${paragrafo}</p>
     <p><span class="num ${type}">${percent}%</span> dos pokémons de Kanto.<p>
     </div>`
-};
-*/
+;*/
