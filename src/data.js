@@ -8,7 +8,7 @@ export const applySearchType = (pokemonGo, filterType) => pokemonGo.filter((sear
   (search.type.includes(filterType)));
 
 export const resultCalcType = (pokemonGo, filterType) =>
-  ((pokemonGo.length) / 100) * (filterType.length).toFixed(2);
+  ((filterType) / (pokemonGo) * 100);
 
 export const applySearchName = (pokemonGo, filterName) => pokemonGo.filter((search) =>
   (search.name.toLowerCase().indexOf(filterName.toLowerCase()) > -1));

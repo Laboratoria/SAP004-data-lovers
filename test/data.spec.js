@@ -1,4 +1,4 @@
-import { apllyAscendingOrder, applyDescendingOrder, applySearchType, applySearchName } from '../src/data.js';
+import { apllyAscendingOrder, applyDescendingOrder, applySearchType, resultCalcType, applySearchName } from '../src/data.js';
 
 const pokemon = [
   {
@@ -299,44 +299,91 @@ const pokemonName = [
     }]
   }
 ]
+const calcType =  [
+  {
+    "id": 1,
+    "num": "001",
+    "name": "Bulbasaur",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+  }, {
+    "id": 2,
+    "num": "002",
+    "name": "Ivysaur",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+
+  }, {
+    "id": 4,
+    "num": "004",
+    "name": "Charmander",
+    "type": [
+      "Fire"
+    ],
+
+  }, {
+    "id": 5,
+    "num": "005",
+    "name": "Charmeleon",
+    "type": [
+      "Fire"
+    ],
+  }]
+
 
 describe('function apllyAscendingOrder', () => {
-  it('is a function', () => {
-    expect(typeof apllyAscendingOrder).toBe('function');
-  });
+    it('is a function', () => {
+      expect(typeof apllyAscendingOrder).toBe('function');
+    });
 
-  it('Coloca em ordem alfabética crescente quando clica em A-Z', () => {
-    expect(apllyAscendingOrder(pokemon)).toEqual(pokemon);
-  });
-})
+    it('should put in ascending alphabetical order when you click the button A-Z', () => {
+      expect(apllyAscendingOrder(pokemon)).toEqual(pokemon);
+    });
+  })
 
 describe('function applyDescendingOrder', () => {
-  it('is a function', () => {
-    expect(typeof applyDescendingOrder).toBe('function');
-  });
+    it('is a function', () => {
+      expect(typeof applyDescendingOrder).toBe('function');
+    });
 
-  it('Coloca em ordem alfabética decrescente quando clica em Z-A', () => {
-    expect(applyDescendingOrder(pokemon)).toEqual(pokemonZa);
-  });
-})
+    it('should put in ascending alphabetical order when you click the button Z-A', () => {
+      expect(applyDescendingOrder(pokemon)).toEqual(pokemonZa);
+    });
+  })
 
 describe('function applySearchType', () => {
-  it('is a function', () => {
-    expect(typeof applySearchType).toBe('function');
-  });
+    it('is a function', () => {
+      expect(typeof applySearchType).toBe('function');
+    });
 
-  it('Faça a busca por tipo de pokemon', () => {
-    expect(applySearchType(pokemon, 'Grass')).toEqual(pokemon);
-  });
-})
+    it('should do the search by type of de Pokemon', () => {
+      expect(applySearchType(pokemon, 'Grass')).toEqual(pokemon);
+    });
+  })
+
+describe('function resultCalcType', () => {
+    it('is a function', () => {
+      expect(typeof resultCalcType).toBe('function');
+    });
+
+    it('should ', () => {
+      const resultCalc = calcType.length;
+      const resultFilterCalc = 2;
+      expect(resultCalcType(resultCalc, resultFilterCalc)).toEqual(50.00);
+    });
+  })
 
 describe('function applySearchName', () => {
-  it('is a function', () => {
-    expect(typeof applySearchName).toBe('function');
-  });
+    it('is a function', () => {
+      expect(typeof applySearchName).toBe('function');
+    });
 
-  it('Faça a busca por nome do Pokemon', () => {
-    const result = applySearchName(pokemonName, "bul")
-    expect(result[0].name).toEqual("Bulbasaur");
-  });
-})
+    it('must search for the name of the pokemon', () => {
+      const result = applySearchName(pokemonName, "bul")
+      expect(result[0].name).toEqual("Bulbasaur");
+    });
+  })

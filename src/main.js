@@ -1,4 +1,4 @@
-import { apllyAscendingOrder, applyDescendingOrder, applySearchType, resultCalcType, applySearchName  } from './data.js';
+import { apllyAscendingOrder, applyDescendingOrder, applySearchType, resultCalcType, applySearchName } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -9,7 +9,7 @@ function allList(list) {
     document.getElementById("cards").innerHTML = "";
     for (let obj of list) {
 
-        let cardItem = document.createElement("div"); 
+        let cardItem = document.createElement("div");
         cardItem.className = "div-child";
 
         cardItem.innerHTML += `<img src = ${obj.img} class = "img-item"><h5>${obj.num}</h5>
@@ -37,7 +37,7 @@ document.getElementById("Z-A").onclick = () => {
 document.getElementById("select-type").onchange = () => {
     const filterType = document.getElementById("select-type").value;
     const listType = (applySearchType(pokemonGo, filterType))
-    const filterCalcType = (resultCalcType(pokemonGo, filterType))
+    const filterCalcType = (resultCalcType(pokemonGo.length, filterType.length).toFixed(2))
     document.getElementById("statistics").innerHTML = `<p>Os Pokémons do tipo ${filterType} representam ${filterCalcType} % dos Pokémons da primeira geração.</p>`;
     allList(listType);
 }
@@ -48,4 +48,3 @@ document.getElementById("filter-name").onkeyup = () => {
     allList(newList);
     document.getElementById("statistics").innerHTML = "";
 }
-//subir no git da Re
