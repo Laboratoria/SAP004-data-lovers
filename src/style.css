@@ -620,7 +620,11 @@ h2{
   }
 
   .submenu-options-yellow{
+<<<<<<< HEAD
     width: 260px;
+=======
+    width: 130px;
+>>>>>>> 9d1c88319231f6afe0ac041044eab68825086707
   }
 
   .sub-item-blue, .sub-item-yellow {
