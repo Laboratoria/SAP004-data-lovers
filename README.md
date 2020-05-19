@@ -68,7 +68,8 @@ Veja também a **lista das principais limitações** identificadas durante o pro
 
 
 E aqui está a **interface final** em diferentes dispositivos:
-___ F A Z E R ___
+![Responsive layouts](src/assets/layouts.png)
+
 
 ## 5. Ferramentas utilizadas :wrench:
 * [Node.js](https://nodejs.org/en/) - plataforma de desenvolvimento.
