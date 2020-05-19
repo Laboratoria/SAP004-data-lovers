@@ -20,3 +20,4 @@ export const filterByType = (pokemonType, arrayType, pokemonData) => pokemonData
 
 // função de Porcentagem 
 export const porcentPokemon = (filterByType, pokemonData) => (filterByType / pokemonData)*100;
+   
