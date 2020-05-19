@@ -46,6 +46,7 @@ const card = (num, name, img, type) => {
     return`<span class="${icons[iconName]}"></span>`
   }).join(' ')
   
+
   return `<figure class="card-pokemon"><p class="pokemon-num">${num}</p>
   <img src="${img}" alt="Miniatura do pokémon ${name}">
   <p class="pokemon-type">${icon}</p>
