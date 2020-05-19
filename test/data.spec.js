@@ -109,7 +109,7 @@ describe('Teste para a função refente ao cálculo agregado: percentageByTypeAn
 
 describe('Teste para função searchChampionsByName', () => {
 
-  it('A função retorna um array contendo um ou mais objetos que cotenham oque foi insirido para realizar a pesquisa', () => {
+  it('A função retorna um array contendo um ou mais objetos que cotenham oque foi inserido para realizar a pesquisa', () => {
     expect(searchChampionsByName(championsArray, "D")).toEqual(resultForSearchFunction);
   });
 
