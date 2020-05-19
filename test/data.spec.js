@@ -10,14 +10,11 @@ describe('filterData', () => {
   });
 
   it('returns different type of Eletric', () => {
-    // expect(filterData(pokemon,"Eletric")).toEqual([{name: "Caterpie", type:["Bug"]}, {name: "Bulbasaur", type:["Grass","Poison"]}]);
     expect(filterData(pokemon, "Eletric").length).toEqual(3);
   });
 
   it('returns different type of Bug', () => {
-    // expect(filterData(pokemon,"Bug")).toEqual([{name: "Pikachu", type:["Eletric"]}, {name: "Bulbasaur", type:["Grass","Poison"]}]);
     let filter = filterData(pokemon,"Bug");
-    // console.log("AQUI..", filter.length, filter[0].name);
     expect(filter.length == 2 && filter[0].name == "Pikachu").toEqual(true);
   });
 });

@@ -4,6 +4,7 @@ import data from "./data/pokemon/pokemon.js";
 //Variáveis globais: configuração
 const colorTypeList = {
   Bug: "#1E6DE3",
+  Dragon: "#ff6347",
   Electric: "#D7DB1E",
   Fighting: "#FEC807",
   Fire: "#FF8C00",
@@ -70,7 +71,8 @@ const loadCards = (dataset) => {
     setInfosOnCard(".img-pok", i, data["pokemon"], "img");
     setCardColor(i);
     document
-      .querySelectorAll(".container-card")[i].addEventListener("click", () => {
+      .querySelectorAll(".container-card")
+      [i].addEventListener("click", () => {
         clickCard(
           data["pokemon"][i].name,
           data["pokemon"][i].num,
@@ -92,19 +94,22 @@ const loadCards = (dataset) => {
 loadCards(data["pokemon"]);
 
 //Configurações do modal (card estendido)
-function clickCard(
-  name,
-  num,
-  type,
-  img,
-  height,
-  weight,
-  candy,
-  candy_count,
-  egg,
-  spawn_chance
-) {
-
+function clickCard(name,num,type,img,height,weight,candy,candy_count,egg,spawn_chance){
+  const changingInfo = () => {
+    if (name === "Nidoran ♀ (Female)") {
+      name = "Nidoran ♀";
+    } else if (name === "Nidoran ♂ (Male)") {
+      name = "Nidoran ♂";
+    } else if ((type === "type[0]", "type[1]")) {
+      type = type.join(" - ");
+    }
+    if (candy === "Nidoran ♀ (Female) Candy") {
+      candy = "Nidoran ♀ Candy";
+    } else if (candy === "Nidoran ♂ (Male) Candy") {
+      candy = "Nidoran ♂ Candy";
+    }
+  };
+  changingInfo();
   document.getElementById("char-name").textContent = name;
   document.getElementById("char-num").textContent = num;
   document.getElementById("char-type").textContent = type;
@@ -131,7 +136,7 @@ document.querySelector(".close").addEventListener("click", () => {
 
 window.addEventListener("click", (event) => {
   if (event.target === modal) {
-  modal.style.display = "none";
+    modal.style.display = "none";
   }
 });
 
@@ -165,6 +170,7 @@ const filterType = () => {
 const orderData = (sortBy) => {
   const sortOrder = getUserOption(1);
   const pokemonOrded = sortData(data["pokemon"], sortBy, sortOrder);
+  console.log(pokemonOrded);
   loadCards(pokemonOrded);
 };
 
@@ -188,7 +194,7 @@ optionTyperUser.addEventListener("change", () => {
 const optionOrderUser = document.getElementsByClassName("select")[1];
 optionOrderUser.addEventListener("change", () => {
   if (getUserOption(1) === "Menor-nº" || getUserOption(1) === "Maior-nº") {
-    orderData("id");
+    orderData("num");
   } else if (getUserOption(1) === "A-Z" || getUserOption(1) === "Z-A") {
     orderData("name");
   }
