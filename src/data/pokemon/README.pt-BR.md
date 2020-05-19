@@ -28,7 +28,16 @@ Gustavo Cesar: 18 anos, estudante, jogador ativo de Pokémon. No jogo seu objeti
 
 ## Protótipo
 
-O protótipo solicitado foi de baixa qualidade como mostra na imagem a seguir:
+Fizemos um esboço de como seria o site e a disposição das informações na aplicação web após descrição das necessidades das personas e também a partir das histórias de usuário.
+
+O protótipo solicitado foi de baixa qualidade como mostra nas imagens a seguir:
+
+![layout1](PrototipoGih1.jpeg)
+
+
+Também realizamos testes de desenho de baixa fidelidade através do aplicativo [Marvel](https://marvelapp.com/575b2ij/screen/68480001)
+
+
 
 ## Funcionalidades da aplicação
 
