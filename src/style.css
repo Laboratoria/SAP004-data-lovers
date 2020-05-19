@@ -104,7 +104,6 @@ body {
   align-items: center;
   color: #a5a5a5;
   display: flex;
-  font-family: Maven Pro;
   font-style: normal;
   font-size: 1.75em;
   font-weight: 700;
@@ -205,7 +204,7 @@ body {
   font-style: normal;
   font-size: 0.75em;
   font-weight: 600;
-  height: 30px;
+  height: 28px;
   outline: none;
   text-align: center;
   width: 90px;
@@ -231,6 +230,7 @@ body {
   letter-spacing: 0.05em;
   text-align: center;
   width: 40px;
+  position: relative;
 }
 
 .sub-button-yellow:hover, .sub-button-yellow:focus, .sub-button-yellow:focus-within .sub-button-yellow:active {
@@ -238,14 +238,15 @@ body {
 }
 
 .submenu-options-yellow {
+  display: flex;
   border-bottom: 1px solid  #a5a5a5;
   box-shadow: 0px 3px 6px 0px #CCC;  
   display: none;
   position: absolute;
   list-style-type: none;
   width: 200px;
-  right: 5%;
   box-sizing: content-box;
+  right: 5vw;
 }
 
 .button-yellow:hover .submenu-options-yellow{
@@ -272,7 +273,7 @@ body {
   font-style: normal;
   font-size: 0.75em;
   font-weight: 600;
-  height: 30px;
+  height: 28px;
   outline: none;
   text-align: left;
   width: 100px;
@@ -452,15 +453,31 @@ h2{
   .submenu {
     width:172px;
   }
-
-  .button-red:hover .submenu-option-red {
-    display: block;
-    width: 170px;
-    height: 48px;
-  }
   
   .sub-button-blue, .sub-button-yellow, .sub-button-red{
     width: 52px;
+  }
+
+  .submenu-options-blue, .sub-item-blue {
+    width: 114px;
+  }
+
+  .submenu-options-yellow {
+    left: 53vw;
+  }
+
+  .button-red:hover .submenu-option-red {
+    display: block;
+    width: 174px;
+    height: 48px;
+  }
+
+  .submenu-option-red{
+    left: 52vw;
+  }
+
+  .sub-item-red {
+    width: 166px;
   }
 
   .pokemon-list {
@@ -474,30 +491,54 @@ h2{
   }
 
   .menu {
-    width: 500px;
+    width: 510px;
   }
   
   .logo {
-    font-size: 3em;
+    font-size: 2.3em;
   }
-    
+  
   .submenu{
-    width: 133px;
-    font-size: 20px;
+    width: 175px;
+    font-size: 1.15em;
   }
   
   .sub-button-blue, .sub-button-yellow, .sub-button-red{
     width: 52px;
   }
   
+  .sub-item-yellow {
+    width: 115px;
+  }
+
+  .sub-item-yellow span {
+    padding: 0 11px 0 11px;
+  }
+
+  .submenu-options-yellow {
+    width: 230px;
+    left: 54vw;
+  }
+
+  .sub-item-blue, .sub-item-yellow {
+    height: 32px;
+  }
+
+  .submenu-option-red {
+    left: 63vw;
+  }
+  
   .pokemon-list {
     grid-template-columns: repeat(4, 120px);
   }
   
+  .types {
+    margin: 55px 0 20px;
+  }
+
   .card-pokemon { 
     height: 120px;
     width: 120px;
-    margin-top:25px;
   }
 
   .card-pokemon img {

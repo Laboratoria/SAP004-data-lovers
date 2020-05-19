@@ -80,5 +80,5 @@ describe('Deve calcular porcentagem de pokemon por tipo', () => {
 
   it('Retorna a porcentagem da quantidade do tipo de pokemon filtrado', () => {
     const filteredPokemon = (filterByType("Grass", "type", pokemonMock));
-    expect(porcentPokemon(filteredPokemon, pokemonMock)).toEqual(50);
+    expect(porcentPokemon(filteredPokemon.length, pokemonMock.length)).toEqual(50);
     })});
