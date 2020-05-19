@@ -5,6 +5,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0%;
   padding: 0%;
 }
@@ -196,16 +197,10 @@ a:active {
   color: #146666;
   font-size: 28px;
   margin: 0 auto;
-  width: 50%;
   margin-top: 230px;
 }
 
-.chart-align {
-  width: 100px;
-  height: 300px;
-}
-
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   
   header {
     flex-direction: row-reverse;
@@ -291,7 +286,7 @@ a:active {
     flex-direction: column;
     opacity: 0.9;
     width: 200px;
-    margin-left: 120px;
+    margin-left: calc(50% - 20%);
     border-radius: 20px;
     background-color: #146666;
     padding: 10px;
@@ -304,17 +299,17 @@ a:active {
     margin-top: 17px;
     margin-left: 8px;
     border-radius: 15px;
+    zoom: 0.9;
   }
   
   .charts {
-    width: auto;
     font-size: 15px;
     margin-top: 0; 
   }
 
   .chart-align{
-    height: 135px;
-    margin-top: -10px;
-    margin-left: -85px;
+    zoom: 0.5;
+    margin-left:-10%;
   }
+
 }

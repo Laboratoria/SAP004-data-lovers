@@ -96,7 +96,7 @@ describe('searchName', () => {
   });
 
   it('should return an "rick" for "rick"', () => {
-    expect(searchName(data, "rick")).toEqual([["Rick", undefined, "Male", "Alive", "Human",]])
+    expect(searchName("rick", data)).toEqual([["Rick", undefined, "Male", "Alive", "Human",]])
   });
 });
 
@@ -106,7 +106,7 @@ describe('countGender', () => {
   });
 
   it('should return the gender count', () => {
-    expect(countGender(data, "gender")).toEqual([["Gender Female", 2], ["Gender Male", 3], ["Unknown", undefined], 
+    expect(countGender(data)).toEqual([["Gender Female", 2], ["Gender Male", 3], ["Unknown", undefined], 
     ["Genderless", undefined]])
   });
 });
@@ -117,6 +117,6 @@ describe('countStatus', () => {
   });
 
   it('should return the status count', () => {
-    expect(countStatus(data, "status")).toEqual([["Alive", 4], ["Dead", 1], ["Unknown", undefined,]])
+    expect(countStatus(data)).toEqual([["Alive", 4], ["Dead", 1], ["Unknown", undefined,]])
   });
 });
