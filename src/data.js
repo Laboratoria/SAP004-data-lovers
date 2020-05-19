@@ -14,11 +14,11 @@ export function percentageByTypeAndLevel(typeOfInfoArg, levelValueArg, champions
    return parseInt((numberOfChampions.length * 100) / totalOfChampions.length);
 }
 
-export function searchChampionsByName(arrayCharactersForFilter, whatTheUserWantsTosearch){  //PESQUISA DENTRO DOS DADOS OQUE O USUÁRIO FORNECE
+export function searchChampionsByName(arrayCharactersForFilter, whatTheUserWantsTosearch){
     return arrayCharactersForFilter.filter(championFilter => championFilter.name.toUpperCase().includes(whatTheUserWantsTosearch.toUpperCase())); 
 }
 
-export function sortCharactersAZ(ObjectCharactersForSortAZ) {  //ORDENA OS PERSONAGENS EM ORDERM AZ
+export function sortCharactersAZ(ObjectCharactersForSortAZ) {
     let arrayPersonas = [];
 
       for (let persona in ObjectCharactersForSortAZ){    
@@ -28,7 +28,7 @@ export function sortCharactersAZ(ObjectCharactersForSortAZ) {  //ORDENA OS PERSO
     return arrayPersonas.sort();
 }
     
-export function sortCharactersZA(ObjectCharactersForSortZA) {  //ORDENA OS PERSONAGENS EM ORDERM ZA
+export function sortCharactersZA(ObjectCharactersForSortZA) {
     let arrayPersonas = [];
 
     for (let persona in ObjectCharactersForSortZA){    

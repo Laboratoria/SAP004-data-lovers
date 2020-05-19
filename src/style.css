@@ -49,18 +49,15 @@ h1 {
   font-size: 18px;
   border: solid 1px black;
 }
+
 .style-view {
   text-align: center;
   font-size: 30px;
   color: bold;
   padding-left: 25px;
   padding-right: 25px;
-  /*border-style: ridge;
-  border-width: 5px;
-  border-radius: 20px;
-  border-color: #97723d;
-  background: #bda275; */
 }
+
 .for-div {
   display: inline-block;
   background: #bda275;
@@ -187,11 +184,10 @@ iframe{
   border-color: #34dce8;
   padding: 10px;
   margin-bottom: 50px;
-
 }
 
 
-/*VERSÃO MOBILE*/
+
 @media only screen and (max-width: 800px) {
   html {
     font-family: "Girassol";

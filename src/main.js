@@ -7,8 +7,8 @@ import { searchChampionsByName,
 
 import data from "./data/lol/lol.js";
 
-const champion = data.data; // OBJETO COM VARIOS OBJETOS   { A:{}, D:{}, B:{} }
-const championsArray = Object.values(data.data);  // ARRAY DE OBJETOS  [{},{},{}]
+const champion = data.data;
+const championsArray = Object.values(data.data);
 const charactersDiv = document.getElementById("characters-div");
 const lolToolIntro = document.getElementById("lol-tool-intro");
 const aboutTheGameDiv = document.getElementById("about-the-game-div");
@@ -26,7 +26,7 @@ const userInput = document.getElementById("search-entry");
 aboutGameButton.addEventListener("click", showAboutGame);
 compareChampionButton.addEventListener("click", () => showCompChan(championsArray));
 youtubeButton.addEventListener("click", showYoutubers);
-buttonShowChampions.addEventListener("click", () => showChampionsInCards(championsArray)); // RECEBE ARRAY DE OBJETOS
+buttonShowChampions.addEventListener("click", () => showChampionsInCards(championsArray));
 radioAZ.addEventListener("click", () => showChampionsInCardsForSort(sortCharactersAZ(champion), champion));
 radioZA.addEventListener("click", () => showChampionsInCardsForSort(sortCharactersZA(champion), champion));
 searchButton.addEventListener('click', () => {
@@ -135,7 +135,7 @@ function showCompChan(arraycharacterForAggregateCalculation) {
     }         
 }
 
-function showChampionsInCards(arrayCharacters) {     //MOSTRA PERSONAGENS EM FORMA DE CARDS DENTRO DA CHARACTERS-DIV
+function showChampionsInCards(arrayCharacters) {
   document.getElementById("characters-div").style.visibility = "visible";
   document.getElementById("characters-div").style.display = "block";
 
@@ -199,112 +199,3 @@ function showChampionsInCardsForSort(arrayCharactersForShowSort, objectWithOther
 
   document.getElementById("see-characters-here").innerHTML = championsInCardsForSort(arrayCharactersForShowSort, objectWithOtherObjectsInsideForSort);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-
-
-
-
-
-
-
-const champion = data.data;
-
-function showChampions() {
-  
-
-  let template = "";
-  for (let persona in champion) {
-    template += `
-    <div class="champions-card">
-    <p class="image-splash"><img class="image common" src="${champion[persona].splash}"></p>
-    <p class="name common">Name: ${persona}</p>
-    <p class="title common">${champion[persona].title}</p>
-    <p class="role common">Role: ${champion[persona].tags}</p>
-    <p class="info-champ common">Attack: ${champion[persona].info.attack}</p>
-    <p class="info-champ common">Defense: ${champion[persona].info.defense}</p>
-    <p class="info-champ common">Magic: ${champion[persona].info.magic}</p>
-    <p class="info-champ common">Difficulty: ${champion[persona].info.difficulty}</p>
-    </div>
-    `;
-  };
-  document.getElementById("see-characters-here").innerHTML = template;
-};
-
-document.getElementById("send-ordination").addEventListener("click", sortCharacters);
-
-    
-function sortCharacters() {
-
-    if (document.getElementById("AZ").checked){
-          
-      let arrayPersonas = [];
-      for (let persona in data.data){    
-      arrayPersonas.push(persona);   
-      };
-
-      let template = "";
-      for (let persona of arrayPersonas.sort()) {
-      template += `
-      <div class="champions-card">
-      <p class="image-splash"><img class="image common" src="${champion[persona].splash}"></p>
-      <p class="name common">Name: ${persona}</p>
-      <p class="title common">${champion[persona].title}</p>
-      <p class="role common">Role: ${champion[persona].tags}</p>
-      <p class="info-champ common">Attack: ${champion[persona].info.attack}</p>
-      <p class="info-champ common">Defense: ${champion[persona].info.defense}</p>
-      <p class="info-champ common">Magic: ${champion[persona].info.magic}</p>
-      <p class="info-champ common">Difficulty: ${champion[persona].info.difficulty}</p>
-      </div>
-      `;
-      };
-      document.getElementById("see-characters-sort-here-AZ").innerHTML = template;
-      
-    }else if(document.getElementById("ZA").checked){
-
-      let arrayPersonas = [];
-      for (let persona in data.data){    
-      arrayPersonas.push(persona);   
-      };
-
-      let template = "";
-      for (let persona of arrayPersonas.sort().reverse()) {
-      template += `
-      <div class="champions-card">
-      <p class="image-splash"><img class="image common" src="${champion[persona].splash}"></p>
-      <p class="name common">Name: ${persona}</p>
-      <p class="title common">${champion[persona].title}</p>
-      <p class="role common">Role: ${champion[persona].tags}</p>
-      <p class="info-champ common">Attack: ${champion[persona].info.attack}</p>
-      <p class="info-champ common">Defense: ${champion[persona].info.defense}</p>
-      <p class="info-champ common">Magic: ${champion[persona].info.magic}</p>
-      <p class="info-champ common">Difficulty: ${champion[persona].info.difficulty}</p>
-      </div>
-      `;
-      };
-      document.getElementById("see-characters-sort-here-ZA").innerHTML = template;
-
-    };
-};
-*/
