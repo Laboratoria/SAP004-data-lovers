@@ -1,5 +1,6 @@
 import { searchPokemon, sortOrder, filterByType, porcentPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
+import icons from './icons.js';
 
 // banco de dados
 const pokemonData = data.pokemon;
