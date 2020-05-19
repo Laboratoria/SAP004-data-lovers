@@ -316,7 +316,6 @@ const calcType =  [
       "Grass",
       "Poison"
     ],
-
   }, {
     "id": 4,
     "num": "004",
@@ -324,7 +323,6 @@ const calcType =  [
     "type": [
       "Fire"
     ],
-
   }, {
     "id": 5,
     "num": "005",
