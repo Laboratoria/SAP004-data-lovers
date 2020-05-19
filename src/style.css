@@ -3,7 +3,7 @@
   font-family: "Cinzel", serif;
 }
 html {
-  background-image: url("wallpaper.jpg");
+  background-image: url("wallpaper21.jpg");
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed;
@@ -55,15 +55,15 @@ h1 {
   color: bold;
   padding-left: 25px;
   padding-right: 25px;
-  border-style: ridge;
+  /*border-style: ridge;
   border-width: 5px;
   border-radius: 20px;
   border-color: #97723d;
-  background: #bda275c7; 
+  background: #bda275; */
 }
 .for-div {
   display: inline-block;
-  background: #fbd27361;
+  background: #bda275;
   font-size: 15px;
   text-align: center;
   border-style: inset;
@@ -73,6 +73,7 @@ h1 {
   padding: 10px;
   margin-bottom: 10px;
 }
+
 .for-button {
   border-radius: 3px;
   background-color: #bda275;
@@ -89,6 +90,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background: #bda275;
+  border-radius: 10px;
 }
 
 .for-display{
@@ -100,12 +103,16 @@ h1 {
   width: 150px;
 }
 
+.for-hover:hover {
+ background-color: #34dce8;
+}
+
 .champions-card {
   display: inline-grid;
   border-style: groove;
   border-width: 4px;
   border-color: #34dce8;
-  background: #fbd27361;
+  background: #bda275;
   width: 304px;
   height: 445px;
   font-size: 20px;
@@ -145,6 +152,48 @@ h1 {
   visibility: hidden;
   display: none;
 }
+
+.youtube-box{
+  border-style: inset;
+  border-color: #34dce8;
+  display: inline-block;
+  margin-bottom: 10px;
+  background: #bda275;
+}
+.youtube-info{
+  display: block;
+}
+.youtube-info > p{
+  font-size: 20px;
+}
+iframe{
+  height: 280px;
+  width: 500px;
+}
+#characters-div, #youtube-media{
+  /*background: #bda275c2; */
+}
+
+.for-background-text {
+  background-color: #bda275;
+  /*background: #ffffff3d;*/
+  border-radius: 10px;
+  
+}
+
+#order-search-buttons{
+  display: inline-block;
+  background: #bda275;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 5px;
+  border-style: inset;
+  border-color: #34dce8;
+  padding: 10px;
+  margin-bottom: 50px;
+
+}
+
 
 /*VERSÃO MOBILE*/
 @media only screen and (max-width: 800px) {
@@ -210,7 +259,7 @@ h1 {
     border-style: groove;
     border-width: 4px;
     border-color: #34dce8;
-    background: #fbd27361;
+    background: #bda275;
     width: 95%;
     height: 90%;
     margin-bottom: 10px;
@@ -246,4 +295,11 @@ h1 {
     width: 100%;
     background: #ffffff3d;
   }
+
+  iframe{
+    height: 200px;
+    width: 300px;
+  }
+
 }
+
