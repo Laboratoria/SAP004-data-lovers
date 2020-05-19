@@ -117,14 +117,14 @@ function showCompChan(arraycharacterForAggregateCalculation) {
   
   function showResultForTheInformationProvided() {
 
-      var selectTypesOfInformation = document.getElementById("types-of-information");
-      var selectedselectTypesOfInformation = selectTypesOfInformation.selectedIndex;
-      var typeOfInfo = selectTypesOfInformation.options[selectedselectTypesOfInformation].value;
+      let selectTypesOfInformation = document.getElementById("types-of-information");
+      let selectedselectTypesOfInformation = selectTypesOfInformation.selectedIndex;
+      let typeOfInfo = selectTypesOfInformation.options[selectedselectTypesOfInformation].value;
 
 
-      var selectLevelOfInformation = document.getElementById("level-of-information");
-      var selectedIndexOfLevelOfInformation = selectLevelOfInformation.selectedIndex;
-      var levelValue = Number(selectLevelOfInformation.options[selectedIndexOfLevelOfInformation].value);
+      let selectLevelOfInformation = document.getElementById("level-of-information");
+      let selectedIndexOfLevelOfInformation = selectLevelOfInformation.selectedIndex;
+      let levelValue = Number(selectLevelOfInformation.options[selectedIndexOfLevelOfInformation].value);
   
       let resultForTheInformationProvided = percentageByTypeAndLevel(typeOfInfo, levelValue, arraycharacterForAggregateCalculation);
   
