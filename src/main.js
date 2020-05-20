@@ -115,7 +115,7 @@ buttonSteel.addEventListener("click", () => {
   Têm um corpo blindado, ou seja, metalizado, são poucos os que existem, já que é um dos mais novos tipos de pokémon. Com o passar das gerações, surgiram mais pokémons desse tipo. São conhecidos como tanques de guerra, pois são resistentes a 11 tipos diferentes, e são inafetados por veneno. São bons apenas contra gelo e pedra. Ficam logo "enferrujados" com golpes de fogo. Também têm fraqueza a lutador e terra. Se não usados esses tipos, o melhor para atacar é água e elétrico, qualquer outro tipo trara dificuldades na batalha.
   </p>
   <p><span class="num steel">${percent}%</span> Infelizmente não existem pokémons desse tipo em Kanto.<p>
-</div>`;;
+</div>`;
 });
 
 buttonWater.addEventListener("click", () => { 
