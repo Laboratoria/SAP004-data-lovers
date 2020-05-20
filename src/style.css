@@ -71,7 +71,7 @@ body {
 .stell { color: #5AA7AA;}
 .water {color: #68B5E5;} 
 .dragon {color: #0A6DCA;}
-.eletric {color: #FFC700;}
+.electric {color: #FFC700;}
 .fairy {color: #F29FE5;}
 .ghost {color: #7272D2;}
 .fire {color: #FF8713;}
@@ -620,11 +620,7 @@ h2{
   }
 
   .submenu-options-yellow{
-<<<<<<< HEAD
     width: 260px;
-=======
-    width: 130px;
->>>>>>> 9d1c88319231f6afe0ac041044eab68825086707
   }
 
   .sub-item-blue, .sub-item-yellow {
