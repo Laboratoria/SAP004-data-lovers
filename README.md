@@ -24,6 +24,8 @@ O usuário pode acessar uma página com os personagens da série em que poderá 
  - **Quarta História**
   Apresentar gráficos com dados sobre a série.
 
+*Planejamento*
+![json-interface](https://github.com/milaroque/SAP004-data-lovers/blob/master/imgsReadme/trello.jpeg)
 
 ### Protótipos 
 *Primeira ideia* : haveria uma barra para o menu e as informações sobre os personagens apareceriam após clicarmos em suas fotos foi descartada por não ser prático ao usuário clicar para então obter a informação. E o fundo foi descartado por ser muito poluído.
