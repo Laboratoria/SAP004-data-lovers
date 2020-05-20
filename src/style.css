@@ -71,7 +71,7 @@ body {
 .stell { color: #5AA7AA;}
 .water {color: #68B5E5;} 
 .dragon {color: #0A6DCA;}
-.eletric {color: #FFC700;}
+.electric {color: #FFC700;}
 .fairy {color: #F29FE5;}
 .ghost {color: #7272D2;}
 .fire {color: #FF8713;}
@@ -88,6 +88,9 @@ body {
 .flying {color: #9FB9EB;}
 
 /* HEADER */
+.image img{
+  display: none;
+}
 .navbar {
   background-color: white;
   box-shadow: 0px 3px 6px 0px #CCC;
@@ -349,6 +352,7 @@ section {
   justify-content: center;
   color: #a5a5a5;
   margin: 55px 0 20px;
+  margin-top: -48px;
 }
 
 .types div{
@@ -686,6 +690,16 @@ h2{
 }
 
 @media(min-width:1200px){
+  .image img{
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 70px;
+    width: 900px;
+    margin-top: 53px;
+    justify-content: center;
+    
+  }
   .menu {
     width: 912px;
   }
@@ -700,11 +714,14 @@ h2{
 
   .types div {
     width: 912px;
+    margin-top: -48px;
+    margin-bottom:  80px;
   }
 
   .pokemon-list{
     grid-template-columns: repeat(6, 135px);
-    grid-gap: 20px
+    grid-gap: 20px;
+    margin-top: -75px;
   }
 
   .pokemon-type {
