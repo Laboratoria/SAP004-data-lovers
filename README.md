@@ -116,7 +116,7 @@ Teste: https://forms.gle/rZLDPkM2ejhVegSM6
 Acesse o protótipo de baixa fidelidade clicando nas imagens abaixo:
 
 
- [![Página inicial](img/image3.png)](https://mires731129.invisionapp.com/overview/Sprint-1-2-e-3---Pokdex-ck9k6l7g90p19013c6dtd9lmp/screens?v=9jM%2FDQc5hQ4vt%2Bs6tLr9OQ%3D%3D&linkshare=urlcopied)
+ [![Teste de baixa fidelidade](img/image3.png)](https://mires731129.invisionapp.com/overview/Sprint-1-2-e-3---Pokdex-ck9k6l7g90p19013c6dtd9lmp/screens?v=9jM%2FDQc5hQ4vt%2Bs6tLr9OQ%3D%3D&linkshare=urlcopied)
 
 O principal retorno que tivemos neste teste foi: o ícone de tipo (pokebola) mesmo com o texto auxiliar não estava reconhecível o bastante. Buscamos solucionar esta inconsistência na etapa de interface. 
 
