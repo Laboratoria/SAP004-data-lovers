@@ -103,16 +103,9 @@ function clickCard(name,num,type,img,height,weight,candy,candy_count,egg,spawn_c
       break;
     } 
 
-    // switch (type) {
-    //   case type.length>1:
-    //   type = type.join(" - ");
-    //   console.log(type)
-    //   break;
-    // }
-
     if(type.length>1){
     type = `${type[0]} - ${type[1]}`
-   }
+    }
 
     switch (candy){
       case "Nidoran ♀ (Female) Candy":
@@ -122,19 +115,6 @@ function clickCard(name,num,type,img,height,weight,candy,candy_count,egg,spawn_c
       candy =   "Nidoran ♂ Candy";
       break;
     }  
-    // ) if (name === "Nidoran ♀ (Female)"{
-    //   name = "Nidoran ♀";
-    // } else if (name === "Nidoran ♂ (Male)") {
-    //   name = "Nidoran ♂";
-    // } 
-    // if ((type === "type[0]", "type[1]")) {
-    //   type = type.join(" - ");
-    // }
-    // if (candy === "Nidoran ♀ (Female) Candy") {
-    //   candy = "Nidoran ♀ Candy";
-    // } else if (candy === "Nidoran ♂ (Male) Candy") {
-    //   candy = "Nidoran ♂ Candy";
-    // }
   };
   changingInfo();
   document.getElementById("char-name").textContent = name;
