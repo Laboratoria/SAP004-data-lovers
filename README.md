@@ -133,15 +133,14 @@ Seguindo noções de material e flat design projetamos a interface com alguns as
 * **ÍCONES:** Os ícones dos tipos foram baseados no jogo mas em sua versão flat, já os ícones de navegação são arredondados e não fecham em si, dando a ideia de busca.
 * **TIPOGRAFIA:** Buscando unidade entre as informações mas com pesos visuais diferentes adotamos uma família extensa com traço arredondados e legibilidade em tamanhos reduzidos.
 
-[![tipografia](img/image2.png)[]]
+
+[![tipografia](img/image2.png)]()
 
 Baseadas em nossas referências chegamos a duas opções de desenhos de interação. Para validação desenvolvemos uma  [entrevista de teste A x B](https://forms.gle/2AcsHgqPXQZt3cvq7).
-
 Acesse o protótipo de alta fidelidade clicando nas imagens abaixo:
  
 [![testes-A](img/Home-A.jpg)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=1%3A2&scaling=scale-down)
 [![testes-B](img/Home-B.png)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down)
-
 
 
 
