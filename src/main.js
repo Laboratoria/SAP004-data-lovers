@@ -4,13 +4,6 @@ import icons from './icons.js';
 
 const pokemonData = data.pokemon;
 
-/*
-if (pokemonData.pokemon.name == "Nidoran ♀ (Female)" ) {
-  pokemonData.pokemon.name.replace("(Female)", "")
-}
-*/
-
-
 
 // banco de dados
 
@@ -89,7 +82,7 @@ const displayPokemons = (pokemon) => {
 };
 
 // **** Botões Ordem ******
-buttonAZ.addEventListener("click", () => displayPokemons(sortOrder("az", "name", pokemonData)));
+buttonAZ.addEventListener("click", () => displayPokemons(sortOrder("az", "name", pokemonData)) ;
 buttonZA.addEventListener("click", () => displayPokemons(sortOrder("za", "name", pokemonData)));
 buttonCresc.addEventListener("click", () => displayPokemons(sortOrder("cresc", "id", pokemonData)));
 buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "id", pokemonData)));
