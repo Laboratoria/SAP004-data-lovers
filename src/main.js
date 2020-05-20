@@ -60,7 +60,10 @@ const card = (num, name, img, type) => {
 pokemonData.map(pokemon => pokemonsList.innerHTML += card (pokemon.num, pokemon.name, pokemon.img, pokemon.type));
 
 // cards filtrados
-searchBar.addEventListener("keyup",() => displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData)));
+searchBar.addEventListener("keyup",() => {
+  displayPokemons(searchPokemon(searchBar.value.toLowerCase(), "name", pokemonData));
+  Kanto.innerHTML = " ";
+});
 
 const displayPokemons = (pokemon) => {
   const cards = pokemon
@@ -82,10 +85,22 @@ const displayPokemons = (pokemon) => {
 };
 
 // **** Botões Ordem ******
-buttonAZ.addEventListener("click", () => displayPokemons(sortOrder("az", "name", pokemonData)) ;
-buttonZA.addEventListener("click", () => displayPokemons(sortOrder("za", "name", pokemonData)));
-buttonCresc.addEventListener("click", () => displayPokemons(sortOrder("cresc", "id", pokemonData)));
-buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "id", pokemonData)));
+buttonAZ.addEventListener("click", () => {
+  displayPokemons(sortOrder("az", "name", pokemonData));
+  Kanto.innerHTML = " ";
+});
+buttonZA.addEventListener("click", () => {
+  displayPokemons(sortOrder("za", "name", pokemonData));
+  Kanto.innerHTML = " ";
+});
+buttonCresc.addEventListener("click", () => {
+  displayPokemons(sortOrder("cresc", "id", pokemonData));
+  Kanto.innerHTML = " ";
+});
+buttonDecre.addEventListener("click", () => {
+  displayPokemons(sortOrder("decre", "id", pokemonData));
+  Kanto.innerHTML = " ";
+});
 
 // **** Botões Tipo *******
 const Kanto = document.querySelector("#textTypes")
@@ -99,8 +114,7 @@ buttonSteel.addEventListener("click", () => {
   <p>
   Têm um corpo blindado, ou seja, metalizado, são poucos os que existem, já que é um dos mais novos tipos de pokémon. Com o passar das gerações, surgiram mais pokémons desse tipo. São conhecidos como tanques de guerra, pois são resistentes a 11 tipos diferentes, e são inafetados por veneno. São bons apenas contra gelo e pedra. Ficam logo "enferrujados" com golpes de fogo. Também têm fraqueza a lutador e terra. Se não usados esses tipos, o melhor para atacar é água e elétrico, qualquer outro tipo trara dificuldades na batalha.
   </p>
-  <p><span class="num steel">${percent}%</span> dos pokémons de Kanto.<p>
-  <p>Infelizmente não há esse tipo de Pokemon em Kanto.</p>
+  <p><span class="num steel">${percent}%</span> Infelizmente não existem pokémons desse tipo em Kanto.<p>
 </div>`;;
 });
 
@@ -135,7 +149,7 @@ buttonEletric.addEventListener("click", () => {
   displayPokemons(filterElectric);
   const percent = porcentPokemon(filterElectric.length, pokemonData.length).toFixed(0);
   Kanto.innerHTML= `<div>
-  <h2 class="electric"><span class="icon-eletrico"></span> Eletrico </h2>
+  <h2 class="electric"><span class="icon-eletrico"></span> Elétrico </h2>
   <p>
   São muito fortes e adoram uma batalha. São muito raros de se achar, mas contam com um grande ataque e uma ótima defesa. Seus golpes podem ser aquáticos, de fogo, de gelo, elétrico, normais, voadores e outros específicos de dragões, tornado eles um oponente difícil de ser derrotado. São difíceis de serem treinados, resistem aos tipos básicos (água, fogo, elétrico e planta). Os dragões totalmente evoluídos e os dragões lendários todos têm 2 tipos. A maioria deles (menos Kingdra e lendários) acabam ficando ou dragão/voador, ou dragão/terra, o que causa dupla desvantagem ao tipo gelo.
   </p>
@@ -152,8 +166,7 @@ buttonFairy.addEventListener("click", () => {
   <p>
   Surgiu principalmente para equilibrar o tipo dragão, que estava cada vez mais imbatível. Também são bons contra lutadores e noturnos, e não são afetados por golpes do tipo dragão. São fracos contra o tipo veneno e metálico, que pouco eram usados ofensivamente, ajudando a equilibrar esses tipos também.
   </p>
-  <p><span class="num fairy">${percent}%</span> dos pokémons de Kanto.<p>
-  <p>Infelizmente não há esse tipo de Pokemon em Kanto.</p>
+  <p><span class="num fairy">${percent}%</span> Infelizmente não existem pokémons desse tipo em Kanto.<p>
 </div>`;
 });
 
@@ -242,8 +255,7 @@ buttonDark.addEventListener("click", () => {
   <h2 class="dark"><span class="icon-normal"></span> Noturno </h2>
   <p>
   Tem costume de aparecerem à noite, seus olhos são ótimos para ver, assim, consegue ser melhor contra os tipos fantasmas e psíquicos, já que eles conseguem enxergar através dos golpes psíquicos e detectar fantasmas invisíveis. Um pokémon Fantasma/Noturno não tem verdadeiras fraquezas, as resistências de um tipo cobrem as desvantagens do outro. Não tem um golpe noturno que cause um grande estrago, mas cada um tem seu efeito especial.
-  <p><span class="num dark">${percent}%</span> dos pokémons de Kanto.<p>
-  <p>Infelizmente não há esse tipo de Pokemon em Kanto.</p>
+  <p><span class="num dark">${percent}%</span> Infelizmente não existem pokémons desse tipo em Kanto.<p>
 </div>`;
 });
 
@@ -328,9 +340,9 @@ buttonFlying.addEventListener("click", () => {
 });
 
 /*
-templateHTML(titulo, paragrafo, porcentagem, type, percent) 
+templateHTML(title, paragraph, porcentagem, typeBR) 
     return `<div>
-    <h2 class="${type}"><span class="icon-{${nome}}"></span>${titulo}</h2>
+    <h2 class="${type}"><span class="icon-{${typeBR}}"></span>${titulo}</h2>
     <p>${paragrafo}</p>
     <p><span class="num ${type}">${percent}%</span> dos pokémons de Kanto.<p>
     </div>`

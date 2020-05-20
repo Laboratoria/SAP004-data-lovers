@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [1. Produto](#1-Produto)
+* [1. PRODUTO](#1-PRODUTO)
 * [2. Protopersona](#2-Protopersona)
 * [3. História do Usuário](#3-História-do-Usuário)
 * [4. Interface](#-Interface)
@@ -13,7 +13,7 @@
 
 ***
 
-## 1. Produto
+## 1. PRODUTO
 
 Desenvolvemos uma página direcionada a jogadores iniciantes de Pokémon Go. Nela os usuários podem encontrar informações essenciais e de forma clara sobre pokémons encontrados no jogo.
 
@@ -128,25 +128,26 @@ Tendo validado nosso protótipo e reunido referências visuais só nos restava a
 
 Seguindo noções de material e flat design projetamos a interface com alguns aspectos em mente:
 
-* **CORES:** a paleta de cores dos símbolos foi herdada dos tipos do jogo, porém a tríade azul, amarelo e vermelho tal como as três equipes do jogo foram ressignificadas como os três botões do navegador.
-* **ÍCONES:** os ícones dos tipos foram baseados no jogo mas em sua versão flat, já os ícones de navegação são arredondados e não fecham em si, dando a ideia de busca.
-* **TIPOGRAFIA:**S buscando unidade entre as informações mas com pesos visuais diferentes adotamos uma família extensa com traço arredondados e legibilidade em tamanhos reduzidos.
+* **CORES:** A paleta de cores dos símbolos foi herdada dos tipos do jogo, porém a tríade azul, amarelo e vermelho tal como as três equipes do jogo foram ressignificadas como os três botões do navegador.
+* **ÍCONES:** Os ícones dos tipos foram baseados no jogo mas em sua versão flat, já os ícones de navegação são arredondados e não fecham em si, dando a ideia de busca.
+* **TIPOGRAFIA:** Buscando unidade entre as informações mas com pesos visuais diferentes adotamos uma família extensa com traço arredondados e legibilidade em tamanhos reduzidos.
 
-[![tipografia](img/image2.png)]
+[![tipografia](img/image2.png)]()
 
 Baseadas em nossas referências chegamos a duas opções de desenhos de interação. Para validação desenvolvemos uma entrevista de teste A x B.
 Teste: https://forms.gle/2AcsHgqPXQZt3cvq7
 
 Acesse o protótipo de alta fidelidade clicando nas imagens abaixo:
  
-Teste A: https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=1%3A2&scaling=scale-down
+Teste A: 
 
 Teste B:
 https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down
 
 
 
-[![testes-A] (img/Home-A)] [![testes-B] (img/Home-A)]
+[![testes-A] (img/Home-A)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=1%3A2&scaling=scale-down)
+[![testes-B] (img/Home-A)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down)
 
 
 

@@ -68,7 +68,7 @@ body {
 .icon-voador:before {content: "\e914";}
 
 /* COLORS */
-.stell { color: #5AA7AA;}
+.steel { color: #5AA7AA;}
 .water {color: #68B5E5;} 
 .dragon {color: #0A6DCA;}
 .electric {color: #FFC700;}
@@ -542,7 +542,13 @@ h2{
   }
 
   .submenu-option-red {
-    left: 63vw;
+    left: 60vw;
+    width:190px;
+  }
+
+  .sub-item-red {
+    width: 180px;
+    height: 35px;
   }
 
   .pokemon-list {
@@ -635,17 +641,17 @@ h2{
   }
 
   .submenu-option-red {
-    left: 67vw;
+    left: 61vw;
   }
 
   .sub-item-red {
-    width: 227px;
+    width: 260px;
     height: 40px;
     font-size: 0.75em;
   }
 
   .button-red:hover .submenu-option-red {
-  width: 215px;
+  width: 270px;
   padding: 8px 0 0;
   }
 
@@ -654,11 +660,7 @@ h2{
   }
 
   .types div {
-    
-  }
-
-  .types p {
-    
+    width: 440px;
   }
 
   .pokemon-list {
@@ -698,7 +700,7 @@ h2{
     box-sizing: border-box;
     margin-top: 70px;
     width: 900px;
-    margin-top: 53px;
+    padding-top: 25px;
     justify-content: center;
     
   }
@@ -711,13 +713,13 @@ h2{
   }
 
   .submenu-option-red {
-    left: 68vw;
+    left: 65vw;
   }
 
   .types div {
-    
     margin-top: -48px;
     margin-bottom:  80px;
+    width: 600px;
   }
 
   .pokemon-list{
