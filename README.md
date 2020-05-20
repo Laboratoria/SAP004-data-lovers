@@ -2,25 +2,28 @@
 
 ## Índice
 
-* [1. PRODUTO](#1-PRODUTO)
-* [2. Protopersona](#2-Protopersona)
-* [3. História do Usuário](#3-História-do-Usuário)
-* [4. Interface](#-Interface)
-* [5. Funcionalidades](#-Funcionalidades)
-* [6. PROTOTIPAÇÃO](#4-PROTOTIPAÇÃO)
-* [7. REFERÊNCIAS](#5-REFERÊNCIAS)
+* [PRODUTO](##-PRODUTO)
+* [1. Protopersona](###-Protopersona)
+* [2. História do Usuário](###-História do Usuário)
+* [3. Interface](###-Interface)
+* [4. Funcionalidades](###-Funcionalidades)
+* [PROTOTIPAÇÃO](##-PROTOTIPAÇÃO)
+* [1. Benchmarking](###-Benchmarking)
+* [2. UX](###-UX)
+* [3. UI](###-UI)
+* [REFERÊNCIAS](##-REFERÊNCIAS)
 
 
 ***
 
-## 1. PRODUTO
+## PRODUTO
 
 Desenvolvemos uma página direcionada a jogadores iniciantes de Pokémon Go. Nela os usuários podem encontrar informações essenciais e de forma clara sobre pokémons encontrados no jogo.
 
 Acesse a página no GitHub clicando na imagem abaixo:
 
 
-## 2. Protopersona
+### Protopersona
 
 >Necessidades do usuário
 
@@ -46,7 +49,7 @@ Conhecer os pokémons que encontra no jogo;
 Acesso rápido enquanto joga no ônibus a caminho do trabalho, da faculdade ou na volta para casa.
 
 
-## 3. História do Usuário
+### História do Usuário
 
 > Necessidades atendidas
 
@@ -55,7 +58,7 @@ Tendo como referência as necessidades da pers**ANA** elaboramos o seguinte épi
 >Conhecer a **imagem, nome, número e tipo** de todos os Pokémons de Kanto.  Poder **filtrar, ordenar** ou **buscar** os Pokémons que encontrar no jogo.
  
 
-## 4. Interface
+### Interface
 
 > Visualização de dados
 
@@ -64,7 +67,7 @@ Optamos por um modelo mobile first, pois por ser um jogo voltado para **disposit
 
 
 
-## 5. Funcionalidades
+### Funcionalidades
 
 >Objetivos de interação
 
@@ -76,7 +79,7 @@ Utilizando uma base de dados com os 151 pokémon de Kanto, oferecemos as seguint
 * Prcentagem de pokémons de Kanto por tipo, entendendo assim sua raridade.
 
 
-## 6. PROTOTIPAÇÃO
+## PROTOTIPAÇÃO
 
 ### Benchmarking
 >Análise de melhores práticas no mercado
@@ -144,7 +147,7 @@ Acesse o protótipo de alta fidelidade clicando nas imagens abaixo:
 
 
 
-## 7. REFERÊNCIAS:
+## REFERÊNCIAS:
 
 [www.pokemon.co.jp](https://www.pokemon.co.jp) 
 
@@ -152,5 +155,13 @@ Acesse o protótipo de alta fidelidade clicando nas imagens abaixo:
 
 [zukan.pokemon.co.jp](https://zukan.pokemon.co.jp)
 
-[www.fandom.com](https://www.fandom.com)
+[www.fandom.com](https://otpokemononline.fandom.com/pt-br/wiki/Tipos_de_Pokemon)
+
+[www.pokemon.com](https://www.pokemon.com/br/pokedex)
+
+
+
+
+
+
 
