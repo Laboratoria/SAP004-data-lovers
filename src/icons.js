@@ -2,7 +2,7 @@ export default {
     water:"icon-agua water",
     stell:"icon-aco stell",
     dragon:"icon-dragao dragon",
-    electric:"icon-eletrico eletric",
+    electric:"icon-eletrico electric",
     fairy:"icon-fada fairy",
     ghost:"icon-fantasma ghost",
     fire:"icon-fogo fire",
