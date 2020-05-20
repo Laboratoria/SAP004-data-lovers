@@ -19,8 +19,6 @@ describe('filterData', () => {
   });
 });
 
-
-
 describe('sortData', () => {
   it('is a function', () => {
     expect(typeof sortData).toBe('function');
@@ -28,6 +26,13 @@ describe('sortData', () => {
 
   it('returns ordened Menor-nº', () => {
     expect(sortData(pokemon, "num", "Menor-nº")[0].num).toEqual("1");
+  });
+
+  it('returns ordened Menor-nº', () => {
+    expect(sortData(pokemon, "num", "Menor-nº")).toEqual([{name: "Pikachu", num:"1", type:["Eletric"]},
+    {name: "Caterpie", num:'2', type:["Bug"]},
+    {name: "Bulbasaur", num:'3', type:["Grass","Poison"]},
+    {name: "Butterfree", num:'3', type:["Bug", "Flying"]}]);
   });
 
   it('returns ordened Maior-nº', () => {

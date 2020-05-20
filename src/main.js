@@ -70,9 +70,7 @@ const loadCards = (dataset) => {
     setInfosOnCard(".type-pok", i, data["pokemon"], "type");
     setInfosOnCard(".img-pok", i, data["pokemon"], "img");
     setCardColor(i);
-    document
-      .querySelectorAll(".container-card")
-      [i].addEventListener("click", () => {
+    document.querySelectorAll(".container-card")[i].addEventListener("click", () => {
         clickCard(
           data["pokemon"][i].name,
           data["pokemon"][i].num,
@@ -95,19 +93,48 @@ loadCards(data["pokemon"]);
 
 //Configurações do modal (card estendido)
 function clickCard(name,num,type,img,height,weight,candy,candy_count,egg,spawn_chance){
-  const changingInfo = () => {
-    if (name === "Nidoran ♀ (Female)") {
+  const changingInfo = () =>{
+    switch (name) {
+      case "Nidoran ♀ (Female)":
       name = "Nidoran ♀";
-    } else if (name === "Nidoran ♂ (Male)") {
+      break;
+      case "Nidoran ♂ (Male)":
       name = "Nidoran ♂";
-    } else if ((type === "type[0]", "type[1]")) {
-      type = type.join(" - ");
-    }
-    if (candy === "Nidoran ♀ (Female) Candy") {
+      break;
+    } 
+
+    // switch (type) {
+    //   case type.length>1:
+    //   type = type.join(" - ");
+    //   console.log(type)
+    //   break;
+    // }
+
+    if(type.length>1){
+    type = `${type[0]} - ${type[1]}`
+   }
+
+    switch (candy){
+      case "Nidoran ♀ (Female) Candy":
       candy = "Nidoran ♀ Candy";
-    } else if (candy === "Nidoran ♂ (Male) Candy") {
-      candy = "Nidoran ♂ Candy";
-    }
+      break;
+      case "Nidoran ♂ (Male) Candy":
+      candy =   "Nidoran ♂ Candy";
+      break;
+    }  
+    // ) if (name === "Nidoran ♀ (Female)"{
+    //   name = "Nidoran ♀";
+    // } else if (name === "Nidoran ♂ (Male)") {
+    //   name = "Nidoran ♂";
+    // } 
+    // if ((type === "type[0]", "type[1]")) {
+    //   type = type.join(" - ");
+    // }
+    // if (candy === "Nidoran ♀ (Female) Candy") {
+    //   candy = "Nidoran ♀ Candy";
+    // } else if (candy === "Nidoran ♂ (Male) Candy") {
+    //   candy = "Nidoran ♂ Candy";
+    // }
   };
   changingInfo();
   document.getElementById("char-name").textContent = name;
@@ -170,7 +197,6 @@ const filterType = () => {
 const orderData = (sortBy) => {
   const sortOrder = getUserOption(1);
   const pokemonOrded = sortData(data["pokemon"], sortBy, sortOrder);
-  console.log(pokemonOrded);
   loadCards(pokemonOrded);
 };
 
