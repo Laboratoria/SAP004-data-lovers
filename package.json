@@ -16,7 +16,7 @@
     "@babel/core": "^7.6.2",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "babel-jest": "^24.9.0",
-    "eslint": "^5.9.0",
+    "eslint": "^5.16.0",
     "gh-pages": "^2.1.1",
     "htmlhint": "^0.11.0",
     "jest": "^24.9.0",

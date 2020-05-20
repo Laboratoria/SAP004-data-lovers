@@ -1,185 +1,144 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Data Lovers</title>
-    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+    <meta
+      id="viewport"
+      name="viewport"
+      content="width=device-width, user-scalable=no"
+    />
     <link rel="stylesheet" href="style.css" />
-</head>
-
-<body class="body-config">
+  </head>
+  <body class="body-config">
     <div id="root">
-        <!--cabeçalho da pagina-->
-        <header class="header">
-            <div class="inner-header">
 
-                <!-- logotipo -->
-                <figure id="home" class="logo-align">
-                    <img class="home" src="./assets/home.png">
-                    <img class="logo-item2" src="./assets/pokeball2.png">
-                    <img class="logo-item1" src="./assets/pokemon-logo.png">
-                </figure>
-
-                <!-- botões -->
-                <div class="flex">
-                    <img class="menu-icon" src="./assets/menu.png">
-                    <!-- Filter -->
-                    <form class="flex btn btn-menu btn-filter">
-                        <img class="img-btn-filter" src="./assets/filter.png">
-                        <select class="select font-22">
-                            <option class="type-option" value="">Filtrar</option>
-                            <option class="type-option" value="Bug">Bug</option>
-                             <option class="type-option" value="Electric">Electric</option>
-                            <option class="type-option" value="Fighting">Fighting</option>
-                            <option class="type-option" value="Fire">Fire</option>
-                            <option class="type-option" value="Flying">Flying</option>
-                            <option class="type-option" value="Ghost">Ghost</option>
-                            <option class="type-option" value="Grass">Grass</option>
-                            <option class="type-option" value="Ground">Ground</option>
-                            <option class="type-option" value="Ice">Ice</option>
-                            <option class="type-option" value="Normal">Normal</option>
-                            <option class="type-option" value="Poison">Poison</option>
-                            <option class="type-option" value="Psychic">Psychic</option>
-                            <option class="type-option" value="Rock">Rock</option>
-                            <option class="type-option" value="Water">Water                 
-                        </option>
-                        </select>
-                    </form>
-                    <!-- order -->
-                    <form class="flex btn btn-menu btn-order">
-                        <img class="img-btn-order" src="./assets/order.png">
-                        <select place class="select font-22">
-                            <option class="type-option" value="filter">Ordenar</option>
-                            <option value="Menor-nº">Menor nº</option>
-                            <option value="Maior-nº">Maior nº</option>
-                            <option value="A-Z">A - Z</option>
-                            <option value="Z-A">Z - A</option>
-                        </select>
-                    </form>
-                </div>
-            </div>
-    </div>
-    </header>
-    <!--//fim cabeçalho-->
-
-
-    <!-- Container principal-->
-    <div class="container">
+      <!--cabeçalho da pagina-->
+      <header class="header">
+        <div class="inner-header">
+          <!-- logotipo -->
+          <figure id="home" class="logo-align">
+            <img class="home" src="./assets/home.png" />
+            <img class="logo-item2" src="./assets/pokeball2.png" />
+            <img class="logo-item1" src="./assets/pokemon-logo.png" />
+          </figure>
+          <!-- botões -->
+          <div class="flex">
+            <img class="menu-icon" src="./assets/menu.png" />
+            <!-- Filter -->
+            <form class="flex btn btn-menu btn-filter">
+              <img class="img-btn-filter" src="./assets/filter.png" />
+              <select class="select font-22">
+                <option class="type-option" value="">Filtrar</option>
+                <option class="type-option" value="Bug">Bug</option>
+                <option class="type-option" value="Dragon">Dragon</option>
+                <option class="type-option" value="Electric">Electric</option>
+                <option class="type-option" value="Fighting">Fighting</option>
+                <option class="type-option" value="Fire">Fire</option>
+                <option class="type-option" value="Flying">Flying</option>
+                <option class="type-option" value="Ghost">Ghost</option>
+                <option class="type-option" value="Grass">Grass</option>
+                <option class="type-option" value="Ground">Ground</option>
+                <option class="type-option" value="Ice">Ice</option>
+                <option class="type-option" value="Normal">Normal</option>
+                <option class="type-option" value="Poison">Poison</option>
+                <option class="type-option" value="Psychic">Psychic</option>
+                <option class="type-option" value="Rock">Rock</option>
+                <option class="type-option" value="Water">Water </option>
+              </select>
+            </form>
+            <!-- order -->
+            <form class="flex btn btn-menu btn-order">
+              <img class="img-btn-order" src="./assets/order.png" />
+              <select place class="select font-22">
+                <option class="type-option" value="filter">Ordenar</option>
+                <option value="Menor-nº">Menor nº</option>
+                <option value="Maior-nº">Maior nº</option>
+                <option value="A-Z">A - Z</option>
+                <option value="Z-A">Z - A</option>
+              </select>
+            </form>
+          </div>
+        </div>
+      </header>
+      <!--//fim cabeçalho-->
+      <!-- Container principal-->
+      <div class="container">
         <!-- tela de cards-->
         <main class="container-deck">
-
-
-            <!--template do card-->
-            <section class="container-card">
-                <header>
-                    <h4 class="name-pok in-block name-pok-spacing">Nome</h4>
-                    <div class="number-pok bold">#000</div>
-                </header>
-                <aside class="flex-pok-type flex">
-                    <div class="type-pok btn btn-card bold">Tipo
-                    </div>
-                </aside>
-                <figure>
-                    <img class="img-pok">
-
-                </figure>
-            </section>
-            <!-- //fim template do card-->
-            <!--tela secundaria-->
-            <section id="modal-characters" class="modal-char">
-                <!--class= " modal-char"-->
-                <section id="modal-char-trans" class="char-card-container">
-                    <!--menu-characters-item-->
-                    <div class="modal-flex">
-                        <div>
-                            <div id="char-name" class="char-name-style"></div>
-                            <div id="char-type" class="char-type-style "></div>
-                        </div>
-                        <div id="char-num" class="char-num-style"></div>
-                    </div>
-                    <figure class="img-container"><img id="char-img" class="char-img-style "></figure>
-                    <div class=b tn-close-modal>
-                        <figure><img class="close" src="../assets/icon.png " /></figure>
-                    </div>
-                    <section class="sections">
-                        <section id="data-container" class="modal-char-trans modal-data">
-                            <!-- <div class= "menu-char border"> 
-                                <label for="rd-data" class= "item-menu-char data">Dados</label>
-                                
-                                <label for="rd-weak" class= "item-menu-char weaknesses">Fraqueza</label>
-                                <label for="rd-evo" class= "item-menu-char evolution">Evolução</label>
-                                <hr/>
-                            </div> -->
-                            <!-- <div classs=" scroll "> 
-                                <input type= "radio" name= "group" id= "rd-data" Checked= "true">
-                                <input type= "radio" name= "group" id= "rd-weak">
-                                <input type= "radio" name= "group" id= "rd-evo">
-                            </div> -->
-                            <div class="modal-flex">
-                                <div id="char-height" class="char-height">Altura</div>
-                                <div id="char-height-value" class="char-value char-height-value"></div>
-                            </div>
-                            <div class="modal-flex">
-                                <div id="char-weight" class="char-weight">Peso</div>
-                                <div id="char-weight-value" class="char-value char-weight-value"></div>
-                            </div>
-                            <div class="modal-flex">
-                                <div id="char-cand" class="char-cand">Doce</div>
-                                <div id="char-cand-value" class="char-value char-cand-value"></div>
-                            </div>
-                            <div class="modal-flex">
-                                <div id="char-cand-count" class="char-cand-count">Nº Doces</div>
-                                <div id="char-cand-count-value" class="char-value char-cand-count-value"></div>
-                            </div>
-                            <div class="modal-flex">
-                                <div id="Char-egg" class="Char-egg">Ovo</div>
-                                <div id="Char-egg-value" class="char-item char-value Char-egg-value"></div>
-                            </div>
-                            <div class="modal-flex">
-                                <div id="char-spawn-chance" class="char-spawn-chance">Chance de Captura</div>
-                                <div id="char-spawn-chance-value" class="char-value char-spawn-chance-value"></div>
-                            </div>
-                        </section>
-                    </section>
-                    <!-- <section id= "weak-container" class= "modal-char-trans-1 "> 
-                        <div id= "char-weak-1"></div>
-                        <div id= "char-weak-icon-1"></div>
-                        <div id= "char-weak-2"></div>
-                        <div id= "char-weak-icon-2"></div>
-                        <div id= "char-weak-3"></div>
-                        <div id= "char-weak-icon-3"></div>
-                        <div id= "char-weak-4"></div>
-                        <div id= "char-weak-icon-4"></div>
-                        <div id= "char-weak-5"></div>
-                        <div id= "char-weak-icon-5"></div>
-                        <div id= "char-weak-6"></div>
-                        <div id= "char-weak-icon-6"></div>
-                    </section>
-                    <section id= "evo-container" class= "modal-char-trans-2"> 
-                        <figure><img class= "img-evo evo-1-img" src=" "></img></figure>
-                        <div id= "evo-1-name evo-position-name evo-name-num-box1"></div>
-                        <div id= "evo-1-num evo-position-num evo-name-num-box1"></div>
-                        
-                        <figure><img class= "arrow"src="../assets/up-chevron.png"></figure>
-                        <div class= "char-evolution-2">
-                        <figure><img class= "img-evo evo-2-img" src=" "></img></figure>
-                        <div id= "evo-2-name evo-position-name evo-name-num-box2"></div>
-                        <div id= "evo-2-num evo-position-num evo-name-num-box2"></div>
-                    </section> -->
-                    </sections>
+          <!--template do card-->
+          <section class="container-card">
+            <header>
+              <h4 class="name-pok in-block name-pok-spacing">Nome</h4>
+              <div class="number-pok bold">#000</div>
+            </header>
+            <aside class="flex-pok-type flex">
+              <div class="type-pok btn btn-card bold">Tipo</div>
+            </aside>
+            <figure>
+              <img class="img-pok" />
+            </figure>
+          </section>
+          <!-- //fim template do card-->
+          <!--tela secundaria-->
+          <section class="modal-char">
+            <!--class= " modal-char"-->
+            <section class="char-card-container">
+              <!--menu-characters-item-->
+              <div class="modal-flex">
+                <div>
+                  <div id="char-name" class="char-name-style"></div>
+                  <div id="char-type" class="char-type-style"></div>
+                </div>
+                <div id="char-num" class="char-num-style"></div>
+              </div>
+              <figure class="img-container">
+                <img id="char-img" class="char-img-style" />
+              </figure>
+              <div class="btn-close-modal">
+                <figure><img class="close" src=".../assets/icon.png " /></figure>
+              </div>
+              <section class="sections">
+                <section id="data-container" class="modal-char-trans">
+                  <div class="modal-flex">
+                    <div id="char-height">Altura</div>
+                    <div id="char-height-value" class="char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="char-weight">Peso</div>
+                    <div id="char-weight-value" class="char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="char-cand">Doce</div>
+                    <div id="char-cand-value" class="char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="char-cand-count">Nº Doces</div>
+                    <div id="char-cand-count-value" class="char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="Char-egg">Ovo</div>
+                    <div id="Char-egg-value" class="char-item char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="char-spawn-chance">Chance de Captura</div>
+                    <div id="char-spawn-chance-value" class="char-value"></div>
+                  </div>
                 </section>
+              </section>
+            </section>
+          </section>
         </main>
         <!--//fim tela de cards-->
+
     </div>
     <!-- //fim container-->
 
-    <footer class="footer-page color-noturno">
+    <footer class="footer-page">
         <img id="logo-lab" src="./assets/laboratoria_logo.png">
         <span> Laboratoria - SAP004 | São Paulo, 2020</span>
-    </footer>
+      </footer>
     </div>
     <script src="main.js" type="module"></script>
-</body>
-
+  </body>
 </html>
