@@ -2,11 +2,11 @@
 
 ## Índice
 
-* [1. Preâmbulo](#1-preâmbulo)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-consideracoes-gerais)
-* [5. Critérios mínimos de aceitação do projeto](#5-criterios-minimos-de-aceitacao-do-projeto)
+* [1. O que é o produto e a quem atende:](#1-O-que-é-o-produto-e-a-quem-atende:)
+* [2. Quais problemas do usuário resolve:](#2-Quais-problemas-do-usuário-resolve)
+* [3. Épico da Ana:](#3-Épico-da-Ana:)
+* [4. PROTOTIPAÇÃO](#4-PROTOTIPAÇÃO)
+* [5. REFERÊNCIAS](#5-REFERÊNCIAS)
 * [6. Hacker edition](#6-hacker-edition)
 * [7. Considerações técnicas](#7-considerações-técnicas)
 * [8. Guias, dicas e leituras complementares](#8-pistas-dicas-e-leituras-complementares)
@@ -14,93 +14,119 @@
 
 ***
 
-## 1. Preâmbulo
+## 1. O que é o produto e a quem atende:
 
-Segundo a [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
-90% dos dados que existem hoje foram gerados durante os últimos dois anos.
-A cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem
-precedentes.
+É uma pagina direcionada a jogadores iniciantes de Pokemon Go, onde os usuários podem encontrar as informações essências dos Pokémon de forma clara
 
-Apesar disso, os dados por si só são de pouca utilidade. Para que essas grandes
-quantidades de dados se convertam em **informação** compreensível para os
-usuários, precisamos entender e processar estes dados. Uma forma simples de
-fazer isso é criando _interfaces_ e _visualizações_.
 
-Na imagem seguinte, você pode ver como os dados que estão na parte esquerda
-podem ser usados para construir a interface amigável e compreensível que está
-na parte direita.
+## 2. Quais problemas do usuário resolve
 
-![json-interface](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
 
-## 2. Resumo do projeto
+Pensando nessas pessoas e em suas necessidades de conhecer os Pekemons de Kanto, desenvolvemos um produto onde o usuário pode buscar o Pokémon por nome, tipo, ordem alfabética (A-Z e Z-A), ordem numérica (crescente e descrente e conhecer de forma mais simples os a quais tipos de Pokemons cada tipo tem maior fraqueza.
+ Optamos por um modelo mobile first, pois por ser um jogo voltado para dispositivos móveis os usuários estariam buscando informações, em grande parte do tempo, diretamente em seus dispositivos enquanto jogam. 
 
-Neste projeto você **construirá uma _página web_ para visualizar um _conjunto
-(set) de dados_** que se adeque às necessidades de seu usuário.
 
-Como entregável final terá uma página web que permita **visualizar dados,
-filtrá-los, ordená-los e fazer algum cálculo agregado**. Por cálculo agregado
-nos referimos aos diversos cálculos que podem ser feitos com os dados para mostrar a
-informação mais relevante para os usuários (médias, valores máximos e mínimos,
-etc).
+Para esse projeto criamos a PersANA, para nos orientar nas necessidades mais básicas dos usuários e seu perfil. 
 
-Para este projeto trazemos uma série de dados de _temáticas diferentes_ para
-que você explore e decida com qual delas deseja trabalhar. Escolhemos
-especificamente estes conjuntos de dados porque cremos que se adequem bem a
-esta etapa de sua aprendizagem.
 
-Uma vez que você defina sua área de interesse, busque entender quem é seu
-usuário e o que exatamente ele necessita saber ou ver, para que assim possa
-construir a interface que o ajude a interagir e entender melhor os dados.
+## 3. Épico da Ana:
 
-Este são os dados que propomos:
+Conhecer a imagem, nome, número e tipo de todos os Pokémons de Kanto.  Poder filtrar, ordenar ou buscar os Pokémons que encontrar no jogo.
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  Neste conjunto você encontrará uma lista com os 151 Pokémon da região de
-  Kanto, com suas respectivas estatísticas utilizadas no jogo [Pokémon GO](http://pokemongolive.com).
-  - [Pesquisa com jogadores de Pokémon Go](src/data/pokemon/README.pt-BR.md)
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este conjunto mostra a lista de campeões do jogo League of
-  Legends (LoL).
-  - [Pesquisa com jogadores de LoL](src/data/lol/README.pt-BR.md)
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Lista de personagens da série Rick & Morty. Você pode revisar a documentação
-  da API neste [link](https://rickandmortyapi.com).
-  - [Pesquisa com seguidores de Rick and Morty](src/data/rickandmorty/README.pt-BR.md)
+**Usuário:** Persona Ana
 
-## 3. Objetivos de aprendizagem
+**Objetivo:**Conhecer os pokémon que encontra no jogo
+Necessidades: cards simples com informação curta de cada Pokemon, opção de busca e filtro.
 
-O objetivo principal deste projeto é que aprenda a desenhar e construir uma
-interface web onde se possa visualizar e manipular dados, entendendo o que o
-usuário necessita.
+**Quando utiliza o produto:** No onibus enquanto  jogava ao caminho do trabalho, da faculdade ou na volta para casa.
 
-Em outras palavras, você aprenderá a:
+**Investigação prévia:** Ana não conhece nem assistia Pokémon
+ 
 
-* Aplicar e aprofundar tudo o que aprendeu no projeto anterior.
-* Pensar nas **necessidades dos usuários** para criar histórias de usuário.
-* Escrever e trabalhar com **histórias de usuário**, suas definições de pronto
-  (_definition of done_) e critérios de aceitação como ferramentas centrais
-  de organização e planejamento de seu trabalho.
-* Definir que dados utilizar e de que forma exibí-los em seu produto,
-  baseando-se no seu **entendimento do usuário**.
-* Iterar o desenho do produto, baseando-se nos resultados dos
-  **testes de usabilidade**.
-* Manipular **arrays e objetos**.
-* **Manipular o DOM** (agregar elementos de forma dinâmica)
-* **Manejar eventos do DOM** para permitir interação com o usuário (filtros,
-  ordenação, etc).
-* Entender os benefícios e complexidades de **trabalhar em equipe** em um
-  ambiente de incerteza.
+## 4. PROTOTIPAÇÃO
 
-## 4. Considerações gerais
 
-* Este projeto será executado em duplas.
-* Este projeto será entregue através do GitHub e a interface deve ser publicada
-  no [GitHub Pages](https://pages.github.com/).
-* Tempo para completá-lo: três semanas.
+### Benchmarking
+**Análise de melhores práticas no mercado**
 
-## 5. Critérios mínimos de aceitação do projeto
+Com o produto definido passamos para busca de referências visuais. 
+Encontramos diversas soluções, a maioria baseada na identidade do jogo, porém descobrimos também referências à franquia Pokémon que nos inspiraram bastante.
 
-Os critérios considerados para que tenha terminado este projeto são:
+Após o contato com diversos sites, fóruns e páginas ligadas ao universo do jogo, chegamos a conclusão de que um desenho de página minimalista traria maior destaque aos pokémons e comunicaria dados básicos de maneira mais efetiva.
+
+Depois dessa decisão, somadas as necessidades do produto, chegamos aos seguintes componentes básicos:
+
+* POKÉMON = a imagem, o nome, o número e o tipo;
+* ORDENAÇÃO = ordenar os Pokémons por nome ou número do pokédex;
+* FILTRO = filtrar por tipos;
+* PESQUISA = buscar Pokémons pelo nome;
+
+### UX
+**Experiência do usuário**
+
+Adotamos uma solução de cards para exposição das informações do pokémon, com uma barra de navegação auxiliar para as demais funções de ordenação, filtro, pesquisa e voltar/início.
+
+Pensando na disposição de botões em telas reduzidas estudamos o uso de ícones para as funções de navegação, somadas a palavras curtas reforçando sua leitura e aumentando assim sua acessibilidade:
+
+* CARD = dados do pokémon;
+* BOTÃO DE ORDEM = ícone com duas setas e palavra Ordem;
+* BOTÃO DE FILTRO = ícone de uma pokebola e a palavra Tipo;
+* ÁREA DE PESQUISA = ícone de lupa e a palavra Busca, área de pesquisa;
+* BOTÃO INÍCIO = logotipo com função de reiniciar a página.
+
+Para os submenus escolhemos usar botões e não uma área de seleção devido a área de clique padrão do usuário de aplicativos móveis. Também analisamos a acessibilidade de conceitos de ordenação e familiaridade de padrões visuais:
+
+* ORDEM ALFABÉTICA: uso das letras do alfabeto A-Z e Z-A;
+* ORDEM NUMÉRICA: uso dos números do pokédex 1-151 e 151-1;
+* TIPO: uso do ícone do jogo somado ao nome.
+
+Tomadas as decisões de fluxo de navegação iniciamos os desenhos de baixa fidelidade das telas e seus recursos. Terminadas as telas desenvolvemos uma entrevista para os testes de usabilidade. 
+Teste: https://forms.gle/rZLDPkM2ejhVegSM6
+
+Acesse o protótipo de baixa fidelidade clicando nas imagens abaixo:
+https://mires731129.invisionapp.com/overview/Sprint-1-2-e-3---Pokdex-ck9k6l7g90p19013c6dtd9lmp/screens?v=9jM%2FDQc5hQ4vt%2Bs6tLr9OQ%3D%3D&linkshare=urlcopied
+
+ 
+
+O principal retorno que tivemos neste teste foi: o ícone de tipo (pokebola) mesmo com o texto auxiliar não estava reconhecível o bastante. Buscamos solucionar esta inconsistência na etapa de interface. 
+
+
+### UI
+**Interface do usuário**
+
+Tendo validado nosso protótipo e reunido referências visuais só nos restava aplicar estes conceitos nas escolhas do design de interface. 
+
+Seguindo noções de material e flat design projetamos a interface com alguns aspectos em mente:
+
+* **CORES:** a paleta de cores dos símbolos foi herdada dos tipos do jogo, porém a tríade azul, amarelo e vermelho tal como as três equipes do jogo foram ressignificadas como os três botões do navegador.
+* **ÍCONES:** os ícones dos tipos foram baseados no jogo mas em sua versão flat, já os ícones de navegação são arredondados e não fecham em si, dando a ideia de busca.
+* **TIPOGRAFIA:**S buscando unidade entre as informações mas com pesos visuais diferentes adotamos uma família extensa com traço arredondados e legibilidade em tamanhos reduzidos.
+
+Baseadas em nossas referências chegamos a duas opções de desenhos de interação. Para validação desenvolvemos uma entrevista de teste A x B.
+Teste: https://forms.gle/2AcsHgqPXQZt3cvq7
+
+Acesse o protótipo de alta fidelidade clicando nas imagens abaixo:
+ 
+Teste A: https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=1%3A2&scaling=scale-down
+
+Teste B:
+https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down
+
+
+
+
+
+
+
+
+## 5. REFERÊNCIAS:
+
+www.pokemon.co.jp
+www.pokemongo.jp
+zukan.pokemon.co.jp
+www.fandom.com
+
+:
 
 ### Definição de produto
 
