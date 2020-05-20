@@ -1,8 +1,8 @@
-export const apllyAscendingOrder = (pokemonGo) => pokemonGo.sort((a, b) =>
-  (((a.name > b.name) ? 1 : (a.name < b.name) ? -1 : 0)));
+export const applyAscendingOrder = (pokemonGo) => pokemonGo.sort((a, b) =>
+  ((a.name > b.name) ? 1 : -1));
 
 export const applyDescendingOrder = (pokemonGo) => pokemonGo.sort((a, b) =>
-  (((a.name > b.name) ? -1 : (a.name < b.name) ? 1 : 0)));
+  ((a.name > b.name) ? -1 : 1));
 
 export const applySearchType = (pokemonGo, filterType) => pokemonGo.filter((search) =>
   (search.type.includes(filterType)));

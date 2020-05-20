@@ -1,4 +1,4 @@
-import { apllyAscendingOrder, applyDescendingOrder, applySearchType, resultCalcType, applySearchName } from '../src/data.js';
+import { applyAscendingOrder, applyDescendingOrder, applySearchType, resultCalcType, applySearchName } from '../src/data.js';
 
 const pokemon = [
   {
@@ -332,14 +332,21 @@ const calcType =  [
     ],
   }]
 
-
-describe('function apllyAscendingOrder', () => {
+describe('function applyAscendingOrder', () => {
     it('is a function', () => {
-      expect(typeof apllyAscendingOrder).toBe('function');
+      expect(typeof applyAscendingOrder).toBe('function');
     });
 
     it('should put in ascending alphabetical order when you click the button A-Z', () => {
-      expect(apllyAscendingOrder(pokemon)).toEqual(pokemon);
+      expect(applyAscendingOrder(pokemon)).toEqual(pokemon);
+    });
+
+    it('should put in ascending alphabetical order when you click the button A-Z', () => {
+      expect(applyAscendingOrder(pokemonZa)).toEqual(pokemon);
+    });
+    
+    it('should put in descending alphabetical order when you click the button Z-A', () => {
+      expect(applyAscendingOrder(pokemonZa)).not.toBe(pokemon);
     });
   })
 
@@ -348,8 +355,16 @@ describe('function applyDescendingOrder', () => {
       expect(typeof applyDescendingOrder).toBe('function');
     });
 
-    it('should put in ascending alphabetical order when you click the button Z-A', () => {
+    it('should put in descending alphabetical order when you click the button Z-A', () => {
+      expect(applyDescendingOrder(pokemonZa)).toEqual(pokemonZa);
+    });
+
+    it('should put in descending alphabetical order when you click the button Z-A', () => {
       expect(applyDescendingOrder(pokemon)).toEqual(pokemonZa);
+    });
+
+    it('should put in descending alphabetical order when you click the button Z-A', () => {
+      expect(applyDescendingOrder(pokemon)).not.toBe(pokemonZa);
     });
   })
 
@@ -368,7 +383,7 @@ describe('function resultCalcType', () => {
       expect(typeof resultCalcType).toBe('function');
     });
 
-    it('should ', () => {
+    it('should return result as a percentage', () => {
       const resultCalc = calcType.length;
       const resultFilterCalc = 2;
       expect(resultCalcType(resultCalc, resultFilterCalc)).toEqual(50.00);
@@ -383,5 +398,9 @@ describe('function applySearchName', () => {
     it('must search for the name of the pokemon', () => {
       const result = applySearchName(pokemonName, "bul")
       expect(result[0].name).toEqual("Bulbasaur");
+    });
+    it('must search for the name of the pokemon', () => {
+      const result = applySearchName(pokemonName, "IVY")
+      expect(result[0].name).toEqual("Ivysaur");
     });
   })

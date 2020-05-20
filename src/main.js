@@ -1,4 +1,4 @@
-import { apllyAscendingOrder, applyDescendingOrder, applySearchType, resultCalcType, applySearchName } from './data.js';
+import { applyAscendingOrder, applyDescendingOrder, applySearchType, resultCalcType, applySearchName } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -23,8 +23,8 @@ function allList(list) {
 allList(pokemonGo);
 
 document.getElementById("A-Z").onclick = () => {
-    const orderResult = apllyAscendingOrder(pokemonGo)
-    allList(orderResult)
+    const orderResult = applyAscendingOrder(pokemonGo);
+    allList(orderResult);
     document.getElementById("statistics").innerHTML = "";
 }
 
@@ -36,8 +36,8 @@ document.getElementById("Z-A").onclick = () => {
 
 document.getElementById("select-type").onchange = () => {
     const filterType = document.getElementById("select-type").value;
-    const listType = (applySearchType(pokemonGo, filterType))
-    const filterCalcType = (resultCalcType(pokemonGo.length, filterType.length).toFixed(2))
+    const listType = (applySearchType(pokemonGo, filterType));
+    const filterCalcType = (resultCalcType(pokemonGo.length, filterType.length).toFixed(2));
     document.getElementById("statistics").innerHTML = `<p>Os Pokémons do tipo ${filterType} representam ${filterCalcType} % dos Pokémons da primeira geração.</p>`;
     allList(listType);
 }
