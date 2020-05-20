@@ -78,11 +78,7 @@ describe('Must calculate the percentage of Pokemon by type', () => {
     expect(typeof porcentPokemon).toBe('function');
   });
 
-  it('Return the percentage of the type of the filtred Pokemon', () => {
+  it('Return the percentage of the type of the filtered Pokemon', () => {
     const filteredPokemon = (filterByType("Grass", "type", pokemonMock));
     expect(porcentPokemon(filteredPokemon.length, pokemonMock.length)).toEqual(50);
-<<<<<<< HEAD
-    })});
-=======
     })});   
->>>>>>> 9d1c88319231f6afe0ac041044eab68825086707

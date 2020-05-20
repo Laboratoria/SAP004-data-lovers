@@ -2,33 +2,29 @@
 
 ## Índice
 
-* [1. Produto:](#1-Produto:)
-* [2. Protopersona:](#2-Protopersona)
-* [3. História do Usuário:](#3-História-do-Usuário:)
-* [4. PROTOTIPAÇÃO](#4-PROTOTIPAÇÃO)
-* [5. REFERÊNCIAS](#5-REFERÊNCIAS)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Considerações técnicas](#7-considerações-técnicas)
-* [8. Guias, dicas e leituras complementares](#8-pistas-dicas-e-leituras-complementares)
-* [9. Checklist](#9-checklist)
+* [1. PRODUTO](#1-PRODUTO)
+* [2. Protopersona](#2-Protopersona)
+* [3. História do Usuário](#3-História-do-Usuário)
+* [4. Interface](#-Interface)
+* [5. Funcionalidades](#-Funcionalidades)
+* [6. PROTOTIPAÇÃO](#4-PROTOTIPAÇÃO)
+* [7. REFERÊNCIAS](#5-REFERÊNCIAS)
+
 
 ***
 
-## 1. Produto:
+## 1. PRODUTO
 
 Desenvolvemos uma página direcionada a jogadores iniciantes de Pokémon Go. Nela os usuários podem encontrar informações essenciais e de forma clara sobre pokémons encontrados no jogo.
 
 Acesse a página no GitHub clicando na imagem abaixo:
 
 
+## 2. Protopersona
 
+>Necessidades do usuário
 
-## 2. Protopersona:
-
-
-### Necessidades do usuário
-
-Para este produto criamos a persANA, que nos orientou sobre as necessidades mais básicas dos usuários e seu perfil:
+Para este produto criamos a pers**ANA**, que nos orientou sobre as necessidades mais básicas dos usuários e seu perfil:
 
 **ANA**
 Informações demográficas
@@ -48,20 +44,40 @@ Necessidades
 Conhecer os pokémons que encontra no jogo;
 Acesso rápido enquanto joga no ônibus a caminho do trabalho, da faculdade ou na volta para casa.
 
-## 3. História do Usuário:
 
-## Necessidades atendidas
+## 3. História do Usuário
 
-Tendo como referência as necessidades da persANA elaboramos o seguinte épico para nossas três sprints de desenvolvimento:
+> Necessidades atendidas
 
-Conhecer a imagem, nome, número e tipo de todos os Pokémons de Kanto.  Poder filtrar, ordenar ou buscar os Pokémons que encontrar no jogo.
+Tendo como referência as necessidades da pers**ANA** elaboramos o seguinte épico para nossas três sprints de desenvolvimento:
+
+>Conhecer a **imagem, nome, número e tipo** de todos os Pokémons de Kanto.  Poder **filtrar, ordenar** ou **buscar** os Pokémons que encontrar no jogo.
  
 
-## 4. PROTOTIPAÇÃO
+## 4. Interface
 
+> Visualização de dados
+Optamos por um modelo mobile first, pois por ser um jogo voltado para **dispositivos móveis** os usuários, como base na nossa protopersona, estariam buscando informações, em grande parte do tempo, diretamente em seus dispositivos enquanto jogam. 
+
+
+
+
+## 5. Funcionalidades
+
+>Objetivos de interação
+
+Utilizando uma base de dados com os 151 pokémon de Kanto, oferecemos as seguintes funcionalidades de interação ao usuário:
+
+* Como buscar o pokémon por nome;
+* Ordenar os pokémon em uma lista alfabética ou numérica;
+* Filtrar os pokémons por tipo e conhecer de maneira pontual seus comportamentos e fraquezas em comparação a outros tipos;
+* Prcentagem de pokémons de Kanto por tipo, entendendo assim sua raridade.
+
+
+## 6. PROTOTIPAÇÃO
 
 ### Benchmarking
-**Análise de melhores práticas no mercado**
+>Análise de melhores práticas no mercado
 
 Com o produto definido passamos para busca de referências visuais. 
 Encontramos diversas soluções, a maioria baseada na identidade do jogo, porém descobrimos também referências à franquia Pokémon que nos inspiraram bastante.
@@ -76,16 +92,16 @@ Depois dessa decisão, somadas as necessidades do produto, chegamos aos seguinte
 * PESQUISA = buscar Pokémons pelo nome;
 
 ### UX
-**Experiência do usuário**
+>Experiência do usuário
 
 Adotamos uma solução de cards para exposição das informações do pokémon, com uma barra de navegação auxiliar para as demais funções de ordenação, filtro, pesquisa e voltar/início.
 
 Pensando na disposição de botões em telas reduzidas estudamos o uso de ícones para as funções de navegação, somadas a palavras curtas reforçando sua leitura e aumentando assim sua acessibilidade:
 
 * CARD = dados do pokémon;
-* BOTÃO DE ORDEM = ícone com duas setas e palavra Ordem;
-* BOTÃO DE FILTRO = ícone de uma pokebola e a palavra Tipo;
-* ÁREA DE PESQUISA = ícone de lupa e a palavra Busca, área de pesquisa;
+* BOTÃO DE ORDEM = ícone com duas setas e palavra **Ordem**;
+* BOTÃO DE FILTRO = ícone de uma pokebola e a palavra **Tipo**;
+* ÁREA DE PESQUISA = ícone de lupa e a palavra **Busca**, área de pesquisa;
 * BOTÃO INÍCIO = logotipo com função de reiniciar a página.
 
 Para os submenus escolhemos usar botões e não uma área de seleção devido a área de clique padrão do usuário de aplicativos móveis. Também analisamos a acessibilidade de conceitos de ordenação e familiaridade de padrões visuais:
@@ -98,347 +114,47 @@ Tomadas as decisões de fluxo de navegação iniciamos os desenhos de baixa fide
 Teste: https://forms.gle/rZLDPkM2ejhVegSM6
 
 Acesse o protótipo de baixa fidelidade clicando nas imagens abaixo:
-https://mires731129.invisionapp.com/overview/Sprint-1-2-e-3---Pokdex-ck9k6l7g90p19013c6dtd9lmp/screens?v=9jM%2FDQc5hQ4vt%2Bs6tLr9OQ%3D%3D&linkshare=urlcopied
 
- 
+
+ [![Teste de baixa fidelidade](img/image3.png)](https://mires731129.invisionapp.com/overview/Sprint-1-2-e-3---Pokdex-ck9k6l7g90p19013c6dtd9lmp/screens?v=9jM%2FDQc5hQ4vt%2Bs6tLr9OQ%3D%3D&linkshare=urlcopied)
 
 O principal retorno que tivemos neste teste foi: o ícone de tipo (pokebola) mesmo com o texto auxiliar não estava reconhecível o bastante. Buscamos solucionar esta inconsistência na etapa de interface. 
 
-
+   
 ### UI
-**Interface do usuário**
+>Interface do usuário
 
 Tendo validado nosso protótipo e reunido referências visuais só nos restava aplicar estes conceitos nas escolhas do design de interface. 
 
 Seguindo noções de material e flat design projetamos a interface com alguns aspectos em mente:
 
-* **CORES:** a paleta de cores dos símbolos foi herdada dos tipos do jogo, porém a tríade azul, amarelo e vermelho tal como as três equipes do jogo foram ressignificadas como os três botões do navegador.
-* **ÍCONES:** os ícones dos tipos foram baseados no jogo mas em sua versão flat, já os ícones de navegação são arredondados e não fecham em si, dando a ideia de busca.
-* **TIPOGRAFIA:**S buscando unidade entre as informações mas com pesos visuais diferentes adotamos uma família extensa com traço arredondados e legibilidade em tamanhos reduzidos.
+* **CORES:** A paleta de cores dos símbolos foi herdada dos tipos do jogo, porém a tríade azul, amarelo e vermelho tal como as três equipes do jogo foram ressignificadas como os três botões do navegador.
+* **ÍCONES:** Os ícones dos tipos foram baseados no jogo mas em sua versão flat, já os ícones de navegação são arredondados e não fecham em si, dando a ideia de busca.
+* **TIPOGRAFIA:** Buscando unidade entre as informações mas com pesos visuais diferentes adotamos uma família extensa com traço arredondados e legibilidade em tamanhos reduzidos.
+
+[![tipografia](img/image2.png)]()
 
 Baseadas em nossas referências chegamos a duas opções de desenhos de interação. Para validação desenvolvemos uma entrevista de teste A x B.
 Teste: https://forms.gle/2AcsHgqPXQZt3cvq7
 
 Acesse o protótipo de alta fidelidade clicando nas imagens abaixo:
  
-Teste A: https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=1%3A2&scaling=scale-down
+Teste A: 
 
 Teste B:
 https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down
 
 
 
+[![testes-A] (img/Home-A)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=1%3A2&scaling=scale-down)
+[![testes-B] (img/Home-A)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down)
 
 
 
 
-
-## 5. REFERÊNCIAS:
+## 7. REFERÊNCIAS:
 
 www.pokemon.co.jp
 www.pokemongo.jp
 zukan.pokemon.co.jp
 www.fandom.com
-
-:
-
-### Definição de produto
-
-Documente brevemente seu trabalho no arquivo `README.md` de seu repositório,
-contando como foi o processo de desenho e como você acredita que o produto
-possa resolver o problema (ou problemas) de seu usuário.
-
-### Histórias de usuário
-
-Uma vez que entenda a necessidade dos usuários, escreva as [Histórias de
-Usuario](https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_usu%C3%A1rio) que representem
-tudo que o usuário precisa fazer/ver. As **histórias de usuário** devem ser o
-resultado de seu processo de investigação/pesquisa de seus usuários.
-
-Não esqueça de incluir a definição de pronto (_definition of done_) e os
-critérios de aceitação para cada uma.
-
-Na medida do possível, termine uma história de usuário antes de passar para a
-seguinte (cumpra com as definições de pronto + critérios de aceitação).
-
-### Desenho de interface do usuário
-
-#### Protótipo de baixa fidelidade
-
-Durante seu trabalho você deverá fazer e iterar rascunhos de sua solução usando
-lápis e papel. Recomendamos que fotografe todas as iterações que fizer, suba
-para seu repositório e as mencione no `README.md`.
-
-#### Testes de usabilidade
-
-Durante o desafio você deverá fazer testes de usabilidade com usuários
-diferentes, e com base nos resultados desses testes, iterar seus desenhos de
-interface. Conte-nos quais problemas de usabilidade você detectou através dos
-testes e como os resolveu na proposta final.
-
-### Implementação da interface de usuário (HTML/CSS/JS)
-
-Após desenhar sua interface de usuário, deverá trabalhar na sua implementação.
-**Não** é necessário que construa a interface exatamente da mesma forma que
-desenhou. Terá um tempo limitado para trabalhar no projeto, então você deve
-priorizar as tarefas.
-
-No mínimo, sua implementação deverá:
-
-1. Mostrar os dados em uma interface: pode ser em cards, tabelas, listas, etc.
-2. Permitir ao usuário interagir com a interface para obter as informações que necessita;
-3. Ser _responsivo_, ou seja, deve ser visualizada sem problemas a partir de
-   diversos tamanhos de tela: celulares, tablets, notebooks, etc.
-
-### Testes unitários
-
-O _boilerplate_ do projeto não inclui testes unitários. Assim, você terá que
-escrever seus próprios testes para as funções encarregadas de _processar_,
-_filtrar_ e _ordenar_ os dados, assim como _calcular_ estatísticas.
-
-Seus testes unitários devem ter cobertura mínima de 70% de _statements_
-(_sentenças_), _functions_ (_funções_), _lines_ (_linhas_), e _branches_
-(_ramos_) do arquivo `src/data.js`, que irá conter suas funções e que está
-detalhado na seção de [Considerações técnicas](#srcdatajs).
-
-## 6. Hacker edition
-
-As seções chamadas _Hacker Edition_ são **opcionais**. Se já tiver terminado
-todos os requisitos anteriores e tiver tempo, pode tentar completá-las. Dessa
-forma, você pode aprofundar e/ou exercitar mais os objetivos de aprendizagem
-deste projeto.
-
-Features/características extra sugeridas:
-
-* Ao invés de consumir dados estáticos do repositório, pode fazer isso de forma
-  dinâmica, carregando um arquivo JSON com `fetch`. A pasta `src/data` contém
-  uma versão `.js` e uma `.json` de cada conjunto de dados.
-* Adicione à sua interface visualização de dados em forma de gráficos. Para
-  isso, recomendamos explorar bibliotecas de gráficos como [Chart.js](https://www.chartjs.org/)
-  ou [Google Charts](https://developers.google.com/chart/).
-* 100% de cobertura nos testes.
-
-## 7. Considerações técnicas
-
-A lógica do projeto deve estar implementada somente em JavaScript (ES6), HTML e
-CSS. Neste projeto não está permitido o uso de bibliotecas e frameworks, apenas
-[vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-com exceção das bibliotecas para gráficos (ver
-[_Parte opcional_](#6-hacker-edition) acima).
-
-Não se deve utilizar a _pseudo-variável_ `this`.
-
-O _boilerplate_ contém uma estrutura de arquivos como ponto de partida, assim
-como toda a configuração de dependências:
-
-```text
-.
-├── EXTRA.md
-├── README.md
-├── package.json
-├── src
-|  ├── data (de acordo com o data que forem trabalhar)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |     ├── rickandmorty.js
-|  |     └── rickandmorty.json
-|  |     └── README.md
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.spec.js
-
-directory: 6 file: 17
-```
-
-### `src/index.html`
-
-Como no projeto anterior, existe um arquivo `index.html`. Como já sabe, aqui
-entra a página que vai ser exibida ao usuário. Também serve para indicar quais
-scripts serão utilizados e juntar tudo o que foi feito.
-
-### `src/main.js`
-
-Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver
-com a exibição dos dados na tela. Com isto nos referimos basicamente à
-interação com o DOM. Operações como criação de nós, registro de manejadores de
-eventos (_event listeners_ ou _event handlers_) e etc.
-
-Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e
-pastas, sempre e quando a estrutura estiver clara para suas colegas.
-
-Neste arquivo você encontrará uma série de _imports comentados_. Para carregar
-diferentes fontes de dados, você deverá "descomentar" estes _imports_. Cada um
-destes _imports_ criará uma variável `data` com os dados correspondentes à fonte
-escolhida.
-
-Por exemplo, se "descomentamos" a seguinte linha:
-
-```js
-// import data from './data/pokemon/pokemon.js';
-```
-
-A linha ficaria assim:
-
-```js
-import data from './data/pokemon/pokemon.js';
-```
-
-E agora teríamos a variável `data` disponível em `src/main.js`.
-
-### `src/data.js`
-
-O coração deste projeto é a manipulação de dados através de arrays e objetos.
-
-Recomendamos que este arquivo contenha toda a funcionalidade que corresponda a
-obter, processar e manipular dados (suas funções):
-
-* `filterData(data, condition)`: esta função receberia os dados e nos
-  retornaria os que cumprem com a condição.
-
-* `sortData(data, sortBy, sortOrder)`: esta função recebe três parâmetros.
-  O primeiro, `data`, nos entrega os dados.
-  O segundo, `sortBy`, diz respeito a qual das informações quer usar para
-  ordenar.
-  O terceiro, `sortOrder`, indica se quer ordenar de maneira crescente ou
-  decrescente.
-
-* `computeStats(data)`: essa função nos permite fazer cálculos estatísticos
-  básicos para serem exibidos de acordo com o que os dados permitem.
-
-Estes nomes de funções e parâmetros são somente referência, o que vocês decidir
-utilizar vai depender da sua implementação.
-
-Estas funções devem ser [_puras_](https://imasters.com.br/desenvolvimento/serie-js-e-vida-pure-functions-funcoes-puras)
-e independentes do DOM. Estas funções serão depois usadas a partir do arquivo
-`src/main.js`, ao carregar a página e a cada vez que o usuário interagir com
-a interface (cliques, seleções, filtros, ordenação, etc).
-
-### `src/data`
-
-Nesta pasta estão os dados de diferentes fontes. Você vai encontrar uma pasta
-para cada fonte, e dentro de cada pasta estão dois arquivos: um com a extensão
-`.js` e outro `.json`. Ambos os arquivos contém os mesmos dados; a diferença é
-que podemos usar o `.js` com uma tag `<script>`, enquanto o `.json` servirá
-para, opcionalmnente, ser carregado de forma assíncrona com
-[`fetch()`](https://developer.mozilla.org/pt-br/docs/Web/API/Fetch_API)
-(ver seção da [_Parte Opcional_](#6-hacker-edition)).
-
-### `test/data.spec.js`
-
-Você também deverá fazer os teste unitários das funções implementadas no
-arquivo `data.js`.
-
-***
-
-## 8. Guias, dicas e leituras complementares
-
-### Primeiros passos
-
-Antes de começar a escrever o código, você deve definir seu produto com base no
-conhecimento que puder obter a respeito de seus usuários. Estas perguntas podem
-ajudar:
-
-* Quem são os usuários principais do produto?
-* Quais são os objetivos dos usuários com relação ao produto?
-* Quais são os dados mais relevantes que querem ver na interface e por quê?
-* Quando utilizam ou utilizariam o produto?
-* Toda sua investigação prévia deve ter como resultado as histórias de
-  usuário de seu projeto.
-* Não faça os protótipos de alta fidelidade de todas as suas histórias. Comece somente pela que necessite para seu Sprint 1.
-
-Quando estiver pronta para codar, sugerimos começar desta forma:
-
-1. Uma das integrantes da dupla deve fazer um :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) do repositório de sua
-   turma (a equipe de formação fornecerá o link). A outra integrante da dupla
-   deve fazer um fork **a partir do repositório de sua companheira** e
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) um
-   `remote` a partir dele.
-
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   seu _fork_ para seu computador (cópia local).
-
-3. Instale as dependências do projeto com o comando `npm install`, assumindo
-   que já tenha instalado o [Node.js](https://nodejs.org/) (que inclui [npm](https://docs.npmjs.com/)).
-
-4. Se tudo correr bem, deve ser capaz de executar os :traffic_light:
-   testes unitários (unit tests) com o comando `npm test`.
-
-5. Para ver a interface de seu programa no navegador, utilize o comando
-   `npm start` para subir o servidor web no endereço `http://localhost:5000`.
-
-6. Comece a codar! :rocket:
-
-***
-
-### Conteúdo de referência
-
-#### UX Design (Experiência do usuário)
-
-* Pesquisa com usuarios / entrevistas
-* Princípios de design/UI
-
-#### Desenvolvimento Front-End
-
-* Unidade de testes do curso de JavaScript do LMS.
-* Unidade de arrays do curso de JavaScript do LMS.
-* Unidade de objetos do curso de JavaScript do LMS.
-* Unidade de funções do curso de JavaScript do LMS.
-* Unidade de DOM do curso de JavaScript do LMS.
-* [Array no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
-* [Array.sort no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-* [Array.map no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-* [Array.filter no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro)
-* [Array.reduce no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-* [Array.forEach no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-* [Object.keys no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
-* [Object.entries no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
-* [Fetch API no MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-pt.html)
-* [Modulos: Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-* [Modulos: Import](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
-
-#### Ferramentas
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
-
-#### Organização do trabalho
-
-* [Histórias de Usuário](https://www.youtube.com/watch?v=sEtiCJfXTE8)
-* [Definição de pronto](https://www.youtube.com/watch?v=Kfss63Q42F8)
-* [Critérios de aceitação](https://medium.com/@karladiasn/user-stories-e-crit%C3%A9rios-de-aceita%C3%A7%C3%A3o-317c48403fcd)
-* [Guia para Data Lovers](https://docs.google.com/presentation/d/1bOq8ns5wsvXdksdqYL3aQoxzFQsXTVlyvlV-yxI2oBM/present?token=AC4w5VhHBbEEA9u2w8bm3Ey1Cse349frbg%3A1567540902700&includes_info_params=1&eisi=CM_ytPW4teQCFQrJgQodeTcEZg#slide=id.g5282e1a53f_1_106)
-
-***
-
-## 9. Checklist
-
-* [ ] Usar VanillaJS.
-* [ ] Não utilizar `this`.
-* [ ] Passa pelo linter (`npm run pretest`)
-* [ ] Passa pelos testes (`npm test`)
-* [ ] Testes unitários cobrem um mínimo de 70% de statements, functions,
-  lines e branches.
-* [ ] Inclui uma _definição de produto_ clara e informativa no `README.md`.
-* [ ] Inclui histórias de usuário no `README.md`.
-* [ ] Inclui rascunho da solução (protótipo de baixa fidelidade) no
-  `README.md`.
-* [ ] Inclui uma lista de problemas detectados nos testes de usabilidade no `README.md`.
-* [ ] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
-* [ ] UI: Permite ordenar dados por um ou mais campos (asc e desc).
-* [ ] UI: Permite filtrar dados com base em uma condição.
-* [ ] UI: É _responsivo_.
