@@ -207,7 +207,8 @@ iframe{
     text-align: center;
     border-style: ridge;
     border-color: #97723d;
-    border-width: 10px;
+    border-width: 5px;
+    border-radius: 20px;
     color: #97723d;
     text-shadow: 2px 3px 2px black;
   }
