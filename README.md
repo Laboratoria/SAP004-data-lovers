@@ -27,6 +27,7 @@ Acesse a página no GitHub clicando na imagem abaixo:
 Para este produto criamos a pers**ANA**, que nos orientou sobre as necessidades mais básicas dos usuários e seu perfil:
 
 **ANA**
+
 Informações demográficas
 * 24 anos;
 * Estudante de Jornalismo;
@@ -57,6 +58,7 @@ Tendo como referência as necessidades da pers**ANA** elaboramos o seguinte épi
 ## 4. Interface
 
 > Visualização de dados
+
 Optamos por um modelo mobile first, pois por ser um jogo voltado para **dispositivos móveis** os usuários, como base na nossa protopersona, estariam buscando informações, em grande parte do tempo, diretamente em seus dispositivos enquanto jogam. 
 
 
@@ -110,13 +112,12 @@ Para os submenus escolhemos usar botões e não uma área de seleção devido a 
 * ORDEM NUMÉRICA: uso dos números do pokédex 1-151 e 151-1;
 * TIPO: uso do ícone do jogo somado ao nome.
 
-Tomadas as decisões de fluxo de navegação iniciamos os desenhos de baixa fidelidade das telas e seus recursos. Terminadas as telas desenvolvemos uma entrevista para os testes de usabilidade. 
-Teste: https://forms.gle/rZLDPkM2ejhVegSM6
+Tomadas as decisões de fluxo de navegação iniciamos os desenhos de baixa fidelidade das telas e seus recursos. Terminadas as telas desenvolvemos uma entrevista para os [testes de usabilidade](https://forms.gle/rZLDPkM2ejhVegSM6). 
 
 Acesse o protótipo de baixa fidelidade clicando nas imagens abaixo:
 
 
- [![Teste de baixa fidelidade](img/image3.png)](https://mires731129.invisionapp.com/overview/Sprint-1-2-e-3---Pokdex-ck9k6l7g90p19013c6dtd9lmp/screens?v=9jM%2FDQc5hQ4vt%2Bs6tLr9OQ%3D%3D&linkshare=urlcopied)
+[![Teste de baixa fidelidade](img/image3.png)](https://mires731129.invisionapp.com/overview/Sprint-1-2-e-3---Pokdex-ck9k6l7g90p19013c6dtd9lmp/screens?v=9jM%2FDQc5hQ4vt%2Bs6tLr9OQ%3D%3D&linkshare=urlcopied)
 
 O principal retorno que tivemos neste teste foi: o ícone de tipo (pokebola) mesmo com o texto auxiliar não estava reconhecível o bastante. Buscamos solucionar esta inconsistência na etapa de interface. 
 
@@ -132,29 +133,22 @@ Seguindo noções de material e flat design projetamos a interface com alguns as
 * **ÍCONES:** Os ícones dos tipos foram baseados no jogo mas em sua versão flat, já os ícones de navegação são arredondados e não fecham em si, dando a ideia de busca.
 * **TIPOGRAFIA:** Buscando unidade entre as informações mas com pesos visuais diferentes adotamos uma família extensa com traço arredondados e legibilidade em tamanhos reduzidos.
 
-[![tipografia](img/image2.png)]()
+[![tipografia](img/image2.png)]
 
-Baseadas em nossas referências chegamos a duas opções de desenhos de interação. Para validação desenvolvemos uma entrevista de teste A x B.
-Teste: https://forms.gle/2AcsHgqPXQZt3cvq7
+Baseadas em nossas referências chegamos a duas opções de desenhos de interação. Para validação desenvolvemos uma  [entrevista de teste A x B](https://forms.gle/2AcsHgqPXQZt3cvq7).
 
 Acesse o protótipo de alta fidelidade clicando nas imagens abaixo:
- 
-Teste A: 
 
-Teste B:
-https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down
-
-
-
-[![testes-A] (img/Home-A)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=1%3A2&scaling=scale-down)
-[![testes-B] (img/Home-A)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down)
+[![testes-A] (img/Home-A.png)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=1%3A2&scaling=scale-down)
+[![testes-B] (img/Home-B.png)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down)
 
 
 
 
 ## 7. REFERÊNCIAS:
 
-www.pokemon.co.jp
-www.pokemongo.jp
-zukan.pokemon.co.jp
-www.fandom.com
+[www.pokemon.co.jp](https://www.pokemon.co.jp) 
+[www.pokemongo.jp](https://www.pokemongo.jp)
+[zukan.pokemon.co.jp](https://zukan.pokemon.co.jp)
+[www.fandom.com](https://www.fandom.com)
+
