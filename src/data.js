@@ -20,7 +20,7 @@ export const orderZA = (item) => {
   return orderAZ(item).reverse();
 };
 
-export function filterAll(list, data, value) {
+export const filterAll = (list, data, value) => {
   let arrayAllFilter = [];
   arrayAllFilter = list.filter(item => {
     if (item[data] === value) {

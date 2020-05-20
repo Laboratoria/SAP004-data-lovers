@@ -1,6 +1,6 @@
 import { orderAZ, naturalOrder, orderZA, filterAll, elements, searchName } from './data.js';
 
-function insertHtml(vector) {
+const insertHtml = (vector) => {
   let newInsertion = "";
   newInsertion += vector.map((item) =>
     `<div class="cards">
