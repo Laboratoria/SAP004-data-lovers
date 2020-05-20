@@ -4,7 +4,7 @@
 
 * [PRODUTO](##-PRODUTO)
 * [1. Protopersona](###-Protopersona)
-* [2. História do Usuário](###-História do Usuário)
+* [2. História do Usuário](###-História-do-Usuário)
 * [3. Interface](###-Interface)
 * [4. Funcionalidades](###-Funcionalidades)
 * [PROTOTIPAÇÃO](##-PROTOTIPAÇÃO)
