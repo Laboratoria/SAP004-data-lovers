@@ -45,8 +45,8 @@ Comportamento
 * Nunca viu o desenho animado Pokémon.
 
 Necessidades
-Conhecer os pokémons que encontra no jogo;
-Acesso rápido enquanto joga no ônibus a caminho do trabalho, da faculdade ou na volta para casa.
+* Conhecer os pokémons que encontra no jogo;
+* Acesso rápido enquanto joga no ônibus a caminho do trabalho, da faculdade ou na volta para casa.
 
 
 ### História do Usuário
