@@ -5,8 +5,10 @@
 * [1. Produto:](#1-Produto:)
 * [2. Protopersona:](#2-Protopersona)
 * [3. História do Usuário:](#3-História-do-Usuário:)
-* [4. PROTOTIPAÇÃO](#4-PROTOTIPAÇÃO)
-* [5. REFERÊNCIAS](#5-REFERÊNCIAS)
+* [4. Interface:](#-Interface)
+* [5. ](#-)
+* [6. PROTOTIPAÇÃO](#4-PROTOTIPAÇÃO)
+* [7. REFERÊNCIAS](#5-REFERÊNCIAS)
 * [6. Hacker edition](#6-hacker-edition)
 * [7. Considerações técnicas](#7-considerações-técnicas)
 * [8. Guias, dicas e leituras complementares](#8-pistas-dicas-e-leituras-complementares)
@@ -21,10 +23,7 @@ Desenvolvemos uma página direcionada a jogadores iniciantes de Pokémon Go. Nel
 Acesse a página no GitHub clicando na imagem abaixo:
 
 
-
-
 ## 2. Protopersona:
-
 
 ### Necessidades do usuário
 
@@ -48,6 +47,7 @@ Necessidades
 Conhecer os pokémons que encontra no jogo;
 Acesso rápido enquanto joga no ônibus a caminho do trabalho, da faculdade ou na volta para casa.
 
+
 ## 3. História do Usuário:
 
 ## Necessidades atendidas
@@ -57,8 +57,25 @@ Tendo como referência as necessidades da persANA elaboramos o seguinte épico p
 Conhecer a imagem, nome, número e tipo de todos os Pokémons de Kanto.  Poder filtrar, ordenar ou buscar os Pokémons que encontrar no jogo.
  
 
-## 4. PROTOTIPAÇÃO
+## 4. Interface:
 
+### Visualização de dados
+Optamos por um modelo mobile first, pois por ser um jogo voltado para dispositivos móveis os usuários, como base na nossa protopersona, estariam buscando informações, em grande parte do tempo, diretamente em seus dispositivos enquanto jogam. 
+
+
+## 5. Funcionalidades:
+
+**Objetivos de interação**
+
+Utilizando uma base de dados com os 151 pokémon de Kanto, oferecemos as seguintes funcionalidades de interação ao usuário:
+
+* Como buscar o pokémon por nome;
+* Ordenar os pokémon em uma lista alfabética ou numérica;
+* Filtrar os pokémons por tipo e conhecer de maneira pontual seus comportamentos e fraquezas em comparação a outros tipos;
+* Prcentagem de pokémons de Kanto por tipo, entendendo assim sua raridade.
+
+
+## 6. PROTOTIPAÇÃO
 
 ### Benchmarking
 **Análise de melhores práticas no mercado**
