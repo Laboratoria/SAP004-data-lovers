@@ -146,7 +146,7 @@ https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377
 
 
 
-[![testes] (img/Home-A)(img/Home-B)]
+[![testes-A] (img/Home-A)] [![testes-B] (img/Home-A)]
 
 
 
