@@ -345,7 +345,7 @@ describe('function applyAscendingOrder', () => {
       expect(applyAscendingOrder(pokemonZa)).toEqual(pokemon);
     });
     
-    it('should put in descending alphabetical order when you click the button Z-A', () => {
+    it('should put in ascending alphabetical order when you click the button A-Z', () => {
       expect(applyAscendingOrder(pokemonZa)).not.toBe(pokemon);
     });
   })
