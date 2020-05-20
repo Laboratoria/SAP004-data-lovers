@@ -193,6 +193,7 @@ const filterType = () => {
   }
 };
 
+
 //Ordenação:
 const orderData = (sortBy) => {
   const sortOrder = getUserOption(1);
@@ -225,3 +226,4 @@ optionOrderUser.addEventListener("change", () => {
     orderData("name");
   }
 });
+
