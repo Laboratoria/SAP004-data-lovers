@@ -2,9 +2,9 @@
 
 ## Índice
 
-* [1. O que é o produto e a quem atende:](#1-O-que-é-o-produto-e-a-quem-atende:)
-* [2. Quais problemas do usuário resolve:](#2-Quais-problemas-do-usuário-resolve)
-* [3. Épico da Ana:](#3-Épico-da-Ana:)
+* [1. Produto:](#1-Produto:)
+* [2. Protopersona:](#2-Protopersona)
+* [3. História do Usuário:](#3-História-do-Usuário:)
 * [4. PROTOTIPAÇÃO](#4-PROTOTIPAÇÃO)
 * [5. REFERÊNCIAS](#5-REFERÊNCIAS)
 * [6. Hacker edition](#6-hacker-edition)
@@ -14,33 +14,47 @@
 
 ***
 
-## 1. O que é o produto e a quem atende:
+## 1. Produto:
 
-É uma pagina direcionada a jogadores iniciantes de Pokemon Go, onde os usuários podem encontrar as informações essências dos Pokémon de forma clara
+Desenvolvemos uma página direcionada a jogadores iniciantes de Pokémon Go. Nela os usuários podem encontrar informações essenciais e de forma clara sobre pokémons encontrados no jogo.
 
-
-## 2. Quais problemas do usuário resolve
-
-
-Pensando nessas pessoas e em suas necessidades de conhecer os Pekemons de Kanto, desenvolvemos um produto onde o usuário pode buscar o Pokémon por nome, tipo, ordem alfabética (A-Z e Z-A), ordem numérica (crescente e descrente e conhecer de forma mais simples os a quais tipos de Pokemons cada tipo tem maior fraqueza.
- Optamos por um modelo mobile first, pois por ser um jogo voltado para dispositivos móveis os usuários estariam buscando informações, em grande parte do tempo, diretamente em seus dispositivos enquanto jogam. 
+Acesse a página no GitHub clicando na imagem abaixo:
 
 
-Para esse projeto criamos a PersANA, para nos orientar nas necessidades mais básicas dos usuários e seu perfil. 
 
 
-## 3. Épico da Ana:
+## 2. Protopersona:
+
+
+### Necessidades do usuário
+
+Para este produto criamos a persANA, que nos orientou sobre as necessidades mais básicas dos usuários e seu perfil:
+
+**ANA**
+Informações demográficas
+* 24 anos;
+* Estudante de Jornalismo;
+* Estagiária em uma Agência;
+* Mora em São Paulo, São Mateus;
+* Trabalha no Brooklin e estuda no Mackenzie.
+
+Comportamento
+* Joga como passatempo no ônibus;
+* Não consegue ir sentada então não pode estudar;
+* Influenciada a jogar por amigos;
+* Nunca viu o desenho animado Pokémon.
+
+Necessidades
+Conhecer os pokémons que encontra no jogo;
+Acesso rápido enquanto joga no ônibus a caminho do trabalho, da faculdade ou na volta para casa.
+
+## 3. História do Usuário:
+
+## Necessidades atendidas
+
+Tendo como referência as necessidades da persANA elaboramos o seguinte épico para nossas três sprints de desenvolvimento:
 
 Conhecer a imagem, nome, número e tipo de todos os Pokémons de Kanto.  Poder filtrar, ordenar ou buscar os Pokémons que encontrar no jogo.
-
-**Usuário:** Persona Ana
-
-**Objetivo:**Conhecer os pokémon que encontra no jogo
-Necessidades: cards simples com informação curta de cada Pokemon, opção de busca e filtro.
-
-**Quando utiliza o produto:** No onibus enquanto  jogava ao caminho do trabalho, da faculdade ou na volta para casa.
-
-**Investigação prévia:** Ana não conhece nem assistia Pokémon
  
 
 ## 4. PROTOTIPAÇÃO

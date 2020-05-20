@@ -321,6 +321,7 @@ body {
 
 .button-red:hover .submenu-option-red{
   display: block;
+
 }
 
 .sub-item-red {
@@ -352,7 +353,7 @@ section {
   justify-content: center;
   color: #a5a5a5;
   margin: 55px 0 20px;
-  margin-top: -48px;
+  margin-top: 55px;
 }
 
 .types div{
@@ -408,6 +409,7 @@ h2{
   justify-content: center;
   align-content: center;
   grid-gap: 10px;
+  margin-top: 15px;
 }
 
 /* CARD */
@@ -652,11 +654,11 @@ h2{
   }
 
   .types div {
-    width: 745px;
+    
   }
 
   .types p {
-    width: 610px;
+    
   }
 
   .pokemon-list {
@@ -713,7 +715,7 @@ h2{
   }
 
   .types div {
-    width: 912px;
+    
     margin-top: -48px;
     margin-bottom:  80px;
   }

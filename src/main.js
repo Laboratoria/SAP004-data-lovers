@@ -85,7 +85,7 @@ const displayPokemons = (pokemon) => {
 };
 
 // **** Botões Ordem ******
-buttonAZ.addEventListener("click", () => displayPokemons(sortOrder("az", "name", pokemonData)));
+buttonAZ.addEventListener("click", () => displayPokemons(sortOrder("az", "name", pokemonData)) ;
 buttonZA.addEventListener("click", () => displayPokemons(sortOrder("za", "name", pokemonData)));
 buttonCresc.addEventListener("click", () => displayPokemons(sortOrder("cresc", "id", pokemonData)));
 buttonDecre.addEventListener("click", () => displayPokemons(sortOrder("decre", "id", pokemonData)));
