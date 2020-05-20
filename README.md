@@ -73,10 +73,10 @@ Optamos por um modelo mobile first, pois por ser um jogo voltado para **disposit
 
 Utilizando uma base de dados com os 151 pokémon de Kanto, oferecemos as seguintes funcionalidades de interação ao usuário:
 
-* Como buscar o pokémon por nome;
+* Buscar o pokémon por nome;
 * Ordenar os pokémon em uma lista alfabética ou numérica;
 * Filtrar os pokémons por tipo e conhecer de maneira pontual seus comportamentos e fraquezas em comparação a outros tipos;
-* Prcentagem de pokémons de Kanto por tipo, entendendo assim sua raridade.
+* Porcentagem de pokémons de Kanto por tipo, entendendo assim sua raridade.
 
 
 ## PROTOTIPAÇÃO
@@ -140,7 +140,7 @@ Seguindo noções de material e flat design projetamos a interface com alguns as
 [![tipografia](img/image2.png)]()
 
 Baseadas em nossas referências chegamos a duas opções de desenhos de interação. Para validação desenvolvemos uma  [entrevista de teste A x B](https://forms.gle/2AcsHgqPXQZt3cvq7).
-Acesse o protótipo de alta fidelidade clicando nas imagens abaixo:
+Acesse os protótipos de alta fidelidade clicando nas imagens abaixo:
  
 [![testes-A](img/Home-A.jpg)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=1%3A2&scaling=scale-down)
 [![testes-B](img/Home-B.png)](https://www.figma.com/proto/HXPRzYK8oAl1zHjUNvycWB/Pok%C3%A9dex?node-id=69%3A377&scaling=scale-down)
