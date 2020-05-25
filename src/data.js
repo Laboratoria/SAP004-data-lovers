@@ -32,9 +32,7 @@ export const filterAll = (list, data, value) => {
 
 export const searchName = (input, character) => {
   const filter = character.filter(item => {
-  const transformData = item.name.toLowerCase();
-  const characterName = transformData.substr(0, input.length);
-    return (characterName.includes(input));
+    return item.name.toLowerCase().substr(0, input.length).includes(input);
   });
   return getInfo(filter);
 };
@@ -53,13 +51,10 @@ export const countGender = (list) => {
     return allNames;
   }, {});
 
-  const legend = [["Female", countedNames.Female],
+  return [["Female", countedNames.Female],
   ["Male", countedNames.Male],
   ["Unknown", countedNames.unknown],
   ["Genderless", countedNames.Genderless]]
-
-
-  return legend
 }
 export const countStatus = (list) => {
   const data = list.map(function (item) {
@@ -75,8 +70,7 @@ export const countStatus = (list) => {
     return allNames;
   }, {});
 
-  const legend = [["Alive", countedNames.Alive],
+  return [["Alive", countedNames.Alive],
   ["Dead", countedNames.Dead],
   ["Unknown", countedNames.unknown]]
-  return legend
 }
