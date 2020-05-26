@@ -1,11 +1,11 @@
 import { countGender, countStatus, elements } from './data.js';
 
 google.charts.load('current', { packages: ['corechart'] });
-google.charts.setOnLoadCallback(drawChart);
-google.charts.setOnLoadCallback(drawChart2);
+google.charts.setOnLoadCallback(drawChartStatus);
+google.charts.setOnLoadCallback(drawChartGender);
 
 
-function drawChart() {
+function drawChartGender() {
   let data = new google.visualization.DataTable();
   data.addColumn('string', 'Element');
   data.addColumn('number', 'Percentage');
@@ -24,10 +24,11 @@ function drawChart() {
       }
     }
   };
-  let chart = new google.visualization.PieChart(document.getElementById('chart1'));
+  let chart = new google.visualization.PieChart(document.getElementById('chart-gender'));
+  
   chart.draw(data, options);
 }
-function drawChart2() {
+function drawChartStatus() {
   let data = new google.visualization.DataTable();
   data.addColumn('string', 'Element');
   data.addColumn('number', 'Percentage');
@@ -47,6 +48,6 @@ function drawChart2() {
     }
 
   };
-  let chart = new google.visualization.PieChart(document.getElementById('chart2'));
+  let chart = new google.visualization.PieChart(document.getElementById('chart-status'));
   chart.draw(data, options);
 }

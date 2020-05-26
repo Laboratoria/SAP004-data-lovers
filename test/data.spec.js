@@ -106,7 +106,7 @@ describe('countGender', () => {
   });
 
   it('should return the gender count', () => {
-    expect(countGender(data)).toEqual([["Gender Female", 2], ["Gender Male", 3], ["Unknown", undefined], 
+    expect(countGender(data)).toEqual([["Female", 2], ["Male", 3], ["Unknown", undefined], 
     ["Genderless", undefined]])
   });
 });
