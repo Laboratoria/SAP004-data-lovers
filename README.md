@@ -41,7 +41,7 @@ Também realizamos testes de desenho de baixa fidelidade através do aplicativo 
 
 Layout publicado:
 
-![layoutPublicado](src/LayoutFinal.png)
+![layoutPublicado](src/Img/LayoutFinal.png)
 
 ## Funcionalidades da aplicação
 
