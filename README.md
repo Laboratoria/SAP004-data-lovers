@@ -37,7 +37,11 @@ O protótipo solicitado foi de baixa qualidade como mostra nas imagens a seguir:
 ![layout1](src/PrototipoRe1.jpeg)
 ![layout1](src/PrototipoRe2.jpeg)
 
-Também realizamos testes de desenho de baixa fidelidade através do aplicativo [Marvel](https://marvelapp.com/575b2ij/screen/68480001)
+Também realizamos testes de desenho de baixa fidelidade através do aplicativo [Marvel](https://marvelapp.com/575b2ij/screen/68480001).
+
+Layout publicado:
+
+![layoutPublicado](src/LayoutFinal.png)
 
 ## Funcionalidades da aplicação
 
