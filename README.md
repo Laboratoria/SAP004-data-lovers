@@ -32,10 +32,10 @@ Fizemos um esboço de como seria o site e a disposição das informações na ap
 
 O protótipo solicitado foi de baixa qualidade como mostra nas imagens a seguir:
 
-![layout1](src/PrototipoGih1.jpeg)
-![layout1](src/PrototipoGih2.jpeg)
-![layout1](src/PrototipoRe1.jpeg)
-![layout1](src/PrototipoRe2.jpeg)
+![layout1](src/Img/PrototipoGih1.jpeg)
+![layout1](src/Img/PrototipoGih2.jpeg)
+![layout1](src/Img/PrototipoRe1.jpeg)
+![layout1](src/Img/PrototipoRe2.jpeg)
 
 Também realizamos testes de desenho de baixa fidelidade através do aplicativo [Marvel](https://marvelapp.com/575b2ij/screen/68480001).
 
