@@ -20,7 +20,7 @@
 
 Desenvolvemos uma página direcionada a jogadores iniciantes de Pokémon Go. Nela os usuários podem encontrar informações essenciais e de forma clara sobre pokémons encontrados no jogo.
 
-[Acesse nossa página no GitHub Pages](https://mirescordeiro.github.io/SAP004-data-lovers/src)
+[Acesse nossa página no GitHub Pages](https://mirescordeiro.github.io/Pokedex/src/)
 
 
 ### Protopersona
